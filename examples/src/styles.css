@@ -1,0 +1,14 @@
+* {
+  font-family: Helvetica;
+}
+
+.App {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.select-wrapper {
+  margin-top: 50px;
+  width: 500px;
+}

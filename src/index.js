@@ -115,7 +115,7 @@ const i18n = {
   'Etc/GMT+2': 'Mid-Atlantic',
   'Atlantic/Azores': 'Azores',
   'Atlantic/Cape_Verde': 'Cape Verde Islands',
-  GMT: 'Dublin, Edinburgh, Lisbon, London',
+  'GMT': 'Dublin, Edinburgh, Lisbon, London',
   'Africa/Casablanca': 'Casablanca, Monrovia',
   'Atlantic/Canary': 'Canary Islands',
   'Europe/Belgrade': 'Belgrade, Bratislava, Budapest, Ljubljana, Prague',
@@ -198,8 +198,8 @@ class TimezoneSelector extends React.Component {
     }
   }
 
-  handleChange = selectedOption => {
-    this.setState({ selectedOption })
+  handleChange = (selectedOption) => {
+    this.setState({ selectedOption: selectedOption })
   }
 
   render () {

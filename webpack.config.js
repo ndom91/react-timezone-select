@@ -1,38 +1,29 @@
-var path = require('path');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
-
+const path = require('path');
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const htmlWebpackPlugin = new HtmlWebpackPlugin({
+    template: path.join(__dirname, "examples/src/index.html"),
+    filename: "./index.html"
+});
 module.exports = {
-  entry: './index.js',
-  output: {
-    path: path.resolve(__dirname, 'build'),
-    filename: 'index.js',
-    libraryTarget: 'commonjs2'
-  },
-  module: {
-    rules: [
-      {
-        test: /\.js$/,
-        include: path.resolve(__dirname, 'src'),
-        exclude: /(node_modules|bower_components|build)/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['env']
-          }
-        }
-      }, {
-        test: /\.*css$/,
-        use : ExtractTextPlugin.extract({
-            fallback : 'style-loader',
-            use : [
-                'css-loader',
-                'sass-loader'
-            ]
-        })
-       },
-    ]
-  },
-  externals: {
-    'react': 'commonjs react' 
-  }
+    entry: path.join(__dirname, "examples/src/index.js"),
+    module: {
+        rules: [
+            {
+                test: /\.(js|jsx)$/,
+                use: "babel-loader",
+                exclude: /node_modules/
+            },
+            {
+                test: /\.css$/,
+                use: ["style-loader", "css-loader"]
+            }
+        ]
+    },
+    plugins: [htmlWebpackPlugin],
+    resolve: {
+        extensions: [".js", ".jsx"]
+    },
+    devServer: {
+        port: 3001
+    }
 };
