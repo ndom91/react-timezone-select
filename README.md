@@ -7,6 +7,8 @@ While looking around for a good one online, I had trouble finding timezone selec
 **A)** Adjusted the choices with Daylight Savings Time (DST)    
 **B)** Didn't have a huge list of choices when technically only 24 (ish) are necessary. 
 
+#### Demo: [ndom91.github.io/react-timezone-select/](https://ndom91.github.io/react-timezone-select/)
+
 ## 🏗️ Installing
 
 ```
