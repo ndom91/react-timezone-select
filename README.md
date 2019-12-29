@@ -1,5 +1,11 @@
 # 🌐⌚ react-timezone-select
 
+![NPM Downloads](https://img.shields.io/npm/dm/react-timezone-select?style=flat-square)
+![npm](https://img.shields.io/npm/v/react-timezone-select?style=flat-square)
+![GitHub issues](https://img.shields.io/github/issues/ndom91/react-timezone-select?style=flat-square)
+![NPM](https://img.shields.io/npm/l/react-timezone-select?style=flat-square)
+
+
 Another react timezone select component, I know.. However this one has a few key benefits!
 
 While looking around for a good one online, I had trouble finding timezone select components which   
