@@ -21,16 +21,24 @@ class App extends React.Component {
     return (
       <div className="App">
         <h2>react-timezone-select</h2>
+        <quote>Please make a selection</quote>
         <div className="select-wrapper">
           <Select value={selectedOption} onChange={this.handleChange} />
         </div>
         <h3>Output:</h3>
-        <pre>
-        selectedOption: {
-          value: {selectedOption.value}
-          label: {selectedOption.label}
-        }
-        </pre>
+        <div className="code">
+          <span style={{ fontWeight: "500" }}>selectedOption: {`{`}</span>{" "}
+          <br />
+          <span style={{ marginLeft: "20px", fontWeight: "500" }}>
+            value: '{selectedOption.value}'
+          </span>
+          <br />
+          <span style={{ marginLeft: "20px", fontWeight: "500" }}>
+            label: '{selectedOption.label}'
+          </span>
+          <br />
+          {`}`}
+        </div>
       </div>
     );
   }
