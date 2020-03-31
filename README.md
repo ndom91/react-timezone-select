@@ -1,20 +1,28 @@
 # 🌐⌚ react-timezone-select
 
+![NPM Downloads](https://img.shields.io/npm/dm/react-timezone-select?style=flat-square)
+![npm](https://img.shields.io/npm/v/react-timezone-select?style=flat-square)
+![GitHub issues](https://img.shields.io/github/issues/ndom91/react-timezone-select?style=flat-square)
+![NPM](https://img.shields.io/npm/l/react-timezone-select?style=flat-square)
+
+
 Another react timezone select component, I know.. However this one has a few key benefits!
 
-While looking around for a good one online, I had trouble finding timezone select components which   
+While looking around for a good one, I had trouble finding a timezone select components which:   
 
-**A)** Adjusted the choices with Daylight Savings Time (DST)    
-**B)** Didn't have a huge list of choices when technically only 24 (ish) are necessary. 
+**1**) Adjusted the choices with Daylight Savings Time (DST)    
+**2**) Didn't have a huge list of choices to scroll through when technically only 24 (ish) are necessary. 
+
+#### Demo: [ndom91.github.io/react-timezone-select/](https://ndom91.github.io/react-timezone-select/)
 
 ## 🏗️ Installing
 
-```
+```bash
 npm install react-timezone-select
 ```
 
 ## 🔭 Usage 
-```
+```javascript
 import React from 'react'
 import ReactDOM from 'react-dom'
 import Select from 'react-timezone-select'
@@ -23,7 +31,7 @@ class App extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
-      selectedOption: ''
+      selectedOption: {}
     }
   }
 
@@ -56,21 +64,18 @@ ReactDOM.render(<App />, rootElement);
 
 ## 🖥️ Example
 
+#### Demo: [ndom91.github.io/react-timezone-select/](https://ndom91.github.io/react-timezone-select/)
+
 Theres a small example page / implementation available in the `./examples` directory, simply run `npm start` after installing everything and webpack dev server should begin, where you will be able to find the demo at `localhost:3001`
 
 ![Screenshot 1](screenshots/1.png)
-
-![Screenshot 2](screenshots/2.png)
 
 ![Screenshot 3](screenshots/3.png)
 
 
 ## 🚧 Contributing
 
-Pull requests are always welcome! Two rules:
-
-1. Don't be a dick
-2. Please use standard for linting / formatting. If you don't, I will before merge.
+Pull requests are always welcome! Please use [`standard.js`](https://standardjs.com/)
 
 ## 🙏 Thanks
 

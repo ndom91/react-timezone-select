@@ -1,36 +1,51 @@
-import React from "react"
-import ReactDOM from "react-dom"
-import Select from '../../src'
-import './styles.css'
+import React from "react";
+import ReactDOM from "react-dom";
+import Select from "../../src";
+import "./styles.css";
 
 class App extends React.Component {
-  constructor (props) {
-    super(props)
+  constructor(props) {
+    super(props);
     this.state = {
-      selectedOption: ''
-    }
+      selectedOption: {}
+    };
   }
 
   handleChange = selectedOption => {
+<<<<<<< HEAD
     this.setState({ selectedOption: selectedOption })
   }
+=======
+    this.setState({ selectedOption: selectedOption });
+  };
+>>>>>>> cb97587f1ffe6d3373b6c18e90387bafef652f13
 
   render() {
-    const {
-      selectedOption
-    } = this.state
+    const { selectedOption } = this.state;
 
     return (
       <div className="App">
+        <h2>react-timezone-select</h2>
+        <quote>Please make a selection</quote>
         <div className="select-wrapper">
-          <Select 
-            value={selectedOption} 
-            onChange={this.handleChange}
-          />
+          <Select value={selectedOption} onChange={this.handleChange} />
         </div>
-        <h3>{selectedOption.value} - {selectedOption.label}</h3>
+        <h3>Output:</h3>
+        <div className="code">
+          <span style={{ fontWeight: "500" }}>selectedOption: {`{`}</span>{" "}
+          <br />
+          <span style={{ marginLeft: "20px", fontWeight: "500" }}>
+            value: '{selectedOption.value}'
+          </span>
+          <br />
+          <span style={{ marginLeft: "20px", fontWeight: "500" }}>
+            label: '{selectedOption.label}'
+          </span>
+          <br />
+          {`}`}
+        </div>
       </div>
-    )
+    );
   }
 }
 

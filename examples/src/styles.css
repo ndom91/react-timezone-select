@@ -12,3 +12,15 @@
   margin-top: 50px;
   width: 500px;
 }
+
+.code, 
+.code span {
+  background-color: #efefef;
+  font-family: monospace;
+}
+
+.code {
+  padding: 10px;
+  line-height: 2;
+  font-size: 1.4rem;
+}
