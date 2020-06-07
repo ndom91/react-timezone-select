@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Select from 'react-select'
 import moment from 'moment-timezone'
 
@@ -115,7 +115,7 @@ const i18n = {
   'Etc/GMT+2': 'Mid-Atlantic',
   'Atlantic/Azores': 'Azores',
   'Atlantic/Cape_Verde': 'Cape Verde Islands',
-  'GMT': 'Dublin, Edinburgh, Lisbon, London',
+  GMT: 'Dublin, Edinburgh, Lisbon, London',
   'Africa/Casablanca': 'Casablanca, Monrovia',
   'Atlantic/Canary': 'Canary Islands',
   'Europe/Belgrade': 'Belgrade, Bratislava, Budapest, Ljubljana, Prague',
@@ -190,30 +190,17 @@ moment.tz.names()
     options.push({ value: tz.name, label: `(GMT${timezone}) ${_t(tz.name)}` })
   }, '')
 
-class TimezoneSelector extends React.Component {
-  constructor (props) {
-    super(props)
-    this.state = {
-      selectedOption: null
-    }
-  }
+const TimezoneSelect = ({ value, onBlur }) => {
+  const [selectedTimezone, setSelectedTimezone] = useState({})
 
-  handleChange = (selectedOption) => {
-    this.setState({ selectedOption: selectedOption })
-  }
-
-  render () {
-    const { selectedOption } = this.state
-
-    return (
-      <Select
-        value={this.props.value || selectedOption}
-        onChange={this.props.onChange || this.handleChange}
-        options={options}
-        onBlur={this.props.onBlur}
-      />
-    )
-  }
+  return (
+    <Select
+      value={value || selectedTimezone}
+      onChange={(tz) => setSelectedTimezone(tz)}
+      options={options}
+      onBlur={onBlur}
+    />
+  )
 }
 
-export default TimezoneSelector
+export default TimezoneSelect

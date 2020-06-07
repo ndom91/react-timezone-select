@@ -22,44 +22,42 @@ npm install react-timezone-select
 ```
 
 ## 🔭 Usage 
-```javascript
-import React from 'react'
+
+```jsx
+import React, { useState } from 'react'
 import ReactDOM from 'react-dom'
-import Select from 'react-timezone-select'
+import TimezoneSelect from 'react-timezone-select'
 
-class App extends React.Component {
-  constructor (props) {
-    super(props)
-    this.state = {
-      selectedOption: {}
-    }
-  }
+const App = () => {
+  const [selectedTimezone, setSelectedTimezone] = useState({})
 
-  handleChange = selectedOption => {
-    this.setState({ selectedOption: selectedOption })
-  }
-
-  render() {
-    const {
-      selectedOption
-    } = this.state
-
-    return (
-      <div className="App">
-        <div className="select-wrapper">
-          <Select 
-            value={selectedOption} 
-            onChange={this.handleChange}
-          />
-        </div>
-        <h3>{selectedOption.value} - {selectedOption.label}</h3>
+  return (
+    <div className='App'>
+      <h2>react-timezone-select</h2>
+      <quote>Please make a selection</quote>
+      <div className='select-wrapper'>
+        <TimezoneSelect value={selectedTimezone} onChange={tz => setSelectedTimezone(tz)} />
       </div>
-    )
-  }
+      <h3>Output:</h3>
+      <div className='code'>
+        <span style={{ fontWeight: '500' }}>selectedTimezone: {'{'}</span>{' '}
+        <br />
+        <span style={{ marginLeft: '20px', fontWeight: '500' }}>
+          value: '{selectedTimezone.value}'
+        </span>
+        <br />
+        <span style={{ marginLeft: '20px', fontWeight: '500' }}>
+          label: '{selectedTimezone.label}'
+        </span>
+        <br />
+        {'}'}
+      </div>
+    </div>
+  )
 }
 
-const rootElement = document.getElementById("root");
-ReactDOM.render(<App />, rootElement);
+const rootElement = document.getElementById('root')
+ReactDOM.render(<App />, rootElement)
 ```
 
 ## 🖥️ Example
