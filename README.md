@@ -73,7 +73,7 @@ Theres a small example page / implementation available in the `./examples` direc
 
 ## 🚧 Contributing
 
-Pull requests are always welcome! Please use [`standard.js`](https://standardjs.com/)
+Pull requests are always welcome!
 
 ## 🙏 Thanks
 
