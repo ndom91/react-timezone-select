@@ -196,7 +196,7 @@ const TimezoneSelect = ({ value, onBlur, onChange }) => {
 
   const handleChange = tz => {
     setSelectedTimezone(tz)
-    onChange && onChange()
+    onChange && onChange(tz)
   }
 
   return (
