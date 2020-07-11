@@ -95,10 +95,13 @@ Object.entries(i18n)
     if (tz.offset === undefined) return false
     const min = tz.offset * 60
     const hr = `${(min / 60) ^ 0}:` + (min % 60 === 0 ? '00' : min % 60)
-    options.push({ value: tz.label, label: `(GMT${hr.includes('-') ? hr : `+${hr}`}) ${tz.name}` })
+    options.push({
+      value: tz.label,
+      label: `(GMT${hr.includes('-') ? hr : `+${hr}`}) ${tz.name}`,
+    })
   })
 
-const TimezoneSelect = ({ value, onBlur, onChange }) => {
+const TimezoneSelect = ({ value, onBlur, onChange, ...props }) => {
   const [selectedTimezone, setSelectedTimezone] = useState({})
 
   const handleChange = tz => {
@@ -112,6 +115,7 @@ const TimezoneSelect = ({ value, onBlur, onChange }) => {
       onChange={handleChange}
       options={options}
       onBlur={() => onBlur}
+      {...props}
     />
   )
 }
