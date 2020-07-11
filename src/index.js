@@ -96,7 +96,7 @@ Object.entries(i18n)
     const min = tz.offset * 60
     const hr = `${(min / 60) ^ 0}:` + (min % 60 === 0 ? '00' : min % 60)
     options.push({
-      value: tz.label,
+      value: tz.name,
       label: `(GMT${hr.includes('-') ? hr : `+${hr}`}) ${tz.label}`,
     })
   })
