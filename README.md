@@ -5,13 +5,14 @@
 ![GitHub issues](https://img.shields.io/github/issues/ndom91/react-timezone-select?style=flat-square)
 ![NPM](https://img.shields.io/npm/l/react-timezone-select?style=flat-square)
 
-
 Another react timezone select component, I know.. However this one has a few key benefits!
 
-While looking around for a good one, I had trouble finding a timezone select components which:   
+While looking around for a good one, I had trouble finding a timezone select components which:
 
-**1**) Adjusted the choices with Daylight Savings Time (DST)    
-**2**) Didn't have a huge list of choices to scroll through when technically only 24 (ish) are necessary. 
+**1**) Adjusted the choices with Daylight Savings Time (DST)  
+**2**) Didn't have a huge list of choices to scroll through when technically only 24 (ish) are necessary.
+
+> Update: v0.7+ now with [`spacetime`](https://github.com/spencermountain/spacetime) instead of [`moment`](https://momentjs.com) reducing bundle size by ~50% (127kb vs 42kb - gzipped + minified)!
 
 #### Demo: [ndom91.github.io/react-timezone-select/](https://ndom91.github.io/react-timezone-select/)
 
@@ -21,7 +22,7 @@ While looking around for a good one, I had trouble finding a timezone select com
 npm install react-timezone-select
 ```
 
-## 🔭 Usage 
+## 🔭 Usage
 
 ```jsx
 import React, { useState } from 'react'
@@ -36,7 +37,10 @@ const App = () => {
       <h2>react-timezone-select</h2>
       <quote>Please make a selection</quote>
       <div className='select-wrapper'>
-        <TimezoneSelect value={selectedTimezone} onChange={tz => setSelectedTimezone(tz)} />
+        <TimezoneSelect
+          value={selectedTimezone}
+          onChange={tz => setSelectedTimezone(tz)}
+        />
       </div>
       <h3>Output:</h3>
       <div className='code'>
@@ -66,10 +70,9 @@ ReactDOM.render(<App />, rootElement)
 
 Theres a small example page / implementation available in the `./examples` directory, simply run `npm start` after installing everything and webpack dev server should begin, where you will be able to find the demo at `localhost:3001`
 
-![Screenshot 1](screenshots/1.png)
+![Screenshot 1](https://github.com/ndom91/react-timezone-select/blob/main/screenshots/1.png)
 
-![Screenshot 3](screenshots/3.png)
-
+![Screenshot 3](https://github.com/ndom91/react-timezone-select/blob/main/screenshots/3.png)
 
 ## 🚧 Contributing
 
@@ -79,4 +82,3 @@ Pull requests are always welcome!
 
 - [Carlos Matallin](https://github.com/matallo/) + [Demo](https://codepen.io/matallo/pen/WEjKqG?editors=1010)
 - [react-select](https://react-select.com)
-
