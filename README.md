@@ -64,6 +64,13 @@ const rootElement = document.getElementById('root')
 ReactDOM.render(<App />, rootElement)
 ```
 
+## 🕹️ Props
+
+- `value` - `{ value: string, label: string }`
+- `onBlur` - `() => void`
+- `onChange` - `(timezone) => void`
+- any other `react-select` props, className, etc. - we pass it all on down now.
+
 ## 🖥️ Example
 
 #### Demo: [ndom91.github.io/react-timezone-select/](https://ndom91.github.io/react-timezone-select/)
