@@ -70,9 +70,9 @@ ReactDOM.render(<App />, rootElement)
 
 Theres a small example page / implementation available in the `./examples` directory, simply run `npm start` after installing everything and webpack dev server should begin, where you will be able to find the demo at `localhost:3001`
 
-> ![Screenshot 1](https://github.com/ndom91/react-timezone-select/blob/main/screenshots/1.png)
+> ![Screenshot 1](https://github.com/ndom91/react-timezone-select/blob/main/screenshots/1.png?raw=true)
 
-> ![Screenshot 3](https://github.com/ndom91/react-timezone-select/blob/main/screenshots/3.png)
+> ![Screenshot 3](https://github.com/ndom91/react-timezone-select/blob/main/screenshots/3.png?raw=true)
 
 ## 🚧 Contributing
 
