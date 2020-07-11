@@ -12,7 +12,7 @@ While looking around for a good one, I had trouble finding a timezone select com
 **1**) Adjusted the choices with Daylight Savings Time (DST)  
 **2**) Didn't have a huge list of choices to scroll through when technically only 24 (ish) are necessary.
 
-> Update: **v0.7+** now with [`spacetime`](https://github.com/spencermountain/spacetime) instead of [`moment`](https://momentjs.com) reducing bundle size by **~66%** (**127kb** vs **42kb** - gzipped + minified)!
+> Update: **v0.7+** now with [`spacetime`](https://github.com/spencermountain/spacetime) instead of [`moment`](https://momentjs.com) reducing bundle size by **~66%**!
 
 #### Demo: [ndom91.github.io/react-timezone-select](https://ndom91.github.io/react-timezone-select/)
 
