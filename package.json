@@ -12,6 +12,15 @@
     "deploy": "gh-pages -d examples/dist",
     "publish-demo": "npm run build && npm run deploy"
   },
+  "author": "Nico Domino <yo@ndo.dev>",
+  "homepage": "https://github.com/ndomino/react-timezone-select",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ndomino/react-timezone-select.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ndomino/react-timezone-select/issues"
+  },
   "keywords": [
     "react",
     "timezone",
@@ -22,7 +31,6 @@
   "files": [
     "dist/*"
   ],
-  "author": "Nico Domino <yo@ndo.dev>",
   "license": "MIT",
   "peerDependencies": {
     "react": "^16.10.2",
@@ -30,7 +38,8 @@
   },
   "dependencies": {
     "moment-timezone": "^0.5.28",
-    "react-select": "^3.1.0"
+    "react-select": "^3.1.0",
+    "spacetime": "^6.6.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.8.4",

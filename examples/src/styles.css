@@ -11,15 +11,18 @@
 .select-wrapper {
   margin-top: 50px;
   width: 500px;
+  max-width: 90vw;
 }
 
-.code, 
+.code,
 .code span {
   background-color: #efefef;
   font-family: monospace;
 }
 
 .code {
+  max-width: 90vw;
+  width: auto;
   padding: 10px;
   line-height: 2;
   font-size: 1.4rem;
