@@ -1,6 +1,6 @@
 {
   "name": "react-timezone-select",
-  "version": "0.6.2",
+  "version": "0.7.2",
   "description": "Usable, dynamic React Timezone Select",
   "main": "dist/index.js",
   "scripts": {
@@ -25,8 +25,7 @@
     "react",
     "timezone",
     "select",
-    "react-select",
-    "moment"
+    "react-select"
   ],
   "files": [
     "dist/*"
@@ -37,7 +36,6 @@
     "react-dom": "^16.10.2"
   },
   "dependencies": {
-    "moment-timezone": "^0.5.28",
     "react-select": "^3.1.0",
     "spacetime": "^6.6.1"
   },
