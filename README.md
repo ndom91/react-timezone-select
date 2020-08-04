@@ -1,16 +1,17 @@
 # 🌐⌚ react-timezone-select
 
+[![Bundlephobia](https://badgen.net/bundlephobia/minzip/react-timezone-select?style=flat-square)](https://bundlephobia.com/result?p=react-timezone-select@0.8.3)
 [![NPM Downloads](https://img.shields.io/npm/dm/react-timezone-select?style=flat-square)](https://www.npmjs.com/package/react-timezone-select)
 [![npm](https://img.shields.io/npm/v/react-timezone-select?style=flat-square)](https://www.npmjs.com/package/react-timezone-select)
-[![GitHub issues](https://img.shields.io/github/issues/ndom91/react-timezone-select?style=flat-square)](https://github.com/ndom91/react-timezone-select)
-![NPM](https://img.shields.io/npm/l/react-timezone-select?style=flat-square)
+[![GitHub issues](https://img.shields.io/github/issues/ndom91/react-timezone-select?style=flat-square)](https://github.com/ndom91/react-timezone-select/issues)
+[![MIT](https://badgen.net/badge/license/MIT/blue?style=flat-square)](https://github.com/ndom91/react-timezone-select/blob/main/LICENSE)
 
 Another react timezone select component, I know.. However this one has a few key benefits!
 
-While looking around for a good one, I had trouble finding a timezone select components which:
+While looking around for a good option, I had trouble finding a timezone select components which:
 
-**1**) Adjusted the choices with Daylight Savings Time (DST)  
-**2**) Didn't have a huge list of choices to scroll through when technically only 24 (ish) are necessary.
+1\) Adjusted the choices automatically with Daylight Savings Time (DST)  
+2\) Didn't have a huge list of choices to scroll through when technically only 24 (ish) are necessary
 
 > Update: **v0.7+** now built with [`spacetime`](https://github.com/spencermountain/spacetime) instead of [`moment.js`](https://momentjs.com), reducing bundle size by **~66%**!
 
