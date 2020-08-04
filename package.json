@@ -1,6 +1,6 @@
 {
   "name": "react-timezone-select",
-  "version": "0.8.3",
+  "version": "0.8.4",
   "description": "Usable, dynamic React Timezone Select",
   "main": "dist/index.js",
   "scripts": {
@@ -12,13 +12,13 @@
     "publish-demo": "npm run build && npm run deploy"
   },
   "author": "Nico Domino <yo@ndo.dev>",
-  "homepage": "https://github.com/ndomino/react-timezone-select",
+  "homepage": "https://github.com/ndom91/react-timezone-select",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ndomino/react-timezone-select.git"
+    "url": "git+https://github.com/ndom91/react-timezone-select.git"
   },
   "bugs": {
-    "url": "https://github.com/ndomino/react-timezone-select/issues"
+    "url": "https://github.com/ndom91/react-timezone-select/issues"
   },
   "keywords": [
     "react",
@@ -36,13 +36,13 @@
   },
   "dependencies": {
     "react-select": "^3.1.0",
-    "spacetime": "^6.6.1"
+    "spacetime": "^6.6.2"
   },
   "devDependencies": {
-    "@babel/cli": "^7.10.4",
-    "@babel/core": "^7.10.4",
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.11.0",
     "@babel/plugin-proposal-class-properties": "^7.10.4",
-    "@babel/preset-env": "^7.10.4",
+    "@babel/preset-env": "^7.11.0",
     "@babel/preset-react": "^7.10.4",
     "babel-loader": "^8.1.0",
     "css-loader": "^3.6.0",
@@ -52,7 +52,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "style-loader": "^1.2.1",
-    "webpack": "^4.43.0",
+    "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0"
   },
