@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Select from 'react-select'
 import spacetime from 'spacetime'
+import { display } from 'spacetime-informal'
 
 const i18n = {
   'Pacific/Midway': 'Midway Island, Samoa',
@@ -85,7 +86,12 @@ Object.entries(i18n)
   .reduce((obj, entry) => {
     const a = spacetime.now().goto(entry[0])
     const tz = a.timezone()
-    obj.push({ name: entry[0], label: entry[1], offset: tz.current.offset })
+    const tzDisplay = display(entry[0])
+    let abbrev = entry[0]
+    if (tzDisplay && tzDisplay.daylight && tzDisplay.standard) {
+        abbrev = a.isDST() ? tzDisplay.daylight.abbrev : tzDisplay.standard.abbrev
+    }
+    obj.push({ name: entry[0], label: entry[1], offset: tz.current.offset, abbrev: abbrev })
     return obj
   })
   .sort((a, b) => {
@@ -98,6 +104,7 @@ Object.entries(i18n)
     options.push({
       value: tz.name,
       label: `(GMT${hr.includes('-') ? hr : `+${hr}`}) ${tz.label}`,
+      abbrev: tz.abbrev,
     })
   })
 
