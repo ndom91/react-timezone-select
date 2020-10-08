@@ -17,6 +17,8 @@ While looking around for a good option, I had trouble finding a timezone select 
 
 #### Demo: [ndom91.github.io/react-timezone-select](https://ndom91.github.io/react-timezone-select/)
 
+This demo is also available in the `./examples` directory. Simply run `npm start` after installing everything and webpack dev server should begin, where you will be able to find the demo locally at `localhost:3001`.
+
 ## 🏗️ Installing
 
 ```bash
@@ -70,10 +72,10 @@ ReactDOM.render(<App />, rootElement)
 - `value` - `{ value: string, label: string }`
 - `onBlur` - `() => void`
 - `onChange` - `(timezone) => void`
-- `labelStyle` - `'original'|'altName'|'abbrev'`
+- `labelStyle` - `'original' | 'altName' | 'abbrev'`
 - Any other props get passed along to `react-select`
 
-**New in 0.9.0** We've added multiple label styles, based upon a generous pull request and the [`spacetime-informal`](https://npm.im/spacetime-informal) library.
+> **New in 0.9.0** We've added multiple label styles, based upon a generous pull request and the [`spacetime-informal`](https://npm.im/spacetime-informal) library.
 
 #### `original`
 
@@ -89,22 +91,12 @@ ReactDOM.render(<App />, rootElement)
 
 The demo page will show you all three types of values available for each selected timezone.
 
-## 🖥️ Example
-
-#### Demo: [ndom91.github.io/react-timezone-select/](https://ndom91.github.io/react-timezone-select/)
-
-Theres a small example page / implementation available in the `./examples` directory, simply run `npm start` after installing everything and webpack dev server should begin, where you will be able to find the demo at `localhost:3001`
-
-> ![Screenshot 1](https://imgur.com/6lnxeEV.png)
-
-> ![Screenshot 3](https://imgur.com/HF6E9hH.png)
-
 ## 🚧 Contributing
 
 Pull requests are always welcome!
 
 ## 🙏 Thanks
 
-- [Carlos Matallin](https://github.com/matallo/) + [Demo](https://codepen.io/matallo/pen/WEjKqG?editors=1010)
+- [Carlos Matallin](https://github.com/matallo/)
 - [spacetime](https://github.com/spencermountain/spacetime)
 - [react-select](https://react-select.com)
