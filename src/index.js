@@ -7,25 +7,22 @@ const i18n = {
   'Pacific/Midway': 'Midway Island, Samoa',
   'Pacific/Honolulu': 'Hawaii',
   'America/Juneau': 'Alaska',
-  'America/Dawson': 'Pacific Time (US and Canada); Tijuana',
-  'America/Boise': 'Mountain Time (US and Canada)',
+  'America/Dawson': 'Tijuana, Pacific Time',
+  'America/Boise': 'Mountain Time',
   'America/Chihuahua': 'Chihuahua, La Paz, Mazatlan',
   'America/Phoenix': 'Arizona',
-  'America/Chicago': 'Central Time (US and Canada)',
+  'America/Chicago': 'Central Time',
   'America/Regina': 'Saskatchewan',
   'America/Mexico_City': 'Guadalajara, Mexico City, Monterrey',
   'America/Belize': 'Central America',
-  'America/Detroit': 'Eastern Time (US and Canada)',
-  'America/Indiana/Indianapolis': 'Indiana (East)',
+  'America/Detroit': 'Eastern Time',
   'America/Bogota': 'Bogota, Lima, Quito',
-  'America/Glace_Bay': 'Atlantic Time (Canada)',
   'America/Caracas': 'Caracas, La Paz',
   'America/Santiago': 'Santiago',
   'America/St_Johns': 'Newfoundland and Labrador',
   'America/Sao_Paulo': 'Brasilia',
   'America/Argentina/Buenos_Aires': 'Buenos Aires, Georgetown',
   'America/Godthab': 'Greenland',
-  'Etc/GMT+2': 'Mid-Atlantic',
   'Atlantic/Azores': 'Azores',
   'Atlantic/Cape_Verde': 'Cape Verde Islands',
   GMT: 'Dublin, Edinburgh, Lisbon, London',
@@ -81,42 +78,6 @@ const i18n = {
   'Pacific/Tongatapu': "Nuku'alofa",
 }
 
-const options = []
-Object.entries(i18n)
-  .reduce((obj, entry) => {
-    const a = spacetime.now().goto(entry[0])
-    const tz = a.timezone()
-    const tzDisplay = display(entry[0])
-    let abbrev = entry[0]
-    let altName = entry[0]
-    if (tzDisplay && tzDisplay.daylight && tzDisplay.standard) {
-      abbrev = a.isDST() ? tzDisplay.daylight.abbrev : tzDisplay.standard.abbrev
-      altName = a.isDST() ? tzDisplay.daylight.name : tzDisplay.standard.name
-    }
-    obj.push({
-      name: entry[0],
-      label: entry[1],
-      offset: tz.current.offset,
-      abbrev: abbrev,
-      altName: altName,
-    })
-    return obj
-  })
-  .sort((a, b) => {
-    return a.offset - b.offset
-  })
-  .map(tz => {
-    if (tz.offset === undefined) return false
-    const min = tz.offset * 60
-    const hr = `${(min / 60) ^ 0}:` + (min % 60 === 0 ? '00' : min % 60)
-    options.push({
-      value: tz.name,
-      label: `(GMT${hr.includes('-') ? hr : `+${hr}`}) ${tz.label}`,
-      abbrev: tz.abbrev,
-      altName: tz.altName,
-    })
-  })
-
 const TimezoneSelect = ({
   value,
   onBlur,
@@ -159,21 +120,25 @@ const TimezoneSelect = ({
         if (tz.offset === undefined) return false
         let label = ''
         const min = tz.offset * 60
-        const hr = `${(min / 60) ^ 0}:` + (min % 60 === 0 ? '00' : min % 60)
+        const hr =
+          `${(min / 60) ^ 0}:` + (min % 60 === 0 ? '00' : Math.abs(min % 60))
+        const prefix = `(GMT${hr.includes('-') ? hr : `+${hr}`}) ${tz.label}`
+
         switch (labelStyle) {
           case 'original':
-            label = `(GMT${hr.includes('-') ? hr : `+${hr}`}) ${tz.label}`
+            label = prefix
             break
           case 'altName':
-            label = `(GMT${hr.includes('-') ? hr : `+${hr}`}) ${tz.label} 
-            ${!tz.altName.includes('/') ? `(${tz.altName})` : ''}`
+            label = `${prefix} ${
+              !tz.altName.includes('/') ? `(${tz.altName})` : ''
+            }`
             break
           case 'abbrev':
-            label = `(GMT${hr.includes('-') ? hr : `+${hr}`}) ${tz.label} 
+            label = `${prefix} 
             ${tz.abbrev.length < 5 ? `(${tz.abbrev})` : ''}`
             break
           default:
-            label = `(GMT${hr.includes('-') ? hr : `+${hr}`}) ${tz.label}`
+            label = `${prefix}`
         }
         options.push({
           value: tz.name,
