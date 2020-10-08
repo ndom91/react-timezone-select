@@ -75,7 +75,7 @@ ReactDOM.render(<App />, rootElement)
 - `labelStyle` - `'original' | 'altName' | 'abbrev'`
 - Any other props get passed along to `react-select`
 
-> **New in 0.9.0** We've added multiple label styles, based upon a generous pull request and the [`spacetime-informal`](https://npm.im/spacetime-informal) library.
+> **New in 0.9.0** - We've added multiple label styles, based upon a generous pull request and the [`spacetime-informal`](https://npm.im/spacetime-informal) library.
 
 #### `original`
 

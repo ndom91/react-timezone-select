@@ -58,9 +58,12 @@ const App = () => {
       <div className='select-wrapper'>
         <TimezoneSelect
           value={selectedTimezone}
-          onChange={tz => setSelectedTimezone(tz)}
+          onChange={tz => {
+            console.log(tz)
+            setSelectedTimezone(tz)
+          }}
           labelStyle={labelStyle}
-          // onBlur={() => console.log('Blur!')}
+          onBlur={() => console.log('Blur!')}
         />
       </div>
       <h3>Output:</h3>
