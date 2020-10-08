@@ -58,11 +58,11 @@ const App = () => {
         </span>
         <br />
         <span style={{ marginLeft: '20px', fontWeight: '500' }}>
-          label: '{selectedTimezone.altName}'
+          altName: '{selectedTimezone.altName}'
         </span>
         <br />
         <span style={{ marginLeft: '20px', fontWeight: '500' }}>
-          label: '{selectedTimezone.abbrev}'
+          abbrev: '{selectedTimezone.abbrev}'
         </span>
         <br />
         {'}'}

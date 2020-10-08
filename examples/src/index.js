@@ -91,22 +91,14 @@ const App = () => {
           label: '{selectedTimezone.label}'
         </span>
         <br />
-        {selectedTimezone.altName && (
-          <>
-            <span style={{ marginLeft: '20px', fontWeight: '500' }}>
-              name: '{selectedTimezone.altName}'
-            </span>
-            <br />
-          </>
-        )}
-        {selectedTimezone.abbrev && (
-          <>
-            <span style={{ marginLeft: '20px', fontWeight: '500' }}>
-              abbrev: '{selectedTimezone.abbrev}'
-            </span>
-            <br />
-          </>
-        )}
+        <span style={{ marginLeft: '20px', fontWeight: '500' }}>
+          altName: '{selectedTimezone.altName}'
+        </span>
+        <br />
+        <span style={{ marginLeft: '20px', fontWeight: '500' }}>
+          abbrev: '{selectedTimezone.abbrev}'
+        </span>
+        <br />
         {'}'}
       </div>
     </div>
