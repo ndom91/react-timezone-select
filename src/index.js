@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useMemo } from 'react'
 import Select from 'react-select'
 import spacetime from 'spacetime'
 import { display } from 'spacetime-informal'
@@ -88,10 +88,18 @@ Object.entries(i18n)
     const tz = a.timezone()
     const tzDisplay = display(entry[0])
     let abbrev = entry[0]
+    let altName = entry[0]
     if (tzDisplay && tzDisplay.daylight && tzDisplay.standard) {
-        abbrev = a.isDST() ? tzDisplay.daylight.abbrev : tzDisplay.standard.abbrev
+      abbrev = a.isDST() ? tzDisplay.daylight.abbrev : tzDisplay.standard.abbrev
+      altName = a.isDST() ? tzDisplay.daylight.name : tzDisplay.standard.name
     }
-    obj.push({ name: entry[0], label: entry[1], offset: tz.current.offset, abbrev: abbrev })
+    obj.push({
+      name: entry[0],
+      label: entry[1],
+      offset: tz.current.offset,
+      abbrev: abbrev,
+      altName: altName,
+    })
     return obj
   })
   .sort((a, b) => {
@@ -105,11 +113,77 @@ Object.entries(i18n)
       value: tz.name,
       label: `(GMT${hr.includes('-') ? hr : `+${hr}`}) ${tz.label}`,
       abbrev: tz.abbrev,
+      altName: tz.altName,
     })
   })
 
-const TimezoneSelect = ({ value, onBlur, onChange, ...props }) => {
+const TimezoneSelect = ({
+  value,
+  onBlur,
+  onChange,
+  labelStyle = 'original',
+  ...props
+}) => {
   const [selectedTimezone, setSelectedTimezone] = useState({})
+
+  const getOptions = useMemo(() => {
+    const options = []
+    Object.entries(i18n)
+      .reduce((obj, entry) => {
+        const a = spacetime.now().goto(entry[0])
+        const tz = a.timezone()
+        const tzDisplay = display(entry[0])
+        let abbrev = entry[0]
+        let altName = entry[0]
+        if (tzDisplay && tzDisplay.daylight && tzDisplay.standard) {
+          abbrev = a.isDST()
+            ? tzDisplay.daylight.abbrev
+            : tzDisplay.standard.abbrev
+          altName = a.isDST()
+            ? tzDisplay.daylight.name
+            : tzDisplay.standard.name
+        }
+        obj.push({
+          name: entry[0],
+          label: entry[1],
+          offset: tz.current.offset,
+          abbrev: abbrev,
+          altName: altName,
+        })
+        return obj
+      })
+      .sort((a, b) => {
+        return a.offset - b.offset
+      })
+      .map(tz => {
+        if (tz.offset === undefined) return false
+        let label = ''
+        const min = tz.offset * 60
+        const hr = `${(min / 60) ^ 0}:` + (min % 60 === 0 ? '00' : min % 60)
+        switch (labelStyle) {
+          case 'original':
+            label = `(GMT${hr.includes('-') ? hr : `+${hr}`}) ${tz.label}`
+            break
+          case 'altName':
+            label = `(GMT${hr.includes('-') ? hr : `+${hr}`}) ${tz.label} 
+            ${!tz.altName.includes('/') ? `(${tz.altName})` : ''}`
+            break
+          case 'abbrev':
+            label = `(GMT${hr.includes('-') ? hr : `+${hr}`}) ${tz.label} 
+            ${tz.abbrev.length < 5 ? `(${tz.abbrev})` : ''}`
+            break
+          default:
+            label = `(GMT${hr.includes('-') ? hr : `+${hr}`}) ${tz.label}`
+        }
+        options.push({
+          value: tz.name,
+          label: label,
+          abbrev: tz.abbrev,
+          altName: tz.altName,
+        })
+      })
+    return options
+  }, [labelStyle])
 
   const handleChange = tz => {
     setSelectedTimezone(tz)
@@ -120,8 +194,8 @@ const TimezoneSelect = ({ value, onBlur, onChange, ...props }) => {
     <Select
       value={value || selectedTimezone}
       onChange={handleChange}
-      options={options}
-      onBlur={() => onBlur}
+      options={getOptions}
+      onBlur={onBlur}
       {...props}
     />
   )
