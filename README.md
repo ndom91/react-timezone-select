@@ -70,7 +70,24 @@ ReactDOM.render(<App />, rootElement)
 - `value` - `{ value: string, label: string }`
 - `onBlur` - `() => void`
 - `onChange` - `(timezone) => void`
-- any other `react-select` props, className, etc. - we pass it all on down now.
+- `labelStyle` - `'original'|'altName'|'abbrev'`
+- Any other props get passed along to `react-select`
+
+**New in 0.9.0** We've added multiple label styles, based upon a generous pull request and the [`spacetime-informal`](https://npm.im/spacetime-informal) library.
+
+#### `original`
+
+![original labelstyle](https://user-images.githubusercontent.com/7415984/95472863-cecf7400-0983-11eb-8b2b-5cdb04e57881.png)
+
+#### `altName`
+
+![altName labelstyle](https://user-images.githubusercontent.com/7415984/95472987-ed356f80-0983-11eb-8bb5-5cf389f2244a.png)
+
+#### `abbrev`
+
+![abbrev labelstyle](https://user-images.githubusercontent.com/7415984/95472714-a9426a80-0983-11eb-9a5f-301a51c92d8a.png)
+
+The demo page will show you all three types of values available for each selected timezone.
 
 ## 🖥️ Example
 
