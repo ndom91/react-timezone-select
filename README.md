@@ -80,6 +80,15 @@ ReactDOM.render(<App />, rootElement)
 - `value` - `{ value: string, label: string }`
 - `onBlur` - `() => void`
 - `onChange` - `(timezone) => void`
+  - Where `timezone` is, for example:
+  ```
+   {
+     value: 'America/Juneau'
+     label: '(GMT-8:00) Alaska (AHDT)'
+     altName: 'Alaskan Daylight Time'
+     abbrev: 'AHDT'
+   }
+  ```
 - `labelStyle` - `'original' | 'altName' | 'abbrev'`
 - Any other props get passed along to `react-select`
 
@@ -87,15 +96,15 @@ ReactDOM.render(<App />, rootElement)
 
 #### `original`
 
-![original labelstyle](https://user-images.githubusercontent.com/7415984/95472863-cecf7400-0983-11eb-8b2b-5cdb04e57881.png)
+![original labelstyle](https://imgur.com/NveHGpg.png)
 
 #### `altName`
 
-![altName labelstyle](https://user-images.githubusercontent.com/7415984/95472987-ed356f80-0983-11eb-8bb5-5cf389f2244a.png)
+![altName labelstyle](https://imgur.com/7sxgNbj.png)
 
 #### `abbrev`
 
-![abbrev labelstyle](https://user-images.githubusercontent.com/7415984/95472714-a9426a80-0983-11eb-9a5f-301a51c92d8a.png)
+![abbrev labelstyle](https://imgur.com/WQPNlw2.png)
 
 The demo page will show you all three types of values available for each selected timezone.
 
