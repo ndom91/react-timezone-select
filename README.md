@@ -57,6 +57,14 @@ const App = () => {
           label: '{selectedTimezone.label}'
         </span>
         <br />
+        <span style={{ marginLeft: '20px', fontWeight: '500' }}>
+          label: '{selectedTimezone.altName}'
+        </span>
+        <br />
+        <span style={{ marginLeft: '20px', fontWeight: '500' }}>
+          label: '{selectedTimezone.abbrev}'
+        </span>
+        <br />
         {'}'}
       </div>
     </div>
