@@ -157,7 +157,7 @@ const TimezoneSelect = ({
 
   return (
     <Select
-      value={value || selectedTimezone}
+      value={value.value}
       onChange={handleChange}
       options={getOptions}
       onBlur={onBlur}
