@@ -157,7 +157,11 @@ const TimezoneSelect = ({
 
   return (
     <Select
-      value={value.value ? value.value : value}
+      value={
+        typeof value === 'object'
+          ? value
+          : { value: value, label: selectedTimezone.label }
+      }
       onChange={handleChange}
       options={getOptions}
       onBlur={onBlur}

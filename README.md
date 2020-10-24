@@ -42,7 +42,7 @@ const App = () => {
       <div className='select-wrapper'>
         <TimezoneSelect
           value={selectedTimezone}
-          onChange={tz => setSelectedTimezone(tz)}
+          onChange={setSelectedTimezone}
         />
       </div>
       <h3>Output:</h3>
@@ -90,7 +90,7 @@ ReactDOM.render(<App />, rootElement)
    }
   ```
 - `labelStyle` - `'original' | 'altName' | 'abbrev'`
-- Any other props get passed along to `react-select`
+- Any other [`react-select`](https://github.com/jedwatson/react-select#props) props
 
 > **New in 0.9.0** - We've added multiple label styles, based upon a generous pull request and the [`spacetime-informal`](https://npm.im/spacetime-informal) library.
 
