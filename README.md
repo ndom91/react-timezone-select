@@ -77,7 +77,7 @@ ReactDOM.render(<App />, rootElement)
 
 ## 🕹️ Props
 
-- `value` - `{ value: string, label: string }`
+- `value` - `{ value: string, label: string, altName: string, abbrev: string }`
 - `onBlur` - `() => void`
 - `onChange` - `(timezone) => void`
   - Where `timezone` is, for example:
