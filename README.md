@@ -19,6 +19,8 @@ While looking around for a good option, I had trouble finding a timezone select 
 
 This demo is also available in the `./examples` directory. Simply run `npm start` after installing everything and webpack dev server should begin, where you will be able to find the demo locally at `localhost:3001`.
 
+There is also a [Codesandbox](https://codesandbox.io/s/react-timezone-select-usage-z37hf) usage example for adjusting the timezone of a selected `spacetime` object, like how one might use this in a real app.
+
 ## 🏗️ Installing
 
 ```bash
