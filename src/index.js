@@ -153,15 +153,23 @@ const TimezoneSelect = ({
   const handleChange = tz => {
     setSelectedTimezone(tz)
     onChange && onChange(tz)
+  } 
+
+  const constructTz = value => {
+    let returnTz
+    if (value.value && value.label)  {
+      returnTz = value
+    } else if (value.value && !value.label) {
+      returnTz = getOptions.find(tz => tz.value === value.value)
+    } else if (typeof value === 'string' && !selectedTimezone.label) {
+      returnTz = getOptions.find(tz => tz.value === value)
+    }
+    return returnTz
   }
 
   return (
     <Select
-      value={
-        typeof value === 'object'
-          ? value
-          : { value: value, label: selectedTimezone.label }
-      }
+      value={constructTz(value)}
       onChange={handleChange}
       options={getOptions}
       onBlur={onBlur}

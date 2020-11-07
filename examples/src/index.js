@@ -38,33 +38,33 @@ const App = () => {
         checked={labelStyle}
       >
         <span>Label Style:</span>
-        <label for='original'>
+        <label htmlFor='original'>
           <input
             type='radio'
             id='original'
             name='labelStyle'
             value='original'
-            checked={labelStyle === 'original'}
+            defaultChecked={labelStyle === 'original'}
           />
           original
         </label>
-        <label for='altName'>
+        <label htmlFor='altName'>
           <input
             type='radio'
             id='altName'
             name='labelStyle'
             value='altName'
-            checked={labelStyle === 'altName'}
+            // defaultChecked={labelStyle === 'altName'}
           />
           altName
         </label>
-        <label for='abbrev'>
+        <label htmlFor='abbrev'>
           <input
             type='radio'
             id='abbrev'
             name='labelStyle'
             value='abbrev'
-            checked={labelStyle === 'abbrev'}
+            // defaultChecked={labelStyle === 'abbrev'}
           />
           abbrev
         </label>
