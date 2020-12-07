@@ -1,6 +1,6 @@
 {
   "name": "react-timezone-select",
-  "version": "0.9.8",
+  "version": "0.9.9",
   "description": "Usable, dynamic React Timezone Select",
   "main": "dist/index.js",
   "scripts": {
@@ -30,6 +30,10 @@
     "dist/*"
   ],
   "license": "MIT",
+  "module": "./dist/index.js",
+  "exports": {
+    ".": "./dist/index.js"
+  },
   "peerDependencies": {
     "react": "^16.10.2",
     "react-dom": "^16.10.2"
