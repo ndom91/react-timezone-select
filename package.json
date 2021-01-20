@@ -1,10 +1,10 @@
 {
   "name": "react-timezone-select",
-  "version": "0.9.9",
+  "version": "0.9.10",
   "description": "Usable, dynamic React Timezone Select",
   "main": "dist/index.js",
   "scripts": {
-    "start": "webpack-dev-server --mode development",
+    "start": "webpack serve --mode development",
     "transpile": "babel src -d dist -s inline --copy-files",
     "prepublishOnly": "npm run transpile",
     "build": "webpack --mode production",
@@ -35,31 +35,29 @@
     ".": "./dist/index.js"
   },
   "peerDependencies": {
-    "react": "^16.10.2",
-    "react-dom": "^16.10.2"
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
   },
   "dependencies": {
-    "react-select": "^3.1.0",
-    "spacetime": "^6.6.2",
-    "spacetime-informal": "^0.3.0"
+    "react-select": "^3.2.0",
+    "spacetime": "^6.12.2",
+    "spacetime-informal": "^0.5.0"
   },
   "devDependencies": {
-    "@babel/cli": "^7.10.5",
-    "@babel/core": "^7.11.0",
-    "@babel/plugin-proposal-class-properties": "^7.10.4",
-    "@babel/preset-env": "^7.11.0",
-    "@babel/preset-react": "^7.10.4",
-    "babel-loader": "^8.1.0",
-    "css-loader": "^3.6.0",
-    "gh-pages": "^2.2.0",
-    "html-webpack-plugin": "^3.2.0",
-    "prettier": "^2.0.5",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "style-loader": "^1.2.1",
-    "webpack": "^4.44.1",
-    "webpack-cli": "^3.3.12",
-    "webpack-dev-server": "^3.11.0"
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.10",
+    "@babel/plugin-proposal-class-properties": "^7.12.1",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/preset-react": "^7.12.10",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^5.0.1",
+    "gh-pages": "^3.1.0",
+    "html-webpack-plugin": "^4.5.1",
+    "prettier": "^2.2.1",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.16.0",
+    "webpack-cli": "^4.4.0",
+    "webpack-dev-server": "^3.11.2"
   },
   "prettier": {
     "singleQuote": true,
