@@ -92,23 +92,33 @@ ReactDOM.render(<App />, rootElement)
    }
   ```
 - `labelStyle` - `'original' | 'altName' | 'abbrev'`
+- `timezone` - Custom Timezone Object
 - Any other [`react-select`](https://github.com/jedwatson/react-select#props) props
 
-> **New in 0.9.0** - We've added multiple label styles, based upon a generous pull request and the [`spacetime-informal`](https://npm.im/spacetime-informal) library.
+## 🕒 Custom Timezones
 
-#### `original`
+New in `v0.9.11`, we shipped a new prop to allow users to fully replace the timezone choices, or simply append a few custom choices.
 
-![original labelstyle](https://imgur.com/NveHGpg.png)
+The prop `timezones` takes an object where the key/value format is simply `'Official Timezone Name' : 'Your Label for it'`. So for example:
 
-#### `altName`
+```
+import { TimezoneSelect, i18nTimezones } from 'react-timezone-select'
+...
 
-![altName labelstyle](https://imgur.com/7sxgNbj.png)
+<TimezoneSelect
+  value={selectedTimezone}
+  onChange={setSelectedTimezone}
+  labelStyle={labelStyle}
+  onBlur={() => console.log('Blur!')}
+  timezones={{
+     ...i18nTimezones
+    'America/Lima': 'Pittsburgh',
+    'Europe/Berlin': 'Frankfurt',
+  }}
+/>
+```
 
-#### `abbrev`
-
-![abbrev labelstyle](https://imgur.com/WQPNlw2.png)
-
-The demo page will show you all three types of values available for each selected timezone.
+Here you can see we're simply appending two new choices to the existing ones. You can omit the `i18nTimezones` object in the prop though and pass in your own complete custom list of timezone options.
 
 ## 🚧 Contributing
 
