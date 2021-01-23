@@ -35,42 +35,42 @@ import ReactDOM from 'react-dom'
 import TimezoneSelect from 'react-timezone-select'
 
 const App = () => {
-  const [selectedTimezone, setSelectedTimezone] = useState({})
+	const [selectedTimezone, setSelectedTimezone] = useState({})
 
-  return (
-    <div className='App'>
-      <h2>react-timezone-select</h2>
-      <blockquote>Please make a selection</blockquote>
-      <div className='select-wrapper'>
-        <TimezoneSelect
-          value={selectedTimezone}
-          onChange={setSelectedTimezone}
-        />
-      </div>
-      <h3>Output:</h3>
-      <div className='code'>
-        <span style={{ fontWeight: '500' }}>selectedTimezone: {'{'}</span>{' '}
-        <br />
-        <span style={{ marginLeft: '20px', fontWeight: '500' }}>
-          value: '{selectedTimezone.value}'
-        </span>
-        <br />
-        <span style={{ marginLeft: '20px', fontWeight: '500' }}>
-          label: '{selectedTimezone.label}'
-        </span>
-        <br />
-        <span style={{ marginLeft: '20px', fontWeight: '500' }}>
-          altName: '{selectedTimezone.altName}'
-        </span>
-        <br />
-        <span style={{ marginLeft: '20px', fontWeight: '500' }}>
-          abbrev: '{selectedTimezone.abbrev}'
-        </span>
-        <br />
-        {'}'}
-      </div>
-    </div>
-  )
+	return (
+		<div className='App'>
+			<h2>react-timezone-select</h2>
+			<blockquote>Please make a selection</blockquote>
+			<div className='select-wrapper'>
+				<TimezoneSelect
+					value={selectedTimezone}
+					onChange={setSelectedTimezone}
+				/>
+			</div>
+			<h3>Output:</h3>
+			<div className='code'>
+				<span style={{ fontWeight: '500' }}>selectedTimezone: {'{'}</span>{' '}
+				<br />
+				<span style={{ marginLeft: '20px', fontWeight: '500' }}>
+					value: '{selectedTimezone.value}'
+				</span>
+				<br />
+				<span style={{ marginLeft: '20px', fontWeight: '500' }}>
+					label: '{selectedTimezone.label}'
+				</span>
+				<br />
+				<span style={{ marginLeft: '20px', fontWeight: '500' }}>
+					altName: '{selectedTimezone.altName}'
+				</span>
+				<br />
+				<span style={{ marginLeft: '20px', fontWeight: '500' }}>
+					abbrev: '{selectedTimezone.abbrev}'
+				</span>
+				<br />
+				{'}'}
+			</div>
+		</div>
+	)
 }
 
 const rootElement = document.getElementById('root')
@@ -97,9 +97,9 @@ ReactDOM.render(<App />, rootElement)
 
 ## 🕒 Custom Timezones
 
-New in `v0.9.11`, we shipped a new prop to allow users to fully replace the timezone choices, or simply append a few custom choices.
+Available in `v0.9.11+` - we've shipped a new prop to allow users to fully replace the timezone choices, or simply append custom choices of their own.
 
-The prop `timezones` takes an object where the key/value format is simply `'Official Timezone Name' : 'Your Label for it'`. So for example:
+The prop `timezones` takes an object where the key/value format is: `'Official Timezone Name' : 'Your Label for it'`. i.e.:
 
 ```
 import { TimezoneSelect, i18nTimezones } from 'react-timezone-select'
@@ -108,8 +108,6 @@ import { TimezoneSelect, i18nTimezones } from 'react-timezone-select'
 <TimezoneSelect
   value={selectedTimezone}
   onChange={setSelectedTimezone}
-  labelStyle={labelStyle}
-  onBlur={() => console.log('Blur!')}
   timezones={{
      ...i18nTimezones
     'America/Lima': 'Pittsburgh',
@@ -118,7 +116,7 @@ import { TimezoneSelect, i18nTimezones } from 'react-timezone-select'
 />
 ```
 
-Here you can see we're simply appending two new choices to the existing ones. You can omit the `i18nTimezones` object in the prop though and pass in your own complete custom list of timezone options.
+Here you can see how to append two new choices to the existing ones (`i18nTimezones`). You can also omit the `i18nTimezones` object in the prop and pass your own completely custom list of timezone choices.
 
 ## 🚧 Contributing
 
@@ -126,6 +124,7 @@ Pull requests are always welcome!
 
 ## 🙏 Thanks
 
+- [All Contributors](https://github.com/ndom91/react-timezone-select/graphs/contributors)
 - [Carlos Matallin](https://github.com/matallo/)
 - [spacetime](https://github.com/spencermountain/spacetime)
 - [react-select](https://react-select.com)
