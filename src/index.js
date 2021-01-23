@@ -3,7 +3,7 @@ import Select from 'react-select'
 import spacetime from 'spacetime'
 import { display } from 'spacetime-informal'
 
-const i18n = {
+export const i18nTimezones = {
   'Pacific/Midway': 'Midway Island, Samoa',
   'Pacific/Honolulu': 'Hawaii',
   'America/Juneau': 'Alaska',
@@ -83,13 +83,14 @@ const TimezoneSelect = ({
   onBlur,
   onChange,
   labelStyle = 'original',
+  timezones,
   ...props
 }) => {
   const [selectedTimezone, setSelectedTimezone] = useState({})
-
+  timezones = timezones || i18nTimezones
   const getOptions = useMemo(() => {
     const options = []
-    Object.entries(i18n)
+    Object.entries(timezones)
       .reduce((obj, entry) => {
         const a = spacetime.now().goto(entry[0])
         const tz = a.timezone()
