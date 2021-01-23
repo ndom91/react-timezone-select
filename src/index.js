@@ -8,6 +8,7 @@ export const i18nTimezones = {
   'Pacific/Honolulu': 'Hawaii',
   'America/Juneau': 'Alaska',
   'America/Boise': 'Mountain Time',
+  'America/Dawson': 'Dawson, Yukon',
   'America/Chihuahua': 'Chihuahua, La Paz, Mazatlan',
   'America/Phoenix': 'Arizona',
   'America/Chicago': 'Central Time',
@@ -154,11 +155,11 @@ const TimezoneSelect = ({
   const handleChange = tz => {
     setSelectedTimezone(tz)
     onChange && onChange(tz)
-  } 
+  }
 
   const constructTz = value => {
     let returnTz
-    if (value.value && value.label)  {
+    if (value.value && value.label) {
       returnTz = value
     } else if (value.value && !value.label) {
       returnTz = getOptions.find(tz => tz.value === value.value)

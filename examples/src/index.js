@@ -49,23 +49,11 @@ const App = () => {
           original
         </label>
         <label htmlFor='altName'>
-          <input
-            type='radio'
-            id='altName'
-            name='labelStyle'
-            value='altName'
-            // defaultChecked={labelStyle === 'altName'}
-          />
+          <input type='radio' id='altName' name='labelStyle' value='altName' />
           altName
         </label>
         <label htmlFor='abbrev'>
-          <input
-            type='radio'
-            id='abbrev'
-            name='labelStyle'
-            value='abbrev'
-            // defaultChecked={labelStyle === 'abbrev'}
-          />
+          <input type='radio' id='abbrev' name='labelStyle' value='abbrev' />
           abbrev
         </label>
       </div>
