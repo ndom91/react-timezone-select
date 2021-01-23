@@ -99,7 +99,9 @@ ReactDOM.render(<App />, rootElement)
 
 Available in `v0.9.11+` - we've shipped a new prop to allow users to fully replace the timezone choices, or simply append custom choices of their own.
 
-The prop `timezones` takes an object where the key/value format is: `'Official Timezone Name' : 'Your Label for it'`. i.e.:
+The prop `timezones` takes an object where the key/value format is: `'Official Timezone Name' : 'Your Label for it'`.
+
+For example:
 
 ```
 import { TimezoneSelect, i18nTimezones } from 'react-timezone-select'
