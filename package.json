@@ -1,6 +1,6 @@
 {
   "name": "react-timezone-select",
-  "version": "0.9.13",
+  "version": "0.9.14",
   "description": "Usable, dynamic React Timezone Select",
   "main": "dist/index.js",
   "scripts": {
