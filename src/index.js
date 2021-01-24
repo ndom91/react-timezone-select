@@ -74,7 +74,8 @@ export const i18nTimezones = {
   'Asia/Vladivostok': 'Vladivostok',
   'Pacific/Guam': 'Guam, Port Moresby',
   'Asia/Magadan': 'Magadan, Solomon Islands, New Caledonia',
-  'Pacific/Fiji': 'Fiji Islands, Kamchatka, Marshall Islands',
+  'Asia/Kamchatka': 'Kamchatka, Marshall Islands',
+  'Pacific/Fiji': 'Fiji Islands',
   'Pacific/Auckland': 'Auckland, Wellington',
   'Pacific/Tongatapu': "Nuku'alofa",
 }
