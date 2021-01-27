@@ -104,7 +104,7 @@ The prop `timezones` takes an object where the key/value format is: `'Official T
 For example:
 
 ```
-import { TimezoneSelect, i18nTimezones } from 'react-timezone-select'
+import TimezoneSelect, { i18nTimezones } from 'react-timezone-select'
 ...
 
 <TimezoneSelect
