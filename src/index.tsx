@@ -4,7 +4,7 @@ import spacetime from 'spacetime'
 import { display } from 'spacetime-informal'
 import type { Props as SelectProps } from 'react-select'
 
-type ICustomTimezone = {
+export type ICustomTimezone = {
   [key: string]: string
 }
 
@@ -98,7 +98,7 @@ type Props = {
   props?: SelectProps
 }
 
-type TimezoneObj = {
+type TimezoneSelectOptions = {
   value: string
   label: string
   abbrev?: string
@@ -113,20 +113,6 @@ type Entry = {
   name: string
 }
 
-type EntryArr = {
-  label: string
-  abbrev: string
-  altName: string
-  offset: number
-  name: string
-}[]
-
-// Type of entry after Object.entries() is used
-type CustomTimezoneEntry = [
-  keyof ICustomTimezone,
-  ICustomTimezone[keyof ICustomTimezone]
-]
-
 const TimezoneSelect = ({
   value,
   onBlur,
@@ -138,7 +124,7 @@ const TimezoneSelect = ({
   timezones = timezones || i18nTimezones
 
   const getOptions = React.useMemo(() => {
-    const options: TimezoneObj = []
+    const options: TimezoneSelectOptions = []
 
     console.log(Object.entries(timezones))
 
@@ -165,7 +151,7 @@ const TimezoneSelect = ({
           altName: altName,
         })
         return obj
-      }, {} as EntryArr)
+      }, {} as Entry[])
       .sort((a: Entry, b: Entry) => {
         return a.offset - b.offset
       })
