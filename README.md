@@ -19,12 +19,12 @@ While looking around for a good option, I had trouble finding a timezone select 
 
 This demo is also available in the `./examples` directory. Simply run `npm start` after installing everything and webpack dev server should begin, where you will be able to find the demo locally at `localhost:3001`.
 
-There is also a [Codesandbox](https://codesandbox.io/s/react-timezone-select-usage-z37hf) usage example for adjusting the timezone of a selected `spacetime` object, like how one might use this in a real app.
+There is another Demo available on [Codesandbox](https://codesandbox.io/s/react-timezone-select-usage-z37hf) showing how to adjust the timezone of a selected `spacetime` object, like how one might use this in a real app.
 
 ## 🏗️ Installing
 
 ```bash
-npm install --save-prod react-timezone-select
+npm install react-timezone-select
 ```
 
 ## 🔭 Usage
@@ -59,14 +59,6 @@ const App = () => {
           label: '{selectedTimezone.label}'
         </span>
         <br />
-        <span style={{ marginLeft: '20px', fontWeight: '500' }}>
-          altName: '{selectedTimezone.altName}'
-        </span>
-        <br />
-        <span style={{ marginLeft: '20px', fontWeight: '500' }}>
-          abbrev: '{selectedTimezone.abbrev}'
-        </span>
-        <br />
         {'}'}
       </div>
     </div>
@@ -78,6 +70,8 @@ ReactDOM.render(<App />, rootElement)
 ```
 
 ## 🕹️ Props
+
+> Update **v0.10.1+** we're now built with Typescript!
 
 - `value` - `{ value: string, label: string, altName: string, abbrev: string }`
 - `onBlur` - `() => void`
@@ -111,7 +105,7 @@ import TimezoneSelect, { i18nTimezones } from 'react-timezone-select'
   value={selectedTimezone}
   onChange={setSelectedTimezone}
   timezones={{
-     ...i18nTimezones
+     ...i18nTimezones,
     'America/Lima': 'Pittsburgh',
     'Europe/Berlin': 'Frankfurt',
   }}

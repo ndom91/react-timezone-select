@@ -4,7 +4,11 @@ import spacetime from 'spacetime'
 import { display } from 'spacetime-informal'
 import type { Props as SelectProps } from 'react-select'
 
-export const i18nTimezones = {
+type ICustomTimezone = {
+  [key: string]: string
+}
+
+export const i18nTimezones: ICustomTimezone = {
   'Pacific/Midway': 'Midway Island, Samoa',
   'Pacific/Honolulu': 'Hawaii',
   'America/Juneau': 'Alaska',
@@ -81,18 +85,16 @@ export const i18nTimezones = {
   'Pacific/Tongatapu': "Nuku'alofa",
 }
 
-export type FixMeLater = any
-
 export type ITimezone = { value: string; label: string }
 
 export type ILabelStyle = 'original' | 'altName' | 'abbrev'
 
 type Props = {
   value: ITimezone
-  onChange: (arg0: ITimezone) => void
+  onChange: (ITimezone) => void
   onBlur?: () => void
   labelStyle?: ILabelStyle
-  timezones?: FixMeLater
+  timezones?: ICustomTimezone
   props?: SelectProps
 }
 
@@ -111,6 +113,20 @@ type Entry = {
   name: string
 }
 
+type EntryArr = {
+  label: string
+  abbrev: string
+  altName: string
+  offset: number
+  name: string
+}[]
+
+// Type of entry after Object.entries() is used
+type CustomTimezoneEntry = [
+  keyof ICustomTimezone,
+  ICustomTimezone[keyof ICustomTimezone]
+]
+
 const TimezoneSelect = ({
   value,
   onBlur,
@@ -119,15 +135,13 @@ const TimezoneSelect = ({
   timezones,
   ...props
 }: Props) => {
-  const [selectedTimezone, setSelectedTimezone] = React.useState<ITimezone>({
-    value: '',
-    label: '',
-  })
-
   timezones = timezones || i18nTimezones
 
   const getOptions = React.useMemo(() => {
     const options: TimezoneObj = []
+
+    console.log(Object.entries(timezones))
+
     Object.entries(timezones)
       .reduce((obj, entry) => {
         const a = spacetime.now().goto(entry[0])
@@ -151,7 +165,7 @@ const TimezoneSelect = ({
           altName: altName,
         })
         return obj
-      })
+      }, {} as EntryArr)
       .sort((a: Entry, b: Entry) => {
         return a.offset - b.offset
       })
@@ -190,7 +204,6 @@ const TimezoneSelect = ({
   }, [labelStyle, timezones])
 
   const handleChange = (tz: ITimezone) => {
-    setSelectedTimezone(tz)
     onChange && onChange(tz)
   }
 

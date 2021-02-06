@@ -1,6 +1,10 @@
 import * as React from 'react'
 import * as ReactDOM from 'react-dom'
-import TimezoneSelect, { ITimezone, ILabelStyle } from '../../src'
+import TimezoneSelect, {
+  i18nTimezones,
+  ITimezone,
+  ILabelStyle,
+} from '../../src'
 import './styles.css'
 
 const App = () => {
@@ -37,7 +41,6 @@ const App = () => {
           marginTop: '50px',
         }}
         onChange={handleLabelChange}
-        // checked={labelStyle}
       >
         <span>Label Style:</span>
         <label htmlFor='original'>
@@ -65,6 +68,11 @@ const App = () => {
           onChange={setSelectedTimezone}
           labelStyle={labelStyle}
           onBlur={() => console.log('Blur!')}
+          timezones={{
+            ...i18nTimezones,
+            'America/Lima': 'Pittsburgh',
+            'Europe/Berlin': 'Frankfurt',
+          }}
         />
       </div>
       <h3>Return Value:</h3>
