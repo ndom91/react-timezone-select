@@ -5,12 +5,9 @@
   "main": "dist/index.js",
   "scripts": {
     "start": "webpack serve --mode development",
-    "transpile-old": "babel src -d dist -s inline --copy-files",
-    "prepublishOnly-old": "npm run transpile",
-    "build-old": "webpack --mode production",
+    "prepublish": "tsc",
     "build": "tsc --project ./tsconfig.json",
-    "deploy": "gh-pages -d example/dist",
-    "postpublish": "npm run build && npm run deploy"
+    "deploy": "gh-pages -d example/dist"
   },
   "author": "Nico Domino <yo@ndo.dev>",
   "homepage": "https://github.com/ndom91/react-timezone-select",
@@ -31,7 +28,7 @@
   "files": [
     "dist/*"
   ],
-  "types": "./index.d.ts",
+  "types": "./dist/index.d.ts",
   "module": "./dist/index.js",
   "exports": {
     ".": "./dist/index.js"
