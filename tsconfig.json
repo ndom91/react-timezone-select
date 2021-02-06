@@ -1,0 +1,23 @@
+{
+  "include": ["src/index.tsx"],
+  "typeRoots": ["./src/types", "./node_modules/@types"],
+  "compilerOptions": {
+    "module": "esnext",
+    "target": "esnext",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "sourceMap": true,
+    "outDir": "./dist",
+    "jsx": "react",
+    "baseUrl": "src",
+    "paths": {},
+    /* Additional Options */
+    "strict": false,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "importsNotUsedAsValues": "error",
+    "declaration": true
+  }
+}

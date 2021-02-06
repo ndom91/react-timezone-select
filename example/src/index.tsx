@@ -1,11 +1,18 @@
-import React, { useState } from 'react'
-import ReactDOM from 'react-dom'
-import TimezoneSelect from '../../src'
+import * as React from 'react'
+import * as ReactDOM from 'react-dom'
+import TimezoneSelect, {
+  i18nTimezones,
+  ITimezone,
+  ILabelStyle,
+} from '../../src'
 import './styles.css'
 
 const App = () => {
-  const [selectedTimezone, setSelectedTimezone] = useState({})
-  const [labelStyle, setLabelStyle] = useState('original')
+  const [selectedTimezone, setSelectedTimezone] = React.useState<ITimezone>({
+    value: '',
+    label: '',
+  })
+  const [labelStyle, setLabelStyle] = React.useState<ILabelStyle>('original')
 
   const handleLabelChange = event => {
     setLabelStyle(event.target.value)
@@ -18,7 +25,6 @@ const App = () => {
         <p>
           <a
             href='https://ndo.dev'
-            alt='ndom91 homepage'
             target='_blank'
             rel='noopener noreferrer'
             className='author'
@@ -35,7 +41,6 @@ const App = () => {
           marginTop: '50px',
         }}
         onChange={handleLabelChange}
-        checked={labelStyle}
       >
         <span>Label Style:</span>
         <label htmlFor='original'>
@@ -63,25 +68,22 @@ const App = () => {
           onChange={setSelectedTimezone}
           labelStyle={labelStyle}
           onBlur={() => console.log('Blur!')}
+          timezones={{
+            ...i18nTimezones,
+            'America/Lima': 'Pittsburgh',
+            'Europe/Berlin': 'Frankfurt',
+          }}
         />
       </div>
       <h3>Return Value:</h3>
       <div className='code'>
-        <span style={{ fontWeight: '500' }}>{'{'}</span> <br />
-        <span style={{ marginLeft: '20px', fontWeight: '500' }}>
+        <span style={{ fontWeight: 500 }}>{'{'}</span> <br />
+        <span style={{ marginLeft: '20px', fontWeight: 500 }}>
           value: '{selectedTimezone.value}'
         </span>
         <br />
-        <span style={{ marginLeft: '20px', fontWeight: '500' }}>
+        <span style={{ marginLeft: '20px', fontWeight: 500 }}>
           label: '{selectedTimezone.label}'
-        </span>
-        <br />
-        <span style={{ marginLeft: '20px', fontWeight: '500' }}>
-          altName: '{selectedTimezone.altName}'
-        </span>
-        <br />
-        <span style={{ marginLeft: '20px', fontWeight: '500' }}>
-          abbrev: '{selectedTimezone.abbrev}'
         </span>
         <br />
         {'}'}

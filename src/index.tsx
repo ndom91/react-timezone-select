@@ -1,9 +1,14 @@
-import React, { useState, useMemo } from 'react'
+import * as React from 'react'
 import Select from 'react-select'
 import spacetime from 'spacetime'
 import { display } from 'spacetime-informal'
+import type { Props as SelectProps } from 'react-select'
 
-export const i18nTimezones = {
+export type ICustomTimezone = {
+  [key: string]: string
+}
+
+export const i18nTimezones: ICustomTimezone = {
   'Pacific/Midway': 'Midway Island, Samoa',
   'Pacific/Honolulu': 'Hawaii',
   'America/Juneau': 'Alaska',
@@ -80,6 +85,34 @@ export const i18nTimezones = {
   'Pacific/Tongatapu': "Nuku'alofa",
 }
 
+export type ITimezone = { value: string; label: string }
+
+export type ILabelStyle = 'original' | 'altName' | 'abbrev'
+
+type Props = {
+  value: ITimezone
+  onChange: (ITimezone) => void
+  onBlur?: () => void
+  labelStyle?: ILabelStyle
+  timezones?: ICustomTimezone
+  props?: SelectProps
+}
+
+type TimezoneSelectOptions = {
+  value: string
+  label: string
+  abbrev?: string
+  altName?: string
+}[]
+
+type Entry = {
+  label: string
+  abbrev: string
+  altName: string
+  offset: number
+  name: string
+}
+
 const TimezoneSelect = ({
   value,
   onBlur,
@@ -87,11 +120,14 @@ const TimezoneSelect = ({
   labelStyle = 'original',
   timezones,
   ...props
-}) => {
-  const [selectedTimezone, setSelectedTimezone] = useState({})
+}: Props) => {
   timezones = timezones || i18nTimezones
-  const getOptions = useMemo(() => {
-    const options = []
+
+  const getOptions = React.useMemo(() => {
+    const options: TimezoneSelectOptions = []
+
+    console.log(Object.entries(timezones))
+
     Object.entries(timezones)
       .reduce((obj, entry) => {
         const a = spacetime.now().goto(entry[0])
@@ -115,11 +151,11 @@ const TimezoneSelect = ({
           altName: altName,
         })
         return obj
-      })
-      .sort((a, b) => {
+      }, {} as Entry[])
+      .sort((a: Entry, b: Entry) => {
         return a.offset - b.offset
       })
-      .map(tz => {
+      .map((tz: Entry) => {
         if (tz.offset === undefined) return false
         let label = ''
         const min = tz.offset * 60
@@ -151,28 +187,27 @@ const TimezoneSelect = ({
         })
       })
     return options
-  }, [labelStyle])
+  }, [labelStyle, timezones])
 
-  const handleChange = tz => {
-    setSelectedTimezone(tz)
+  const handleChange = (tz: ITimezone) => {
     onChange && onChange(tz)
   }
 
-  const constructTz = value => {
+  const normalizeTz = (value: ITimezone | string) => {
     let returnTz
-    if (value.value && value.label) {
-      returnTz = value
+    if (typeof value === 'string') {
+      returnTz = getOptions.find(tz => tz.value === value)
     } else if (value.value && !value.label) {
       returnTz = getOptions.find(tz => tz.value === value.value)
-    } else if (typeof value === 'string' && !selectedTimezone.label) {
-      returnTz = getOptions.find(tz => tz.value === value)
+    } else {
+      returnTz = value
     }
     return returnTz
   }
 
   return (
     <Select
-      value={constructTz(value)}
+      value={normalizeTz(value)}
       onChange={handleChange}
       options={getOptions}
       onBlur={onBlur}

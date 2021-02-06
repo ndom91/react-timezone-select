@@ -1,5 +1,5 @@
 src
-examples
-babel.config.js
+example
 webpack.config.js
+tsconfig.json
 .gitignore
