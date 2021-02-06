@@ -73,7 +73,7 @@ ReactDOM.render(<App />, rootElement)
 
 > Update **v0.10.1+** we're now built with Typescript!
 
-- `value` - `{ value: string, label: string, altName: string, abbrev: string }`
+- `value` - `{ value: string, label: string }`
 - `onBlur` - `() => void`
 - `onChange` - `(timezone) => void`
   - Where `timezone` is, for example:
@@ -81,8 +81,6 @@ ReactDOM.render(<App />, rootElement)
    {
      value: 'America/Juneau'
      label: '(GMT-8:00) Alaska (AHDT)'
-     altName: 'Alaskan Daylight Time'
-     abbrev: 'AHDT'
    }
   ```
 - `labelStyle` - `'original' | 'altName' | 'abbrev'`

@@ -151,7 +151,7 @@ const TimezoneSelect = ({
           altName: altName,
         })
         return obj
-      }, {} as Entry[])
+      }, [] as Entry[])
       .sort((a: Entry, b: Entry) => {
         return a.offset - b.offset
       })
