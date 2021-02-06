@@ -2,6 +2,8 @@ import React, { useState, useMemo } from 'react'
 import Select from 'react-select'
 import spacetime from 'spacetime'
 import { display } from 'spacetime-informal'
+import { Props as SelectProps } from '@types/react-select'
+import { i18nTypes } from './types'
 
 export const i18nTimezones = {
   'Pacific/Midway': 'Midway Island, Samoa',
@@ -80,6 +82,20 @@ export const i18nTimezones = {
   'Pacific/Tongatapu': "Nuku'alofa",
 }
 
+enum labelStyle {
+  original = 'original',
+  altName = 'altName',
+  abbrev = 'abbrev',
+}
+
+type Props = {
+  value: String | { name: String; value: String }
+  onBlur: () => void
+  onChange: () => void
+  labelStyle?: labelStyle
+  timezones?: i18nTypes
+}
+
 const TimezoneSelect = ({
   value,
   onBlur,
@@ -87,7 +103,7 @@ const TimezoneSelect = ({
   labelStyle = 'original',
   timezones,
   ...props
-}) => {
+}: Props) => {
   const [selectedTimezone, setSelectedTimezone] = useState({})
   timezones = timezones || i18nTimezones
   const getOptions = useMemo(() => {
