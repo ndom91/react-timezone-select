@@ -1,14 +1,38 @@
+// {
+//   "include": ["src/index.tsx"],
+//   "compilerOptions": {
+//     "outDir": "./dist/",
+//     "sourceMap": true,
+//     "strictNullChecks": false,
+//     "module": "es2020",
+//     "target": "es6",
+//     "esModuleInterop": true,
+//     "allowJs": false,
+//     "moduleResolution": "node",
+//     "allowSyntheticDefaultImports": true,
+//     "jsx": "react"
+//   },
+//   "typeRoots": ["./src/types", "./node_modules/@types"]
+// }
 {
   "include": ["src/index.tsx"],
+  "typeRoots": ["./src/types", "./node_modules/@types"],
   "compilerOptions": {
-    "outDir": "./dist/",
-    "sourceMap": true,
-    "strictNullChecks": true,
-    "module": "ESNext",
-    "jsx": "react",
-    "target": "es6",
-    "allowJs": true,
+    "module": "esnext",
+    "target": "esnext",
     "moduleResolution": "node",
-    "allowSyntheticDefaultImports": true
+    "esModuleInterop": true,
+    "sourceMap": true,
+    "outDir": "./dist",
+    "jsx": "react",
+    "baseUrl": "src",
+    "paths": {},
+    /* Additional Options */
+    "strict": false,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "importsNotUsedAsValues": "error"
   }
 }

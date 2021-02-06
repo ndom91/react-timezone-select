@@ -1,33 +1,46 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const htmlWebpackPlugin = new HtmlWebpackPlugin({
-  template: path.join(__dirname, 'examples/src/index.html'),
-  filename: './index.html'
-})
+
 module.exports = {
-  entry: path.join(__dirname, 'examples/src/index.js'),
-  output: {
-    path: path.join(__dirname, 'examples/dist'),
-    filename: 'bundle.js'
-  },
+  entry: path.join(__dirname, 'example', 'src', 'index.tsx'),
+  target: 'web',
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
-        use: 'babel-loader',
-        exclude: /node_modules/
+        test: /\.tsx$/,
+        use: 'ts-loader',
+        exclude: /node_modules/,
       },
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader']
-      }
-    ]
+        use: ['style-loader', 'css-loader'],
+      },
+      {
+        enforce: 'pre',
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'source-map-loader',
+      },
+    ],
   },
-  plugins: [htmlWebpackPlugin],
   resolve: {
-    extensions: ['.js', '.jsx']
+    extensions: ['.js', '.tsx', '.ts'],
   },
+  output: {
+    path: path.resolve(__dirname, 'example', 'dist'),
+    filename: '[name].js',
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: path.join(__dirname, 'example', 'src', 'index.html'),
+    }),
+  ],
+  externals: {
+    react: 'React',
+    'react-dom': 'ReactDOM',
+  },
+  devtool: 'source-map',
   devServer: {
-    port: 3001
-  }
+    port: 3001,
+  },
 }

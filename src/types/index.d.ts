@@ -75,6 +75,9 @@ export const i18nTypes: {
   'Pacific/Tongatapu': string
 }
 export default TimezoneSelect
+
+declare module 'spacetime-informal'
+
 declare function TimezoneSelect({
   value,
   onBlur,
