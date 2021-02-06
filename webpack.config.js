@@ -35,10 +35,6 @@ module.exports = {
       template: path.join(__dirname, 'example', 'src', 'index.html'),
     }),
   ],
-  externals: {
-    react: 'React',
-    'react-dom': 'ReactDOM',
-  },
   devtool: 'source-map',
   devServer: {
     port: 3001,

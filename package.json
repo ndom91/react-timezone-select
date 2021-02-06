@@ -2,6 +2,7 @@
   "name": "react-timezone-select",
   "version": "0.9.15",
   "description": "Usable, dynamic React Timezone Select",
+  "main": "dist/index.js",
   "scripts": {
     "start": "webpack serve --mode development",
     "transpile-old": "babel src -d dist -s inline --copy-files",
@@ -27,7 +28,14 @@
     "select",
     "react-select"
   ],
+  "files": [
+    "dist/*"
+  ],
   "types": "./index.d.ts",
+  "module": "./dist/index.js",
+  "exports": {
+    ".": "./dist/index.js"
+  },
   "peerDependencies": {
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
@@ -45,6 +53,8 @@
     "gh-pages": "^3.1.0",
     "html-webpack-plugin": "^5.0.0",
     "prettier": "^2.2.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
     "source-map-loader": "^2.0.0",
     "style-loader": "^2.0.0",
     "ts-loader": "^8.0.15",
