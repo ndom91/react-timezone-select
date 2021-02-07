@@ -14,6 +14,7 @@ While looking around for a good option, I had trouble finding a timezone select 
 2\) Didn't have a huge list of choices to scroll through when technically only 24 (ish) are necessary
 
 > Update: **v0.7+** now built with [`spacetime`](https://github.com/spencermountain/spacetime) instead of [`moment.js`](https://momentjs.com), reducing bundle size by **~66%**!
+> Update **v0.10.1+** we're now built with Typescript!
 
 #### Demo: [ndom91.github.io/react-timezone-select](https://ndom91.github.io/react-timezone-select/)
 
@@ -49,17 +50,15 @@ const App = () => {
       </div>
       <h3>Output:</h3>
       <div className='code'>
-        <span style={{ fontWeight: '500' }}>selectedTimezone: {'{'}</span>{' '}
-        <br />
-        <span style={{ marginLeft: '20px', fontWeight: '500' }}>
-          value: '{selectedTimezone.value}'
-        </span>
-        <br />
-        <span style={{ marginLeft: '20px', fontWeight: '500' }}>
-          label: '{selectedTimezone.label}'
-        </span>
-        <br />
-        {'}'}
+        <pre
+          style={{
+            margin: '0 20px',
+            fontWeight: 500,
+            fontFamily: 'monospace',
+          }}
+        >
+          {JSON.stringify(selectedTimezone, null, 2)}
+        </pre>
       </div>
     </div>
   )
@@ -71,8 +70,6 @@ ReactDOM.render(<App />, rootElement)
 
 ## 🕹️ Props
 
-> Update **v0.10.1+** we're now built with Typescript!
-
 - `value` - `{ value: string, label: string }`
 - `onBlur` - `() => void`
 - `onChange` - `(timezone) => void`
@@ -80,18 +77,18 @@ ReactDOM.render(<App />, rootElement)
   ```
    {
      value: 'America/Juneau'
-     label: '(GMT-8:00) Alaska (AHDT)'
+     label: '(GMT-8:00) Alaska'
    }
   ```
 - `labelStyle` - `'original' | 'altName' | 'abbrev'`
-- `timezone` - Custom Timezone Object
+- `timezone` - Custom Timezone Object - see more below
 - Any other [`react-select`](https://github.com/jedwatson/react-select#props) props
 
 ## 🕒 Custom Timezones
 
 Available in `v0.9.11+` - we've shipped a new prop to allow users to fully replace the timezone choices, or simply append custom choices of their own.
 
-The prop `timezones` takes an object where the key/value format is: `'Official Timezone Name' : 'Your Label for it'`.
+The prop `timezones` takes an object where the key/value format is: `'Official Timezone Name' : 'Your Label for it'`, don't worry we'll prepend the `(GMT ...)` part - just pass the city(s) you want to display.
 
 For example:
 

@@ -1,5 +1,10 @@
 import React from 'react'
-import { render, fireEvent } from '@testing-library/react'
+import {
+  render,
+  screen,
+  findAllByText,
+  fireEvent,
+} from '@testing-library/react'
 
 import TimezoneSelect, { i18nTimezones } from '../index'
 
@@ -78,6 +83,25 @@ test('load and displays custom timezone', async () => {
   )
 
   expect(getByText('(GMT-5:00) Pittsburgh')).toBeInTheDocument()
+})
+
+test('load and displays only 2 custom timezone choices', async () => {
+  const { debug, container } = render(
+    <TimezoneSelect
+      value={''}
+      timezones={{
+        'America/Lima': 'Pittsburgh',
+        'Europe/Berlin': 'Frankfurt',
+      }}
+      menuIsOpen={true}
+      onChange={e => e}
+    />
+  )
+  debug()
+
+  const items = await findAllByText(container, /^\(GMT[+-][0-9]{1,2}:[0-9]{2}/)
+  console.log(items)
+  expect(items).toHaveLength(2)
 })
 
 test('load and passes react-select props', async () => {
