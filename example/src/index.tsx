@@ -77,16 +77,15 @@ const App = () => {
       </div>
       <h3>Return Value:</h3>
       <div className='code'>
-        <span style={{ fontWeight: 500 }}>{'{'}</span> <br />
-        <span style={{ marginLeft: '20px', fontWeight: 500 }}>
-          value: '{selectedTimezone.value}'
-        </span>
-        <br />
-        <span style={{ marginLeft: '20px', fontWeight: 500 }}>
-          label: '{selectedTimezone.label}'
-        </span>
-        <br />
-        {'}'}
+        <pre
+          style={{
+            margin: '0 20px',
+            fontWeight: 500,
+            fontFamily: 'monospace',
+          }}
+        >
+          {JSON.stringify(selectedTimezone, null, 2)}
+        </pre>
       </div>
     </div>
   )
