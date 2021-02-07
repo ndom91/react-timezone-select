@@ -2,7 +2,7 @@ import * as React from 'react'
 import Select from 'react-select'
 import spacetime from 'spacetime'
 import { display } from 'spacetime-informal'
-import type { NamedProps as ReactSelectProps } from 'react-select'
+import type { Props as ReactSelectProps } from 'react-select'
 
 export type ICustomTimezone = {
   [key: string]: string
@@ -102,7 +102,11 @@ type Props = {
   onBlur?: () => void
   labelStyle?: ILabelStyle
   timezones?: ICustomTimezone
-  props?: ReactSelectProps
+
+  // react-select
+  placeholder?: string
+  menuIsOpen?: boolean
+  ReactSelectProps?
 }
 
 type Entry = {
