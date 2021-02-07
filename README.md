@@ -4,6 +4,7 @@
 [![NPM Downloads](https://img.shields.io/npm/dm/react-timezone-select?style=flat-square)](https://www.npmjs.com/package/react-timezone-select)
 [![npm](https://img.shields.io/npm/v/react-timezone-select?style=flat-square)](https://www.npmjs.com/package/react-timezone-select)
 [![GitHub issues](https://img.shields.io/github/issues/ndom91/react-timezone-select?style=flat-square)](https://github.com/ndom91/react-timezone-select/issues)
+[![Test CI](https://github.com/ndom91/react-timezone-select/workflows/Tests%20CI/badge.svg)](https://github.com/ndom91/react-timezone-select/actions?query=workflow%3A%22Tests+CI%22)
 [![MIT](https://badgen.net/badge/license/MIT/blue?style=flat-square)](https://github.com/ndom91/react-timezone-select/blob/main/LICENSE)
 
 Another react timezone select component, I know.. However this one has a few key benefits!
