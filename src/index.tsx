@@ -2,7 +2,7 @@ import * as React from 'react'
 import Select from 'react-select'
 import spacetime from 'spacetime'
 import { display } from 'spacetime-informal'
-import type { Props as SelectProps } from 'react-select'
+import type { NamedProps as ReactSelectProps } from 'react-select'
 
 export type ICustomTimezone = {
   [key: string]: string
@@ -85,7 +85,14 @@ export const i18nTimezones: ICustomTimezone = {
   'Pacific/Tongatapu': "Nuku'alofa",
 }
 
-export type ITimezone = { value: string; label: string }
+export type TimezoneSelectOption = {
+  value: string
+  label: string
+  abbrev?: string
+  altName?: string
+}
+
+export type ITimezone = TimezoneSelectOption | string
 
 export type ILabelStyle = 'original' | 'altName' | 'abbrev'
 
@@ -95,15 +102,8 @@ type Props = {
   onBlur?: () => void
   labelStyle?: ILabelStyle
   timezones?: ICustomTimezone
-  props?: SelectProps
+  props?: ReactSelectProps
 }
-
-type TimezoneSelectOptions = {
-  value: string
-  label: string
-  abbrev?: string
-  altName?: string
-}[]
 
 type Entry = {
   label: string
@@ -118,15 +118,11 @@ const TimezoneSelect = ({
   onBlur,
   onChange,
   labelStyle = 'original',
-  timezones,
+  timezones = i18nTimezones,
   ...props
 }: Props) => {
-  timezones = timezones || i18nTimezones
-
   const getOptions = React.useMemo(() => {
-    const options: TimezoneSelectOptions = []
-
-    console.log(Object.entries(timezones))
+    const options: TimezoneSelectOption[] = []
 
     Object.entries(timezones)
       .reduce((obj, entry) => {
@@ -193,7 +189,7 @@ const TimezoneSelect = ({
     onChange && onChange(tz)
   }
 
-  const normalizeTz = (value: ITimezone | string) => {
+  const normalizeTz = (value: ITimezone) => {
     let returnTz
     if (typeof value === 'string') {
       returnTz = getOptions.find(tz => tz.value === value)

@@ -6,8 +6,12 @@
   "scripts": {
     "start": "webpack serve --mode development",
     "prepublish": "tsc",
+    "postpublish": "npm run build:example && npm run deploy",
     "build": "tsc --project ./tsconfig.json",
-    "deploy": "gh-pages -d example/dist"
+    "build:example": "webpack --mode production",
+    "deploy": "gh-pages -d example/dist",
+    "test": "jest",
+    "test:watch": "jest --watch"
   },
   "author": "Nico Domino <yo@ndo.dev>",
   "homepage": "https://github.com/ndom91/react-timezone-select",
@@ -38,9 +42,14 @@
     "react-dom": "^17.0.1"
   },
   "dependencies": {
+    "@testing-library/jest-dom": "^5.11.9",
+    "@testing-library/react": "^11.2.5",
+    "@types/jest": "^26.0.20",
+    "jest": "^26.6.3",
     "react-select": "^4.0.2",
     "spacetime": "^6.12.3",
-    "spacetime-informal": "^0.5.0"
+    "spacetime-informal": "^0.5.0",
+    "ts-jest": "^26.5.0"
   },
   "devDependencies": {
     "@types/react": "^17.0.1",
