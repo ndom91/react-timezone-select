@@ -104,9 +104,10 @@ type Props = {
   timezones?: ICustomTimezone
 
   // react-select
+  // TODO: get official prop types in here
   placeholder?: string
   menuIsOpen?: boolean
-  ReactSelectProps?
+  ReactSelectProps? // not working for some reason
 }
 
 type Entry = {
