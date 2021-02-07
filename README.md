@@ -15,7 +15,8 @@ While looking around for a good option, I had trouble finding a timezone select 
 2\) Didn't have a huge list of choices to scroll through when technically only 24 (ish) are necessary
 
 > Update: **v0.7+** now built with [`spacetime`](https://github.com/spencermountain/spacetime) instead of [`moment.js`](https://momentjs.com), reducing bundle size by **~66%**!
-> Update **v0.10.1+** we're now built with Typescript!
+
+> Update: **v0.10.1+** we're now built with Typescript!
 
 #### Demo: [ndom91.github.io/react-timezone-select](https://ndom91.github.io/react-timezone-select/)
 
