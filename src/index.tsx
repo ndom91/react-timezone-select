@@ -4,6 +4,8 @@ import spacetime from 'spacetime'
 import { display } from 'spacetime-informal'
 import type { Props as ReactSelectProps } from 'react-select'
 
+type ExcludeValue<T> = Pick<T, Exclude<keyof T, 'value'>>
+
 export type ICustomTimezone = {
   [key: string]: string
 }
@@ -85,6 +87,8 @@ export const i18nTimezones: ICustomTimezone = {
   'Pacific/Tongatapu': "Nuku'alofa",
 }
 
+export type ILabelStyle = 'original' | 'altName' | 'abbrev'
+
 export type TimezoneSelectOption = {
   value: string
   label: string
@@ -94,20 +98,10 @@ export type TimezoneSelectOption = {
 
 export type ITimezone = TimezoneSelectOption | string
 
-export type ILabelStyle = 'original' | 'altName' | 'abbrev'
-
-type Props = {
+interface Props extends ExcludeValue<ReactSelectProps> {
   value: ITimezone
-  onChange: (ITimezone) => void
-  onBlur?: () => void
   labelStyle?: ILabelStyle
   timezones?: ICustomTimezone
-
-  // react-select
-  // TODO: get official prop types in here
-  placeholder?: string
-  menuIsOpen?: boolean
-  ReactSelectProps? // not working for some reason
 }
 
 type Entry = {

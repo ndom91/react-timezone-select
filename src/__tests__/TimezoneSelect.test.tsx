@@ -1,10 +1,5 @@
 import React from 'react'
-import {
-  render,
-  screen,
-  findAllByText,
-  fireEvent,
-} from '@testing-library/react'
+import { render, findAllByText, fireEvent } from '@testing-library/react'
 
 import TimezoneSelect, { i18nTimezones } from '../index'
 
