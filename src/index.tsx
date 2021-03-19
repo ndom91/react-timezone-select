@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React from 'react'
 import Select from 'react-select'
 import spacetime from 'spacetime'
 import { display } from 'spacetime-informal'
