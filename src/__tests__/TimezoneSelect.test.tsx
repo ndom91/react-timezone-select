@@ -19,7 +19,9 @@ test('loads and displays default timezone - passing string', async () => {
   )
 
   expect(
-    getByText('(GMT+1:00) Amsterdam, Berlin, Bern, Rome, Stockholm, Vienna')
+    getByText(
+      /\(GMT\+[1-2]:00\) Amsterdam, Berlin, Bern, Rome, Stockholm, Vienna$/
+    )
   ).toBeInTheDocument()
 })
 
@@ -35,7 +37,9 @@ test('loads and displays default timezone - passing full object', async () => {
   )
 
   expect(
-    getByText('(GMT+1:00) Amsterdam, Berlin, Bern, Rome, Stockholm, Vienna')
+    getByText(
+      /\(GMT\+[1-2]:00\) Amsterdam, Berlin, Bern, Rome, Stockholm, Vienna$/
+    )
   ).toBeInTheDocument()
 })
 
@@ -49,7 +53,7 @@ test('load and displays labelStyle - altName', async () => {
   )
 
   expect(
-    getByText('(GMT-9:00) Alaska (Alaskan Standard Time)')
+    getByText(/\(GMT-[8-9]:00\) Alaska \(Alaskan (Daylight|Standard) Time\)$/)
   ).toBeInTheDocument()
 })
 
@@ -62,7 +66,7 @@ test('load and displays labelStyle - abbrev', async () => {
     />
   )
 
-  expect(getByText('(GMT-9:00) Alaska (AHST)')).toBeInTheDocument()
+  expect(getByText(/\(GMT-[8-9]:00\) Alaska \(AH[D|S]T\)$/)).toBeInTheDocument()
 })
 
 test('load and displays custom timezone', async () => {
@@ -77,7 +81,7 @@ test('load and displays custom timezone', async () => {
     />
   )
 
-  expect(getByText('(GMT-5:00) Pittsburgh')).toBeInTheDocument()
+  expect(getByText(/\(GMT-[5-6]:00\) Pittsburgh$/)).toBeInTheDocument()
 })
 
 test('load and displays only 2 custom timezone choices', async () => {
