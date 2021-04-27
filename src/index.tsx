@@ -115,26 +115,28 @@ const TimezoneSelect = ({
 }: Props) => {
   const getOptions = React.useMemo(() => {
     return Object.entries(timezones)
-      .reduce((obj, entry) => {
-        const a = spacetime.now().goto(entry[0])
-        const tz = a.timezone()
-        const tzDisplay = display(entry[0])
+      .reduce((selectOptions, zone) => {
+        const now = spacetime.now().goto(zone[0])
+        const tz = now.timezone()
+        const tzStrings = display(zone[0])
+
         let label = ''
-        let abbrev = entry[0]
-        let altName = entry[0]
-        if (tzDisplay && tzDisplay.daylight && tzDisplay.standard) {
-          abbrev = a.isDST()
-            ? tzDisplay.daylight.abbrev
-            : tzDisplay.standard.abbrev
-          altName = a.isDST()
-            ? tzDisplay.daylight.name
-            : tzDisplay.standard.name
+        let abbrev = zone[0]
+        let altName = zone[0]
+
+        if (tzStrings && tzStrings.daylight && tzStrings.standard) {
+          abbrev = now.isDST()
+            ? tzStrings.daylight.abbrev
+            : tzStrings.standard.abbrev
+          altName = now.isDST()
+            ? tzStrings.daylight.name
+            : tzStrings.standard.name
         }
 
         const min = tz.current.offset * 60
         const hr =
           `${(min / 60) ^ 0}:` + (min % 60 === 0 ? '00' : Math.abs(min % 60))
-        const prefix = `(GMT${hr.includes('-') ? hr : `+${hr}`}) ${entry[1]}`
+        const prefix = `(GMT${hr.includes('-') ? hr : `+${hr}`}) ${zone[1]}`
 
         switch (labelStyle) {
           case 'original':
@@ -149,30 +151,30 @@ const TimezoneSelect = ({
           default:
             label = `${prefix}`
         }
-        obj.push({
-          value: entry[0],
+
+        selectOptions.push({
+          value: zone[0],
           label: label,
           offset: tz.current.offset,
           abbrev: abbrev,
           altName: altName,
         })
-        return obj
+
+        return selectOptions
       }, [] as ITimezoneOption[])
-      .sort((a: ITimezoneOption, b: ITimezoneOption) => {
-        return a.offset - b.offset
-      })
+      .sort((a: ITimezoneOption, b: ITimezoneOption) => a.offset - b.offset)
   }, [labelStyle, timezones])
 
   const handleChange = (tz: ITimezone) => {
     onChange && onChange(tz)
   }
 
-  const parseTimezone = (value: ITimezone) => {
-    if (typeof value === 'object' && value.value && value.label) return value
-    if (typeof value === 'string') {
-      return getOptions.find(tz => tz.value === value)
-    } else if (value.value && !value.label) {
-      return getOptions.find(tz => tz.value === value.value)
+  const parseTimezone = (zone: ITimezone) => {
+    if (typeof zone === 'object' && zone.value && zone.label) return zone
+    if (typeof zone === 'string') {
+      return getOptions.find(tz => tz.value === zone)
+    } else if (zone.value && !zone.label) {
+      return getOptions.find(tz => tz.value === zone.value)
     }
   }
 

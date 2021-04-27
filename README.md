@@ -77,6 +77,31 @@ const rootElement = document.getElementById('root')
 ReactDOM.render(<App />, rootElement)
 ```
 
+### Setting Users Timezone as Default
+
+If you'd like the user's own timezone to be set as the initially selected option, we can make use of the new `Intl` browser api by setting the default state value to `Intl.DateTimeFormat().resolvedOptions().timeZone`.
+
+```jsx
+const [timezone, setTimezone] = useState(
+  Intl.DateTimeFormat().resolvedOptions().timeZone
+)
+```
+
+Thanks [@ndrwksr](https://github.com/ndom91/react-timezone-select/issues/25)!
+
+### ⚠ Next.js Users
+
+For now, Next.js isn't great about handling ESM packages. Until this gets fixed, a workaround involves using [`next-transpile-modules`](https://www.npmjs.com/package/next-transpile-modules) like so:
+
+```js
+// next.config.js
+const withTM = require('next-transpile-modules')(['react-timezone-select']);
+
+module.exports = withTM({
+  ...
+})
+```
+
 ## 🕹️ Props
 
 - `value` - Initial Timezone `string`, i.e. `'Europe/Amsterdam'` or the full object from the onChange function: `{ value: string, label: string, abbrev: string, altName: string }`
@@ -120,19 +145,6 @@ import TimezoneSelect, { i18nTimezones } from 'react-timezone-select'
 ```
 
 This will generate two additional choices in our dropdown, one with the label `'(GMT-5:00) Pittsburgh'` and another with `'(GMT+1:00) Frankfurt'`. One could also omit spreading in the `i18nTimezones` object and pass in ones own completely custom list of timezone choices.
-
-## ⚠ Next.js Users
-
-For now, Next.js isn't great about handling ESM packages. Until this gets fixed, a workaround invovles using `next-transpile-modules` like so:
-
-```js
-// next.config.js
-const withTM = require('next-transpile-modules')(['react-timezone-select']);
-
-module.exports = withTM({
-  ...
-})
-```
 
 ## 🚧 Contributing
 
