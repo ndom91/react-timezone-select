@@ -140,6 +140,7 @@ test('select drop-downs must use the fireEvent.change', () => {
     value: 'Pacific/Honolulu',
     label: '(GMT-10:00) Hawaii',
     altName: 'Pacific/Honolulu',
+    offset: -10,
     abbrev: 'Pacific/Honolulu',
   })
 })
