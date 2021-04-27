@@ -36,9 +36,7 @@
   "type": "module",
   "types": "./dist/index.d.ts",
   "module": "./dist/index.js",
-  "exports": {
-    ".": "./dist/index.js"
-  },
+  "exports": "./dist/index.js",
   "peerDependencies": {
     "react": "^17.0.1",
     "react-dom": "^17.0.1"

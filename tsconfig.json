@@ -3,7 +3,7 @@
   "typeRoots": ["./src/types", "./node_modules/@types"],
   "exclude": ["example/"],
   "compilerOptions": {
-    "module": "esnext",
+    "module": "es2020",
     "target": "esnext",
     "moduleResolution": "node",
     "esModuleInterop": true,
@@ -15,7 +15,6 @@
     "strict": false,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
     "importsNotUsedAsValues": "error",
     "declaration": true
