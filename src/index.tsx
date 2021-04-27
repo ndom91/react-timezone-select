@@ -89,27 +89,20 @@ export const i18nTimezones: ICustomTimezone = {
 
 export type ILabelStyle = 'original' | 'altName' | 'abbrev'
 
-export type TimezoneSelectOption = {
+export type ITimezoneOption = {
   value: string
   label: string
   abbrev?: string
   altName?: string
+  offset?: number
 }
 
-export type ITimezone = TimezoneSelectOption | string
+export type ITimezone = ITimezoneOption | string
 
 interface Props extends ExcludeValue<ReactSelectProps> {
   value: ITimezone
   labelStyle?: ILabelStyle
   timezones?: ICustomTimezone
-}
-
-type Entry = {
-  label: string
-  abbrev: string
-  altName: string
-  offset: number
-  name: string
 }
 
 const TimezoneSelect = ({
@@ -121,13 +114,12 @@ const TimezoneSelect = ({
   ...props
 }: Props) => {
   const getOptions = React.useMemo(() => {
-    const options: TimezoneSelectOption[] = []
-
-    Object.entries(timezones)
+    return Object.entries(timezones)
       .reduce((obj, entry) => {
         const a = spacetime.now().goto(entry[0])
         const tz = a.timezone()
         const tzDisplay = display(entry[0])
+        let label = ''
         let abbrev = entry[0]
         let altName = entry[0]
         if (tzDisplay && tzDisplay.daylight && tzDisplay.standard) {
@@ -138,71 +130,55 @@ const TimezoneSelect = ({
             ? tzDisplay.daylight.name
             : tzDisplay.standard.name
         }
-        obj.push({
-          name: entry[0],
-          label: entry[1],
-          offset: tz.current.offset,
-          abbrev: abbrev,
-          altName: altName,
-        })
-        return obj
-      }, [] as Entry[])
-      .sort((a: Entry, b: Entry) => {
-        return a.offset - b.offset
-      })
-      .map((tz: Entry) => {
-        if (tz.offset === undefined) return false
-        let label = ''
-        const min = tz.offset * 60
+
+        const min = tz.current.offset * 60
         const hr =
           `${(min / 60) ^ 0}:` + (min % 60 === 0 ? '00' : Math.abs(min % 60))
-        const prefix = `(GMT${hr.includes('-') ? hr : `+${hr}`}) ${tz.label}`
+        const prefix = `(GMT${hr.includes('-') ? hr : `+${hr}`}) ${entry[1]}`
 
         switch (labelStyle) {
           case 'original':
             label = prefix
             break
           case 'altName':
-            label = `${prefix} ${
-              !tz.altName.includes('/') ? `(${tz.altName})` : ''
-            }`
+            label = `${prefix} ${!altName.includes('/') ? `(${altName})` : ''}`
             break
           case 'abbrev':
-            label = `${prefix} 
-            ${tz.abbrev.length < 5 ? `(${tz.abbrev})` : ''}`
+            label = `${prefix} ${abbrev.length < 5 ? `(${abbrev})` : ''}`
             break
           default:
             label = `${prefix}`
         }
-        options.push({
-          value: tz.name,
+        obj.push({
+          value: entry[0],
           label: label,
-          abbrev: tz.abbrev,
-          altName: tz.altName,
+          offset: tz.current.offset,
+          abbrev: abbrev,
+          altName: altName,
         })
+        return obj
+      }, [] as ITimezoneOption[])
+      .sort((a: ITimezoneOption, b: ITimezoneOption) => {
+        return a.offset - b.offset
       })
-    return options
   }, [labelStyle, timezones])
 
   const handleChange = (tz: ITimezone) => {
     onChange && onChange(tz)
   }
 
-  const normalizeTz = (value: ITimezone) => {
-    let returnTz
+  const parseTimezone = (value: ITimezone) => {
+    if (typeof value === 'object' && value.value && value.label) return value
     if (typeof value === 'string') {
-      returnTz = getOptions.find(tz => tz.value === value)
+      return getOptions.find(tz => tz.value === value)
     } else if (value.value && !value.label) {
-      returnTz = getOptions.find(tz => tz.value === value.value)
-    } else {
-      returnTz = value
+      return getOptions.find(tz => tz.value === value.value)
     }
-    return returnTz
   }
 
   return (
     <Select
-      value={normalizeTz(value)}
+      value={parseTimezone(value)}
       onChange={handleChange}
       options={getOptions}
       onBlur={onBlur}

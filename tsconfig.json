@@ -1,6 +1,7 @@
 {
   "include": ["src/index.tsx"],
   "typeRoots": ["./src/types", "./node_modules/@types"],
+  "exclude": ["example/"],
   "compilerOptions": {
     "module": "esnext",
     "target": "esnext",
@@ -11,7 +12,6 @@
     "jsx": "react",
     "baseUrl": "src",
     "paths": {},
-    /* Additional Options */
     "strict": false,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
