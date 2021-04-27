@@ -88,6 +88,7 @@ ReactDOM.render(<App />, rootElement)
      value: 'America/Juneau'
      label: '(GMT-8:00) Alaska,
      abbrev: 'AHST',
+     offset: -8,
      altName: 'Alaskan Standard Time'
    }
   ```
@@ -119,6 +120,19 @@ import TimezoneSelect, { i18nTimezones } from 'react-timezone-select'
 ```
 
 This will generate two additional choices in our dropdown, one with the label `'(GMT-5:00) Pittsburgh'` and another with `'(GMT+1:00) Frankfurt'`. One could also omit spreading in the `i18nTimezones` object and pass in ones own completely custom list of timezone choices.
+
+## ⚠ Next.js Users
+
+For now, Next.js isn't great about handling ESM packages. Until this gets fixed, a workaround invovles using `next-transpile-modules` like so:
+
+```js
+// next.config.js
+const withTM = require('next-transpile-modules')(['react-timezone-select']);
+
+module.exports = withTM({
+  ...
+})
+```
 
 ## 🚧 Contributing
 
