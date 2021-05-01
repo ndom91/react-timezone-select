@@ -172,10 +172,42 @@ const TimezoneSelect = ({
     onChange && onChange(tz)
   }
 
+  const findFuzzyTz = (zone: string): ITimezoneOption => {
+    let currentTime;
+    try {
+      currentTime = spacetime.now(zone);
+    }
+    catch (err) {
+      return;
+    }
+    return getOptions.filter( (tz: ITimezoneOption) => (tz.offset === currentTime.timezone().current.offset))
+      .map( (tz: ITimezoneOption) => {
+        let score = 0;
+        if (currentTime.timezones[ tz.value.toLowerCase() ] && !!currentTime.timezones[ tz.value.toLowerCase() ].dst === currentTime.timezone().hasDst) {
+
+          if (tz.value.toLowerCase().indexOf(currentTime.tz.substr(currentTime.tz.indexOf('/') + 1)) !== -1) {
+            score += 8;
+          }
+          if (tz.label.toLowerCase().indexOf(currentTime.tz.substr(currentTime.tz.indexOf('/') + 1)) !== -1) {
+            score += 4;
+          }
+          if (tz.value.toLowerCase().indexOf(currentTime.tz.substr(0, currentTime.tz.indexOf('/')))) {
+            score += 2;
+          }
+          score += 1;
+        } else if (tz.value === 'GMT') {
+          score += 1;
+        }
+        return { tz, score };
+      })
+      .sort( (a, b) => b.score - a.score )
+      .map( ({ tz, score }) => tz )[0];
+  };
+
   const parseTimezone = (zone: ITimezone) => {
     if (typeof zone === 'object' && zone.value && zone.label) return zone
     if (typeof zone === 'string') {
-      return getOptions.find(tz => tz.value === zone)
+      return getOptions.find(tz => tz.value === zone) || ( zone.indexOf('/') !== -1 && findFuzzyTz(zone) )
     } else if (zone.value && !zone.label) {
       return getOptions.find(tz => tz.value === zone.value)
     }
