@@ -3,7 +3,7 @@
   "typeRoots": ["./src/types", "./node_modules/@types"],
   "exclude": ["example/"],
   "compilerOptions": {
-    "module": "es2020",
+    "module": "esnext",
     "target": "esnext",
     "moduleResolution": "node",
     "esModuleInterop": true,

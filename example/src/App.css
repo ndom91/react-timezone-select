@@ -1,11 +1,7 @@
-* {
-  font-family: Helvetica;
-}
-
 .App {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
+  padding-top: 25px;
+  width: 500px;
+  margin: 0 auto;
 }
 
 .header * {
@@ -26,18 +22,20 @@
   margin-top: 15px;
   width: 500px;
   max-width: 90vw;
-}
-
-.code,
-.code span {
-  background-color: #efefef;
-  font-family: monospace;
+  text-align: left;
 }
 
 .code {
-  max-width: 90vw;
+  background-color: #efefef;
+
   width: auto;
+  margin-top: 20px;
   padding: 10px;
+
   line-height: 2;
-  font-size: 1.4rem;
+  white-space: pre-wrap;
+
+  font-family: monospace;
+  font-weight: 100;
+  font-size: 1.2rem;
 }

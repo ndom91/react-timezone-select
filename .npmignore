@@ -1,4 +1,5 @@
 example/
-webpack.config.js
 tsconfig.json
 .gitignore
+jest.config.js
+.github
