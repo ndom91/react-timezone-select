@@ -1,4 +1,4 @@
-import React from "../snowpack/pkg/react";
+import React from "../_snowpack/pkg/react";
 import Timezone from "./Timezone.js";
 import "./App.css.proxy.js";
 function App({}) {
