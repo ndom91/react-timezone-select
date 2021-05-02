@@ -1,0 +1,17 @@
+{
+  "dist/index.js": "/dist/index-be713fec.js",
+  "entrypoints": {
+    "index": {
+      "js": "/dist/index-be713fec.js",
+      "js.map": "/dist/index-be713fec.js.map",
+      "css": "/css/dist/index-1aee6bc3.css",
+      "css.map": "/css/dist/index-1aee6bc3.css.map"
+    }
+  },
+  "css/dist/index.css": "/css/dist/index-1aee6bc3.css",
+  "css/dist/index.css.map": "/css/dist/index-1aee6bc3.css.map",
+  "assets": {
+    "index": "/dist/index-be713fec.js.map"
+  },
+  "dist/index.js.map": "/dist/index-be713fec.js.map"
+}
