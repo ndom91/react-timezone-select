@@ -6,12 +6,14 @@ module.exports = {
   },
   plugins: [
     '@snowpack/plugin-react-refresh',
-    '@snowpack/plugin-dotenv',
-    ['@snowpack/plugin-typescript'],
+    '@snowpack/plugin-typescript',
+    '@snowpack/plugin-webpack',
   ],
   workspaceRoot: '../../',
   routes: [],
-  optimize: {},
+  // optimize: {
+  //   bundle: true,
+  // },
   packageOptions: {
     source: 'remote',
     types: true,
@@ -19,5 +21,8 @@ module.exports = {
   devOptions: {
     open: 'none',
   },
-  buildOptions: {},
+  buildOptions: {
+    metaUrlPath: 'snowpack',
+    baseUrl: './',
+  },
 };

@@ -1,7 +1,7 @@
 import React from 'react'
 import Select from 'react-select'
 import spacetime from 'spacetime'
-import { display } from 'spacetime-informal'
+import informal from 'spacetime-informal'
 import type { Props as ReactSelectProps } from 'react-select'
 
 type ExcludeValue<T> = Pick<T, Exclude<keyof T, 'value'>>
@@ -126,7 +126,7 @@ const TimezoneSelect = ({
       .reduce((selectOptions, zone) => {
         const now = spacetime.now().goto(zone[0])
         const tz = now.timezone()
-        const tzStrings = display(zone[0])
+        const tzStrings = informal.display(zone[0])
 
         let label = ''
         let abbrev = zone[0]

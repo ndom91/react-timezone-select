@@ -12,7 +12,6 @@
     "noEmit": true,
     "strict": false,
     "skipLibCheck": true,
-    "types": ["mocha", "snowpack-env"],
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
