@@ -1,0 +1,16 @@
+/*
+ * Skypack CDN - spacetime@6.16.0
+ *
+ * Learn more:
+ *   📙 Package Documentation: https://www.skypack.dev/view/spacetime
+ *   📘 Skypack Documentation: https://www.skypack.dev/docs
+ *
+ * Pinned URL: (Optimized for Production)
+ *   ▶️ Normal: https://cdn.skypack.dev/pin/spacetime@v6.16.0-JgNQhRTRzckBqnHP0aun/mode=imports/optimized/spacetime.js
+ *   ⏩ Minified: https://cdn.skypack.dev/pin/spacetime@v6.16.0-JgNQhRTRzckBqnHP0aun/mode=imports,min/optimized/spacetime.js
+ *
+ */
+
+// Browser-Optimized Imports (Don't directly import the URLs below in your application!)
+export * from '/_snowpack/pkg/-/spacetime@v6.16.0-JgNQhRTRzckBqnHP0aun/dist=es2020,mode=imports/optimized/spacetime.js';
+export {default} from '/_snowpack/pkg/-/spacetime@v6.16.0-JgNQhRTRzckBqnHP0aun/dist=es2020,mode=imports/optimized/spacetime.js';
