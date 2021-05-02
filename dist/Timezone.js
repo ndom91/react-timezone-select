@@ -1,8 +1,8 @@
-import React, {useState} from "../_snowpack/pkg/react";
+import React, {useState} from "../snowpack/pkg/react";
 import TimezoneSelect, {
   i18nTimezones,
   LabelType
-} from "../_snowpack/link/react-timezone-select/src/index.js";
+} from "../snowpack/link/react-timezone-select/src/index.js";
 const Timezone = () => {
   const [selectedTimezone, setSelectedTimezone] = useState("Europe/Rome");
   const [labelStyle, setLabelStyle] = useState("original");
