@@ -1,6 +1,6 @@
 {
   "name": "react-timezone-select",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Usable, dynamic React Timezone Select",
   "main": "dist/index.js",
   "scripts": {
@@ -12,7 +12,7 @@
     "deploy": "gh-pages -d example/build",
     "test": "jest",
     "test:watch": "jest --watch",
-    "test:ci": "jest --ci --reporters='default' --reporters='./github-actions-reporter'"
+    "test:ci": "jest --ci "
   },
   "author": "Nico Domino <yo@ndo.dev>",
   "homepage": "https://github.com/ndom91/react-timezone-select",
