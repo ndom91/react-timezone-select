@@ -11,9 +11,6 @@ module.exports = {
   ],
   workspaceRoot: '../../',
   routes: [],
-  // optimize: {
-  //   bundle: true,
-  // },
   packageOptions: {
     source: 'remote',
     types: true,
