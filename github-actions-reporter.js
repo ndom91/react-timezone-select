@@ -27,4 +27,4 @@ class GithubActionsReporter {
     })
   }
 }
-module.exports = GithubActionsReporter
+export default GithubActionsReporter
