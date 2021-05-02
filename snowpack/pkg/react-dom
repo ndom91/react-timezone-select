@@ -12,5 +12,5 @@
  */
 
 // Browser-Optimized Imports (Don't directly import the URLs below in your application!)
-export * from '/_snowpack/pkg/-/react-dom@v17.0.1-oZ1BXZ5opQ1DbTh7nu9r/dist=es2020,mode=imports/optimized/react-dom.js';
-export {default} from '/_snowpack/pkg/-/react-dom@v17.0.1-oZ1BXZ5opQ1DbTh7nu9r/dist=es2020,mode=imports/optimized/react-dom.js';
+export * from '/snowpack/pkg/-/react-dom@v17.0.1-oZ1BXZ5opQ1DbTh7nu9r/dist=es2020,mode=imports/optimized/react-dom.js';
+export {default} from '/snowpack/pkg/-/react-dom@v17.0.1-oZ1BXZ5opQ1DbTh7nu9r/dist=es2020,mode=imports/optimized/react-dom.js';

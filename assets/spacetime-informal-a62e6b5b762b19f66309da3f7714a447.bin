@@ -12,5 +12,5 @@
  */
 
 // Browser-Optimized Imports (Don't directly import the URLs below in your application!)
-export * from '/_snowpack/pkg/-/spacetime-informal@v0.6.1-OxNayatLDXHZ9EpIQgyM/dist=es2020,mode=imports/optimized/spacetime-informal.js';
-export {default} from '/_snowpack/pkg/-/spacetime-informal@v0.6.1-OxNayatLDXHZ9EpIQgyM/dist=es2020,mode=imports/optimized/spacetime-informal.js';
+export * from '/snowpack/pkg/-/spacetime-informal@v0.6.1-OxNayatLDXHZ9EpIQgyM/dist=es2020,mode=imports/optimized/spacetime-informal.js';
+export {default} from '/snowpack/pkg/-/spacetime-informal@v0.6.1-OxNayatLDXHZ9EpIQgyM/dist=es2020,mode=imports/optimized/spacetime-informal.js';
