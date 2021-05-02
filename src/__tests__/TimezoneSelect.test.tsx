@@ -119,6 +119,21 @@ test('load and passes react-select props', async () => {
   expect(getByText('Please Select a Timezone')).toBeInTheDocument()
 })
 
+test('can determine timezone by approximate match', async () => {
+  const { getByText } = render(
+    <TimezoneSelect
+      value="Europe/Rome"
+      onChange={e => e}
+    />
+  )
+
+  expect(
+    getByText(
+      /\(GMT\+[1-2]:00\) Amsterdam, Berlin, Bern, Rome, Stockholm, Vienna$/
+    )
+  ).toBeInTheDocument()
+})
+
 test('select drop-downs must use the fireEvent.change', () => {
   const onChangeSpy = jest.fn()
   const { container } = render(
