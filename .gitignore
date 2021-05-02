@@ -1,4 +1,5 @@
 node_modules/
 dist/
 example/.snowpack
+example/build
 example/node_modules
