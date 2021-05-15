@@ -1,13 +1,63 @@
+/* build/dist/index.css */
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    "Roboto",
+    "Oxygen",
+    "Ubuntu",
+    "Cantarell",
+    "Fira Sans",
+    "Droid Sans",
+    "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family:
+    source-code-pro,
+    Menlo,
+    Monaco,
+    Consolas,
+    "Courier New",
     monospace;
+}
+
+/* build/dist/App.css */
+.App {
+  padding-top: 25px;
+  width: 500px;
+  margin: 0 auto;
+}
+.header * {
+  margin: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.author {
+  text-decoration: none;
+  font-size: 0.8rem;
+  padding-top: 10px;
+  color: #666;
+}
+.select-wrapper {
+  margin-top: 15px;
+  width: 500px;
+  max-width: 90vw;
+  text-align: left;
+}
+.code {
+  background-color: #efefef;
+  width: auto;
+  margin-top: 20px;
+  padding: 10px;
+  line-height: 2;
+  white-space: pre-wrap;
+  font-family: monospace;
+  font-weight: 100;
+  font-size: 1.2rem;
 }
