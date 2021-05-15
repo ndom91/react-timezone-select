@@ -4,16 +4,11 @@ module.exports = {
     public: { url: '/', static: true },
     src: { url: '/dist' },
   },
-  plugins: [
-    '@snowpack/plugin-react-refresh',
-    '@snowpack/plugin-typescript',
-    '@snowpack/plugin-webpack',
-  ],
+  plugins: ['@snowpack/plugin-react-refresh', '@snowpack/plugin-typescript'],
   workspaceRoot: '../../',
   routes: [],
-  packageOptions: {
-    source: 'remote',
-    types: true,
+  optimize: {
+    bundle: true,
   },
   devOptions: {
     open: 'none',
