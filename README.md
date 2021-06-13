@@ -16,7 +16,7 @@ While looking around for a good option, I had trouble finding a timezone select 
 
 #### Demo: [ndom91.github.io/react-timezone-select](https://ndom91.github.io/react-timezone-select/)
 
-This demo is also available in the `./examples` directory. Simply run `npm start` in the root of the repository after installing everything in the examples subdirectory and snowpack dev will begin, where you can find the demo at [`localhost:8080`](http://localhost:8080).
+> This demo is also available in the `./examples` directory. Simply run `npm start` in the root of the repository after installing everything in the examples subdirectory and snowpack dev will begin, where you can find the demo at [`localhost:8080`](http://localhost:8080).
 
 We also have some **more examples** available on Codesandbox using this component with the datetime library [spacetime](https://codesandbox.io/s/react-timezone-select-usage-z37hf) as well as with [moment](https://codesandbox.io/s/react-timezone-select-usage-moment-5n6vn), showing how one might use this component in a real application.
 
@@ -34,7 +34,7 @@ import ReactDOM from 'react-dom'
 import TimezoneSelect from 'react-timezone-select'
 
 const App = () => {
-  const [selectedTimezone, setSelectedTimezone] = useState('')
+  const [selectedTimezone, setSelectedTimezone] = useState({})
 
   return (
     <div className='App'>
@@ -74,9 +74,11 @@ const rootElement = document.getElementById('root')
 ReactDOM.render(<App />, rootElement)
 ```
 
-### Setting Users Timezone as Default
+## 🪙 Tips
 
-If you'd like the user's own timezone to be set as the initially selected option, we can make use of the new `Intl` browser api by setting the default state value to `Intl.DateTimeFormat().resolvedOptions().timeZone`.
+### 👤 Default Users Timezone
+
+If you'd like the user's own timezone to be set as the initially selected option on render, we can make use of the new `Intl` browser API by setting the default state value to `Intl.DateTimeFormat().resolvedOptions().timeZone`.
 
 ```jsx
 const [timezone, setTimezone] = useState(
@@ -88,16 +90,39 @@ Thanks [@ndrwksr](https://github.com/ndom91/react-timezone-select/issues/25)!
 
 ### ⚠ Next.js Users
 
-For now, Next.js isn't great about handling ESM packages. Until this gets fixed, a workaround involves using [`next-transpile-modules`](https://www.npmjs.com/package/next-transpile-modules) like so:
+For now, Next.js isn't great about handling ESM packages. Until this gets fixed, there is a workaround for using this and other ESM packages via [`next-transpile-modules`](https://www.npmjs.com/package/next-transpile-modules).
 
 ```js
 // next.config.js
 const withTM = require('next-transpile-modules')(['react-timezone-select']);
 
 module.exports = withTM({
-  ...
+  // ...further Next.js config
 })
 ```
+
+### 🕒 Custom Timezones
+
+You can append custom choices of your own, or fully replace the listed timezone options.
+
+The `timezones` prop takes a dictionary of timezones. Don't worry, we'll prepend the `(GMT...)` part, you just have to pass the city(s) or region(s) you want in your label.
+
+```jsx
+import TimezoneSelect, { i18nTimezones } from 'react-timezone-select'
+
+<TimezoneSelect
+  value={selectedTimezone}
+  onChange={setSelectedTimezone}
+  timezones={{
+     ...i18nTimezones,
+    'America/Lima': 'Pittsburgh',
+    'Europe/Berlin': 'Frankfurt',
+  }}
+/>
+```
+
+The above example will generate two additional choices in the select options, one with the label `'(GMT-5:00) Pittsburgh'` and another with `'(GMT+1:00) Frankfurt'`. You can omit spreading in the `i18nTimezones` object and then only your custom timezone options get rendered in the select component.
+
 
 ## 🕹️ Props
 
@@ -115,37 +140,12 @@ module.exports = withTM({
    }
   ```
 - `labelStyle` - `'original' | 'altName' | 'abbrev'`
-- `timezones` - Custom Timezone Object - see below..
+- `timezones` - Custom Timezone Object
 - Any other [`react-select`](https://github.com/jedwatson/react-select#props) props
-
-## 🕒 Custom Timezones
-
-New in `v0.9.11+` we've shipped a prop to allow users to either fully replace the timezone options or append custom choices of their own.
-
-The `timezones` prop takes a dictionary of timezones, i.e. an object where the key/value format is: `{ 'IANA Timezone Name' : 'Your Label' }` - don't worry we'll prepend the `(GMT...)` part, just pass the city(s) or region(s) you want in your label.
-
-For example:
-
-```
-import TimezoneSelect, { i18nTimezones } from 'react-timezone-select'
-...
-
-<TimezoneSelect
-  value={selectedTimezone}
-  onChange={setSelectedTimezone}
-  timezones={{
-     ...i18nTimezones,
-    'America/Lima': 'Pittsburgh',
-    'Europe/Berlin': 'Frankfurt',
-  }}
-/>
-```
-
-This will generate two additional choices in our dropdown, one with the label `'(GMT-5:00) Pittsburgh'` and another with `'(GMT+1:00) Frankfurt'`. One could also omit spreading in the `i18nTimezones` object and pass in ones own completely custom list of timezone choices.
 
 ## 🚧 Contributing
 
-Pull requests are always welcome! Please stick to the `prettier` settings, and if adding new features, please consider adding test(s) and some notes in the README, where appropriate.
+Pull requests are always welcome! Please stick to the `prettier` settings, and if adding new features, please consider adding test(s) and documentation where appropriate!
 
 ## 🙏 Thanks
 
