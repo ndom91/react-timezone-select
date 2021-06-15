@@ -9,6 +9,8 @@ const config = {
     '^.+\\.tsx?$': 'ts-jest',
   },
 
+	testEnvironment: "jsdom",
+
   // Runs special logic, such as cleaning up components
   // when using React Testing Library and adds special
   // extended assertions to Jest
