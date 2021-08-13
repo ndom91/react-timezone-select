@@ -3,6 +3,7 @@ import Select from 'react-select'
 import spacetime from 'spacetime'
 import informal from 'spacetime-informal'
 import type { Props as ReactSelectProps } from 'react-select'
+import './index.css'
 
 type ExcludeValue<T> = Pick<T, Exclude<keyof T, 'value'>>
 
