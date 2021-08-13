@@ -7,9 +7,8 @@ import TimezoneSelect, {
 } from '../../src';
 
 const Timezone = () => {
-  const [selectedTimezone, setSelectedTimezone] = React.useState<ITimezone>(
-    'Europe/Rome',
-  );
+  const [selectedTimezone, setSelectedTimezone] =
+    React.useState<ITimezone>('Europe/Rome');
   const [labelStyle, setLabelStyle] = React.useState<ILabelStyle>('original');
 
   const handleLabelChange = (event: React.ChangeEvent<HTMLInputElement>) => {
