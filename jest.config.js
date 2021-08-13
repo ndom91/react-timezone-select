@@ -7,9 +7,10 @@ const config = {
   // using ts-jest
   transform: {
     '^.+\\.tsx?$': 'ts-jest',
+    '.(css|scss)$': '<rootDir>/src/__mocks__/cssStub.ts',
   },
 
-	testEnvironment: "jsdom",
+  testEnvironment: 'jsdom',
 
   // Runs special logic, such as cleaning up components
   // when using React Testing Library and adds special

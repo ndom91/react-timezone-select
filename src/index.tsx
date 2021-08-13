@@ -1,101 +1,102 @@
-import React from 'react'
-import Select from 'react-select'
-import spacetime from 'spacetime'
-import informal from 'spacetime-informal'
-import type { Props as ReactSelectProps } from 'react-select'
+import React from "react"
+import Select from "react-select"
+import spacetime from "spacetime"
+import informal from "spacetime-informal"
+import type { Props as ReactSelectProps } from "react-select"
+import "./index.css"
 
-type ExcludeValue<T> = Pick<T, Exclude<keyof T, 'value'>>
+type ExcludeValue<T> = Pick<T, Exclude<keyof T, "value">>
 
 export type ICustomTimezone = {
   [key: string]: string
 }
 
 export const i18nTimezones: ICustomTimezone = {
-  'Pacific/Midway': 'Midway Island, Samoa',
-  'Pacific/Honolulu': 'Hawaii',
-  'America/Juneau': 'Alaska',
-  'America/Boise': 'Mountain Time',
-  'America/Dawson': 'Dawson, Yukon',
-  'America/Chihuahua': 'Chihuahua, La Paz, Mazatlan',
-  'America/Phoenix': 'Arizona',
-  'America/Chicago': 'Central Time',
-  'America/Regina': 'Saskatchewan',
-  'America/Mexico_City': 'Guadalajara, Mexico City, Monterrey',
-  'America/Belize': 'Central America',
-  'America/Detroit': 'Eastern Time',
-  'America/Bogota': 'Bogota, Lima, Quito',
-  'America/Caracas': 'Caracas, La Paz',
-  'America/Santiago': 'Santiago',
-  'America/St_Johns': 'Newfoundland and Labrador',
-  'America/Sao_Paulo': 'Brasilia',
-  'America/Tijuana': 'Tijuana',
-  'America/Argentina/Buenos_Aires': 'Buenos Aires, Georgetown',
-  'America/Godthab': 'Greenland',
-  'America/Los_Angeles': 'Pacific Time',
-  'Atlantic/Azores': 'Azores',
-  'Atlantic/Cape_Verde': 'Cape Verde Islands',
-  GMT: 'UTC',
-  'Europe/London': 'Edinburgh, London',
-  'Europe/Dublin': 'Dublin',
-  'Europe/Lisbon': 'Lisbon',
-  'Africa/Casablanca': 'Casablanca, Monrovia',
-  'Atlantic/Canary': 'Canary Islands',
-  'Europe/Belgrade': 'Belgrade, Bratislava, Budapest, Ljubljana, Prague',
-  'Europe/Sarajevo': 'Sarajevo, Skopje, Warsaw, Zagreb',
-  'Europe/Brussels': 'Brussels, Copenhagen, Madrid, Paris',
-  'Europe/Amsterdam': 'Amsterdam, Berlin, Bern, Rome, Stockholm, Vienna',
-  'Africa/Algiers': 'West Central Africa',
-  'Europe/Bucharest': 'Bucharest',
-  'Africa/Cairo': 'Cairo',
-  'Europe/Helsinki': 'Helsinki, Kiev, Riga, Sofia, Tallinn, Vilnius',
-  'Europe/Athens': 'Athens, Istanbul, Minsk',
-  'Asia/Jerusalem': 'Jerusalem',
-  'Africa/Harare': 'Harare, Pretoria',
-  'Europe/Moscow': 'Moscow, St. Petersburg, Volgograd',
-  'Asia/Kuwait': 'Kuwait, Riyadh',
-  'Africa/Nairobi': 'Nairobi',
-  'Asia/Baghdad': 'Baghdad',
-  'Asia/Tehran': 'Tehran',
-  'Asia/Dubai': 'Abu Dhabi, Muscat',
-  'Asia/Baku': 'Baku, Tbilisi, Yerevan',
-  'Asia/Kabul': 'Kabul',
-  'Asia/Yekaterinburg': 'Ekaterinburg',
-  'Asia/Karachi': 'Islamabad, Karachi, Tashkent',
-  'Asia/Kolkata': 'Chennai, Kolkata, Mumbai, New Delhi',
-  'Asia/Kathmandu': 'Kathmandu',
-  'Asia/Dhaka': 'Astana, Dhaka',
-  'Asia/Colombo': 'Sri Jayawardenepura',
-  'Asia/Almaty': 'Almaty, Novosibirsk',
-  'Asia/Rangoon': 'Yangon Rangoon',
-  'Asia/Bangkok': 'Bangkok, Hanoi, Jakarta',
-  'Asia/Krasnoyarsk': 'Krasnoyarsk',
-  'Asia/Shanghai': 'Beijing, Chongqing, Hong Kong SAR, Urumqi',
-  'Asia/Kuala_Lumpur': 'Kuala Lumpur, Singapore',
-  'Asia/Taipei': 'Taipei',
-  'Australia/Perth': 'Perth',
-  'Asia/Irkutsk': 'Irkutsk, Ulaanbaatar',
-  'Asia/Seoul': 'Seoul',
-  'Asia/Tokyo': 'Osaka, Sapporo, Tokyo',
-  'Asia/Yakutsk': 'Yakutsk',
-  'Australia/Darwin': 'Darwin',
-  'Australia/Adelaide': 'Adelaide',
-  'Australia/Sydney': 'Canberra, Melbourne, Sydney',
-  'Australia/Brisbane': 'Brisbane',
-  'Australia/Hobart': 'Hobart',
-  'Asia/Vladivostok': 'Vladivostok',
-  'Pacific/Guam': 'Guam, Port Moresby',
-  'Asia/Magadan': 'Magadan, Solomon Islands, New Caledonia',
-  'Asia/Kamchatka': 'Kamchatka, Marshall Islands',
-  'Pacific/Fiji': 'Fiji Islands',
-  'Pacific/Auckland': 'Auckland, Wellington',
-  'Pacific/Tongatapu': "Nuku'alofa",
+  "Pacific/Midway": "Midway Island, Samoa",
+  "Pacific/Honolulu": "Hawaii",
+  "America/Juneau": "Alaska",
+  "America/Boise": "Mountain Time",
+  "America/Dawson": "Dawson, Yukon",
+  "America/Chihuahua": "Chihuahua, La Paz, Mazatlan",
+  "America/Phoenix": "Arizona",
+  "America/Chicago": "Central Time",
+  "America/Regina": "Saskatchewan",
+  "America/Mexico_City": "Guadalajara, Mexico City, Monterrey",
+  "America/Belize": "Central America",
+  "America/Detroit": "Eastern Time",
+  "America/Bogota": "Bogota, Lima, Quito",
+  "America/Caracas": "Caracas, La Paz",
+  "America/Santiago": "Santiago",
+  "America/St_Johns": "Newfoundland and Labrador",
+  "America/Sao_Paulo": "Brasilia",
+  "America/Tijuana": "Tijuana",
+  "America/Argentina/Buenos_Aires": "Buenos Aires, Georgetown",
+  "America/Godthab": "Greenland",
+  "America/Los_Angeles": "Pacific Time",
+  "Atlantic/Azores": "Azores",
+  "Atlantic/Cape_Verde": "Cape Verde Islands",
+  GMT: "UTC",
+  "Europe/London": "Edinburgh, London",
+  "Europe/Dublin": "Dublin",
+  "Europe/Lisbon": "Lisbon",
+  "Africa/Casablanca": "Casablanca, Monrovia",
+  "Atlantic/Canary": "Canary Islands",
+  "Europe/Belgrade": "Belgrade, Bratislava, Budapest, Ljubljana, Prague",
+  "Europe/Sarajevo": "Sarajevo, Skopje, Warsaw, Zagreb",
+  "Europe/Brussels": "Brussels, Copenhagen, Madrid, Paris",
+  "Europe/Amsterdam": "Amsterdam, Berlin, Bern, Rome, Stockholm, Vienna",
+  "Africa/Algiers": "West Central Africa",
+  "Europe/Bucharest": "Bucharest",
+  "Africa/Cairo": "Cairo",
+  "Europe/Helsinki": "Helsinki, Kiev, Riga, Sofia, Tallinn, Vilnius",
+  "Europe/Athens": "Athens, Istanbul, Minsk",
+  "Asia/Jerusalem": "Jerusalem",
+  "Africa/Harare": "Harare, Pretoria",
+  "Europe/Moscow": "Moscow, St. Petersburg, Volgograd",
+  "Asia/Kuwait": "Kuwait, Riyadh",
+  "Africa/Nairobi": "Nairobi",
+  "Asia/Baghdad": "Baghdad",
+  "Asia/Tehran": "Tehran",
+  "Asia/Dubai": "Abu Dhabi, Muscat",
+  "Asia/Baku": "Baku, Tbilisi, Yerevan",
+  "Asia/Kabul": "Kabul",
+  "Asia/Yekaterinburg": "Ekaterinburg",
+  "Asia/Karachi": "Islamabad, Karachi, Tashkent",
+  "Asia/Kolkata": "Chennai, Kolkata, Mumbai, New Delhi",
+  "Asia/Kathmandu": "Kathmandu",
+  "Asia/Dhaka": "Astana, Dhaka",
+  "Asia/Colombo": "Sri Jayawardenepura",
+  "Asia/Almaty": "Almaty, Novosibirsk",
+  "Asia/Rangoon": "Yangon Rangoon",
+  "Asia/Bangkok": "Bangkok, Hanoi, Jakarta",
+  "Asia/Krasnoyarsk": "Krasnoyarsk",
+  "Asia/Shanghai": "Beijing, Chongqing, Hong Kong SAR, Urumqi",
+  "Asia/Kuala_Lumpur": "Kuala Lumpur, Singapore",
+  "Asia/Taipei": "Taipei",
+  "Australia/Perth": "Perth",
+  "Asia/Irkutsk": "Irkutsk, Ulaanbaatar",
+  "Asia/Seoul": "Seoul",
+  "Asia/Tokyo": "Osaka, Sapporo, Tokyo",
+  "Asia/Yakutsk": "Yakutsk",
+  "Australia/Darwin": "Darwin",
+  "Australia/Adelaide": "Adelaide",
+  "Australia/Sydney": "Canberra, Melbourne, Sydney",
+  "Australia/Brisbane": "Brisbane",
+  "Australia/Hobart": "Hobart",
+  "Asia/Vladivostok": "Vladivostok",
+  "Pacific/Guam": "Guam, Port Moresby",
+  "Asia/Magadan": "Magadan, Solomon Islands, New Caledonia",
+  "Asia/Kamchatka": "Kamchatka, Marshall Islands",
+  "Pacific/Fiji": "Fiji Islands",
+  "Pacific/Auckland": "Auckland, Wellington",
+  "Pacific/Tongatapu": "Nuku'alofa",
 }
 
-export type ILabelStyle = 'original' | 'altName' | 'abbrev'
+export type ILabelStyle = "original" | "altName" | "abbrev"
 export enum LabelType {
-  ORIGINAL = 'original',
-  ALTNAME = 'altName',
-  ABBREV = 'abbrev',
+  ORIGINAL = "original",
+  ALTNAME = "altName",
+  ABBREV = "abbrev",
 }
 
 export type ITimezoneOption = {
@@ -118,7 +119,7 @@ const TimezoneSelect = ({
   value,
   onBlur,
   onChange,
-  labelStyle = 'original',
+  labelStyle = "original",
   timezones = i18nTimezones,
   ...props
 }: Props) => {
@@ -129,7 +130,7 @@ const TimezoneSelect = ({
         const tz = now.timezone()
         const tzStrings = informal.display(zone[0])
 
-        let label = ''
+        let label = ""
         let abbrev = zone[0]
         let altName = zone[0]
 
@@ -144,18 +145,18 @@ const TimezoneSelect = ({
 
         const min = tz.current.offset * 60
         const hr =
-          `${(min / 60) ^ 0}:` + (min % 60 === 0 ? '00' : Math.abs(min % 60))
-        const prefix = `(GMT${hr.includes('-') ? hr : `+${hr}`}) ${zone[1]}`
+          `${(min / 60) ^ 0}:` + (min % 60 === 0 ? "00" : Math.abs(min % 60))
+        const prefix = `(GMT${hr.includes("-") ? hr : `+${hr}`}) ${zone[1]}`
 
         switch (labelStyle) {
-          case 'original':
+          case "original":
             label = prefix
             break
-          case 'altName':
-            label = `${prefix} ${!altName.includes('/') ? `(${altName})` : ''}`
+          case "altName":
+            label = `${prefix} ${!altName.includes("/") ? `(${altName})` : ""}`
             break
-          case 'abbrev':
-            label = `${prefix} ${abbrev.length < 5 ? `(${abbrev})` : ''}`
+          case "abbrev":
+            label = `${prefix} ${abbrev.length < 5 ? `(${abbrev})` : ""}`
             break
           default:
             label = `${prefix}`
@@ -201,7 +202,7 @@ const TimezoneSelect = ({
             tz.value
               .toLowerCase()
               .indexOf(
-                currentTime.tz.substr(currentTime.tz.indexOf('/') + 1)
+                currentTime.tz.substr(currentTime.tz.indexOf("/") + 1)
               ) !== -1
           ) {
             score += 8
@@ -210,7 +211,7 @@ const TimezoneSelect = ({
             tz.label
               .toLowerCase()
               .indexOf(
-                currentTime.tz.substr(currentTime.tz.indexOf('/') + 1)
+                currentTime.tz.substr(currentTime.tz.indexOf("/") + 1)
               ) !== -1
           ) {
             score += 4
@@ -218,12 +219,12 @@ const TimezoneSelect = ({
           if (
             tz.value
               .toLowerCase()
-              .indexOf(currentTime.tz.substr(0, currentTime.tz.indexOf('/')))
+              .indexOf(currentTime.tz.substr(0, currentTime.tz.indexOf("/")))
           ) {
             score += 2
           }
           score += 1
-        } else if (tz.value === 'GMT') {
+        } else if (tz.value === "GMT") {
           score += 1
         }
         return { tz, score }
@@ -233,11 +234,11 @@ const TimezoneSelect = ({
   }
 
   const parseTimezone = (zone: ITimezone) => {
-    if (typeof zone === 'object' && zone.value && zone.label) return zone
-    if (typeof zone === 'string') {
+    if (typeof zone === "object" && zone.value && zone.label) return zone
+    if (typeof zone === "string") {
       return (
         getOptions.find(tz => tz.value === zone) ||
-        (zone.indexOf('/') !== -1 && findFuzzyTz(zone))
+        (zone.indexOf("/") !== -1 && findFuzzyTz(zone))
       )
     } else if (zone.value && !zone.label) {
       return getOptions.find(tz => tz.value === zone.value)
