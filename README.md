@@ -29,18 +29,18 @@ npm install react-timezone-select
 ## 🔭 Usage
 
 ```jsx
-import React, { useState } from 'react'
-import ReactDOM from 'react-dom'
-import TimezoneSelect from 'react-timezone-select'
+import React, { useState } from "react"
+import ReactDOM from "react-dom"
+import TimezoneSelect from "react-timezone-select"
 
 const App = () => {
   const [selectedTimezone, setSelectedTimezone] = useState({})
 
   return (
-    <div className='App'>
+    <div className="App">
       <h2>react-timezone-select</h2>
       <blockquote>Please make a selection</blockquote>
-      <div className='select-wrapper'>
+      <div className="select-wrapper">
         <TimezoneSelect
           value={selectedTimezone}
           onChange={setSelectedTimezone}
@@ -49,18 +49,18 @@ const App = () => {
       <h3>Output:</h3>
       <div
         style={{
-          backgroundColor: '#ccc',
-          padding: '20px',
-          margin: '20px auto',
-          borderRadius: '5px',
-          maxWidth: '600px',
+          backgroundColor: "#ccc",
+          padding: "20px",
+          margin: "20px auto",
+          borderRadius: "5px",
+          maxWidth: "600px",
         }}
       >
         <pre
           style={{
-            margin: '0 20px',
+            margin: "0 20px",
             fontWeight: 500,
-            fontFamily: 'monospace',
+            fontFamily: "monospace",
           }}
         >
           {JSON.stringify(selectedTimezone, null, 2)}
@@ -70,7 +70,7 @@ const App = () => {
   )
 }
 
-const rootElement = document.getElementById('root')
+const rootElement = document.getElementById("root")
 ReactDOM.render(<App />, rootElement)
 ```
 
@@ -94,12 +94,14 @@ For now, Next.js isn't great about handling ESM packages. Until this gets fixed,
 
 ```js
 // next.config.js
-const withTM = require('next-transpile-modules')(['react-timezone-select']);
+const withTM = require("next-transpile-modules")(["react-timezone-select"])
 
 module.exports = withTM({
   // ...further Next.js config
 })
 ```
+
+**Update**: Next.js 11.1.0 now supports ESM packages natively! Until 12.0.0 you need to include `esmExternals: true` in your `next.js.config` though.
 
 ### 🕒 Custom Timezones
 
@@ -108,21 +110,19 @@ You can append custom choices of your own, or fully replace the listed timezone 
 The `timezones` prop takes a dictionary of timezones. Don't worry, we'll prepend the `(GMT...)` part, you just have to pass the city(s) or region(s) you want in your label.
 
 ```jsx
-import TimezoneSelect, { i18nTimezones } from 'react-timezone-select'
-
-<TimezoneSelect
+import TimezoneSelect, { i18nTimezones } from "react-timezone-select"
+;<TimezoneSelect
   value={selectedTimezone}
   onChange={setSelectedTimezone}
   timezones={{
-     ...i18nTimezones,
-    'America/Lima': 'Pittsburgh',
-    'Europe/Berlin': 'Frankfurt',
+    ...i18nTimezones,
+    "America/Lima": "Pittsburgh",
+    "Europe/Berlin": "Frankfurt",
   }}
 />
 ```
 
 The above example will generate two additional choices in the select options, one with the label `'(GMT-5:00) Pittsburgh'` and another with `'(GMT+1:00) Frankfurt'`. You can omit spreading in the `i18nTimezones` object and then only your custom timezone options get rendered in the select component.
-
 
 ## 🕹️ Props
 
