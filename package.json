@@ -1,14 +1,15 @@
 {
   "name": "react-timezone-select",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Usable, dynamic React Timezone Select",
   "main": "dist/index.js",
   "scripts": {
     "start": "cd example && npm start",
     "prepublish": "npm run build",
     "postpublish": "npm run build:example && npm run deploy",
-    "build": "tsc --project ./tsconfig.json",
+    "build": "tsc --project ./tsconfig.json && npm run copy-files",
     "build:example": "cd example && npm run build",
+    "copy-files": "cp ./src/index.css ./dist",
     "deploy": "gh-pages -d example/build",
     "test": "jest",
     "test:watch": "jest --watch",
