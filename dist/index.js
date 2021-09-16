@@ -14409,6 +14409,7 @@ var i18nTimezones = {
   "America/St_Johns": "Newfoundland and Labrador",
   "America/Sao_Paulo": "Brasilia",
   "America/Tijuana": "Tijuana",
+  "America/Montevideo": "Montevideo",
   "America/Argentina/Buenos_Aires": "Buenos Aires, Georgetown",
   "America/Godthab": "Greenland",
   "America/Los_Angeles": "Pacific Time",
