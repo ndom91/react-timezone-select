@@ -11,14 +11,14 @@ Another react timezone select component, I know.. However this one has a few key
 
 While looking around for a good option, I had trouble finding a timezone select components which:
 
-1\) Adjusted the choices automatically with Daylight Savings Time (DST)  
-2\) Didn't have a huge list of choices to scroll through when technically only 24 (ish) are necessary
+1) Adjusted the choices automatically with Daylight Savings Time (DST)
+2) Didn't have a huge list of choices to scroll through when technically only 24 (ish) are necessary
 
 #### Demo: [ndom91.github.io/react-timezone-select](https://ndom91.github.io/react-timezone-select/)
 
 > This demo is also available in the `./examples` directory. Simply run `npm start` in the root of the repository after installing everything in the examples subdirectory and snowpack dev will begin, where you can find the demo at [`localhost:8080`](http://localhost:8080).
 
-We also have some **more examples** available on Codesandbox using this component with the datetime library [spacetime](https://codesandbox.io/s/react-timezone-select-usage-z37hf) as well as with [moment](https://codesandbox.io/s/react-timezone-select-usage-moment-5n6vn), showing how one might use this component in a real application.
+We also have some **more examples** available on Codesandbox using this component with the datetime library `spacetime` ([example](https://codesandbox.io/s/react-timezone-select-usage-z37hf)) as well as with `moment` ([example](https://codesandbox.io/s/react-timezone-select-usage-moment-5n6vn)), showing how one might use this component in a real application.
 
 ## 🏗️ Installing
 
