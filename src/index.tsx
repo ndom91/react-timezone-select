@@ -1,4 +1,4 @@
-import { useMemo } from "react"
+import React from "react"
 import Select from "react-select"
 import spacetime from "spacetime"
 import soft from "timezone-soft"
@@ -122,7 +122,7 @@ const TimezoneSelect = ({
   timezones = i18nTimezones,
   ...props
 }: Props) => {
-  const getOptions = useMemo(() => {
+  const getOptions = React.useMemo(() => {
     return Object.entries(timezones)
       .reduce((selectOptions, zone) => {
         const now = spacetime.now(zone[0])
