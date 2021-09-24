@@ -1,11 +1,9 @@
-import React from "react"
+import { useMemo } from "react"
 import Select from "react-select"
 import spacetime from "spacetime"
-import informal from "spacetime-informal"
+import soft from "timezone-soft"
 import type { Props as ReactSelectProps } from "react-select"
 import "./index.css"
-
-type ExcludeValue<T> = Pick<T, Exclude<keyof T, "value">>
 
 export type ICustomTimezone = {
   [key: string]: string
@@ -100,7 +98,7 @@ export enum LabelType {
   ABBREV = "abbrev",
 }
 
-export type ITimezoneOption = {
+export interface ITimezoneOption {
   value: string
   label: string
   abbrev?: string
@@ -110,7 +108,7 @@ export type ITimezoneOption = {
 
 export type ITimezone = ITimezoneOption | string
 
-interface Props extends ExcludeValue<ReactSelectProps> {
+interface Props extends ReactSelectProps {
   value: ITimezone
   labelStyle?: ILabelStyle
   timezones?: ICustomTimezone
@@ -124,25 +122,17 @@ const TimezoneSelect = ({
   timezones = i18nTimezones,
   ...props
 }: Props) => {
-  const getOptions = React.useMemo(() => {
+  const getOptions = useMemo(() => {
     return Object.entries(timezones)
       .reduce((selectOptions, zone) => {
-        const now = spacetime.now().goto(zone[0])
+        const now = spacetime.now(zone[0])
         const tz = now.timezone()
-        const tzStrings = informal.display(zone[0])
+        const tzStrings = soft(zone[0])
 
         let label = ""
-        let abbrev = zone[0]
-        let altName = zone[0]
-
-        if (tzStrings && tzStrings.daylight && tzStrings.standard) {
-          abbrev = now.isDST()
-            ? tzStrings.daylight.abbrev
-            : tzStrings.standard.abbrev
-          altName = now.isDST()
-            ? tzStrings.daylight.name
-            : tzStrings.standard.name
-        }
+        // @ts-expect-error
+        let abbr = now.isDST() ? tzStrings[0].daylight?.abbr : tzStrings[0].standard?.abbr
+        let altName = now.isDST() ? tzStrings[0].daylight?.name : tzStrings[0].standard?.name
 
         const min = tz.current.offset * 60
         const hr =
@@ -157,17 +147,17 @@ const TimezoneSelect = ({
             label = `${prefix} ${!altName.includes("/") ? `(${altName})` : ""}`
             break
           case "abbrev":
-            label = `${prefix} ${abbrev.length < 5 ? `(${abbrev})` : ""}`
+            label = `${prefix} ${abbr.length < 5 ? `(${abbr})` : ""}`
             break
           default:
             label = `${prefix}`
         }
 
         selectOptions.push({
-          value: zone[0],
+          value: tz.name,
           label: label,
           offset: tz.current.offset,
-          abbrev: abbrev,
+          abbrev: abbr,
           altName: altName,
         })
 
@@ -181,7 +171,7 @@ const TimezoneSelect = ({
   }
 
   const findFuzzyTz = (zone: string): ITimezoneOption => {
-    let currentTime
+    let currentTime = spacetime.now('GMT')
     try {
       currentTime = spacetime.now(zone)
     } catch (err) {
@@ -231,7 +221,7 @@ const TimezoneSelect = ({
         return { tz, score }
       })
       .sort((a, b) => b.score - a.score)
-      .map(({ tz, score }) => tz)[0]
+      .map(({ tz }) => tz)[0]
   }
 
   const parseTimezone = (zone: ITimezone) => {
