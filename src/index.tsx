@@ -167,6 +167,7 @@ const TimezoneSelect = ({
   }, [labelStyle, timezones])
 
   const handleChange = (tz: ITimezone) => {
+    // @ts-expect-error
     onChange && onChange(tz)
   }
 
