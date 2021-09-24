@@ -43,7 +43,7 @@
     "react-dom": "^17.0.1"
   },
   "dependencies": {
-    "react-select": "^4.3.1",
+    "react-select": "^5.0.0",
     "spacetime": "^6.16.2",
     "spacetime-informal": "^0.6.1"
   },
