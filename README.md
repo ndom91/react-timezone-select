@@ -110,19 +110,19 @@ You can append custom choices of your own, or fully replace the listed timezone 
 The `timezones` prop takes a dictionary of timezones. Don't worry, we'll prepend the `(GMT...)` part, you just have to pass the city(s) or region(s) you want in your label.
 
 ```jsx
-import TimezoneSelect, { i18nTimezones } from "react-timezone-select"
+import TimezoneSelect, { allTimezones } from "react-timezone-select"
 ;<TimezoneSelect
   value={selectedTimezone}
   onChange={setSelectedTimezone}
   timezones={{
-    ...i18nTimezones,
+    ...allTimezones,
     "America/Lima": "Pittsburgh",
     "Europe/Berlin": "Frankfurt",
   }}
 />
 ```
 
-The above example will generate two additional choices in the select options, one with the label `'(GMT-5:00) Pittsburgh'` and another with `'(GMT+1:00) Frankfurt'`. You can omit spreading in the `i18nTimezones` object and then only your custom timezone options get rendered in the select component.
+The above example will generate two additional choices in the select options, one with the label `'(GMT-5:00) Pittsburgh'` and another with `'(GMT+1:00) Frankfurt'`. You can omit spreading in the `allTimezones` object and then only your custom timezone options get rendered in the select component.
 
 ## 🕹️ Props
 
