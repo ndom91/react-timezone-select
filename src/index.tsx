@@ -150,3 +150,4 @@ const TimezoneSelect = ({
 }
 
 export default TimezoneSelect
+export { allTimezones }
