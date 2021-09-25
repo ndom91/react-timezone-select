@@ -1,10 +1,14 @@
 import React from 'react';
 import TimezoneSelect, {
-  i18nTimezones,
+  LabelType
+} from '../../src';
+
+import allTimezones from '../../src/timezone-list'
+
+import type {
   ITimezone,
   ILabelStyle,
-  LabelType,
-} from '../../src';
+} from '../../src/types/timezone'
 
 const Timezone = () => {
   const [selectedTimezone, setSelectedTimezone] =
@@ -76,7 +80,7 @@ const Timezone = () => {
           labelStyle={labelStyle}
           onBlur={() => console.log('Blur!')}
           timezones={{
-            ...i18nTimezones,
+            ...allTimezones,
             'America/Lima': 'Pittsburgh',
             'Europe/Berlin': 'Frankfurt',
           }}

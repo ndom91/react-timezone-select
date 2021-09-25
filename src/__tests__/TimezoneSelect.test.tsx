@@ -1,7 +1,8 @@
 import React from "react"
 import { render, findAllByText, fireEvent } from "@testing-library/react"
 
-import TimezoneSelect, { i18nTimezones } from "../index"
+import TimezoneSelect from "../index"
+import allTimezones from '../timezone-list'
 
 // react-select react-testing-library jest example tests:
 // https://github.com/JedWatson/react-select/blob/master/packages/react-select/src/__tests__/Select.test.js
@@ -53,7 +54,7 @@ test("load and displays labelStyle - altName", async () => {
   )
 
   expect(
-    getByText(/\(GMT-[8-9]:00\) Alaska \(Alaskan (Daylight|Standard) Time\)$/)
+    getByText(/\(GMT-[8-9]:00\) Alaska \(Alaska (Daylight|Standard) Time\)$/)
   ).toBeInTheDocument()
 })
 
@@ -66,7 +67,7 @@ test("load and displays labelStyle - abbrev", async () => {
     />
   )
 
-  expect(getByText(/\(GMT-[8-9]:00\) Alaska \(AH[D|S]T\)$/)).toBeInTheDocument()
+  expect(getByText(/\(GMT-[8-9]:00\) Alaska \(AK[D|S]T\)$/)).toBeInTheDocument()
 })
 
 test("load and displays custom timezone", async () => {
@@ -74,7 +75,7 @@ test("load and displays custom timezone", async () => {
     <TimezoneSelect
       value={"America/Lima"}
       timezones={{
-        ...i18nTimezones,
+        ...allTimezones,
         "America/Lima": "Pittsburgh",
       }}
       onChange={e => e}
@@ -85,7 +86,7 @@ test("load and displays custom timezone", async () => {
 })
 
 test("load and displays only 2 custom timezone choices", async () => {
-  const { debug, container } = render(
+  const { container } = render(
     <TimezoneSelect
       value={""}
       timezones={{
@@ -96,10 +97,8 @@ test("load and displays only 2 custom timezone choices", async () => {
       onChange={e => e}
     />
   )
-  debug()
 
   const items = await findAllByText(container, /^\(GMT[+-][0-9]{1,2}:[0-9]{2}/)
-  // console.log(items)
   expect(items).toHaveLength(2)
 })
 
@@ -108,7 +107,7 @@ test("load and passes react-select props", async () => {
     <TimezoneSelect
       value={""}
       timezones={{
-        ...i18nTimezones,
+        ...allTimezones,
         "America/Lima": "Pittsburgh",
       }}
       placeholder={"Please Select a Timezone"}
@@ -151,8 +150,8 @@ test("select drop-downs must use the fireEvent.change", () => {
   expect(onChangeSpy).toHaveBeenCalledWith({
     value: "Pacific/Honolulu",
     label: "(GMT-10:00) Hawaii",
-    altName: "Pacific/Honolulu",
+    altName: "Hawaii-Aleutian Standard Time",
     offset: -10,
-    abbrev: "Pacific/Honolulu",
+    abbrev: "HAST",
   })
 })
