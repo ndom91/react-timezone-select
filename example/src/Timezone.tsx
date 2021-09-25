@@ -1,14 +1,12 @@
 import React from 'react';
 import TimezoneSelect, {
-  LabelType
+  LabelType,
+  allTimezones,
 } from '../../src';
-
-import allTimezones from '../../src/timezone-list'
-
 import type {
   ITimezone,
-  ILabelStyle,
-} from '../../src/types/timezone'
+  ILabelStyle
+} from '../../src'
 
 const Timezone = () => {
   const [selectedTimezone, setSelectedTimezone] =

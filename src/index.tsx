@@ -8,6 +8,7 @@ import type {
   Props,
   ITimezone,
   ITimezoneOption,
+  ILabelStyle
 } from './types/timezone'
 
 export enum LabelType {
@@ -151,3 +152,4 @@ const TimezoneSelect = ({
 
 export default TimezoneSelect
 export { allTimezones }
+export type { ITimezone, ITimezoneOption, Props, ILabelStyle }

@@ -1,5 +1,5 @@
 {
-  "include": ["src/index.tsx", "src/index.css"],
+  "include": ["src/index.tsx", "src/timezone-list.ts", "src/index.css"],
   "typeRoots": ["./src/types", "./node_modules/@types"],
   "exclude": ["example/"],
   "compilerOptions": {
