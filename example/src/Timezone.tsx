@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useMemo, useState } from 'react';
+import spacetime from 'spacetime'
 import TimezoneSelect, {
   LabelType,
   allTimezones,
@@ -16,6 +17,13 @@ const Timezone = () => {
   const handleLabelChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setLabelStyle(event.target.value as LabelType);
   };
+
+  const [datetime, setDatetime] = useState(spacetime.now());
+
+  useMemo(() => {
+    const tzValue = typeof selectedTimezone === 'string' ? selectedTimezone : selectedTimezone.value;
+    setDatetime(datetime.goto(tzValue));
+  }, [selectedTimezone]);
 
   return (
     <div className="App">
@@ -85,6 +93,11 @@ const Timezone = () => {
         />
       </div>
       <div className="code">
+        <div>
+          Current Date / Time in{" "}
+          {typeof selectedTimezone === 'string' ? selectedTimezone.split("/")[1] : selectedTimezone.value.split("/")[1]}:{" "}
+          <pre>{datetime.unixFmt("dd.MM.YY HH:mm:ss")}</pre>
+        </div>
         <pre>{JSON.stringify(selectedTimezone, null, 2)}</pre>
       </div>
     </div>
