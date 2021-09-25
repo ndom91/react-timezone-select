@@ -16,8 +16,9 @@ export interface ITimezoneOption {
 
 export type ITimezone = ITimezoneOption | string
 
-interface Props extends ReactSelectProps {
+interface Props extends Omit<ReactSelectProps, 'onChange'> {
   value: ITimezone
   labelStyle?: ILabelStyle
+  onChange?: (timezone: ITimezoneOption) => void;
   timezones?: ICustomTimezone
 }
