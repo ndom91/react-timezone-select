@@ -26,7 +26,7 @@ const TimezoneSelect = ({
 }: Props) => {
   const getOptions = React.useMemo(() => {
     return Object.entries(timezones)
-      .reduce((selectOptions, zone) => {
+      .reduce<ITimezoneOption[]>((selectOptions, zone) => {
         const now = spacetime.now(zone[0])
         const tz = now.timezone()
         const tzStrings = soft(zone[0])
@@ -64,12 +64,11 @@ const TimezoneSelect = ({
         })
 
         return selectOptions
-      }, [] as ITimezoneOption[])
+      }, [])
       .sort((a: ITimezoneOption, b: ITimezoneOption) => a.offset - b.offset)
   }, [labelStyle, timezones])
 
-  const handleChange = (tz: ITimezone) => {
-    // @ts-expect-error
+  const handleChange = (tz: ITimezoneOption) => {
     onChange && onChange(tz)
   }
 
