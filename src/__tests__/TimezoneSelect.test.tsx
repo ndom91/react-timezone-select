@@ -86,7 +86,7 @@ test("load and displays custom timezone", async () => {
 })
 
 test("load and displays only 2 custom timezone choices", async () => {
-  const { debug, container } = render(
+  const { container } = render(
     <TimezoneSelect
       value={""}
       timezones={{
@@ -97,10 +97,8 @@ test("load and displays only 2 custom timezone choices", async () => {
       onChange={e => e}
     />
   )
-  debug()
 
   const items = await findAllByText(container, /^\(GMT[+-][0-9]{1,2}:[0-9]{2}/)
-  // console.log(items)
   expect(items).toHaveLength(2)
 })
 
