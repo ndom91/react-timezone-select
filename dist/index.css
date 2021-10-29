@@ -61,8 +61,3 @@ code {
   font-weight: 100;
   font-size: 1.2rem;
 }
-
-/* build/snowpack/link/react-timezone-select/src/index.css */
-.select-wrapper > div > div:hover {
-  cursor: pointer;
-}
