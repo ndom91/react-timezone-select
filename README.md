@@ -11,8 +11,8 @@ Another react timezone select component, I know.. However this one has a few key
 
 While looking around for a good option, I had trouble finding a timezone select components which:
 
-1) Adjusted the choices automatically with Daylight Savings Time (DST)
-2) Didn't have a huge list of choices to scroll through when technically only 24 (ish) are necessary
+1. Adjusted the choices automatically with Daylight Savings Time (DST)
+2. Didn't have a huge list of choices to scroll through when technically only 24 (ish) are necessary
 
 #### Demo: [ndom91.github.io/react-timezone-select](https://ndom91.github.io/react-timezone-select/)
 
@@ -101,7 +101,7 @@ module.exports = withTM({
 })
 ```
 
-**Update**: Next.js 11.1.0 now supports ESM packages natively! Until 12.0.0 you need to include `esmExternals: true` in your `next.js.config` though.
+**Update**: Next.js 12 now supports ESM packages by default. If you have any problems with this package in a Next.js 12 project, please let me know!
 
 ### 🕒 Custom Timezones
 
