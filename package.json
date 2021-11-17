@@ -1,8 +1,7 @@
 {
   "name": "react-timezone-select",
-  "version": "1.1.13",
+  "version": "1.1.14",
   "description": "Usable, dynamic React Timezone Select",
-  "main": "dist/index.js",
   "scripts": {
     "start": "cd example && npm start",
     "prepublish": "npm run build",
@@ -34,12 +33,16 @@
     "dist/*"
   ],
   "type": "module",
-  "types": "./dist/index.d.ts",
   "module": "./dist/index.js",
-  "exports": "./dist/index.js",
+  "types": "./dist/index.d.js",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js"
+    }
+  },
   "peerDependencies": {
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "react": "^17.0.1 || ^16",
+    "react-dom": "^17.0.1 || ^16"
   },
   "dependencies": {
     "react-select": "^5.1.0",
@@ -63,6 +66,7 @@
   "prettier": {
     "trailingComma": "es5",
     "semi": false,
+    "singleQuote": true,
     "arrowParens": "avoid"
   }
 }
