@@ -1,6 +1,6 @@
 {
   "name": "react-timezone-select",
-  "version": "1.1.14",
+  "version": "1.1.15",
   "description": "Usable, dynamic React Timezone Select",
   "scripts": {
     "start": "cd example && npm start",
@@ -23,15 +23,8 @@
     "url": "https://github.com/ndom91/react-timezone-select/issues"
   },
   "license": "MIT",
-  "keywords": [
-    "react",
-    "timezone",
-    "select",
-    "react-select"
-  ],
-  "files": [
-    "dist/*"
-  ],
+  "keywords": ["react", "timezone", "select", "react-select"],
+  "files": ["dist/*"],
   "type": "module",
   "module": "./dist/index.js",
   "types": "./dist/index.d.js",

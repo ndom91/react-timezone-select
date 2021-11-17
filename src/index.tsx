@@ -19,7 +19,7 @@ export enum LabelType {
 export { allTimezones }
 export type { ITimezone, ITimezoneOption, Props, ILabelStyle }
 
-export function TimezoneSelect({
+export default function TimezoneSelect({
   value,
   onBlur,
   onChange,
