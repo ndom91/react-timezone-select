@@ -1,29 +1,33 @@
-import React from "react"
-import Select from "react-select"
-import spacetime from "spacetime"
-import soft from "timezone-soft"
+import React from 'react'
+import Select from 'react-select'
+import spacetime from 'spacetime'
+import soft from 'timezone-soft'
 import allTimezones from './timezone-list'
 import type {
   Props,
   ITimezone,
   ITimezoneOption,
-  ILabelStyle
+  ILabelStyle,
 } from './types/timezone'
 
 export enum LabelType {
-  ORIGINAL = "original",
-  ALTNAME = "altName",
-  ABBREV = "abbrev",
+  ORIGINAL = 'original',
+  ALTNAME = 'altName',
+  ABBREV = 'abbrev',
 }
 
-const TimezoneSelect = ({
+export { allTimezones }
+export type { ITimezone, ITimezoneOption, Props, ILabelStyle }
+
+export default function TimezoneSelect({
   value,
   onBlur,
   onChange,
-  labelStyle = "original",
-  timezones = allTimezones,
+  labelStyle = 'original',
+  timezones,
   ...props
-}: Props) => {
+}: Props) {
+  if (!timezones) timezones = allTimezones
   const getOptions = React.useMemo(() => {
     return Object.entries(timezones)
       .reduce<ITimezoneOption[]>((selectOptions, zone) => {
@@ -31,25 +35,30 @@ const TimezoneSelect = ({
         const tz = now.timezone()
         const tzStrings = soft(zone[0])
 
-        let label = ""
-        // @ts-expect-error
-        let abbr = now.isDST() ? tzStrings[0].daylight?.abbr : tzStrings[0].standard?.abbr
-        let altName = now.isDST() ? tzStrings[0].daylight?.name : tzStrings[0].standard?.name
+        let label = ''
+        let abbr = now.isDST()
+          ? // @ts-expect-error
+            tzStrings[0].daylight?.abbr
+          : // @ts-expect-error
+            tzStrings[0].standard?.abbr
+        let altName = now.isDST()
+          ? tzStrings[0].daylight?.name
+          : tzStrings[0].standard?.name
 
         const min = tz.current.offset * 60
         const hr =
-          `${(min / 60) ^ 0}:` + (min % 60 === 0 ? "00" : Math.abs(min % 60))
-        const prefix = `(GMT${hr.includes("-") ? hr : `+${hr}`}) ${zone[1]}`
+          `${(min / 60) ^ 0}:` + (min % 60 === 0 ? '00' : Math.abs(min % 60))
+        const prefix = `(GMT${hr.includes('-') ? hr : `+${hr}`}) ${zone[1]}`
 
         switch (labelStyle) {
-          case "original":
+          case 'original':
             label = prefix
             break
-          case "altName":
-            label = `${prefix} ${altName?.length ? `(${altName})` : ""}`
+          case 'altName':
+            label = `${prefix} ${altName?.length ? `(${altName})` : ''}`
             break
-          case "abbrev":
-            label = `${prefix} ${abbr?.length < 5 ? `(${abbr})` : ""}`
+          case 'abbrev':
+            label = `${prefix} ${abbr?.length < 5 ? `(${abbr})` : ''}`
             break
           default:
             label = `${prefix}`
@@ -95,7 +104,7 @@ const TimezoneSelect = ({
             tz.value
               .toLowerCase()
               .indexOf(
-                currentTime.tz.substr(currentTime.tz.indexOf("/") + 1)
+                currentTime.tz.substr(currentTime.tz.indexOf('/') + 1)
               ) !== -1
           ) {
             score += 8
@@ -104,7 +113,7 @@ const TimezoneSelect = ({
             tz.label
               .toLowerCase()
               .indexOf(
-                currentTime.tz.substr(currentTime.tz.indexOf("/") + 1)
+                currentTime.tz.substr(currentTime.tz.indexOf('/') + 1)
               ) !== -1
           ) {
             score += 4
@@ -112,12 +121,12 @@ const TimezoneSelect = ({
           if (
             tz.value
               .toLowerCase()
-              .indexOf(currentTime.tz.substr(0, currentTime.tz.indexOf("/")))
+              .indexOf(currentTime.tz.substr(0, currentTime.tz.indexOf('/')))
           ) {
             score += 2
           }
           score += 1
-        } else if (tz.value === "GMT") {
+        } else if (tz.value === 'GMT') {
           score += 1
         }
         return { tz, score }
@@ -127,11 +136,11 @@ const TimezoneSelect = ({
   }
 
   const parseTimezone = (zone: ITimezone) => {
-    if (typeof zone === "object" && zone.value && zone.label) return zone
-    if (typeof zone === "string") {
+    if (typeof zone === 'object' && zone.value && zone.label) return zone
+    if (typeof zone === 'string') {
       return (
         getOptions.find(tz => tz.value === zone) ||
-        (zone.indexOf("/") !== -1 && findFuzzyTz(zone))
+        (zone.indexOf('/') !== -1 && findFuzzyTz(zone))
       )
     } else if (zone.value && !zone.label) {
       return getOptions.find(tz => tz.value === zone.value)
@@ -148,7 +157,3 @@ const TimezoneSelect = ({
     />
   )
 }
-
-export default TimezoneSelect
-export { allTimezones }
-export type { ITimezone, ITimezoneOption, Props, ILabelStyle }
