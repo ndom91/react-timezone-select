@@ -16714,14 +16714,16 @@ var LabelType;
   LabelType2["ALTNAME"] = "altName";
   LabelType2["ABBREV"] = "abbrev";
 })(LabelType || (LabelType = {}));
-var TimezoneSelect = ({
+function TimezoneSelect({
   value,
   onBlur,
   onChange: onChange2,
   labelStyle = "original",
-  timezones = timezone_list_default,
+  timezones,
   ...props
-}) => {
+}) {
+  if (!timezones)
+    timezones = timezone_list_default;
   const getOptions = react.useMemo(() => {
     return Object.entries(timezones).reduce((selectOptions, zone) => {
       const now = spacetime_default.now(zone[0]);
@@ -16801,8 +16803,7 @@ var TimezoneSelect = ({
     onBlur,
     ...props
   });
-};
-var src_default = TimezoneSelect;
+}
 
 // build/dist/Timezone.js
 var Timezone = () => {
@@ -16857,7 +16858,7 @@ var Timezone = () => {
     value: LabelType.ABBREV
   }), "abbrev")), /* @__PURE__ */ react.createElement("div", {
     className: "select-wrapper"
-  }, /* @__PURE__ */ react.createElement(src_default, {
+  }, /* @__PURE__ */ react.createElement(TimezoneSelect, {
     value: selectedTimezone,
     onChange: setSelectedTimezone,
     labelStyle,
