@@ -2,7 +2,7 @@ import React from 'react'
 import Select from 'react-select'
 import spacetime from 'spacetime'
 import soft from 'timezone-soft'
-import allTimezones from './timezone-list'
+import allTimezones from './timezone-list.js'
 import type {
   Props,
   ITimezone,
