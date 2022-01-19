@@ -1,7 +1,7 @@
 {
-  "name": "react-timezone-select",
-  "version": "1.1.16",
-  "description": "Usable, dynamic React Timezone Select",
+  "name": "@jyotikabanerjee/react-timezone-select",
+  "version": "0.1.0",
+  "description": "Usable, dynamic antd style React Timezone Select",
   "scripts": {
     "start": "cd example && npm start",
     "prepublish": "npm run build",
@@ -13,7 +13,7 @@
     "test:watch": "jest --watch",
     "test:ci": "jest --ci "
   },
-  "author": "Nico Domino <yo@ndo.dev>",
+  "author": "Jyotika Banerjee",
   "homepage": "https://github.com/ndom91/react-timezone-select",
   "repository": {
     "type": "git",
