@@ -10,6 +10,50 @@ import type {
   ILabelStyle,
 } from './types/timezone'
 
+// Customize to make it look like antd timepicker
+const tzCustomStyles = {
+  container: (provided, state) => ({
+    ...provided,
+    height: '32px',
+    minWidth: '15em',
+  }),
+  control: (provided, state) => ({
+    ...provided,
+    minHeight: '32px',
+    maxHeight: '34px',
+    borderRadius: '2px',
+    padding: '0'
+  }),
+  valueContainer: (provided, state) => ({
+    ...provided,
+    height: '32px',
+    padding: '4px 8px'
+  }),
+  indicatorsSeparator: (provided, state) => ({
+    ...provided,
+    margin: '0'
+  }),
+  indicatorsContainer: (provided, state) => ({
+    ...provided,
+    height: '30px'
+  }),
+  indicatorContainer: (provided, state) => ({
+    ...provided,
+    padding: '6px'
+  }),
+  input: (provided, state) => ({
+    ...provided,
+    color: 'gray',
+    margin: '5px'
+  }),
+  placeholder: (provided, state) => ({
+    ...provided,
+    background: 'transparent',
+    color: '#bfbfbf',
+    paddingBottom: '10px'
+  })
+}
+
 export enum LabelType {
   ORIGINAL = 'original',
   ALTNAME = 'altName',
@@ -149,6 +193,7 @@ export default function TimezoneSelect({
 
   return (
     <Select
+      styles={tzCustomStyles}
       value={parseTimezone(value)}
       onChange={handleChange}
       options={getOptions}
