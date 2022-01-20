@@ -6,8 +6,9 @@ const config = {
   // Jest transformations -- this adds support for TypeScript
   // using ts-jest
   transform: {
+    // '^.+\\.tsx?$': 'esbuild-jest',
     '^.+\\.tsx?$': 'ts-jest',
-    '.(css|scss)$': '<rootDir>/src/__mocks__/cssStub.ts',
+    // '.(css|scss)$': '<rootDir>/src/tests/mocks/cssStub.ts',
   },
 
   testEnvironment: 'jsdom',
@@ -18,12 +19,14 @@ const config = {
   setupFilesAfterEnv: ['@testing-library/jest-dom/extend-expect'],
 
   // Test spec file resolution pattern
-  // Matches parent folder `__tests__` and filename
+  // Matches parent folder `tests` and filename
   // should contain `test` or `spec`.
-  testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.tsx?$',
+  // testRegex: '(src/tests/.*|(\\.|/))\\spec.tsx?$',
+  testRegex: 'src/tests/(.*).spec.tsx$',
 
   // Module file extensions for importing
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
+  // extensionsToTreatAsEsm: ['.jsx', '.ts', '.tsx'],
 }
 
 export default config
