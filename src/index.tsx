@@ -10,23 +10,17 @@ import type {
   ILabelStyle,
 } from './types/timezone'
 
-export enum LabelType {
-  ORIGINAL = 'original',
-  ALTNAME = 'altName',
-  ABBREV = 'abbrev',
-}
-
 export { allTimezones }
 export type { ITimezone, ITimezoneOption, Props, ILabelStyle }
 
-export default function TimezoneSelect({
+const TimezoneSelect = ({
   value,
   onBlur,
   onChange,
   labelStyle = 'original',
   timezones,
   ...props
-}: Props) {
+}: Props) => {
   if (!timezones) timezones = allTimezones
   const getOptions = React.useMemo(() => {
     return Object.entries(timezones)
@@ -104,7 +98,7 @@ export default function TimezoneSelect({
             tz.value
               .toLowerCase()
               .indexOf(
-                currentTime.tz.substr(currentTime.tz.indexOf('/') + 1)
+                currentTime.tz.substring(currentTime.tz.indexOf('/') + 1)
               ) !== -1
           ) {
             score += 8
@@ -113,7 +107,7 @@ export default function TimezoneSelect({
             tz.label
               .toLowerCase()
               .indexOf(
-                currentTime.tz.substr(currentTime.tz.indexOf('/') + 1)
+                currentTime.tz.substring(currentTime.tz.indexOf('/') + 1)
               ) !== -1
           ) {
             score += 4
@@ -121,7 +115,7 @@ export default function TimezoneSelect({
           if (
             tz.value
               .toLowerCase()
-              .indexOf(currentTime.tz.substr(0, currentTime.tz.indexOf('/')))
+              .indexOf(currentTime.tz.substring(0, currentTime.tz.indexOf('/')))
           ) {
             score += 2
           }
@@ -157,3 +151,5 @@ export default function TimezoneSelect({
     />
   )
 }
+
+export default TimezoneSelect

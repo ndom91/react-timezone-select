@@ -1,13 +1,8 @@
 import React, { useMemo, useState } from 'react';
-import spacetime from 'spacetime'
-import TimezoneSelect, {
-  LabelType,
-  allTimezones,
-} from '../../src';
-import type {
-  ITimezone,
-  ILabelStyle
-} from '../../src'
+import spacetime from 'spacetime';
+import TimezoneSelect, { allTimezones } from '../../dist';
+// import TimezoneSelect from '../../dist';
+import type { ITimezone, ILabelStyle } from '../../dist';
 
 const Timezone = () => {
   const [selectedTimezone, setSelectedTimezone] =
@@ -15,13 +10,16 @@ const Timezone = () => {
   const [labelStyle, setLabelStyle] = React.useState<ILabelStyle>('original');
 
   const handleLabelChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setLabelStyle(event.target.value as LabelType);
+    setLabelStyle(event.target.value as ILabelStyle);
   };
 
   const [datetime, setDatetime] = useState(spacetime.now());
 
   useMemo(() => {
-    const tzValue = typeof selectedTimezone === 'string' ? selectedTimezone : selectedTimezone.value;
+    const tzValue =
+      typeof selectedTimezone === 'string'
+        ? selectedTimezone
+        : selectedTimezone.value;
     setDatetime(datetime.goto(tzValue));
   }, [selectedTimezone]);
 
@@ -55,7 +53,7 @@ const Timezone = () => {
             type="radio"
             id="original"
             name="labelStyle"
-            value={LabelType.ORIGINAL}
+            value={'ori}ginal'}
             defaultChecked={labelStyle === 'original'}
           />
           original
@@ -65,17 +63,12 @@ const Timezone = () => {
             type="radio"
             id="altName"
             name="labelStyle"
-            value={LabelType.ALTNAME}
+            value={'altName'}
           />
           altName
         </label>
         <label htmlFor="abbrev">
-          <input
-            type="radio"
-            id="abbrev"
-            name="labelStyle"
-            value={LabelType.ABBREV}
-          />
+          <input type="radio" id="abbrev" name="labelStyle" value={'abbrev'} />
           abbrev
         </label>
       </div>
@@ -94,9 +87,11 @@ const Timezone = () => {
       </div>
       <div className="code">
         <div>
-          Current Date / Time in{" "}
-          {typeof selectedTimezone === 'string' ? selectedTimezone.split("/")[1] : selectedTimezone.value.split("/")[1]}:{" "}
-          <pre>{datetime.unixFmt("dd.MM.YY HH:mm:ss")}</pre>
+          Current Date / Time in{' '}
+          {typeof selectedTimezone === 'string'
+            ? selectedTimezone.split('/')[1]
+            : selectedTimezone.value.split('/')[1]}
+          : <pre>{datetime.unixFmt('dd.MM.YY HH:mm:ss')}</pre>
         </div>
         <pre>{JSON.stringify(selectedTimezone, null, 2)}</pre>
       </div>

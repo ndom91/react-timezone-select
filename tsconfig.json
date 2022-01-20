@@ -4,17 +4,13 @@
   "compilerOptions": {
     "target": "es6",
     "module": "esnext",
-    "allowJs": true,
+    "emitDeclarationOnly": true,
+    "declaration": true,
+    "strict": false,
+    "jsx": "react",
+    "outDir": "dist/",
     "moduleResolution": "node",
     "esModuleInterop": true,
-    "resolveJsonModule": true,
-    "sourceMap": true,
-    "outDir": "dist",
-    "jsx": "react",
-    "strict": false,
-    "forceConsistentCasingInFileNames": true,
-    "allowSyntheticDefaultImports": true,
-    "importsNotUsedAsValues": "error",
-    "declaration": true
+    "allowSyntheticDefaultImports": true
   }
 }
