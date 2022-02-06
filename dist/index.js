@@ -8176,24 +8176,24 @@ var xt = At;
 var spacetime_default = xt;
 
 // build/snowpack/link/react-timezone-select/dist/index.js
-var vo = Object.create;
+var Ao = Object.create;
 var vt2 = Object.defineProperty;
-var Ao = Object.getOwnPropertyDescriptor;
-var Co = Object.getOwnPropertyNames;
-var Io = Object.getPrototypeOf;
-var ko = Object.prototype.hasOwnProperty;
-var To = (e22) => vt2(e22, "__esModule", {value: true});
+var Co = Object.getOwnPropertyDescriptor;
+var Io = Object.getOwnPropertyNames;
+var ko = Object.getPrototypeOf;
+var To = Object.prototype.hasOwnProperty;
+var Eo = (e22) => vt2(e22, "__esModule", {value: true});
 var At2 = (e22, a2) => () => (a2 || e22((a2 = {exports: {}}).exports, a2), a2.exports);
-var Eo = (e22, a2, t2, r2) => {
+var So = (e22, a2, t2, r2) => {
   if (a2 && typeof a2 == "object" || typeof a2 == "function")
-    for (let n2 of Co(a2))
-      !ko.call(e22, n2) && (t2 || n2 !== "default") && vt2(e22, n2, {get: () => a2[n2], enumerable: !(r2 = Ao(a2, n2)) || r2.enumerable});
+    for (let n2 of Io(a2))
+      !To.call(e22, n2) && (t2 || n2 !== "default") && vt2(e22, n2, {get: () => a2[n2], enumerable: !(r2 = Co(a2, n2)) || r2.enumerable});
   return e22;
 };
-var So = (e22, a2) => Eo(To(vt2(e22 != null ? vo(Io(e22)) : {}, "default", !a2 && e22 && e22.__esModule ? {get: () => e22.default, enumerable: true} : {value: e22, enumerable: true})), e22);
+var wo = (e22, a2) => So(Eo(vt2(e22 != null ? Ao(ko(e22)) : {}, "default", !a2 && e22 && e22.__esModule ? {get: () => e22.default, enumerable: true} : {value: e22, enumerable: true})), e22);
 var Kn = At2((G3) => {
   "use strict";
-  var R3 = typeof Symbol == "function" && Symbol.for, Et2 = R3 ? Symbol.for("react.element") : 60103, St2 = R3 ? Symbol.for("react.portal") : 60106, za2 = R3 ? Symbol.for("react.fragment") : 60107, Oa2 = R3 ? Symbol.for("react.strict_mode") : 60108, Fa2 = R3 ? Symbol.for("react.profiler") : 60114, Va2 = R3 ? Symbol.for("react.provider") : 60109, Da2 = R3 ? Symbol.for("react.context") : 60110, wt2 = R3 ? Symbol.for("react.async_mode") : 60111, Ra2 = R3 ? Symbol.for("react.concurrent_mode") : 60111, ja2 = R3 ? Symbol.for("react.forward_ref") : 60112, Wa2 = R3 ? Symbol.for("react.suspense") : 60113, Do = R3 ? Symbol.for("react.suspense_list") : 60120, Za2 = R3 ? Symbol.for("react.memo") : 60115, Xa2 = R3 ? Symbol.for("react.lazy") : 60116, Ro = R3 ? Symbol.for("react.block") : 60121, jo = R3 ? Symbol.for("react.fundamental") : 60117, Wo = R3 ? Symbol.for("react.responder") : 60118, Zo = R3 ? Symbol.for("react.scope") : 60119;
+  var R3 = typeof Symbol == "function" && Symbol.for, Et2 = R3 ? Symbol.for("react.element") : 60103, St2 = R3 ? Symbol.for("react.portal") : 60106, za2 = R3 ? Symbol.for("react.fragment") : 60107, Oa2 = R3 ? Symbol.for("react.strict_mode") : 60108, Fa2 = R3 ? Symbol.for("react.profiler") : 60114, Va2 = R3 ? Symbol.for("react.provider") : 60109, Da2 = R3 ? Symbol.for("react.context") : 60110, wt2 = R3 ? Symbol.for("react.async_mode") : 60111, Ra2 = R3 ? Symbol.for("react.concurrent_mode") : 60111, ja2 = R3 ? Symbol.for("react.forward_ref") : 60112, Wa2 = R3 ? Symbol.for("react.suspense") : 60113, Ro = R3 ? Symbol.for("react.suspense_list") : 60120, Za2 = R3 ? Symbol.for("react.memo") : 60115, Xa2 = R3 ? Symbol.for("react.lazy") : 60116, jo = R3 ? Symbol.for("react.block") : 60121, Wo = R3 ? Symbol.for("react.fundamental") : 60117, Zo = R3 ? Symbol.for("react.responder") : 60118, Xo = R3 ? Symbol.for("react.scope") : 60119;
   function q2(e22) {
     if (typeof e22 == "object" && e22 !== null) {
       var a2 = e22.$$typeof;
@@ -8278,37 +8278,37 @@ var Kn = At2((G3) => {
     return q2(e22) === Wa2;
   };
   G3.isValidElementType = function(e22) {
-    return typeof e22 == "string" || typeof e22 == "function" || e22 === za2 || e22 === Ra2 || e22 === Fa2 || e22 === Oa2 || e22 === Wa2 || e22 === Do || typeof e22 == "object" && e22 !== null && (e22.$$typeof === Xa2 || e22.$$typeof === Za2 || e22.$$typeof === Va2 || e22.$$typeof === Da2 || e22.$$typeof === ja2 || e22.$$typeof === jo || e22.$$typeof === Wo || e22.$$typeof === Zo || e22.$$typeof === Ro);
+    return typeof e22 == "string" || typeof e22 == "function" || e22 === za2 || e22 === Ra2 || e22 === Fa2 || e22 === Oa2 || e22 === Wa2 || e22 === Ro || typeof e22 == "object" && e22 !== null && (e22.$$typeof === Xa2 || e22.$$typeof === Za2 || e22.$$typeof === Va2 || e22.$$typeof === Da2 || e22.$$typeof === ja2 || e22.$$typeof === Wo || e22.$$typeof === Zo || e22.$$typeof === Xo || e22.$$typeof === jo);
   };
   G3.typeOf = q2;
 });
-var qn = At2((td2, $n) => {
+var qn = At2((ad2, $n) => {
   "use strict";
   $n.exports = Kn();
 });
-var or = At2((nd2, ir) => {
+var or = At2((td2, ir) => {
   "use strict";
-  var xt2 = qn(), Xo = {childContextTypes: true, contextType: true, contextTypes: true, defaultProps: true, displayName: true, getDefaultProps: true, getDerivedStateFromError: true, getDerivedStateFromProps: true, mixins: true, propTypes: true, type: true}, Ho = {name: true, length: true, prototype: true, caller: true, callee: true, arguments: true, arity: true}, Lo = {$$typeof: true, render: true, defaultProps: true, displayName: true, propTypes: true}, er = {$$typeof: true, compare: true, defaultProps: true, displayName: true, propTypes: true, type: true}, Gt = {};
-  Gt[xt2.ForwardRef] = Lo;
+  var xt2 = qn(), Ho = {childContextTypes: true, contextType: true, contextTypes: true, defaultProps: true, displayName: true, getDefaultProps: true, getDerivedStateFromError: true, getDerivedStateFromProps: true, mixins: true, propTypes: true, type: true}, Lo = {name: true, length: true, prototype: true, caller: true, callee: true, arguments: true, arity: true}, Yo = {$$typeof: true, render: true, defaultProps: true, displayName: true, propTypes: true}, er = {$$typeof: true, compare: true, defaultProps: true, displayName: true, propTypes: true, type: true}, Gt = {};
+  Gt[xt2.ForwardRef] = Yo;
   Gt[xt2.Memo] = er;
   function ar(e22) {
-    return xt2.isMemo(e22) ? er : Gt[e22.$$typeof] || Xo;
+    return xt2.isMemo(e22) ? er : Gt[e22.$$typeof] || Ho;
   }
-  var Yo = Object.defineProperty, _o = Object.getOwnPropertyNames, tr = Object.getOwnPropertySymbols, Jo = Object.getOwnPropertyDescriptor, Uo = Object.getPrototypeOf, nr = Object.prototype;
+  var _o = Object.defineProperty, Jo = Object.getOwnPropertyNames, tr = Object.getOwnPropertySymbols, Uo = Object.getOwnPropertyDescriptor, Qo = Object.getPrototypeOf, nr = Object.prototype;
   function rr(e22, a2, t2) {
     if (typeof a2 != "string") {
       if (nr) {
-        var r2 = Uo(a2);
+        var r2 = Qo(a2);
         r2 && r2 !== nr && rr(e22, r2, t2);
       }
-      var n2 = _o(a2);
+      var n2 = Jo(a2);
       tr && (n2 = n2.concat(tr(a2)));
       for (var i2 = ar(e22), o2 = ar(a2), s2 = 0; s2 < n2.length; ++s2) {
         var u2 = n2[s2];
-        if (!Ho[u2] && !(t2 && t2[u2]) && !(o2 && o2[u2]) && !(i2 && i2[u2])) {
-          var c2 = Jo(a2, u2);
+        if (!Lo[u2] && !(t2 && t2[u2]) && !(o2 && o2[u2]) && !(i2 && i2[u2])) {
+          var c2 = Uo(a2, u2);
           try {
-            Yo(e22, u2, c2);
+            _o(e22, u2, c2);
           } catch {
           }
         }
@@ -8328,14 +8328,14 @@ function A2() {
     return e22;
   }, A2.apply(this, arguments);
 }
-function wo(e22) {
+function xo(e22) {
   if (e22.sheet)
     return e22.sheet;
   for (var a2 = 0; a2 < document.styleSheets.length; a2++)
     if (document.styleSheets[a2].ownerNode === e22)
       return document.styleSheets[a2];
 }
-function xo(e22) {
+function Go(e22) {
   var a2 = document.createElement("style");
   return a2.setAttribute("data-emotion", e22.key), e22.nonce !== void 0 && a2.setAttribute("nonce", e22.nonce), a2.appendChild(document.createTextNode("")), a2.setAttribute("data-s", ""), a2;
 }
@@ -8351,12 +8351,12 @@ var Ct2 = function() {
   return a2.hydrate = function(r2) {
     r2.forEach(this._insertTag);
   }, a2.insert = function(r2) {
-    this.ctr % (this.isSpeedy ? 65e3 : 1) === 0 && this._insertTag(xo(this));
+    this.ctr % (this.isSpeedy ? 65e3 : 1) === 0 && this._insertTag(Go(this));
     var n2 = this.tags[this.tags.length - 1];
     if (false)
       var i2;
     if (this.isSpeedy) {
-      var o2 = wo(n2);
+      var o2 = xo(n2);
       try {
         o2.insertRule(r2, o2.cssRules.length);
       } catch {
@@ -8553,7 +8553,7 @@ function Ma2(e22, a2, t2, r2, n2, i2, o2, s2, u2) {
         switch (ne3()) {
           case 42:
           case 47:
-            Ye3(Go(Rn(_2(), ua2()), a2, t2), u2);
+            Ye3(Po(Rn(_2(), ua2()), a2, t2), u2);
             break;
           default:
             I3 += "/";
@@ -8621,7 +8621,7 @@ function Zn(e22, a2, t2, r2, n2, i2, o2, s2, u2, c2, l2) {
       (k2 = Ga2(g2 > 0 ? m2[y3] + " " + v2 : w2(v2, /&\f/g, m2[y3]))) && (u2[b2++] = k2);
   return sa2(e22, a2, t2, n2 === 0 ? Xe3 : s2, u2, c2, l2);
 }
-function Go(e22, a2, t2) {
+function Po(e22, a2, t2) {
   return sa2(e22, a2, t2, wa2, Me3(On()), we3(e22, 2, -2), 0);
 }
 function Xn(e22, a2, t2, r2) {
@@ -8795,24 +8795,24 @@ function _n(e22, a2, t2, r2) {
           });
     }
 }
-function Po(e22) {
+function No(e22) {
   var a2 = Object.create(null);
   return function(t2) {
     return a2[t2] === void 0 && (a2[t2] = e22(t2)), a2[t2];
   };
 }
-var Jn = Po;
-var No = function(a2, t2, r2) {
+var Jn = No;
+var Bo = function(a2, t2, r2) {
   for (var n2 = 0, i2 = 0; n2 = i2, i2 = ne3(), n2 === 38 && i2 === 12 && (t2[r2] = 1), !Ke3(i2); )
     _2();
   return Qe3(a2, Y3);
 };
-var Bo = function(a2, t2) {
+var Mo = function(a2, t2) {
   var r2 = -1, n2 = 44;
   do
     switch (Ke3(n2)) {
       case 0:
-        n2 === 38 && ne3() === 12 && (t2[r2] = 1), a2[r2] += No(Y3 - 1, t2, r2);
+        n2 === 38 && ne3() === 12 && (t2[r2] = 1), a2[r2] += Bo(Y3 - 1, t2, r2);
         break;
       case 2:
         a2[r2] += $e3(n2);
@@ -8828,31 +8828,31 @@ var Bo = function(a2, t2) {
   while (n2 = _2());
   return a2;
 };
-var Mo = function(a2, t2) {
-  return Ba2(Bo(Na2(a2), t2));
+var zo = function(a2, t2) {
+  return Ba2(Mo(Na2(a2), t2));
 };
 var Un = new WeakMap();
-var zo = function(a2) {
+var Oo = function(a2) {
   if (!(a2.type !== "rule" || !a2.parent || a2.length < 1)) {
     for (var t2 = a2.value, r2 = a2.parent, n2 = a2.column === r2.column && a2.line === r2.line; r2.type !== "rule"; )
       if (r2 = r2.parent, !r2)
         return;
     if (!(a2.props.length === 1 && t2.charCodeAt(0) !== 58 && !Un.get(r2)) && !n2) {
       Un.set(a2, true);
-      for (var i2 = [], o2 = Mo(t2, i2), s2 = r2.props, u2 = 0, c2 = 0; u2 < o2.length; u2++)
+      for (var i2 = [], o2 = zo(t2, i2), s2 = r2.props, u2 = 0, c2 = 0; u2 < o2.length; u2++)
         for (var l2 = 0; l2 < s2.length; l2++, c2++)
           a2.props[c2] = i2[u2] ? o2[u2].replace(/&\f/g, s2[l2]) : s2[l2] + " " + o2[u2];
     }
   }
 };
-var Oo = function(a2) {
+var Fo = function(a2) {
   if (a2.type === "decl") {
     var t2 = a2.value;
     t2.charCodeAt(0) === 108 && t2.charCodeAt(2) === 98 && (a2.return = "", a2.value = "");
   }
 };
-var Fo = [_n];
-var Vo = function(a2) {
+var Vo = [_n];
+var Do = function(a2) {
   var t2 = a2.key;
   if (t2 === "css") {
     var r2 = document.querySelectorAll("style[data-emotion]:not([data-s])");
@@ -8861,13 +8861,13 @@ var Vo = function(a2) {
       b2.indexOf(" ") !== -1 && (document.head.appendChild(g2), g2.setAttribute("data-s", ""));
     });
   }
-  var n2 = a2.stylisPlugins || Fo, i2 = {}, o2, s2 = [];
+  var n2 = a2.stylisPlugins || Vo, i2 = {}, o2, s2 = [];
   o2 = a2.container || document.head, Array.prototype.forEach.call(document.querySelectorAll('style[data-emotion^="' + t2 + ' "]'), function(g2) {
     for (var b2 = g2.getAttribute("data-emotion").split(" "), y3 = 1; y3 < b2.length; y3++)
       i2[b2[y3]] = true;
     s2.push(g2);
   });
-  var u2, c2 = [zo, Oo];
+  var u2, c2 = [Oo, Fo];
   {
     var l2, d2 = [Hn, Yn(function(g2) {
       l2.insert(g2);
@@ -8881,8 +8881,8 @@ var Vo = function(a2) {
   var f2 = {key: t2, sheet: new Ct2({key: t2, container: o2, nonce: a2.nonce, speedy: a2.speedy, prepend: a2.prepend, insertionPoint: a2.insertionPoint}), nonce: a2.nonce, inserted: i2, registered: {}, insert: u2};
   return f2.sheet.hydrate(s2), f2;
 };
-var Tt2 = Vo;
-var Qo = true;
+var Tt2 = Do;
+var Ko = true;
 function Ha2(e22, a2, t2) {
   var r2 = "";
   return t2.split(" ").forEach(function(n2) {
@@ -8891,7 +8891,7 @@ function Ha2(e22, a2, t2) {
 }
 var La2 = function(a2, t2, r2) {
   var n2 = a2.key + "-" + t2.name;
-  if ((r2 === false || Qo === false) && a2.registered[n2] === void 0 && (a2.registered[n2] = t2.styles), a2.inserted[t2.name] === void 0) {
+  if ((r2 === false || Ko === false) && a2.registered[n2] === void 0 && (a2.registered[n2] = t2.styles), a2.inserted[t2.name] === void 0) {
     var i2 = t2;
     do {
       var o2 = a2.insert(t2 === i2 ? "." + n2 : "", i2, a2.sheet, true);
@@ -8899,7 +8899,7 @@ var La2 = function(a2, t2, r2) {
     } while (i2 !== void 0);
   }
 };
-function Ko(e22) {
+function $o(e22) {
   for (var a2 = 0, t2, r2 = 0, n2 = e22.length; n2 >= 4; ++r2, n2 -= 4)
     t2 = e22.charCodeAt(r2) & 255 | (e22.charCodeAt(++r2) & 255) << 8 | (e22.charCodeAt(++r2) & 255) << 16 | (e22.charCodeAt(++r2) & 255) << 24, t2 = (t2 & 65535) * 1540483477 + ((t2 >>> 16) * 59797 << 16), t2 ^= t2 >>> 24, a2 = (t2 & 65535) * 1540483477 + ((t2 >>> 16) * 59797 << 16) ^ (a2 & 65535) * 1540483477 + ((a2 >>> 16) * 59797 << 16);
   switch (n2) {
@@ -8912,11 +8912,11 @@ function Ko(e22) {
   }
   return a2 ^= a2 >>> 13, a2 = (a2 & 65535) * 1540483477 + ((a2 >>> 16) * 59797 << 16), ((a2 ^ a2 >>> 15) >>> 0).toString(36);
 }
-var sr = Ko;
-var $o = {animationIterationCount: 1, borderImageOutset: 1, borderImageSlice: 1, borderImageWidth: 1, boxFlex: 1, boxFlexGroup: 1, boxOrdinalGroup: 1, columnCount: 1, columns: 1, flex: 1, flexGrow: 1, flexPositive: 1, flexShrink: 1, flexNegative: 1, flexOrder: 1, gridRow: 1, gridRowEnd: 1, gridRowSpan: 1, gridRowStart: 1, gridColumn: 1, gridColumnEnd: 1, gridColumnSpan: 1, gridColumnStart: 1, msGridRow: 1, msGridRowSpan: 1, msGridColumn: 1, msGridColumnSpan: 1, fontWeight: 1, lineHeight: 1, opacity: 1, order: 1, orphans: 1, tabSize: 1, widows: 1, zIndex: 1, zoom: 1, WebkitLineClamp: 1, fillOpacity: 1, floodOpacity: 1, stopOpacity: 1, strokeDasharray: 1, strokeDashoffset: 1, strokeMiterlimit: 1, strokeOpacity: 1, strokeWidth: 1};
-var ur = $o;
-var qo = /[A-Z]|^ms/g;
-var es = /_EMO_([^_]+?)_([^]*?)_EMO_/g;
+var sr = $o;
+var qo = {animationIterationCount: 1, borderImageOutset: 1, borderImageSlice: 1, borderImageWidth: 1, boxFlex: 1, boxFlexGroup: 1, boxOrdinalGroup: 1, columnCount: 1, columns: 1, flex: 1, flexGrow: 1, flexPositive: 1, flexShrink: 1, flexNegative: 1, flexOrder: 1, gridRow: 1, gridRowEnd: 1, gridRowSpan: 1, gridRowStart: 1, gridColumn: 1, gridColumnEnd: 1, gridColumnSpan: 1, gridColumnStart: 1, msGridRow: 1, msGridRowSpan: 1, msGridColumn: 1, msGridColumnSpan: 1, fontWeight: 1, lineHeight: 1, opacity: 1, order: 1, orphans: 1, tabSize: 1, widows: 1, zIndex: 1, zoom: 1, WebkitLineClamp: 1, fillOpacity: 1, floodOpacity: 1, stopOpacity: 1, strokeDasharray: 1, strokeDashoffset: 1, strokeMiterlimit: 1, strokeOpacity: 1, strokeWidth: 1};
+var ur = qo;
+var es = /[A-Z]|^ms/g;
+var as = /_EMO_([^_]+?)_([^]*?)_EMO_/g;
 var lr = function(a2) {
   return a2.charCodeAt(1) === 45;
 };
@@ -8924,14 +8924,14 @@ var cr = function(a2) {
   return a2 != null && typeof a2 != "boolean";
 };
 var Pt2 = Jn(function(e22) {
-  return lr(e22) ? e22 : e22.replace(qo, "-$&").toLowerCase();
+  return lr(e22) ? e22 : e22.replace(es, "-$&").toLowerCase();
 });
 var dr = function(a2, t2) {
   switch (a2) {
     case "animation":
     case "animationName":
       if (typeof t2 == "string")
-        return t2.replace(es, function(r2, n2, i2) {
+        return t2.replace(as, function(r2, n2, i2) {
           return fe3 = {name: n2, styles: i2, next: fe3}, n2;
         });
   }
@@ -8956,7 +8956,7 @@ function la2(e22, a2, t2) {
         var n2 = t2.styles + ";";
         return n2;
       }
-      return as(e22, a2, t2);
+      return ts(e22, a2, t2);
     }
     case "function": {
       if (e22 !== void 0) {
@@ -8975,7 +8975,7 @@ function la2(e22, a2, t2) {
   var c2 = a2[t2];
   return c2 !== void 0 ? c2 : t2;
 }
-function as(e22, a2, t2) {
+function ts(e22, a2, t2) {
   var r2 = "";
   if (Array.isArray(t2))
     for (var n2 = 0; n2 < t2.length; n2++)
@@ -9023,7 +9023,7 @@ var ca2 = function(a2, t2, r2) {
 };
 var Ya2 = {}.hasOwnProperty;
 var fr = createContext(typeof HTMLElement != "undefined" ? Tt2({key: "css"}) : null);
-var yd2 = fr.Provider;
+var gd2 = fr.Provider;
 var Bt = function(a2) {
   return forwardRef(function(t2, r2) {
     var n2 = useContext(fr);
@@ -9040,7 +9040,7 @@ var pr = function(a2, t2) {
     var i2;
   return r2;
 };
-var rs = function() {
+var is = function() {
   return null;
 };
 var gr = Bt(function(e22, a2, t2) {
@@ -9057,10 +9057,10 @@ var gr = Bt(function(e22, a2, t2) {
   for (var d2 in e22)
     Ya2.call(e22, d2) && d2 !== "css" && d2 !== zt2 && (l2[d2] = e22[d2]);
   l2.ref = t2, l2.className = o2;
-  var m2 = createElement(n2, l2), h2 = createElement(rs, null);
+  var m2 = createElement(n2, l2), h2 = createElement(is, null);
   return createElement(Fragment, null, h2, m2);
 });
-var wd2 = So(or());
+var Sd2 = wo(or());
 var C2 = function(a2, t2) {
   var r2 = arguments;
   if (t2 == null || !Ya2.call(t2, "css"))
@@ -9082,7 +9082,7 @@ var yr = function() {
     return "_EMO_" + this.name + "_" + this.styles + "_EMO_";
   }};
 };
-var ss = function e2(a2) {
+var us = function e2(a2) {
   for (var t2 = a2.length, r2 = 0, n2 = ""; r2 < t2; r2++) {
     var i2 = a2[r2];
     if (i2 != null) {
@@ -9108,11 +9108,11 @@ var ss = function e2(a2) {
   }
   return n2;
 };
-function us(e22, a2, t2) {
+function ls(e22, a2, t2) {
   var r2 = [], n2 = Ha2(e22, r2, t2);
   return r2.length < 2 ? t2 : n2 + a2(r2);
 }
-var ls = function() {
+var cs = function() {
   return null;
 };
 var vr = Bt(function(e22, a2) {
@@ -9124,10 +9124,10 @@ var vr = Bt(function(e22, a2) {
   }, n2 = function() {
     for (var c2 = arguments.length, l2 = new Array(c2), d2 = 0; d2 < c2; d2++)
       l2[d2] = arguments[d2];
-    return us(a2.registered, r2, ss(l2));
+    return ls(a2.registered, r2, us(l2));
   }, i2 = {css: r2, cx: n2, theme: useContext(Mt2)}, o2 = e22.children(i2);
   t2 = true;
-  var s2 = createElement(ls, null);
+  var s2 = createElement(cs, null);
   return createElement(Fragment, null, s2, o2);
 });
 function Ot2(e22, a2) {
@@ -9185,7 +9185,7 @@ function Fe3(e22, a2) {
 function ue3(e22, a2, t2) {
   return a2 in e22 ? Object.defineProperty(e22, a2, {value: t2, enumerable: true, configurable: true, writable: true}) : e22[a2] = t2, e22;
 }
-function ms(e22, a2, t2) {
+function hs(e22, a2, t2) {
   return a2 in e22 ? Object.defineProperty(e22, a2, {value: t2, enumerable: true, configurable: true, writable: true}) : e22[a2] = t2, e22;
 }
 function Ir(e22, a2) {
@@ -9202,7 +9202,7 @@ function B3(e22) {
   for (var a2 = 1; a2 < arguments.length; a2++) {
     var t2 = arguments[a2] != null ? arguments[a2] : {};
     a2 % 2 ? Ir(Object(t2), true).forEach(function(r2) {
-      ms(e22, r2, t2[r2]);
+      hs(e22, r2, t2[r2]);
     }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e22, Object.getOwnPropertyDescriptors(t2)) : Ir(Object(t2)).forEach(function(r2) {
       Object.defineProperty(e22, r2, Object.getOwnPropertyDescriptor(t2, r2));
     });
@@ -9214,7 +9214,7 @@ function Ja2(e22) {
     return t2.__proto__ || Object.getPrototypeOf(t2);
   }, Ja2(e22);
 }
-function hs() {
+function bs() {
   if (typeof Reflect == "undefined" || !Reflect.construct || Reflect.construct.sham)
     return false;
   if (typeof Proxy == "function")
@@ -9226,16 +9226,16 @@ function hs() {
     return false;
   }
 }
-function bs(e22) {
+function fs(e22) {
   if (e22 === void 0)
     throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
   return e22;
 }
-function fs(e22, a2) {
-  return a2 && (typeof a2 == "object" || typeof a2 == "function") ? a2 : bs(e22);
+function ps(e22, a2) {
+  return a2 && (typeof a2 == "object" || typeof a2 == "function") ? a2 : fs(e22);
 }
 function Ua2(e22) {
-  var a2 = hs();
+  var a2 = bs();
   return function() {
     var r2 = Ja2(e22), n2;
     if (a2) {
@@ -9243,20 +9243,20 @@ function Ua2(e22) {
       n2 = Reflect.construct(r2, arguments, i2);
     } else
       n2 = r2.apply(this, arguments);
-    return fs(this, n2);
+    return ps(this, n2);
   };
 }
-var ps = ["className", "clearValue", "cx", "getStyles", "getValue", "hasValue", "isMulti", "isRtl", "options", "selectOption", "selectProps", "setValue", "theme"];
+var gs = ["className", "clearValue", "cx", "getStyles", "getValue", "hasValue", "isMulti", "isRtl", "options", "selectOption", "selectProps", "setValue", "theme"];
 var ha2 = function() {
 };
-function gs(e22, a2) {
+function ys(e22, a2) {
   return a2 ? a2[0] === "-" ? e22 + a2 : e22 + "__" + a2 : e22;
 }
 function kr(e22, a2, t2) {
   var r2 = [t2];
   if (a2 && e22)
     for (var n2 in a2)
-      a2.hasOwnProperty(n2) && a2[n2] && r2.push("".concat(gs(e22, n2)));
+      a2.hasOwnProperty(n2) && a2[n2] && r2.push("".concat(ys(e22, n2)));
   return r2.filter(function(i2) {
     return i2;
   }).map(function(i2) {
@@ -9264,11 +9264,11 @@ function kr(e22, a2, t2) {
   }).join(" ");
 }
 var Vt = function(a2) {
-  return Is(a2) ? a2.filter(Boolean) : qe3(a2) === "object" && a2 !== null ? [a2] : [];
+  return ks(a2) ? a2.filter(Boolean) : qe3(a2) === "object" && a2 !== null ? [a2] : [];
 };
 var Tr = function(a2) {
   a2.className, a2.clearValue, a2.cx, a2.getStyles, a2.getValue, a2.hasValue, a2.isMulti, a2.isRtl, a2.options, a2.selectOption, a2.selectProps, a2.setValue, a2.theme;
-  var t2 = pe3(a2, ps);
+  var t2 = pe3(a2, gs);
   return B3({}, t2);
 };
 function Qa2(e22) {
@@ -9284,7 +9284,7 @@ function Ka2(e22, a2) {
   }
   e22.scrollTop = a2;
 }
-function ys(e22) {
+function vs(e22) {
   var a2 = getComputedStyle(e22), t2 = a2.position === "absolute", r2 = /(auto|scroll)/;
   if (a2.position === "fixed")
     return document.documentElement;
@@ -9293,14 +9293,14 @@ function ys(e22) {
       return n2;
   return document.documentElement;
 }
-function vs(e22, a2, t2, r2) {
+function As(e22, a2, t2, r2) {
   return t2 * ((e22 = e22 / r2 - 1) * e22 * e22 + 1) + a2;
 }
 function $a2(e22, a2) {
   var t2 = arguments.length > 2 && arguments[2] !== void 0 ? arguments[2] : 200, r2 = arguments.length > 3 && arguments[3] !== void 0 ? arguments[3] : ha2, n2 = Er(e22), i2 = a2 - n2, o2 = 10, s2 = 0;
   function u2() {
     s2 += o2;
-    var c2 = vs(s2, n2, i2, t2);
+    var c2 = As(s2, n2, i2, t2);
     Ka2(e22, c2), s2 < t2 ? window.requestAnimationFrame(u2) : r2(e22);
   }
   u2();
@@ -9309,7 +9309,7 @@ function Sr(e22, a2) {
   var t2 = e22.getBoundingClientRect(), r2 = a2.getBoundingClientRect(), n2 = a2.offsetHeight / 3;
   r2.bottom + n2 > t2.bottom ? Ka2(e22, Math.min(a2.offsetTop + a2.clientHeight - e22.offsetHeight + n2, e22.scrollHeight)) : r2.top - n2 < t2.top && Ka2(e22, Math.max(a2.offsetTop - n2, 0));
 }
-function As(e22) {
+function Cs(e22) {
   var a2 = e22.getBoundingClientRect();
   return {bottom: a2.bottom, height: a2.height, left: a2.left, right: a2.right, top: a2.top, width: a2.width};
 }
@@ -9328,23 +9328,23 @@ function wr() {
   }
 }
 var xr = false;
-var Cs = {get passive() {
+var Is = {get passive() {
   return xr = true;
 }};
 var qa2 = typeof window != "undefined" ? window : {};
-qa2.addEventListener && qa2.removeEventListener && (qa2.addEventListener("p", ha2, Cs), qa2.removeEventListener("p", ha2, false));
+qa2.addEventListener && qa2.removeEventListener && (qa2.addEventListener("p", ha2, Is), qa2.removeEventListener("p", ha2, false));
 var Gr = xr;
 function Pr(e22) {
   return e22 != null;
 }
-function Is(e22) {
+function ks(e22) {
   return Array.isArray(e22);
 }
 function ba2(e22, a2, t2) {
   return e22 ? a2 : t2;
 }
-function ks(e22) {
-  var a2 = e22.maxHeight, t2 = e22.menuEl, r2 = e22.minHeight, n2 = e22.placement, i2 = e22.shouldScroll, o2 = e22.isFixedPosition, s2 = e22.theme, u2 = s2.spacing, c2 = ys(t2), l2 = {placement: "bottom", maxHeight: a2};
+function Ts(e22) {
+  var a2 = e22.maxHeight, t2 = e22.menuEl, r2 = e22.minHeight, n2 = e22.placement, i2 = e22.shouldScroll, o2 = e22.isFixedPosition, s2 = e22.theme, u2 = s2.spacing, c2 = vs(t2), l2 = {placement: "bottom", maxHeight: a2};
   if (!t2 || !t2.offsetParent)
     return l2;
   var d2 = c2.getBoundingClientRect(), m2 = d2.height, h2 = t2.getBoundingClientRect(), f2 = h2.bottom, g2 = h2.height, b2 = h2.top, y3 = t2.offsetParent.getBoundingClientRect(), v2 = y3.top, k2 = window.innerHeight, E2 = Er(c2), M3 = parseInt(getComputedStyle(t2).marginBottom, 10), T3 = parseInt(getComputedStyle(t2).marginTop, 10), I3 = v2 - T3, N3 = k2 - b2, F3 = I3 + E2, ae3 = m2 - E2 - b2, oe3 = f2 - k2 + E2 + M3, te3 = E2 + b2 - T3, U3 = 160;
@@ -9382,7 +9382,7 @@ function ks(e22) {
   }
   return l2;
 }
-function Ts(e22) {
+function Es(e22) {
   var a2 = {bottom: "top", top: "bottom"};
   return e22 ? a2[e22] : "bottom";
 }
@@ -9391,7 +9391,7 @@ var Rt = function(a2) {
 };
 var Nr = function(a2) {
   var t2, r2 = a2.placement, n2 = a2.theme, i2 = n2.borderRadius, o2 = n2.spacing, s2 = n2.colors;
-  return t2 = {label: "menu"}, ue3(t2, Ts(r2), "100%"), ue3(t2, "backgroundColor", s2.neutral0), ue3(t2, "borderRadius", i2), ue3(t2, "boxShadow", "0 0 0 1px hsla(0, 0%, 0%, 0.1), 0 4px 11px hsla(0, 0%, 0%, 0.1)"), ue3(t2, "marginBottom", o2.menuGutter), ue3(t2, "marginTop", o2.menuGutter), ue3(t2, "position", "absolute"), ue3(t2, "width", "100%"), ue3(t2, "zIndex", 1), t2;
+  return t2 = {label: "menu"}, ue3(t2, Es(r2), "100%"), ue3(t2, "backgroundColor", s2.neutral0), ue3(t2, "borderRadius", i2), ue3(t2, "boxShadow", "0 0 0 1px hsla(0, 0%, 0%, 0.1), 0 4px 11px hsla(0, 0%, 0%, 0.1)"), ue3(t2, "marginBottom", o2.menuGutter), ue3(t2, "marginTop", o2.menuGutter), ue3(t2, "position", "absolute"), ue3(t2, "width", "100%"), ue3(t2, "zIndex", 1), t2;
 };
 var Br = createContext({getPortalPlacement: null});
 var jt2 = function(e22) {
@@ -9405,7 +9405,7 @@ var jt2 = function(e22) {
     return r2 = a2.call.apply(a2, [this].concat(i2)), r2.state = {maxHeight: r2.props.maxMenuHeight, placement: null}, r2.context = void 0, r2.getPlacement = function(s2) {
       var u2 = r2.props, c2 = u2.minMenuHeight, l2 = u2.maxMenuHeight, d2 = u2.menuPlacement, m2 = u2.menuPosition, h2 = u2.menuShouldScrollIntoView, f2 = u2.theme;
       if (!!s2) {
-        var g2 = m2 === "fixed", b2 = h2 && !g2, y3 = ks({maxHeight: l2, menuEl: s2, minHeight: c2, placement: d2, shouldScroll: b2, isFixedPosition: g2, theme: f2}), v2 = r2.context.getPortalPlacement;
+        var g2 = m2 === "fixed", b2 = h2 && !g2, y3 = Ts({maxHeight: l2, menuEl: s2, minHeight: c2, placement: d2, shouldScroll: b2, isFixedPosition: g2, theme: f2}), v2 = r2.context.getPortalPlacement;
         v2 && v2(y3), r2.setState(y3);
       }
     }, r2.getUpdatedProps = function() {
@@ -9419,7 +9419,7 @@ var jt2 = function(e22) {
   }}]), t2;
 }(Component);
 jt2.contextType = Br;
-var Es = function(a2) {
+var Ss = function(a2) {
   var t2 = a2.children, r2 = a2.className, n2 = a2.cx, i2 = a2.getStyles, o2 = a2.innerRef, s2 = a2.innerProps;
   return C2("div", A2({css: i2("menu", a2), className: n2({menu: true}, r2), ref: o2}, s2), t2);
 };
@@ -9427,7 +9427,7 @@ var Mr = function(a2) {
   var t2 = a2.maxHeight, r2 = a2.theme.spacing.baseUnit;
   return {maxHeight: t2, overflowY: "auto", paddingBottom: r2, paddingTop: r2, position: "relative", WebkitOverflowScrolling: "touch"};
 };
-var Ss = function(a2) {
+var ws = function(a2) {
   var t2 = a2.children, r2 = a2.className, n2 = a2.cx, i2 = a2.getStyles, o2 = a2.innerProps, s2 = a2.innerRef, u2 = a2.isMulti;
   return C2("div", A2({css: i2("menuList", a2), className: n2({"menu-list": true, "menu-list--is-multi": u2}, r2), ref: s2}, o2), t2);
 };
@@ -9451,7 +9451,7 @@ var Rr = function(a2) {
   var t2 = a2.rect, r2 = a2.offset, n2 = a2.position;
   return {left: t2.left, position: n2, top: r2, width: t2.width, zIndex: 1};
 };
-var ws = function(e22) {
+var xs = function(e22) {
   Fe3(t2, e22);
   var a2 = Ua2(t2);
   function t2() {
@@ -9468,7 +9468,7 @@ var ws = function(e22) {
     var n2 = this.props, i2 = n2.appendTo, o2 = n2.children, s2 = n2.className, u2 = n2.controlElement, c2 = n2.cx, l2 = n2.innerProps, d2 = n2.menuPlacement, m2 = n2.menuPosition, h2 = n2.getStyles, f2 = m2 === "fixed";
     if (!i2 && !f2 || !u2)
       return null;
-    var g2 = this.state.placement || Rt(d2), b2 = As(u2), y3 = f2 ? 0 : window.pageYOffset, v2 = b2[g2] + y3, k2 = {offset: v2, position: m2, rect: b2}, E2 = C2("div", A2({css: h2("menuPortal", k2), className: c2({"menu-portal": true}, s2)}, l2), o2);
+    var g2 = this.state.placement || Rt(d2), b2 = Cs(u2), y3 = f2 ? 0 : window.pageYOffset, v2 = b2[g2] + y3, k2 = {offset: v2, position: m2, rect: b2}, E2 = C2("div", A2({css: h2("menuPortal", k2), className: c2({"menu-portal": true}, s2)}, l2), o2);
     return C2(Br.Provider, {value: {getPortalPlacement: this.getPortalPlacement}}, i2 ? createPortal$1(E2, i2) : E2);
   }}]), t2;
 }(Component);
@@ -9476,7 +9476,7 @@ var jr = function(a2) {
   var t2 = a2.isDisabled, r2 = a2.isRtl;
   return {label: "container", direction: r2 ? "rtl" : void 0, pointerEvents: t2 ? "none" : void 0, position: "relative"};
 };
-var xs = function(a2) {
+var Gs = function(a2) {
   var t2 = a2.children, r2 = a2.className, n2 = a2.cx, i2 = a2.getStyles, o2 = a2.innerProps, s2 = a2.isDisabled, u2 = a2.isRtl;
   return C2("div", A2({css: i2("container", a2), className: n2({"--is-disabled": s2, "--is-rtl": u2}, r2)}, o2), t2);
 };
@@ -9484,23 +9484,23 @@ var Wr = function(a2) {
   var t2 = a2.theme.spacing, r2 = a2.isMulti, n2 = a2.hasValue, i2 = a2.selectProps.controlShouldRenderValue;
   return {alignItems: "center", display: r2 && n2 && i2 ? "flex" : "grid", flex: 1, flexWrap: "wrap", padding: "".concat(t2.baseUnit / 2, "px ").concat(t2.baseUnit * 2, "px"), WebkitOverflowScrolling: "touch", position: "relative", overflow: "hidden"};
 };
-var Gs = function(a2) {
+var Ps = function(a2) {
   var t2 = a2.children, r2 = a2.className, n2 = a2.cx, i2 = a2.innerProps, o2 = a2.isMulti, s2 = a2.getStyles, u2 = a2.hasValue;
   return C2("div", A2({css: s2("valueContainer", a2), className: n2({"value-container": true, "value-container--is-multi": o2, "value-container--has-value": u2}, r2)}, i2), t2);
 };
 var Zr = function() {
   return {alignItems: "center", alignSelf: "stretch", display: "flex", flexShrink: 0};
 };
-var Ps = function(a2) {
+var Ns = function(a2) {
   var t2 = a2.children, r2 = a2.className, n2 = a2.cx, i2 = a2.innerProps, o2 = a2.getStyles;
   return C2("div", A2({css: o2("indicatorsContainer", a2), className: n2({indicators: true}, r2)}, i2), t2);
 };
 var Xr;
-var Ns = ["size"];
-var Bs = {name: "8mmkcg", styles: "display:inline-block;fill:currentColor;line-height:1;stroke:currentColor;stroke-width:0"};
+var Bs = ["size"];
+var Ms = {name: "8mmkcg", styles: "display:inline-block;fill:currentColor;line-height:1;stroke:currentColor;stroke-width:0"};
 var Hr = function(a2) {
-  var t2 = a2.size, r2 = pe3(a2, Ns);
-  return C2("svg", A2({height: t2, width: t2, viewBox: "0 0 20 20", "aria-hidden": "true", focusable: "false", css: Bs}, r2));
+  var t2 = a2.size, r2 = pe3(a2, Bs);
+  return C2("svg", A2({height: t2, width: t2, viewBox: "0 0 20 20", "aria-hidden": "true", focusable: "false", css: Ms}, r2));
 };
 var Wt = function(a2) {
   return C2(Hr, A2({size: 20}, a2), C2("path", {d: "M14.348 14.849c-0.469 0.469-1.229 0.469-1.697 0l-2.651-3.030-2.651 3.029c-0.469 0.469-1.229 0.469-1.697 0-0.469-0.469-0.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-0.469-0.469-0.469-1.228 0-1.697s1.228-0.469 1.697 0l2.652 3.031 2.651-3.031c0.469-0.469 1.228-0.469 1.697 0s0.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c0.469 0.469 0.469 1.229 0 1.698z"}));
@@ -9513,12 +9513,12 @@ var Yr = function(a2) {
   return {label: "indicatorContainer", color: t2 ? i2.neutral60 : i2.neutral20, display: "flex", padding: n2 * 2, transition: "color 150ms", ":hover": {color: t2 ? i2.neutral80 : i2.neutral40}};
 };
 var _r = Yr;
-var Ms = function(a2) {
+var zs = function(a2) {
   var t2 = a2.children, r2 = a2.className, n2 = a2.cx, i2 = a2.getStyles, o2 = a2.innerProps;
   return C2("div", A2({css: i2("dropdownIndicator", a2), className: n2({indicator: true, "dropdown-indicator": true}, r2)}, o2), t2 || C2(Lr, null));
 };
 var Jr = Yr;
-var zs = function(a2) {
+var Os = function(a2) {
   var t2 = a2.children, r2 = a2.className, n2 = a2.cx, i2 = a2.getStyles, o2 = a2.innerProps;
   return C2("div", A2({css: i2("clearIndicator", a2), className: n2({indicator: true, "clear-indicator": true}, r2)}, o2), t2 || C2(Wt, null));
 };
@@ -9526,11 +9526,11 @@ var Ur = function(a2) {
   var t2 = a2.isDisabled, r2 = a2.theme, n2 = r2.spacing.baseUnit, i2 = r2.colors;
   return {label: "indicatorSeparator", alignSelf: "stretch", backgroundColor: t2 ? i2.neutral10 : i2.neutral20, marginBottom: n2 * 2, marginTop: n2 * 2, width: 1};
 };
-var Os = function(a2) {
+var Fs = function(a2) {
   var t2 = a2.className, r2 = a2.cx, n2 = a2.getStyles, i2 = a2.innerProps;
   return C2("span", A2({}, i2, {css: n2("indicatorSeparator", a2), className: r2({"indicator-separator": true}, t2)}));
 };
-var Fs = yr(Xr || (Xr = Ot2([`
+var Vs = yr(Xr || (Xr = Ot2([`
   0%, 80%, 100% { opacity: 0; }
   40% { opacity: 1; }
 `])));
@@ -9540,7 +9540,7 @@ var Qr = function(a2) {
 };
 var Zt = function(a2) {
   var t2 = a2.delay, r2 = a2.offset;
-  return C2("span", {css: da2({animation: "".concat(Fs, " 1s ease-in-out ").concat(t2, "ms infinite;"), backgroundColor: "currentColor", borderRadius: "1em", display: "inline-block", marginLeft: r2 ? "1em" : void 0, height: "1em", verticalAlign: "top", width: "1em"}, "", "")});
+  return C2("span", {css: da2({animation: "".concat(Vs, " 1s ease-in-out ").concat(t2, "ms infinite;"), backgroundColor: "currentColor", borderRadius: "1em", display: "inline-block", marginLeft: r2 ? "1em" : void 0, height: "1em", verticalAlign: "top", width: "1em"}, "", "")});
 };
 var Kr = function(a2) {
   var t2 = a2.className, r2 = a2.cx, n2 = a2.getStyles, i2 = a2.innerProps, o2 = a2.isRtl;
@@ -9551,16 +9551,16 @@ var $r = function(a2) {
   var t2 = a2.isDisabled, r2 = a2.isFocused, n2 = a2.theme, i2 = n2.colors, o2 = n2.borderRadius, s2 = n2.spacing;
   return {label: "control", alignItems: "center", backgroundColor: t2 ? i2.neutral5 : i2.neutral0, borderColor: t2 ? i2.neutral10 : r2 ? i2.primary : i2.neutral20, borderRadius: o2, borderStyle: "solid", borderWidth: 1, boxShadow: r2 ? "0 0 0 1px ".concat(i2.primary) : void 0, cursor: "default", display: "flex", flexWrap: "wrap", justifyContent: "space-between", minHeight: s2.controlHeight, outline: "0 !important", position: "relative", transition: "all 100ms", "&:hover": {borderColor: r2 ? i2.primary : i2.neutral30}};
 };
-var Vs = function(a2) {
+var Ds = function(a2) {
   var t2 = a2.children, r2 = a2.cx, n2 = a2.getStyles, i2 = a2.className, o2 = a2.isDisabled, s2 = a2.isFocused, u2 = a2.innerRef, c2 = a2.innerProps, l2 = a2.menuIsOpen;
   return C2("div", A2({ref: u2, css: n2("control", a2), className: r2({control: true, "control--is-disabled": o2, "control--is-focused": s2, "control--menu-is-open": l2}, i2)}, c2), t2);
 };
-var Ds = ["data"];
+var Rs = ["data"];
 var qr = function(a2) {
   var t2 = a2.theme.spacing;
   return {paddingBottom: t2.baseUnit * 2, paddingTop: t2.baseUnit * 2};
 };
-var Rs = function(a2) {
+var js = function(a2) {
   var t2 = a2.children, r2 = a2.className, n2 = a2.cx, i2 = a2.getStyles, o2 = a2.Heading, s2 = a2.headingProps, u2 = a2.innerProps, c2 = a2.label, l2 = a2.theme, d2 = a2.selectProps;
   return C2("div", A2({css: i2("group", a2), className: n2({group: true}, r2)}, u2), C2(o2, A2({}, s2, {selectProps: d2, theme: l2, getStyles: i2, cx: n2}), c2), C2("div", null, t2));
 };
@@ -9568,25 +9568,25 @@ var ei2 = function(a2) {
   var t2 = a2.theme.spacing;
   return {label: "group", color: "#999", cursor: "default", display: "block", fontSize: "75%", fontWeight: 500, marginBottom: "0.25em", paddingLeft: t2.baseUnit * 3, paddingRight: t2.baseUnit * 3, textTransform: "uppercase"};
 };
-var js = function(a2) {
+var Ws = function(a2) {
   var t2 = a2.getStyles, r2 = a2.cx, n2 = a2.className, i2 = Tr(a2);
   i2.data;
-  var o2 = pe3(i2, Ds);
+  var o2 = pe3(i2, Rs);
   return C2("div", A2({css: t2("groupHeading", a2), className: r2({"group-heading": true}, n2)}, o2));
 };
-var Ws = ["innerRef", "isDisabled", "isHidden", "inputClassName"];
+var Zs = ["innerRef", "isDisabled", "isHidden", "inputClassName"];
 var ai2 = function(a2) {
   var t2 = a2.isDisabled, r2 = a2.value, n2 = a2.theme, i2 = n2.spacing, o2 = n2.colors;
-  return B3({margin: i2.baseUnit / 2, paddingBottom: i2.baseUnit / 2, paddingTop: i2.baseUnit / 2, visibility: t2 ? "hidden" : "visible", color: o2.neutral80, transform: r2 ? "translateZ(0)" : ""}, Zs);
+  return B3({margin: i2.baseUnit / 2, paddingBottom: i2.baseUnit / 2, paddingTop: i2.baseUnit / 2, visibility: t2 ? "hidden" : "visible", color: o2.neutral80, transform: r2 ? "translateZ(0)" : ""}, Xs);
 };
 var ti2 = {gridArea: "1 / 2", font: "inherit", minWidth: "2px", border: 0, margin: 0, outline: 0, padding: 0};
-var Zs = {flex: "1 1 auto", display: "inline-grid", gridArea: "1 / 1 / 2 / 3", gridTemplateColumns: "0 min-content", "&:after": B3({content: 'attr(data-value) " "', visibility: "hidden", whiteSpace: "pre"}, ti2)};
-var Xs = function(a2) {
+var Xs = {flex: "1 1 auto", display: "inline-grid", gridArea: "1 / 1 / 2 / 3", gridTemplateColumns: "0 min-content", "&:after": B3({content: 'attr(data-value) " "', visibility: "hidden", whiteSpace: "pre"}, ti2)};
+var Hs = function(a2) {
   return B3({label: "input", color: "inherit", background: 0, opacity: a2 ? 0 : 1, width: "100%"}, ti2);
 };
-var Hs = function(a2) {
-  var t2 = a2.className, r2 = a2.cx, n2 = a2.getStyles, i2 = a2.value, o2 = Tr(a2), s2 = o2.innerRef, u2 = o2.isDisabled, c2 = o2.isHidden, l2 = o2.inputClassName, d2 = pe3(o2, Ws);
-  return C2("div", {className: r2({"input-container": true}, t2), css: n2("input", a2), "data-value": i2 || ""}, C2("input", A2({className: r2({input: true}, l2), ref: s2, style: Xs(c2), disabled: u2}, d2)));
+var Ls = function(a2) {
+  var t2 = a2.className, r2 = a2.cx, n2 = a2.getStyles, i2 = a2.value, o2 = Tr(a2), s2 = o2.innerRef, u2 = o2.isDisabled, c2 = o2.isHidden, l2 = o2.inputClassName, d2 = pe3(o2, Zs);
+  return C2("div", {className: r2({"input-container": true}, t2), css: n2("input", a2), "data-value": i2 || ""}, C2("input", A2({className: r2({input: true}, l2), ref: s2, style: Hs(c2), disabled: u2}, d2)));
 };
 var ni2 = function(a2) {
   var t2 = a2.theme, r2 = t2.spacing, n2 = t2.borderRadius, i2 = t2.colors;
@@ -9604,13 +9604,13 @@ var oi2 = function(a2) {
   var t2 = a2.children, r2 = a2.innerProps;
   return C2("div", r2, t2);
 };
-var Ls = oi2;
 var Ys = oi2;
-function _s(e22) {
+var _s = oi2;
+function Js(e22) {
   var a2 = e22.children, t2 = e22.innerProps;
   return C2("div", A2({role: "button"}, t2), a2 || C2(Wt, {size: 14}));
 }
-var Js = function(a2) {
+var Us = function(a2) {
   var t2 = a2.children, r2 = a2.className, n2 = a2.components, i2 = a2.cx, o2 = a2.data, s2 = a2.getStyles, u2 = a2.innerProps, c2 = a2.isDisabled, l2 = a2.removeProps, d2 = a2.selectProps, m2 = n2.Container, h2 = n2.Label, f2 = n2.Remove;
   return C2(vr, null, function(g2) {
     var b2 = g2.css, y3 = g2.cx;
@@ -9621,7 +9621,7 @@ var si2 = function(a2) {
   var t2 = a2.isDisabled, r2 = a2.isFocused, n2 = a2.isSelected, i2 = a2.theme, o2 = i2.spacing, s2 = i2.colors;
   return {label: "option", backgroundColor: n2 ? s2.primary : r2 ? s2.primary25 : "transparent", color: t2 ? s2.neutral20 : n2 ? s2.neutral0 : "inherit", cursor: "default", display: "block", fontSize: "inherit", padding: "".concat(o2.baseUnit * 2, "px ").concat(o2.baseUnit * 3, "px"), width: "100%", userSelect: "none", WebkitTapHighlightColor: "rgba(0, 0, 0, 0)", ":active": {backgroundColor: t2 ? void 0 : n2 ? s2.primary : s2.primary50}};
 };
-var Us = function(a2) {
+var Qs = function(a2) {
   var t2 = a2.children, r2 = a2.className, n2 = a2.cx, i2 = a2.getStyles, o2 = a2.isDisabled, s2 = a2.isFocused, u2 = a2.isSelected, c2 = a2.innerRef, l2 = a2.innerProps;
   return C2("div", A2({css: i2("option", a2), className: n2({option: true, "option--is-disabled": o2, "option--is-focused": s2, "option--is-selected": u2}, r2), ref: c2, "aria-disabled": o2}, l2), t2);
 };
@@ -9629,7 +9629,7 @@ var ui2 = function(a2) {
   var t2 = a2.theme, r2 = t2.spacing, n2 = t2.colors;
   return {label: "placeholder", color: n2.neutral50, gridArea: "1 / 1 / 2 / 3", marginLeft: r2.baseUnit / 2, marginRight: r2.baseUnit / 2};
 };
-var Qs = function(a2) {
+var Ks = function(a2) {
   var t2 = a2.children, r2 = a2.className, n2 = a2.cx, i2 = a2.getStyles, o2 = a2.innerProps;
   return C2("div", A2({css: i2("placeholder", a2), className: n2({placeholder: true}, r2)}, o2), t2);
 };
@@ -9637,13 +9637,13 @@ var li2 = function(a2) {
   var t2 = a2.isDisabled, r2 = a2.theme, n2 = r2.spacing, i2 = r2.colors;
   return {label: "singleValue", color: t2 ? i2.neutral40 : i2.neutral80, gridArea: "1 / 1 / 2 / 3", marginLeft: n2.baseUnit / 2, marginRight: n2.baseUnit / 2, maxWidth: "100%", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap"};
 };
-var Ks = function(a2) {
+var $s = function(a2) {
   var t2 = a2.children, r2 = a2.className, n2 = a2.cx, i2 = a2.getStyles, o2 = a2.isDisabled, s2 = a2.innerProps;
   return C2("div", A2({css: i2("singleValue", a2), className: n2({"single-value": true, "single-value--is-disabled": o2}, r2)}, s2), t2);
 };
-var $s = {ClearIndicator: zs, Control: Vs, DropdownIndicator: Ms, DownChevron: Lr, CrossIcon: Wt, Group: Rs, GroupHeading: js, IndicatorsContainer: Ps, IndicatorSeparator: Os, Input: Hs, LoadingIndicator: Kr, Menu: Es, MenuList: Ss, MenuPortal: ws, LoadingMessage: Dr, NoOptionsMessage: Vr, MultiValue: Js, MultiValueContainer: Ls, MultiValueLabel: Ys, MultiValueRemove: _s, Option: Us, Placeholder: Qs, SelectContainer: xs, SingleValue: Ks, ValueContainer: Gs};
+var qs = {ClearIndicator: Os, Control: Ds, DropdownIndicator: zs, DownChevron: Lr, CrossIcon: Wt, Group: js, GroupHeading: Ws, IndicatorsContainer: Ns, IndicatorSeparator: Fs, Input: Ls, LoadingIndicator: Kr, Menu: Ss, MenuList: ws, MenuPortal: xs, LoadingMessage: Dr, NoOptionsMessage: Vr, MultiValue: Us, MultiValueContainer: Ys, MultiValueLabel: _s, MultiValueRemove: Js, Option: Qs, Placeholder: Ks, SelectContainer: Gs, SingleValue: $s, ValueContainer: Ps};
 var ci2 = function(a2) {
-  return B3(B3({}, $s), a2.components);
+  return B3(B3({}, qs), a2.components);
 };
 function Xt(e22) {
   if (Array.isArray(e22))
@@ -9693,9 +9693,9 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 function pa2(e22, a2) {
   return Xt(e22) || Ht(e22, a2) || fa2(e22, a2) || Lt();
 }
-var qs = ["defaultInputValue", "defaultMenuIsOpen", "defaultValue", "inputValue", "menuIsOpen", "onChange", "onInputChange", "onMenuClose", "onMenuOpen", "value"];
+var eu = ["defaultInputValue", "defaultMenuIsOpen", "defaultValue", "inputValue", "menuIsOpen", "onChange", "onInputChange", "onMenuClose", "onMenuOpen", "value"];
 function di2(e22) {
-  var a2 = e22.defaultInputValue, t2 = a2 === void 0 ? "" : a2, r2 = e22.defaultMenuIsOpen, n2 = r2 === void 0 ? false : r2, i2 = e22.defaultValue, o2 = i2 === void 0 ? null : i2, s2 = e22.inputValue, u2 = e22.menuIsOpen, c2 = e22.onChange, l2 = e22.onInputChange, d2 = e22.onMenuClose, m2 = e22.onMenuOpen, h2 = e22.value, f2 = pe3(e22, qs), g2 = useState(s2 !== void 0 ? s2 : t2), b2 = pa2(g2, 2), y3 = b2[0], v2 = b2[1], k2 = useState(u2 !== void 0 ? u2 : n2), E2 = pa2(k2, 2), M3 = E2[0], T3 = E2[1], I3 = useState(h2 !== void 0 ? h2 : o2), N3 = pa2(I3, 2), F3 = N3[0], ae3 = N3[1], oe3 = useCallback(function(me3, ke3) {
+  var a2 = e22.defaultInputValue, t2 = a2 === void 0 ? "" : a2, r2 = e22.defaultMenuIsOpen, n2 = r2 === void 0 ? false : r2, i2 = e22.defaultValue, o2 = i2 === void 0 ? null : i2, s2 = e22.inputValue, u2 = e22.menuIsOpen, c2 = e22.onChange, l2 = e22.onInputChange, d2 = e22.onMenuClose, m2 = e22.onMenuOpen, h2 = e22.value, f2 = pe3(e22, eu), g2 = useState(s2 !== void 0 ? s2 : t2), b2 = pa2(g2, 2), y3 = b2[0], v2 = b2[1], k2 = useState(u2 !== void 0 ? u2 : n2), E2 = pa2(k2, 2), M3 = E2[0], T3 = E2[1], I3 = useState(h2 !== void 0 ? h2 : o2), N3 = pa2(I3, 2), F3 = N3[0], ae3 = N3[1], oe3 = useCallback(function(me3, ke3) {
     typeof c2 == "function" && c2(me3, ke3), ae3(me3);
   }, [c2]), te3 = useCallback(function(me3, ke3) {
     var Te3;
@@ -9725,19 +9725,19 @@ function at2(e22) {
 var mi2 = Number.isNaN || function(a2) {
   return typeof a2 == "number" && a2 !== a2;
 };
-function eu(e22, a2) {
+function au(e22, a2) {
   return !!(e22 === a2 || mi2(e22) && mi2(a2));
 }
-function au(e22, a2) {
+function tu(e22, a2) {
   if (e22.length !== a2.length)
     return false;
   for (var t2 = 0; t2 < e22.length; t2++)
-    if (!eu(e22[t2], a2[t2]))
+    if (!au(e22[t2], a2[t2]))
       return false;
   return true;
 }
-function tu(e22, a2) {
-  a2 === void 0 && (a2 = au);
+function nu(e22, a2) {
+  a2 === void 0 && (a2 = tu);
   var t2, r2 = [], n2, i2 = false;
   function o2() {
     for (var s2 = [], u2 = 0; u2 < arguments.length; u2++)
@@ -9746,12 +9746,12 @@ function tu(e22, a2) {
   }
   return o2;
 }
-var hi2 = tu;
-var ru = {name: "7pg0cj-a11yText", styles: "label:a11yText;z-index:9999;border:0;clip:rect(1px, 1px, 1px, 1px);height:1px;width:1px;position:absolute;overflow:hidden;padding:0;white-space:nowrap"};
+var hi2 = nu;
+var iu = {name: "7pg0cj-a11yText", styles: "label:a11yText;z-index:9999;border:0;clip:rect(1px, 1px, 1px, 1px);height:1px;width:1px;position:absolute;overflow:hidden;padding:0;white-space:nowrap"};
 var fi2 = function(a2) {
-  return C2("span", A2({css: ru}, a2));
+  return C2("span", A2({css: iu}, a2));
 };
-var iu = {guidance: function(a2) {
+var ou = {guidance: function(a2) {
   var t2 = a2.isSearchable, r2 = a2.isMulti, n2 = a2.isDisabled, i2 = a2.tabSelectsValue, o2 = a2.context;
   switch (o2) {
     case "menu":
@@ -9794,9 +9794,9 @@ var iu = {guidance: function(a2) {
   var t2 = a2.inputValue, r2 = a2.resultsMessage;
   return "".concat(r2).concat(t2 ? " for search term " + t2 : "", ".");
 }};
-var ou = function(a2) {
+var su = function(a2) {
   var t2 = a2.ariaSelection, r2 = a2.focusedOption, n2 = a2.focusedValue, i2 = a2.focusableOptions, o2 = a2.isFocused, s2 = a2.selectValue, u2 = a2.selectProps, c2 = a2.id, l2 = u2.ariaLiveMessages, d2 = u2.getOptionLabel, m2 = u2.inputValue, h2 = u2.isMulti, f2 = u2.isOptionDisabled, g2 = u2.isSearchable, b2 = u2.menuIsOpen, y3 = u2.options, v2 = u2.screenReaderStatus, k2 = u2.tabSelectsValue, E2 = u2["aria-label"], M3 = u2["aria-live"], T3 = useMemo(function() {
-    return B3(B3({}, iu), l2 || {});
+    return B3(B3({}, ou), l2 || {});
   }, [l2]), I3 = useMemo(function() {
     var Z3 = "";
     if (t2 && T3.onChange) {
@@ -9831,7 +9831,7 @@ var ou = function(a2) {
   return C2(Fragment, null, C2(fi2, {id: c2}, U3 && te3), C2(fi2, {"aria-live": M3, "aria-atomic": "false", "aria-relevant": "additions text"}, o2 && !U3 && te3));
 };
 var Kt = [{base: "A", letters: "AⒶＡÀÁÂẦẤẪẨÃĀĂẰẮẴẲȦǠÄǞẢÅǺǍȀȂẠẬẶḀĄȺⱯ"}, {base: "AA", letters: "Ꜳ"}, {base: "AE", letters: "ÆǼǢ"}, {base: "AO", letters: "Ꜵ"}, {base: "AU", letters: "Ꜷ"}, {base: "AV", letters: "ꜸꜺ"}, {base: "AY", letters: "Ꜽ"}, {base: "B", letters: "BⒷＢḂḄḆɃƂƁ"}, {base: "C", letters: "CⒸＣĆĈĊČÇḈƇȻꜾ"}, {base: "D", letters: "DⒹＤḊĎḌḐḒḎĐƋƊƉꝹ"}, {base: "DZ", letters: "ǱǄ"}, {base: "Dz", letters: "ǲǅ"}, {base: "E", letters: "EⒺＥÈÉÊỀẾỄỂẼĒḔḖĔĖËẺĚȄȆẸỆȨḜĘḘḚƐƎ"}, {base: "F", letters: "FⒻＦḞƑꝻ"}, {base: "G", letters: "GⒼＧǴĜḠĞĠǦĢǤƓꞠꝽꝾ"}, {base: "H", letters: "HⒽＨĤḢḦȞḤḨḪĦⱧⱵꞍ"}, {base: "I", letters: "IⒾＩÌÍÎĨĪĬİÏḮỈǏȈȊỊĮḬƗ"}, {base: "J", letters: "JⒿＪĴɈ"}, {base: "K", letters: "KⓀＫḰǨḲĶḴƘⱩꝀꝂꝄꞢ"}, {base: "L", letters: "LⓁＬĿĹĽḶḸĻḼḺŁȽⱢⱠꝈꝆꞀ"}, {base: "LJ", letters: "Ǉ"}, {base: "Lj", letters: "ǈ"}, {base: "M", letters: "MⓂＭḾṀṂⱮƜ"}, {base: "N", letters: "NⓃＮǸŃÑṄŇṆŅṊṈȠƝꞐꞤ"}, {base: "NJ", letters: "Ǌ"}, {base: "Nj", letters: "ǋ"}, {base: "O", letters: "OⓄＯÒÓÔỒỐỖỔÕṌȬṎŌṐṒŎȮȰÖȪỎŐǑȌȎƠỜỚỠỞỢỌỘǪǬØǾƆƟꝊꝌ"}, {base: "OI", letters: "Ƣ"}, {base: "OO", letters: "Ꝏ"}, {base: "OU", letters: "Ȣ"}, {base: "P", letters: "PⓅＰṔṖƤⱣꝐꝒꝔ"}, {base: "Q", letters: "QⓆＱꝖꝘɊ"}, {base: "R", letters: "RⓇＲŔṘŘȐȒṚṜŖṞɌⱤꝚꞦꞂ"}, {base: "S", letters: "SⓈＳẞŚṤŜṠŠṦṢṨȘŞⱾꞨꞄ"}, {base: "T", letters: "TⓉＴṪŤṬȚŢṰṮŦƬƮȾꞆ"}, {base: "TZ", letters: "Ꜩ"}, {base: "U", letters: "UⓊＵÙÚÛŨṸŪṺŬÜǛǗǕǙỦŮŰǓȔȖƯỪỨỮỬỰỤṲŲṶṴɄ"}, {base: "V", letters: "VⓋＶṼṾƲꝞɅ"}, {base: "VY", letters: "Ꝡ"}, {base: "W", letters: "WⓌＷẀẂŴẆẄẈⱲ"}, {base: "X", letters: "XⓍＸẊẌ"}, {base: "Y", letters: "YⓎＹỲÝŶỸȲẎŸỶỴƳɎỾ"}, {base: "Z", letters: "ZⓏＺŹẐŻŽẒẔƵȤⱿⱫꝢ"}, {base: "a", letters: "aⓐａẚàáâầấẫẩãāăằắẵẳȧǡäǟảåǻǎȁȃạậặḁąⱥɐ"}, {base: "aa", letters: "ꜳ"}, {base: "ae", letters: "æǽǣ"}, {base: "ao", letters: "ꜵ"}, {base: "au", letters: "ꜷ"}, {base: "av", letters: "ꜹꜻ"}, {base: "ay", letters: "ꜽ"}, {base: "b", letters: "bⓑｂḃḅḇƀƃɓ"}, {base: "c", letters: "cⓒｃćĉċčçḉƈȼꜿↄ"}, {base: "d", letters: "dⓓｄḋďḍḑḓḏđƌɖɗꝺ"}, {base: "dz", letters: "ǳǆ"}, {base: "e", letters: "eⓔｅèéêềếễểẽēḕḗĕėëẻěȅȇẹệȩḝęḙḛɇɛǝ"}, {base: "f", letters: "fⓕｆḟƒꝼ"}, {base: "g", letters: "gⓖｇǵĝḡğġǧģǥɠꞡᵹꝿ"}, {base: "h", letters: "hⓗｈĥḣḧȟḥḩḫẖħⱨⱶɥ"}, {base: "hv", letters: "ƕ"}, {base: "i", letters: "iⓘｉìíîĩīĭïḯỉǐȉȋịįḭɨı"}, {base: "j", letters: "jⓙｊĵǰɉ"}, {base: "k", letters: "kⓚｋḱǩḳķḵƙⱪꝁꝃꝅꞣ"}, {base: "l", letters: "lⓛｌŀĺľḷḹļḽḻſłƚɫⱡꝉꞁꝇ"}, {base: "lj", letters: "ǉ"}, {base: "m", letters: "mⓜｍḿṁṃɱɯ"}, {base: "n", letters: "nⓝｎǹńñṅňṇņṋṉƞɲŉꞑꞥ"}, {base: "nj", letters: "ǌ"}, {base: "o", letters: "oⓞｏòóôồốỗổõṍȭṏōṑṓŏȯȱöȫỏőǒȍȏơờớỡởợọộǫǭøǿɔꝋꝍɵ"}, {base: "oi", letters: "ƣ"}, {base: "ou", letters: "ȣ"}, {base: "oo", letters: "ꝏ"}, {base: "p", letters: "pⓟｐṕṗƥᵽꝑꝓꝕ"}, {base: "q", letters: "qⓠｑɋꝗꝙ"}, {base: "r", letters: "rⓡｒŕṙřȑȓṛṝŗṟɍɽꝛꞧꞃ"}, {base: "s", letters: "sⓢｓßśṥŝṡšṧṣṩșşȿꞩꞅẛ"}, {base: "t", letters: "tⓣｔṫẗťṭțţṱṯŧƭʈⱦꞇ"}, {base: "tz", letters: "ꜩ"}, {base: "u", letters: "uⓤｕùúûũṹūṻŭüǜǘǖǚủůűǔȕȗưừứữửựụṳųṷṵʉ"}, {base: "v", letters: "vⓥｖṽṿʋꝟʌ"}, {base: "vy", letters: "ꝡ"}, {base: "w", letters: "wⓦｗẁẃŵẇẅẘẉⱳ"}, {base: "x", letters: "xⓧｘẋẍ"}, {base: "y", letters: "yⓨｙỳýŷỹȳẏÿỷẙỵƴɏỿ"}, {base: "z", letters: "zⓩｚźẑżžẓẕƶȥɀⱬꝣ"}];
-var su = new RegExp("[" + Kt.map(function(e22) {
+var uu = new RegExp("[" + Kt.map(function(e22) {
   return e22.letters;
 }).join("") + "]", "g");
 var pi2 = {};
@@ -9842,38 +9842,38 @@ var nt2;
 var rt2;
 var tt2;
 var gi2 = function(a2) {
-  return a2.replace(su, function(t2) {
+  return a2.replace(uu, function(t2) {
     return pi2[t2];
   });
 };
-var uu = hi2(gi2);
+var lu = hi2(gi2);
 var yi2 = function(a2) {
   return a2.replace(/^\s+|\s+$/g, "");
 };
-var lu = function(a2) {
+var cu = function(a2) {
   return "".concat(a2.label, " ").concat(a2.value);
 };
-var cu = function(a2) {
+var du = function(a2) {
   return function(t2, r2) {
     if (t2.data.__isNew__)
       return true;
-    var n2 = B3({ignoreCase: true, ignoreAccents: true, stringify: lu, trim: true, matchFrom: "any"}, a2), i2 = n2.ignoreCase, o2 = n2.ignoreAccents, s2 = n2.stringify, u2 = n2.trim, c2 = n2.matchFrom, l2 = u2 ? yi2(r2) : r2, d2 = u2 ? yi2(s2(t2)) : s2(t2);
-    return i2 && (l2 = l2.toLowerCase(), d2 = d2.toLowerCase()), o2 && (l2 = uu(l2), d2 = gi2(d2)), c2 === "start" ? d2.substr(0, l2.length) === l2 : d2.indexOf(l2) > -1;
+    var n2 = B3({ignoreCase: true, ignoreAccents: true, stringify: cu, trim: true, matchFrom: "any"}, a2), i2 = n2.ignoreCase, o2 = n2.ignoreAccents, s2 = n2.stringify, u2 = n2.trim, c2 = n2.matchFrom, l2 = u2 ? yi2(r2) : r2, d2 = u2 ? yi2(s2(t2)) : s2(t2);
+    return i2 && (l2 = l2.toLowerCase(), d2 = d2.toLowerCase()), o2 && (l2 = lu(l2), d2 = gi2(d2)), c2 === "start" ? d2.substr(0, l2.length) === l2 : d2.indexOf(l2) > -1;
   };
 };
-var du = ["innerRef"];
-function mu(e22) {
-  var a2 = e22.innerRef, t2 = pe3(e22, du);
+var mu = ["innerRef"];
+function hu(e22) {
+  var a2 = e22.innerRef, t2 = pe3(e22, mu);
   return C2("input", A2({ref: a2}, t2, {css: da2({label: "dummyInput", background: 0, border: 0, caretColor: "transparent", fontSize: "inherit", gridArea: "1 / 1 / 2 / 3", outline: 0, padding: 0, width: 1, color: "transparent", left: -100, opacity: 0, position: "relative", transform: "scale(.01)"}, "", "")}));
 }
-var hu = function(a2) {
+var bu = function(a2) {
   a2.preventDefault(), a2.stopPropagation();
 };
-function bu(e22) {
+function fu(e22) {
   var a2 = e22.isEnabled, t2 = e22.onBottomArrive, r2 = e22.onBottomLeave, n2 = e22.onTopArrive, i2 = e22.onTopLeave, o2 = useRef(false), s2 = useRef(false), u2 = useRef(0), c2 = useRef(null), l2 = useCallback(function(b2, y3) {
     if (c2.current !== null) {
       var v2 = c2.current, k2 = v2.scrollTop, E2 = v2.scrollHeight, M3 = v2.clientHeight, T3 = c2.current, I3 = y3 > 0, N3 = E2 - M3 - k2, F3 = false;
-      N3 > y3 && o2.current && (r2 && r2(b2), o2.current = false), I3 && s2.current && (i2 && i2(b2), s2.current = false), I3 && y3 > N3 ? (t2 && !o2.current && t2(b2), T3.scrollTop = E2, F3 = true, o2.current = true) : !I3 && -y3 > k2 && (n2 && !s2.current && n2(b2), T3.scrollTop = 0, F3 = true, s2.current = true), F3 && hu(b2);
+      N3 > y3 && o2.current && (r2 && r2(b2), o2.current = false), I3 && s2.current && (i2 && i2(b2), s2.current = false), I3 && y3 > N3 ? (t2 && !o2.current && t2(b2), T3.scrollTop = E2, F3 = true, o2.current = true) : !I3 && -y3 > k2 && (n2 && !s2.current && n2(b2), T3.scrollTop = 0, F3 = true, s2.current = true), F3 && bu(b2);
     }
   }, [t2, r2, n2, i2]), d2 = useCallback(function(b2) {
     l2(b2, b2.deltaY);
@@ -9919,7 +9919,7 @@ function Ti2() {
 var Ei2 = !!(typeof window != "undefined" && window.document && window.document.createElement);
 var ya2 = 0;
 var ta2 = {capture: false, passive: false};
-function fu(e22) {
+function pu(e22) {
   var a2 = e22.isEnabled, t2 = e22.accountForScrollbars, r2 = t2 === void 0 ? true : t2, n2 = useRef({}), i2 = useRef(null), o2 = useCallback(function(u2) {
     if (!!Ei2) {
       var c2 = document.body, l2 = c2 && c2.style;
@@ -9955,37 +9955,37 @@ function fu(e22) {
     i2.current = u2;
   };
 }
-var pu = function() {
+var gu = function() {
   return document.activeElement && document.activeElement.blur();
 };
-var gu = {name: "1kfdb0e", styles: "position:fixed;left:0;bottom:0;right:0;top:0"};
-function yu(e22) {
-  var a2 = e22.children, t2 = e22.lockEnabled, r2 = e22.captureEnabled, n2 = r2 === void 0 ? true : r2, i2 = e22.onBottomArrive, o2 = e22.onBottomLeave, s2 = e22.onTopArrive, u2 = e22.onTopLeave, c2 = bu({isEnabled: n2, onBottomArrive: i2, onBottomLeave: o2, onTopArrive: s2, onTopLeave: u2}), l2 = fu({isEnabled: t2}), d2 = function(h2) {
+var yu = {name: "1kfdb0e", styles: "position:fixed;left:0;bottom:0;right:0;top:0"};
+function vu(e22) {
+  var a2 = e22.children, t2 = e22.lockEnabled, r2 = e22.captureEnabled, n2 = r2 === void 0 ? true : r2, i2 = e22.onBottomArrive, o2 = e22.onBottomLeave, s2 = e22.onTopArrive, u2 = e22.onTopLeave, c2 = fu({isEnabled: n2, onBottomArrive: i2, onBottomLeave: o2, onTopArrive: s2, onTopLeave: u2}), l2 = pu({isEnabled: t2}), d2 = function(h2) {
     c2(h2), l2(h2);
   };
-  return C2(Fragment, null, t2 && C2("div", {onClick: pu, css: gu}), a2(d2));
+  return C2(Fragment, null, t2 && C2("div", {onClick: gu, css: yu}), a2(d2));
 }
-var vu = function(a2) {
-  return a2.label;
-};
 var Au = function(a2) {
   return a2.label;
 };
 var Cu = function(a2) {
-  return a2.value;
+  return a2.label;
 };
 var Iu = function(a2) {
+  return a2.value;
+};
+var ku = function(a2) {
   return !!a2.isDisabled;
 };
-var ku = {clearIndicator: Jr, container: jr, control: $r, dropdownIndicator: _r, group: qr, groupHeading: ei2, indicatorsContainer: Zr, indicatorSeparator: Ur, input: ai2, loadingIndicator: Qr, loadingMessage: Fr, menu: Nr, menuList: Mr, menuPortal: Rr, multiValue: ni2, multiValueLabel: ri2, multiValueRemove: ii2, noOptionsMessage: Or, option: si2, placeholder: ui2, singleValue: li2, valueContainer: Wr};
-var Tu = {primary: "#2684FF", primary75: "#4C9AFF", primary50: "#B2D4FF", primary25: "#DEEBFF", danger: "#DE350B", dangerLight: "#FFBDAD", neutral0: "hsl(0, 0%, 100%)", neutral5: "hsl(0, 0%, 95%)", neutral10: "hsl(0, 0%, 90%)", neutral20: "hsl(0, 0%, 80%)", neutral30: "hsl(0, 0%, 70%)", neutral40: "hsl(0, 0%, 60%)", neutral50: "hsl(0, 0%, 50%)", neutral60: "hsl(0, 0%, 40%)", neutral70: "hsl(0, 0%, 30%)", neutral80: "hsl(0, 0%, 20%)", neutral90: "hsl(0, 0%, 10%)"};
-var Eu = 4;
+var Tu = {clearIndicator: Jr, container: jr, control: $r, dropdownIndicator: _r, group: qr, groupHeading: ei2, indicatorsContainer: Zr, indicatorSeparator: Ur, input: ai2, loadingIndicator: Qr, loadingMessage: Fr, menu: Nr, menuList: Mr, menuPortal: Rr, multiValue: ni2, multiValueLabel: ri2, multiValueRemove: ii2, noOptionsMessage: Or, option: si2, placeholder: ui2, singleValue: li2, valueContainer: Wr};
+var Eu = {primary: "#2684FF", primary75: "#4C9AFF", primary50: "#B2D4FF", primary25: "#DEEBFF", danger: "#DE350B", dangerLight: "#FFBDAD", neutral0: "hsl(0, 0%, 100%)", neutral5: "hsl(0, 0%, 95%)", neutral10: "hsl(0, 0%, 90%)", neutral20: "hsl(0, 0%, 80%)", neutral30: "hsl(0, 0%, 70%)", neutral40: "hsl(0, 0%, 60%)", neutral50: "hsl(0, 0%, 50%)", neutral60: "hsl(0, 0%, 40%)", neutral70: "hsl(0, 0%, 30%)", neutral80: "hsl(0, 0%, 20%)", neutral90: "hsl(0, 0%, 10%)"};
+var Su = 4;
 var Si2 = 4;
-var Su = 38;
-var wu = Si2 * 2;
-var xu = {baseUnit: Si2, controlHeight: Su, menuGutter: wu};
-var $t2 = {borderRadius: Eu, colors: Tu, spacing: xu};
-var Gu = {"aria-live": "polite", backspaceRemovesValue: true, blurInputOnSelect: Dt2(), captureMenuScroll: !Dt2(), closeMenuOnSelect: true, closeMenuOnScroll: false, components: {}, controlShouldRenderValue: true, escapeClearsValue: false, filterOption: cu(), formatGroupLabel: vu, getOptionLabel: Au, getOptionValue: Cu, isDisabled: false, isLoading: false, isMulti: false, isRtl: false, isSearchable: true, isOptionDisabled: Iu, loadingMessage: function() {
+var wu = 38;
+var xu = Si2 * 2;
+var Gu = {baseUnit: Si2, controlHeight: wu, menuGutter: xu};
+var $t2 = {borderRadius: Su, colors: Eu, spacing: Gu};
+var Pu = {"aria-live": "polite", backspaceRemovesValue: true, blurInputOnSelect: Dt2(), captureMenuScroll: !Dt2(), closeMenuOnSelect: true, closeMenuOnScroll: false, components: {}, controlShouldRenderValue: true, escapeClearsValue: false, filterOption: du(), formatGroupLabel: Au, getOptionLabel: Cu, getOptionValue: Iu, isDisabled: false, isLoading: false, isMulti: false, isRtl: false, isSearchable: true, isOptionDisabled: ku, loadingMessage: function() {
   return "Loading...";
 }, maxMenuHeight: 300, minMenuHeight: 140, menuIsOpen: false, menuPlacement: "bottom", menuPosition: "absolute", menuShouldBlockScroll: false, menuShouldScrollIntoView: !wr(), noOptionsMessage: function() {
   return "No options";
@@ -10018,14 +10018,14 @@ function Gi2(e22) {
     }))) : a2.push(t2.data), a2;
   }, []);
 }
-function Pu(e22, a2) {
+function Nu(e22, a2) {
   return Gi2(xi2(e22, a2));
 }
 function Pi2(e22, a2) {
   var t2 = e22.inputValue, r2 = t2 === void 0 ? "" : t2, n2 = a2.data, i2 = a2.isSelected, o2 = a2.label, s2 = a2.value;
   return (!Oi2(e22) || !i2) && zi2(e22, {label: o2, value: s2, data: n2}, r2);
 }
-function Nu(e22, a2) {
+function Bu(e22, a2) {
   var t2 = e22.focusedValue, r2 = e22.selectValue, n2 = r2.indexOf(t2);
   if (n2 > -1) {
     var i2 = a2.indexOf(t2);
@@ -10036,7 +10036,7 @@ function Nu(e22, a2) {
   }
   return null;
 }
-function Bu(e22, a2) {
+function Mu(e22, a2) {
   var t2 = e22.focusedOption;
   return t2 && a2.indexOf(t2) > -1 ? t2 : a2[0];
 }
@@ -10066,7 +10066,7 @@ var Oi2 = function(a2) {
   var t2 = a2.hideSelectedOptions, r2 = a2.isMulti;
   return t2 === void 0 ? r2 : t2;
 };
-var Mu = 1;
+var zu = 1;
 var qt2 = function(e22) {
   Fe3(t2, e22);
   var a2 = Ua2(t2);
@@ -10122,7 +10122,7 @@ var qt2 = function(e22) {
     }, n2.getOptionValue = function(i2) {
       return it2(n2.props, i2);
     }, n2.getStyles = function(i2, o2) {
-      var s2 = ku[i2](o2);
+      var s2 = Tu[i2](o2);
       s2.boxSizing = "border-box";
       var u2 = n2.props.styles[i2];
       return u2 ? u2(s2, o2) : s2;
@@ -10281,7 +10281,7 @@ var qt2 = function(e22) {
         }
         i2.preventDefault();
       }
-    }, n2.instancePrefix = "react-select-" + (n2.props.instanceId || ++Mu), n2.state.selectValue = Vt(r2.value), n2;
+    }, n2.instancePrefix = "react-select-" + (n2.props.instanceId || ++zu), n2.state.selectValue = Vt(r2.value), n2;
   }
   return Oe3(t2, [{key: "componentDidMount", value: function() {
     this.startListeningComposition(), this.startListeningToTouch(), this.props.closeMenuOnScroll && document && document.addEventListener && document.addEventListener("scroll", this.onScroll, true), this.props.autoFocus && this.focusInput();
@@ -10371,7 +10371,7 @@ var qt2 = function(e22) {
     document && document.removeEventListener && (document.removeEventListener("touchstart", this.onTouchStart), document.removeEventListener("touchmove", this.onTouchMove), document.removeEventListener("touchend", this.onTouchEnd));
   }}, {key: "renderInput", value: function() {
     var n2 = this.props, i2 = n2.isDisabled, o2 = n2.isSearchable, s2 = n2.inputId, u2 = n2.inputValue, c2 = n2.tabIndex, l2 = n2.form, d2 = n2.menuIsOpen, m2 = this.getComponents(), h2 = m2.Input, f2 = this.state, g2 = f2.inputIsHidden, b2 = f2.ariaSelection, y3 = this.commonProps, v2 = s2 || this.getElementId("input"), k2 = B3(B3({"aria-autocomplete": "list", "aria-expanded": d2, "aria-haspopup": true, "aria-controls": this.getElementId("listbox"), "aria-owns": this.getElementId("listbox"), "aria-errormessage": this.props["aria-errormessage"], "aria-invalid": this.props["aria-invalid"], "aria-label": this.props["aria-label"], "aria-labelledby": this.props["aria-labelledby"], role: "combobox"}, !o2 && {"aria-readonly": true}), this.hasValue() ? (b2 == null ? void 0 : b2.action) === "initial-input-focus" && {"aria-describedby": this.getElementId("live-region")} : {"aria-describedby": this.getElementId("placeholder")});
-    return o2 ? createElement(h2, A2({}, y3, {autoCapitalize: "none", autoComplete: "off", autoCorrect: "off", id: v2, innerRef: this.getInputRef, isDisabled: i2, isHidden: g2, onBlur: this.onInputBlur, onChange: this.handleInputChange, onFocus: this.onInputFocus, spellCheck: "false", tabIndex: c2, form: l2, type: "text", value: u2}, k2)) : createElement(mu, A2({id: v2, innerRef: this.getInputRef, onBlur: this.onInputBlur, onChange: ha2, onFocus: this.onInputFocus, disabled: i2, tabIndex: c2, inputMode: "none", form: l2, value: ""}, k2));
+    return o2 ? createElement(h2, A2({}, y3, {autoCapitalize: "none", autoComplete: "off", autoCorrect: "off", id: v2, innerRef: this.getInputRef, isDisabled: i2, isHidden: g2, onBlur: this.onInputBlur, onChange: this.handleInputChange, onFocus: this.onInputFocus, spellCheck: "false", tabIndex: c2, form: l2, type: "text", value: u2}, k2)) : createElement(hu, A2({id: v2, innerRef: this.getInputRef, onBlur: this.onInputBlur, onChange: ha2, onFocus: this.onInputFocus, disabled: i2, tabIndex: c2, inputMode: "none", form: l2, value: ""}, k2));
   }}, {key: "renderPlaceholderOrValue", value: function() {
     var n2 = this, i2 = this.getComponents(), o2 = i2.MultiValue, s2 = i2.MultiValueContainer, u2 = i2.MultiValueLabel, c2 = i2.MultiValueRemove, l2 = i2.SingleValue, d2 = i2.Placeholder, m2 = this.commonProps, h2 = this.props, f2 = h2.controlShouldRenderValue, g2 = h2.isDisabled, b2 = h2.isMulti, y3 = h2.inputValue, v2 = h2.placeholder, k2 = this.state, E2 = k2.selectValue, M3 = k2.focusedValue, T3 = k2.isFocused;
     if (!this.hasValue() || !f2)
@@ -10420,12 +10420,12 @@ var qt2 = function(e22) {
     if (!I3)
       return null;
     var se3 = function(Q2, Ee3) {
-      var Se3 = Q2.type, he3 = Q2.data, be3 = Q2.isDisabled, ia2 = Q2.isSelected, Sa2 = Q2.label, po = Q2.value, En = g2 === he3, Sn = be3 ? void 0 : function() {
+      var Se3 = Q2.type, he3 = Q2.data, be3 = Q2.isDisabled, ia2 = Q2.isSelected, Sa2 = Q2.label, go = Q2.value, En = g2 === he3, Sn = be3 ? void 0 : function() {
         return n2.onOptionHover(he3);
-      }, go = be3 ? void 0 : function() {
+      }, yo = be3 ? void 0 : function() {
         return n2.selectOption(he3);
-      }, wn = "".concat(n2.getElementId("option"), "-").concat(Ee3), yo = {id: wn, onClick: go, onMouseMove: Sn, onMouseOver: Sn, tabIndex: -1};
-      return createElement(h2, A2({}, f2, {innerProps: yo, data: he3, isDisabled: be3, isSelected: ia2, key: wn, label: Sa2, type: Se3, value: po, isFocused: En, innerRef: En ? n2.getFocusedOptionRef : void 0}), n2.formatOptionLabel(Q2.data, "menu"));
+      }, wn = "".concat(n2.getElementId("option"), "-").concat(Ee3), vo = {id: wn, onClick: yo, onMouseMove: Sn, onMouseOver: Sn, tabIndex: -1};
+      return createElement(h2, A2({}, f2, {innerProps: vo, data: he3, isDisabled: be3, isSelected: ia2, key: wn, label: Sa2, type: Se3, value: go, isFocused: En, innerRef: En ? n2.getFocusedOptionRef : void 0}), n2.formatOptionLabel(Q2.data, "menu"));
     }, $2;
     if (this.hasOptions())
       $2 = this.getCategorizedOptions().map(function(H3) {
@@ -10450,7 +10450,7 @@ var qt2 = function(e22) {
     }
     var Te3 = {minMenuHeight: M3, maxMenuHeight: T3, menuPlacement: N3, menuPosition: F3, menuShouldScrollIntoView: te3}, Be3 = createElement(jt2, A2({}, f2, Te3), function(H3) {
       var Q2 = H3.ref, Ee3 = H3.placerProps, Se3 = Ee3.placement, he3 = Ee3.maxHeight;
-      return createElement(u2, A2({}, f2, Te3, {innerRef: Q2, innerProps: {onMouseDown: n2.onMenuMouseDown, onMouseMove: n2.onMenuMouseMove, id: n2.getElementId("listbox")}, isLoading: k2, placement: Se3}), createElement(yu, {captureEnabled: y3, onTopArrive: Z3, onBottomArrive: V3, lockEnabled: oe3}, function(be3) {
+      return createElement(u2, A2({}, f2, Te3, {innerRef: Q2, innerProps: {onMouseDown: n2.onMenuMouseDown, onMouseMove: n2.onMenuMouseMove, id: n2.getElementId("listbox")}, isLoading: k2, placement: Se3}), createElement(vu, {captureEnabled: y3, onTopArrive: Z3, onBottomArrive: V3, lockEnabled: oe3}, function(be3) {
         return createElement(c2, A2({}, f2, {innerRef: function(Sa2) {
           n2.getMenuListRef(Sa2), be3(Sa2);
         }, isLoading: k2, maxHeight: he3, focusedOption: g2}), $2);
@@ -10478,26 +10478,26 @@ var qt2 = function(e22) {
       }
   }}, {key: "renderLiveRegion", value: function() {
     var n2 = this.commonProps, i2 = this.state, o2 = i2.ariaSelection, s2 = i2.focusedOption, u2 = i2.focusedValue, c2 = i2.isFocused, l2 = i2.selectValue, d2 = this.getFocusableOptions();
-    return createElement(ou, A2({}, n2, {id: this.getElementId("live-region"), ariaSelection: o2, focusedOption: s2, focusedValue: u2, isFocused: c2, selectValue: l2, focusableOptions: d2}));
+    return createElement(su, A2({}, n2, {id: this.getElementId("live-region"), ariaSelection: o2, focusedOption: s2, focusedValue: u2, isFocused: c2, selectValue: l2, focusableOptions: d2}));
   }}, {key: "render", value: function() {
     var n2 = this.getComponents(), i2 = n2.Control, o2 = n2.IndicatorsContainer, s2 = n2.SelectContainer, u2 = n2.ValueContainer, c2 = this.props, l2 = c2.className, d2 = c2.id, m2 = c2.isDisabled, h2 = c2.menuIsOpen, f2 = this.state.isFocused, g2 = this.commonProps = this.getCommonProps();
     return createElement(s2, A2({}, g2, {className: l2, innerProps: {id: d2, onKeyDown: this.onKeyDown}, isDisabled: m2, isFocused: f2}), this.renderLiveRegion(), createElement(i2, A2({}, g2, {innerRef: this.getControlRef, innerProps: {onMouseDown: this.onControlMouseDown, onTouchEnd: this.onControlTouchEnd}, isDisabled: m2, isFocused: f2, menuIsOpen: h2}), createElement(u2, A2({}, g2, {isDisabled: m2}), this.renderPlaceholderOrValue(), this.renderInput()), createElement(o2, A2({}, g2, {isDisabled: m2}), this.renderClearIndicator(), this.renderLoadingIndicator(), this.renderIndicatorSeparator(), this.renderDropdownIndicator())), this.renderMenu(), this.renderFormField());
   }}], [{key: "getDerivedStateFromProps", value: function(n2, i2) {
     var o2 = i2.prevProps, s2 = i2.clearFocusValueOnUpdate, u2 = i2.inputIsHiddenAfterUpdate, c2 = i2.ariaSelection, l2 = i2.isFocused, d2 = i2.prevWasFocused, m2 = n2.options, h2 = n2.value, f2 = n2.menuIsOpen, g2 = n2.inputValue, b2 = n2.isMulti, y3 = Vt(h2), v2 = {};
     if (o2 && (h2 !== o2.value || m2 !== o2.options || f2 !== o2.menuIsOpen || g2 !== o2.inputValue)) {
-      var k2 = f2 ? Pu(n2, y3) : [], E2 = s2 ? Nu(i2, y3) : null, M3 = Bu(i2, k2);
+      var k2 = f2 ? Nu(n2, y3) : [], E2 = s2 ? Bu(i2, y3) : null, M3 = Mu(i2, k2);
       v2 = {selectValue: y3, focusedOption: M3, focusedValue: E2, clearFocusValueOnUpdate: false};
     }
     var T3 = u2 != null && n2 !== o2 ? {inputIsHidden: u2, inputIsHiddenAfterUpdate: void 0} : {}, I3 = c2, N3 = l2 && d2;
     return l2 && !N3 && (I3 = {value: ba2(b2, y3, y3[0] || null), options: y3, action: "initial-input-focus"}, N3 = !d2), (c2 == null ? void 0 : c2.action) === "initial-input-focus" && (I3 = null), B3(B3(B3({}, v2), T3), {}, {prevProps: n2, ariaSelection: I3, prevWasFocused: N3});
   }}]), t2;
 }(Component);
-qt2.defaultProps = Gu;
-var Ou = forwardRef(function(e22, a2) {
+qt2.defaultProps = Pu;
+var Fu = forwardRef(function(e22, a2) {
   var t2 = di2(e22);
   return createElement(qt2, A2({ref: a2}, t2));
 });
-var Vi2 = Ou;
+var Vi2 = Fu;
 var Di2 = (e22, a2, t2) => {
   let [r2, n2] = e22.split("/"), [i2, o2] = n2.split(":");
   return Date.UTC(t2, r2 - 1, i2, o2) - 36e5 * a2;
@@ -10506,7 +10506,7 @@ var Ri2 = (e22, a2, t2, r2, n2) => {
   let i2 = new Date(e22).getUTCFullYear(), o2 = Di2(a2, n2, i2), s2 = Di2(t2, r2, i2);
   return e22 >= o2 && e22 < s2;
 };
-var Fu = (e22) => {
+var Vu = (e22) => {
   let a2 = e22.timezones[e22.tz];
   if (a2 === void 0)
     return console.warn("Warning: couldn't find timezone " + e22.tz), 0;
@@ -10519,12 +10519,12 @@ var Fu = (e22) => {
 };
 var en;
 var ji2 = (en = Object.freeze({__proto__: null, default: {"9|s": "2/dili,2/jayapura", "9|n": "2/chita,2/khandyga,2/pyongyang,2/seoul,2/tokyo,11/palau", "9.5|s|04/04:03->10/03:02": "4/adelaide,4/broken_hill,4/south,4/yancowinna", "9.5|s": "4/darwin,4/north", "8|s|03/08:01->10/04:00": "12/casey", "8|s": "2/kuala_lumpur,2/makassar,2/singapore,4/perth,2/ujung_pandang,4/west", "8|n": "2/brunei,2/choibalsan,2/hong_kong,2/irkutsk,2/kuching,2/macau,2/manila,2/shanghai,2/taipei,2/ulaanbaatar,2/chongqing,2/chungking,2/harbin,2/macao,2/ulan_bator", "8.75|s": "4/eucla", "7|s": "12/davis,2/jakarta,9/christmas", "7|n": "2/bangkok,2/barnaul,2/hovd,2/krasnoyarsk,2/novokuznetsk,2/novosibirsk,2/phnom_penh,2/pontianak,2/saigon,2/tomsk,2/vientiane,2/ho_chi_minh", "6|s": "12/vostok", "6|n": "2/almaty,2/bishkek,2/dhaka,2/omsk,2/qyzylorda,2/qostanay,2/thimphu,2/urumqi,9/chagos,2/dacca,2/kashgar,2/thimbu", "6.5|n": "2/rangoon,9/cocos,2/yangon", "5|s": "12/mawson,9/kerguelen", "5|n": "2/aqtau,2/aqtobe,2/ashgabat,2/atyrau,2/baku,2/dushanbe,2/karachi,2/oral,2/samarkand,2/tashkent,2/yekaterinburg,9/maldives,2/ashkhabad", "5.75|n": "2/katmandu,2/kathmandu", "5.5|n": "2/calcutta,2/colombo,2/kolkata", "4|s": "9/reunion", "4|n": "2/dubai,2/muscat,2/tbilisi,2/yerevan,8/astrakhan,8/samara,8/saratov,8/ulyanovsk,8/volgograd,2/volgograd,9/mahe,9/mauritius", "4.5|n|03/22:00->09/21:24": "2/tehran", "4.5|n": "2/kabul", "3|s": "12/syowa,9/antananarivo", "3|n|03/28:03->10/31:04": "2/famagusta,2/nicosia,8/athens,8/bucharest,8/helsinki,8/kiev,8/mariehamn,8/riga,8/sofia,8/tallinn,8/uzhgorod,8/vilnius,8/zaporozhye,8/nicosia", "3|n|03/28:02->10/31:03": "8/chisinau,8/tiraspol", "3|n|03/28:00->10/30:24": "2/beirut", "3|n|03/27:00->10/30:01": "2/gaza,2/hebron", "3|n|03/26:02->10/31:02": "2/jerusalem,2/tel_aviv", "3|n|03/26:00->10/29:01": "2/amman", "3|n|03/26:00->10/28:24": "2/damascus", "3|n": "0/addis_ababa,0/asmera,0/dar_es_salaam,0/djibouti,0/juba,0/kampala,0/mogadishu,0/nairobi,2/aden,2/baghdad,2/bahrain,2/kuwait,2/qatar,2/riyadh,8/istanbul,8/kirov,8/minsk,8/moscow,8/simferopol,9/comoro,9/mayotte,0/asmara,2/istanbul", "2|s|03/28:02->10/31:02": "12/troll", "2|s": "0/gaborone,0/harare,0/johannesburg,0/lubumbashi,0/lusaka,0/maputo,0/maseru,0/mbabane", "2|n|03/28:02->10/31:03": "0/ceuta,arctic/longyearbyen,8/amsterdam,8/andorra,8/belgrade,8/berlin,8/bratislava,8/brussels,8/budapest,8/busingen,8/copenhagen,8/gibraltar,8/ljubljana,8/luxembourg,8/madrid,8/malta,8/monaco,8/oslo,8/paris,8/podgorica,8/prague,8/rome,8/san_marino,8/sarajevo,8/skopje,8/stockholm,8/tirane,8/vaduz,8/vatican,8/vienna,8/warsaw,8/zagreb,8/zurich,3/jan_mayen", "2|n": "0/blantyre,0/bujumbura,0/cairo,0/khartoum,0/kigali,0/tripoli,8/kaliningrad", "1|s": "0/brazzaville,0/kinshasa,0/luanda,0/windhoek", "1|n|04/11:03->05/16:02": "0/casablanca,0/el_aaiun", "1|n|03/28:01->10/31:02": "3/canary,3/faeroe,3/madeira,8/dublin,8/guernsey,8/isle_of_man,8/jersey,8/lisbon,8/london,3/faroe,8/belfast", "1|n": "0/algiers,0/bangui,0/douala,0/lagos,0/libreville,0/malabo,0/ndjamena,0/niamey,0/porto-novo,0/tunis", "14|n": "11/kiritimati", "13|s|04/04:04->09/26:03": "11/apia", "13|s|01/15:02->11/05:03": "11/tongatapu", "13|n": "11/enderbury,11/fakaofo", "12|s|04/04:03->09/26:02": "12/mcmurdo,11/auckland,12/south_pole", "12|s|01/17:03->11/14:02": "11/fiji", "12|n": "2/anadyr,2/kamchatka,2/srednekolymsk,11/funafuti,11/kwajalein,11/majuro,11/nauru,11/tarawa,11/wake,11/wallis", "12.75|s|04/04:03->09/26:02": "11/chatham", "11|s|04/04:03->10/03:02": "12/macquarie", "11|s": "11/bougainville", "11|n": "2/magadan,2/sakhalin,11/efate,11/guadalcanal,11/kosrae,11/noumea,11/ponape,11/pohnpei", "11.5|n|04/04:03->10/03:02": "11/norfolk", "10|s|04/04:03->10/03:02": "4/currie,4/hobart,4/melbourne,4/sydney,4/act,4/canberra,4/nsw,4/tasmania,4/victoria", "10|s": "12/dumontdurville,4/brisbane,4/lindeman,11/port_moresby,4/queensland", "10|n": "2/ust-nera,2/vladivostok,2/yakutsk,11/guam,11/saipan,11/truk,11/chuuk,11/yap", "10.5|s|04/04:01->10/03:02": "4/lord_howe,4/lhi", "0|n|03/28:00->10/31:01": "1/scoresbysund,3/azores", "0|n": "0/abidjan,0/accra,0/bamako,0/banjul,0/bissau,0/conakry,0/dakar,0/freetown,0/lome,0/monrovia,0/nouakchott,0/ouagadougou,0/sao_tome,1/danmarkshavn,3/reykjavik,3/st_helena,13/gmt,13/utc,0/timbuktu,13/gmt-0,13/gmt+0,13/gmt0,13/greenwich,13/uct,13/universal,13/zulu", "-9|n|03/14:02->11/07:02": "1/adak,1/atka,us/aleutian", "-9|n": "11/gambier", "-9.5|n": "11/marquesas", "-8|n|03/14:02->11/07:02": "1/anchorage,1/juneau,1/metlakatla,1/nome,1/sitka,1/yakutat,us/alaska", "-8|n": "11/pitcairn", "-7|n|03/14:02->11/07:02": "1/los_angeles,1/santa_isabel,1/tijuana,1/vancouver,1/ensenada,6/pacific,10/bajanorte,us/pacific-new,us/pacific", "-7|n|03/08:02->11/01:01": "1/dawson,1/whitehorse,6/yukon", "-7|n": "1/creston,1/dawson_creek,1/fort_nelson,1/hermosillo,1/phoenix,us/arizona", "-6|s|04/03:22->09/04:22": "11/easter,7/easterisland", "-6|n|04/04:02->10/31:02": "1/chihuahua,1/mazatlan,10/bajasur", "-6|n|03/14:02->11/07:02": "1/boise,1/cambridge_bay,1/denver,1/edmonton,1/inuvik,1/ojinaga,1/yellowknife,1/shiprock,6/mountain,us/mountain", "-6|n": "1/belize,1/costa_rica,1/el_salvador,1/guatemala,1/managua,1/regina,1/swift_current,1/tegucigalpa,11/galapagos,6/east-saskatchewan,6/saskatchewan", "-5|s": "1/lima,1/rio_branco,1/porto_acre,5/acre", "-5|n|04/04:02->10/31:02": "1/bahia_banderas,1/merida,1/mexico_city,1/monterrey,10/general", "-5|n|03/14:02->11/07:02": "1/chicago,1/matamoros,1/menominee,1/rainy_river,1/rankin_inlet,1/resolute,1/winnipeg,1/indiana/knox,1/indiana/tell_city,1/north_dakota/beulah,1/north_dakota/center,1/north_dakota/new_salem,1/knox_in,6/central,us/central,us/indiana-starke", "-5|n|03/12:03->11/05:01": "1/north_dakota", "-5|n": "1/bogota,1/cancun,1/cayman,1/coral_harbour,1/eirunepe,1/guayaquil,1/jamaica,1/panama,1/atikokan", "-4|s|05/13:23->08/13:01": "12/palmer", "-4|s|04/03:24->09/05:00": "1/santiago,7/continental", "-4|s|03/27:24->10/03:00": "1/asuncion", "-4|s|02/16:24->11/03:00": "1/campo_grande,1/cuiaba", "-4|s": "1/la_paz,1/manaus,5/west", "-4|n|03/14:02->11/07:02": "1/detroit,1/grand_turk,1/indianapolis,1/iqaluit,1/louisville,1/montreal,1/nassau,1/new_york,1/nipigon,1/pangnirtung,1/port-au-prince,1/thunder_bay,1/toronto,1/indiana/marengo,1/indiana/petersburg,1/indiana/vevay,1/indiana/vincennes,1/indiana/winamac,1/kentucky/monticello,1/fort_wayne,1/indiana/indianapolis,1/kentucky/louisville,6/eastern,us/east-indiana,us/eastern,us/michigan", "-4|n|03/14:00->11/07:01": "1/havana", "-4|n|03/12:03->11/05:01": "1/indiana,1/kentucky", "-4|n": "1/anguilla,1/antigua,1/aruba,1/barbados,1/blanc-sablon,1/boa_vista,1/caracas,1/curacao,1/dominica,1/grenada,1/guadeloupe,1/guyana,1/kralendijk,1/lower_princes,1/marigot,1/martinique,1/montserrat,1/port_of_spain,1/porto_velho,1/puerto_rico,1/santo_domingo,1/st_barthelemy,1/st_kitts,1/st_lucia,1/st_thomas,1/st_vincent,1/tortola,1/virgin", "-3|s": "1/argentina,1/buenos_aires,1/catamarca,1/cordoba,1/fortaleza,1/jujuy,1/mendoza,1/montevideo,1/punta_arenas,1/sao_paulo,12/rothera,3/stanley,1/argentina/la_rioja,1/argentina/rio_gallegos,1/argentina/salta,1/argentina/san_juan,1/argentina/san_luis,1/argentina/tucuman,1/argentina/ushuaia,1/argentina/buenos_aires,1/argentina/catamarca,1/argentina/comodrivadavia,1/argentina/cordoba,1/argentina/jujuy,1/argentina/mendoza,1/rosario,5/east", "-3|n|03/14:02->11/07:02": "1/glace_bay,1/goose_bay,1/halifax,1/moncton,1/thule,3/bermuda,6/atlantic", "-3|n": "1/araguaina,1/bahia,1/belem,1/cayenne,1/maceio,1/paramaribo,1/recife,1/santarem", "-2|n|03/27:22->10/30:23": "1/godthab,1/nuuk", "-2|n|03/14:02->11/07:02": "1/miquelon", "-2|n": "1/noronha,3/south_georgia,5/denoronha", "-2.5|n|03/14:02->11/07:02": "1/st_johns,6/newfoundland", "-1|n": "3/cape_verde", "-11|n": "11/midway,11/niue,11/pago_pago,11/samoa,us/samoa", "-10|n": "11/honolulu,11/johnston,11/rarotonga,11/tahiti,us/hawaii"}})) && en.default || en;
-var Vu = ["africa", "america", "asia", "atlantic", "australia", "brazil", "canada", "chile", "europe", "indian", "mexico", "pacific", "antarctica", "etc"];
+var Du = ["africa", "america", "asia", "atlantic", "australia", "brazil", "canada", "chile", "europe", "indian", "mexico", "pacific", "antarctica", "etc"];
 var va = {};
 Object.keys(ji2).forEach((e22) => {
   let a2 = e22.split("|"), t2 = {offset: Number(a2[0]), hem: a2[1]};
   a2[2] && (t2.dst = a2[2]), ji2[e22].split(",").forEach((r2) => {
-    r2 = r2.replace(/(^[0-9]+)\//, (n2, i2) => (i2 = Number(i2), Vu[i2] + "/")), va[r2] = t2;
+    r2 = r2.replace(/(^[0-9]+)\//, (n2, i2) => (i2 = Number(i2), Du[i2] + "/")), va[r2] = t2;
   });
 }), va.utc = {offset: 0, hem: "n"};
 for (let e22 = -14; e22 <= 14; e22 += 0.5) {
@@ -10533,25 +10533,25 @@ for (let e22 = -14; e22 <= 14; e22 += 0.5) {
   let t2 = "etc/gmt" + a2;
   va[t2] = {offset: -1 * e22, hem: "n"}, t2 = "utc/gmt" + a2, va[t2] = {offset: -1 * e22, hem: "n"};
 }
-var Du = /(\-?[0-9]+)h(rs)?/i;
-var Ru = /(\-?[0-9]+)/;
-var ju = /utc([\-+]?[0-9]+)/i;
-var Wu = /gmt([\-+]?[0-9]+)/i;
+var Ru = /(\-?[0-9]+)h(rs)?/i;
+var ju = /(\-?[0-9]+)/;
+var Wu = /utc([\-+]?[0-9]+)/i;
+var Zu = /gmt([\-+]?[0-9]+)/i;
 var ot2 = function(e22) {
   return (e22 = Number(e22)) >= -13 && e22 <= 13 ? "etc/gmt" + (e22 = ((e22 *= -1) > 0 ? "+" : "") + e22) : null;
 };
 var Wi2 = va;
-var Zu = function(e22) {
-  let a2 = e22.match(Du);
-  if (a2 !== null || (a2 = e22.match(ju), a2 !== null))
+var Xu = function(e22) {
+  let a2 = e22.match(Ru);
+  if (a2 !== null || (a2 = e22.match(Wu), a2 !== null))
     return ot2(a2[1]);
-  if (a2 = e22.match(Wu), a2 !== null) {
+  if (a2 = e22.match(Zu), a2 !== null) {
     let t2 = -1 * Number(a2[1]);
     return ot2(t2);
   }
-  return a2 = e22.match(Ru), a2 !== null ? ot2(a2[1]) : null;
+  return a2 = e22.match(ju), a2 !== null ? ot2(a2[1]) : null;
 };
-var Xu = (() => {
+var Hu = (() => {
   let e22 = (() => {
     if (typeof Intl == "undefined" || Intl.DateTimeFormat === void 0)
       return null;
@@ -10568,9 +10568,9 @@ var Zi2 = Object.keys(Wi2).reduce((e22, a2) => {
   return t2 = t2.replace(/_/g, " "), e22[t2] = a2, e22;
 }, {});
 var an;
-var Hu = (e22, a2) => {
+var Lu = (e22, a2) => {
   if (!e22)
-    return Xu;
+    return Hu;
   typeof e22 != "string" && console.error("Timezone must be a string - recieved: '", e22, `'
 `);
   let t2 = e22.trim();
@@ -10579,7 +10579,7 @@ var Hu = (e22, a2) => {
   if (Zi2.hasOwnProperty(t2) === true)
     return Zi2[t2];
   if (/[0-9]/.test(t2) === true) {
-    let r2 = Zu(t2);
+    let r2 = Xu(t2);
     if (r2)
       return r2;
   }
@@ -10596,7 +10596,7 @@ var K2 = (function(e22, a2) {
 }(an = {exports: {}}, an.exports), an.exports);
 K2.isLeapYear, K2.isDate, K2.isArray, K2.isObject, K2.isBoolean, K2.zeroPad, K2.titleCase, K2.ordinal, K2.toCardinal, K2.normalize, K2.getEpoch, K2.beADate, K2.formatTimezone;
 var tn = {year: new Date().getFullYear(), month: 0, date: 1};
-var Lu = {parseArray: (e22, a2, t2) => {
+var Yu = {parseArray: (e22, a2, t2) => {
   if (a2.length === 0)
     return e22;
   let r2 = ["year", "month", "date", "hour", "minute", "second", "millisecond"];
@@ -10634,8 +10634,8 @@ var nn = {now: (e22) => Ve2(e22), today: (e22) => Ve2(e22), tonight: (e22) => e2
   return e22 = e22.set([a2, 11, 31, 18, 0, 0]);
 }};
 nn["new years eve"] = nn["new years"];
-var Yu = nn;
-var _u = function(e22) {
+var _u = nn;
+var Ju = function(e22) {
   return e22 = (e22 = (e22 = (e22 = e22.replace(/\b(mon|tues?|wed|wednes|thur?s?|fri|sat|satur|sun)(day)?\b/i, "")).replace(/([0-9])(th|rd|st|nd)/, "$1")).replace(/,/g, "")).replace(/ +/g, " ").trim();
 };
 var ye2 = {millisecond: 1, second: 1e3, minute: 6e4, hour: 36e5, day: 864e5};
@@ -10670,7 +10670,7 @@ var rn = {year: {valid: (e22) => e22 > -4e3 && e22 < 4e3, walkTo: (e22, a2) => s
 }}, millisecond: {valid: (e22) => e22 >= 0 && e22 < 1e3, walkTo: (e22, a2) => {
   e22.epoch = e22.milliseconds(a2).epoch;
 }}};
-var Ju = (e22, a2) => {
+var Uu = (e22, a2) => {
   let t2 = Object.keys(rn), r2 = e22.clone();
   for (let n2 = 0; n2 < t2.length; n2++) {
     let i2 = t2[n2], o2 = a2[i2];
@@ -10693,7 +10693,7 @@ var ve3 = {short: () => Aa2, long: () => Ca2, mapping: () => function() {
 }(), set: (e22) => {
   Aa2 = e22.short || Aa2, Ca2 = e22.long || Ca2;
 }};
-var Uu = (e22, a2) => {
+var Qu = (e22, a2) => {
   if (!a2)
     return e22;
   a2 !== "Z" && a2 !== "z" || (a2 = "+0000");
@@ -10702,7 +10702,7 @@ var Uu = (e22, a2) => {
   let r2 = "etc/gmt" + t2;
   return e22.timezones[r2] && (e22.tz = r2), e22;
 };
-var Qu = (e22, a2 = "") => {
+var Ku = (e22, a2 = "") => {
   let t2 = (a2 = a2.replace(/^\s+/, "").toLowerCase()).match(/([0-9]{1,2}):([0-9]{1,2}):?([0-9]{1,2})?[:\.]?([0-9]{1,4})?/);
   if (t2 !== null) {
     let r2 = Number(t2[1]);
@@ -10721,10 +10721,10 @@ var Qu = (e22, a2 = "") => {
   }
   return e22 = e22.startOf("day");
 };
-var Ku = p2.isLeapYear;
-var $u = ve3.mapping();
-var x2 = Ju;
-var ut2 = {parseOffset: Uu, parseTime: Qu, parseYear: (e22 = "", a2) => {
+var $u = p2.isLeapYear;
+var qu = ve3.mapping();
+var x2 = Uu;
+var ut2 = {parseOffset: Qu, parseTime: Ku, parseYear: (e22 = "", a2) => {
   if (e22 = e22.trim(), /^'[0-9][0-9]$/.test(e22) === true) {
     let r2 = Number(e22.replace(/'/, ""));
     return r2 > 50 ? 1900 + r2 : 2e3 + r2;
@@ -10732,28 +10732,28 @@ var ut2 = {parseOffset: Uu, parseTime: Qu, parseYear: (e22 = "", a2) => {
   let t2 = parseInt(e22, 10);
   return !t2 && a2 && (t2 = a2.year), t2 = t2 || new Date().getFullYear(), t2;
 }, parseMonth: function(e22) {
-  return e22 = e22.toLowerCase().trim(), $u[e22];
+  return e22 = e22.toLowerCase().trim(), qu[e22];
 }, validate: (e22) => {
   if (De3.hasOwnProperty(e22.month) !== true)
     return false;
   if (e22.month === 1)
-    return !!(Ku(e22.year) && e22.date <= 29) || e22.date <= 28;
+    return !!($u(e22.year) && e22.date <= 29) || e22.date <= 28;
   let a2 = De3[e22.month] || 0;
   return e22.date <= a2;
 }};
-var {validate: on, parseTime: sn, parseYear: qu, parseMonth: el, parseOffset: al} = ut2;
-var tl = [{reg: /^(\-?0?0?[0-9]{3,4})-([0-9]{1,2})-([0-9]{1,2})[T| ]([0-9.:]+)(Z|[0-9\-\+:]+)?$/i, parse: (e22, a2) => {
+var {validate: on, parseTime: sn, parseYear: el, parseMonth: al, parseOffset: tl} = ut2;
+var nl = [{reg: /^(\-?0?0?[0-9]{3,4})-([0-9]{1,2})-([0-9]{1,2})[T| ]([0-9.:]+)(Z|[0-9\-\+:]+)?$/i, parse: (e22, a2) => {
   let t2 = {year: a2[1], month: parseInt(a2[2], 10) - 1, date: a2[3]};
-  return on(t2) === false ? (e22.epoch = null, e22) : (al(e22, a2[5]), x2(e22, t2), e22 = sn(e22, a2[4]));
+  return on(t2) === false ? (e22.epoch = null, e22) : (tl(e22, a2[5]), x2(e22, t2), e22 = sn(e22, a2[4]));
 }}, {reg: /^([0-9]{4})[\-\/\. ]([0-9]{1,2})[\-\/\. ]([0-9]{1,2})( [0-9]{1,2}(:[0-9]{0,2})?(:[0-9]{0,3})? ?(am|pm)?)?$/i, parse: (e22, a2) => {
   let t2 = {year: a2[1], month: parseInt(a2[2], 10) - 1, date: parseInt(a2[3], 10)};
   return t2.month >= 12 && (t2.date = parseInt(a2[2], 10), t2.month = parseInt(a2[3], 10) - 1), on(t2) === false ? (e22.epoch = null, e22) : (x2(e22, t2), e22 = sn(e22, a2[4]));
 }}, {reg: /^([0-9]{4})[\-\/\. ]([a-z]+)[\-\/\. ]([0-9]{1,2})( [0-9]{1,2}(:[0-9]{0,2})?(:[0-9]{0,3})? ?(am|pm)?)?$/i, parse: (e22, a2) => {
-  let t2 = {year: qu(a2[1], e22._today), month: el(a2[2]), date: p2.toCardinal(a2[3] || "")};
+  let t2 = {year: el(a2[1], e22._today), month: al(a2[2]), date: p2.toCardinal(a2[3] || "")};
   return on(t2) === false ? (e22.epoch = null, e22) : (x2(e22, t2), e22 = sn(e22, a2[4]));
 }}];
 var {validate: lt2, parseTime: ct2, parseYear: dt2, parseMonth: un} = ut2;
-var nl = [{reg: /^([0-9]{1,2})[\-\/.]([0-9]{1,2})[\-\/.]?([0-9]{4})?( [0-9]{1,2}:[0-9]{2}:?[0-9]{0,2}? ?(am|pm|gmt))?$/i, parse: (e22, a2) => {
+var rl = [{reg: /^([0-9]{1,2})[\-\/.]([0-9]{1,2})[\-\/.]?([0-9]{4})?( [0-9]{1,2}:[0-9]{2}:?[0-9]{0,2}? ?(am|pm|gmt))?$/i, parse: (e22, a2) => {
   let t2 = parseInt(a2[1], 10) - 1, r2 = parseInt(a2[2], 10);
   (e22.british || t2 >= 12) && (r2 = parseInt(a2[1], 10), t2 = parseInt(a2[2], 10) - 1);
   let n2 = {date: r2, month: t2, year: dt2(a2[3], e22._today) || new Date().getFullYear()};
@@ -10769,7 +10769,7 @@ var nl = [{reg: /^([0-9]{1,2})[\-\/.]([0-9]{1,2})[\-\/.]?([0-9]{4})?( [0-9]{1,2}
   return lt2(t2) === false ? (e22.epoch = null, e22) : (x2(e22, t2), e22 = ct2(e22, a2[3]));
 }}];
 var {validate: ln, parseTime: cn, parseYear: Xi2, parseMonth: dn} = ut2;
-var rl = [{reg: /^([0-9]{1,2})[\-\/]([a-z]+)[\-\/]?([0-9]{4})?$/i, parse: (e22, a2) => {
+var il = [{reg: /^([0-9]{1,2})[\-\/]([a-z]+)[\-\/]?([0-9]{4})?$/i, parse: (e22, a2) => {
   let t2 = {year: Xi2(a2[3], e22._today), month: dn(a2[2]), date: p2.toCardinal(a2[1] || "")};
   return ln(t2) === false ? (e22.epoch = null, e22) : (x2(e22, t2), e22 = cn(e22, a2[4]));
 }}, {reg: /^([0-9]{1,2})( [a-z]+)( [0-9]{4}| '[0-9]{2})? ?([0-9]{1,2}:[0-9]{2}:?[0-9]{0,2}? ?(am|pm|gmt))?$/i, parse: (e22, a2) => {
@@ -10779,12 +10779,12 @@ var rl = [{reg: /^([0-9]{1,2})[\-\/]([a-z]+)[\-\/]?([0-9]{4})?$/i, parse: (e22, 
   let t2 = {date: Number(a2[1]), month: dn(a2[2]), year: Number(a2[3])};
   return ln(t2) === false ? (e22.epoch = null, e22) : (x2(e22, t2), e22 = e22.startOf("day"), e22 = cn(e22, a2[4]));
 }}];
-var {validate: Ia2, parseTime: ka2, parseYear: Hi2, parseMonth: il} = ut2;
-var mn = [].concat(tl, nl, rl, [{reg: /^([0-9]{4})[\-\/]([0-9]{2})$/i, parse: (e22, a2) => {
+var {validate: Ia2, parseTime: ka2, parseYear: Hi2, parseMonth: ol} = ut2;
+var mn = [].concat(nl, rl, il, [{reg: /^([0-9]{4})[\-\/]([0-9]{2})$/i, parse: (e22, a2) => {
   let t2 = {year: a2[1], month: parseInt(a2[2], 10) - 1, date: 1};
   return Ia2(t2) === false ? (e22.epoch = null, e22) : (x2(e22, t2), e22 = ka2(e22, a2[4]));
 }}, {reg: /^([a-z]+) ([0-9]{4})$/i, parse: (e22, a2) => {
-  let t2 = {year: Hi2(a2[2], e22._today), month: il(a2[1]), date: e22._today.date || 1};
+  let t2 = {year: Hi2(a2[2], e22._today), month: ol(a2[1]), date: e22._today.date || 1};
   return Ia2(t2) === false ? (e22.epoch = null, e22) : (x2(e22, t2), e22 = ka2(e22, a2[4]));
 }}, {reg: /^(q[0-9])( of)?( [0-9]{4})?/i, parse: (e22, a2) => {
   let t2 = a2[1] || "";
@@ -10812,10 +10812,10 @@ var mn = [].concat(tl, nl, rl, [{reg: /^([0-9]{4})[\-\/]([0-9]{2})$/i, parse: (e
   let r2 = new Date(), n2 = {year: Hi2(a2[0], t2), month: t2.month || r2.getMonth(), date: t2.date || r2.getDate()};
   return Ia2(n2) === false ? (e22.epoch = null, e22) : (x2(e22, n2), e22 = ka2(e22));
 }}]);
-var ol = Lu;
-var Li2 = Yu;
-var sl = _u;
-var ul = function(e22, a2, t2) {
+var sl = Yu;
+var Li2 = _u;
+var ul = Ju;
+var ll = function(e22, a2, t2) {
   for (let r2 = 0; r2 < mn.length; r2++) {
     let n2 = a2.match(mn[r2].reg);
     if (n2) {
@@ -10826,17 +10826,17 @@ var ul = function(e22, a2, t2) {
   }
   return e22.silent === false && console.warn("Warning: couldn't parse date-string: '" + a2 + "'"), e22.epoch = null, e22;
 };
-var {parseArray: ll, parseObject: Yi2, parseNumber: cl} = ol;
+var {parseArray: cl, parseObject: Yi2, parseNumber: dl} = sl;
 var _i = {year: new Date().getFullYear(), month: 0, date: 1};
-var dl = (e22, a2) => {
+var ml = (e22, a2) => {
   let t2 = e22._today || _i;
   if (typeof a2 == "number")
-    return cl(e22, a2);
+    return dl(e22, a2);
   if (e22.epoch = Date.now(), e22._today && p2.isObject(e22._today) && Object.keys(e22._today).length > 0) {
     let r2 = Yi2(e22, t2, _i);
     r2.isValid() && (e22.epoch = r2.epoch);
   }
-  return a2 == null || a2 === "" ? e22 : p2.isDate(a2) === true ? (e22.epoch = a2.getTime(), e22) : p2.isArray(a2) === true ? e22 = ll(e22, a2, t2) : p2.isObject(a2) === true ? a2.epoch ? (e22.epoch = a2.epoch, e22.tz = a2.tz, e22) : e22 = Yi2(e22, a2, t2) : typeof a2 != "string" ? e22 : (a2 = sl(a2), Li2.hasOwnProperty(a2) === true ? e22 = Li2[a2](e22) : ul(e22, a2));
+  return a2 == null || a2 === "" ? e22 : p2.isDate(a2) === true ? (e22.epoch = a2.getTime(), e22) : p2.isArray(a2) === true ? e22 = cl(e22, a2, t2) : p2.isObject(a2) === true ? a2.epoch ? (e22.epoch = a2.epoch, e22.tz = a2.tz, e22) : e22 = Yi2(e22, a2, t2) : typeof a2 != "string" ? e22 : (a2 = ul(a2), Li2.hasOwnProperty(a2) === true ? e22 = Li2[a2](e22) : ll(e22, a2));
 };
 var hn = ["sun", "mon", "tue", "wed", "thu", "fri", "sat"];
 var bn = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
@@ -10868,7 +10868,7 @@ var na2 = {day: (e22) => Ae3(e22.dayName()), "day-short": (e22) => Ae3(re3.short
 }, "iso-utc": (e22) => new Date(e22.epoch).toISOString(), nice: (e22) => `${ve3.short()[e22.month()]} ${p2.ordinal(e22.date())}, ${e22.time()}`, "nice-24": (e22) => `${ve3.short()[e22.month()]} ${p2.ordinal(e22.date())}, ${e22.hour24()}:${p2.zeroPad(e22.minute())}`, "nice-year": (e22) => `${ve3.short()[e22.month()]} ${p2.ordinal(e22.date())}, ${e22.year()}`, "nice-day": (e22) => `${re3.short()[e22.day()]} ${Ae3(ve3.short()[e22.month()])} ${p2.ordinal(e22.date())}`, "nice-full": (e22) => `${e22.dayName()} ${Ae3(e22.monthName())} ${p2.ordinal(e22.date())}, ${e22.time()}`, "nice-full-24": (e22) => `${e22.dayName()} ${Ae3(e22.monthName())} ${p2.ordinal(e22.date())}, ${e22.hour24()}:${p2.zeroPad(e22.minute())}`};
 var Ki2 = {"day-name": "day", "month-name": "month", "iso 8601": "iso", "time-h24": "time-24", "time-12": "time", "time-h12": "time", tz: "timezone", "day-num": "day-number", "month-num": "month-number", "month-iso": "iso-month", "year-iso": "iso-year", "nice-short": "nice", "nice-short-24": "nice-24", mdy: "numeric-us", dmy: "numeric-uk", ymd: "numeric", "yyyy/mm/dd": "numeric", "mm/dd/yyyy": "numeric-us", "dd/mm/yyyy": "numeric-us", "little-endian": "numeric-uk", "big-endian": "numeric", "day-nice": "nice-day"};
 Object.keys(Ki2).forEach((e22) => na2[e22] = na2[Ki2[e22]]);
-var ml = (e22, a2 = "") => {
+var hl = (e22, a2 = "") => {
   if (e22.isValid() !== true)
     return "";
   if (na2.hasOwnProperty(a2)) {
@@ -10896,7 +10896,7 @@ var Ce3 = (e22, a2, t2) => {
     ht2[r2] = ht2[n2], r2 += e22, n2 += a2;
 };
 Ce3("q", "Q", 4), Ce3("L", "M", 4), Ce3("Y", "y", 4), Ce3("c", "e", 4), Ce3("k", "H", 2), Ce3("K", "h", 2), Ce3("S", "s", 2), Ce3("v", "z", 4), Ce3("V", "Z", 4);
-var hl = (e22, a2) => {
+var bl = (e22, a2) => {
   let t2 = a2.split("");
   return t2 = function(r2) {
     for (let n2 = 0; n2 < r2.length; n2 += 1)
@@ -10918,20 +10918,20 @@ var hl = (e22, a2) => {
     return (r2 = r2.filter((n2) => n2)).map((n2) => (n2 === "''" && (n2 = "'"), n2));
   }(t2), t2.reduce((r2, n2) => (ht2[n2] !== void 0 ? r2 += ht2[n2](e22) || "" : (/^'.{1,}'$/.test(n2) && (n2 = n2.replace(/'/g, "")), r2 += n2), r2), "");
 };
-var bl = ["year", "season", "quarter", "month", "week", "day", "quarterHour", "hour", "minute"];
+var fl = ["year", "season", "quarter", "month", "week", "day", "quarterHour", "hour", "minute"];
 var $i2 = function(e22, a2) {
   let t2 = e22.clone().startOf(a2), r2 = e22.clone().endOf(a2).epoch - t2.epoch, n2 = (e22.epoch - t2.epoch) / r2;
   return parseFloat(n2.toFixed(2));
 };
-var fl = (e22, a2) => {
+var pl = (e22, a2) => {
   if (a2)
     return a2 = p2.normalize(a2), $i2(e22, a2);
   let t2 = {};
-  return bl.forEach((r2) => {
+  return fl.forEach((r2) => {
     t2[r2] = $i2(e22, r2);
   }), t2;
 };
-var pl = (e22, a2) => {
+var gl = (e22, a2) => {
   let t2 = e22.progress();
   return (a2 = p2.normalize(a2)) === "quarterhour" && (a2 = "quarterHour"), t2[a2] !== void 0 ? (t2[a2] > 0.5 && (e22 = e22.add(1, a2)), e22 = e22.startOf(a2)) : e22.silent === false && console.warn("no known unit '" + a2 + "'"), e22;
 };
@@ -10942,7 +10942,7 @@ var qi2 = (e22, a2, t2) => {
   return e22.isAfter(a2, t2) && (r2 -= 1), r2;
 };
 var fn = (e22, a2, t2) => e22.isBefore(a2) ? qi2(e22, a2, t2) : -1 * qi2(a2, e22, t2);
-var gl = function(e22, a2) {
+var yl = function(e22, a2) {
   let t2 = a2.epoch - e22.epoch, r2 = {milliseconds: t2, seconds: parseInt(t2 / 1e3, 10)};
   r2.minutes = parseInt(r2.seconds / 60, 10), r2.hours = parseInt(r2.minutes / 60, 10);
   let n2 = e22.clone();
@@ -10951,14 +10951,14 @@ var gl = function(e22, a2) {
     return (i2 = i2.year(o2.year())).isAfter(o2) && (s2 -= 1), s2;
   })(n2, a2), n2 = e22.add(r2.years, "year"), r2.months = 12 * r2.years, n2 = e22.add(r2.months, "month"), r2.months += fn(n2, a2, "month"), r2.weeks = 52 * r2.years, n2 = e22.add(r2.weeks, "week"), r2.weeks += fn(n2, a2, "week"), r2.days = 7 * r2.weeks, n2 = e22.add(r2.days, "day"), r2.days += fn(n2, a2, "day"), r2;
 };
-var yl = function(e22, a2, t2) {
+var vl = function(e22, a2, t2) {
   a2 = p2.beADate(a2, e22);
   let r2 = false;
   if (e22.isAfter(a2)) {
     let i2 = e22;
     e22 = a2, a2 = i2, r2 = true;
   }
-  let n2 = gl(e22, a2);
+  let n2 = yl(e22, a2);
   return r2 && (n2 = function(i2) {
     return Object.keys(i2).forEach((o2) => {
       i2[o2] *= -1;
@@ -10969,7 +10969,7 @@ var eo = {months: {almost: 10, over: 4}, days: {almost: 25, over: 10}, hours: {a
 function ao(e22, a2) {
   return e22 === 1 && (a2 = a2.slice(0, -1)), e22 + " " + a2;
 }
-var vl = (e22, a2) => {
+var Al = (e22, a2) => {
   let t2 = function(s2, u2) {
     let c2 = s2.isBefore(u2), l2 = c2 ? u2 : s2, d2 = c2 ? s2 : u2;
     d2 = d2.clone();
@@ -11027,13 +11027,13 @@ var je3 = {minute: (e22) => (x2(e22, {second: 0, millisecond: 0}), e22), quarter
   return e22 = e22.year(t2);
 }};
 je3.date = je3.day;
-var bt2 = Hu;
-var pn = ml;
-var Al = hl;
-var Cl = fl;
+var bt2 = Lu;
+var pn = hl;
+var Cl = bl;
 var Il = pl;
-var kl = yl;
+var kl = gl;
 var Tl = vl;
+var El = Al;
 var to = {startOf: (e22, a2) => {
   let t2 = e22.clone();
   return a2 = p2.normalize(a2), je3[a2] ? je3[a2](t2) : a2 === "summer" || a2 === "winter" ? (t2 = t2.season(a2), je3.season(t2)) : t2;
@@ -11041,7 +11041,7 @@ var to = {startOf: (e22, a2) => {
   let t2 = e22.clone();
   return a2 = p2.normalize(a2), je3[a2] && (t2 = je3[a2](t2), t2 = t2.add(1, a2), t2 = t2.subtract(1, "millisecond")), t2;
 }};
-var El = function(e22, a2 = "", t2) {
+var Sl = function(e22, a2 = "", t2) {
   if (!a2 || !t2)
     return [];
   if (a2 = p2.normalize(a2), t2 = e22.clone().set(t2), e22.isAfter(t2)) {
@@ -11070,8 +11070,8 @@ var Ta2 = (e22) => {
   let s2 = r2.offset, u2 = s2;
   return n2.hasDst === true && (u2 = n2.hemisphere === "North" ? s2 - 1 : r2.offset + 1), n2.hasDst === false ? (n2.current.offset = s2, n2.current.isDST = false) : Ri2(e22.epoch, n2.change.start, n2.change.back, s2, u2) === true ? (n2.current.offset = s2, n2.current.isDST = n2.hemisphere === "North") : (n2.current.offset = u2, n2.current.isDST = n2.hemisphere === "South"), n2;
 };
-var no = dl;
-var Sl = ["century", "decade", "year", "month", "date", "day", "hour", "minute", "second", "millisecond"];
+var no = ml;
+var wl = ["century", "decade", "year", "month", "date", "day", "hour", "minute", "second", "millisecond"];
 var We2 = {set: function(e22, a2) {
   let t2 = this.clone();
   return t2 = no(t2, e22, null), a2 && (this.tz = bt2(a2)), t2;
@@ -11088,7 +11088,7 @@ var We2 = {set: function(e22, a2) {
 }, format: function(e22) {
   return pn(this, e22);
 }, unixFmt: function(e22) {
-  return Al(this, e22);
+  return Cl(this, e22);
 }, startOf: function(e22) {
   return to.startOf(this, e22);
 }, endOf: function(e22) {
@@ -11097,13 +11097,13 @@ var We2 = {set: function(e22, a2) {
   let e22 = this.year();
   return p2.isLeapYear(e22);
 }, progress: function(e22) {
-  return Cl(this, e22);
-}, nearest: function(e22) {
   return Il(this, e22);
+}, nearest: function(e22) {
+  return kl(this, e22);
 }, diff: function(e22, a2) {
-  return kl(this, e22, a2);
+  return Tl(this, e22, a2);
 }, since: function(e22) {
-  return e22 || (e22 = this.clone().set()), Tl(this, e22);
+  return e22 || (e22 = this.clone().set()), El(this, e22);
 }, next: function(e22) {
   return this.add(1, e22).startOf(e22);
 }, last: function(e22) {
@@ -11118,7 +11118,7 @@ var We2 = {set: function(e22, a2) {
     let t2 = a2;
     a2 = e22, e22 = t2;
   }
-  return El(this, e22, a2);
+  return Sl(this, e22, a2);
 }, isAwake: function() {
   let e22 = this.hour();
   return !(e22 < 8 || e22 > 22);
@@ -11157,7 +11157,7 @@ var We2 = {set: function(e22, a2) {
 }, logYear: function() {
   return console.log(""), console.log(pn(this, "full-short")), this;
 }, json: function() {
-  return Sl.reduce((e22, a2) => (e22[a2] = this[a2](), e22), {});
+  return wl.reduce((e22, a2) => (e22[a2] = this[a2](), e22), {});
 }, debug: function() {
   let e22 = this.timezone(), a2 = this.format("MM") + " " + this.format("date-ordinal") + " " + this.year();
   return a2 += `
@@ -11181,8 +11181,8 @@ var We2 = {set: function(e22, a2) {
   return this;
 }};
 We2.inDST = We2.isDST, We2.round = We2.nearest, We2.each = We2.every;
-var wl = We2;
-var xl = p2.isLeapYear;
+var xl = We2;
+var Gl = p2.isLeapYear;
 var Ie3 = (e22) => (typeof e22 == "string" && (e22 = parseInt(e22, 10)), e22);
 var gn = ["year", "month", "date", "hour", "minute", "second", "millisecond"];
 var yn = (e22, a2, t2) => {
@@ -11226,7 +11226,7 @@ var J2 = {milliseconds: (e22, a2) => {
 }, date: (e22, a2, t2) => {
   if ((a2 = Ie3(a2)) > 28) {
     let n2 = e22.month(), i2 = De3[n2];
-    n2 === 1 && a2 === 29 && xl(e22.year()) && (i2 = 29), a2 > i2 && (a2 = i2);
+    n2 === 1 && a2 === 29 && Gl(e22.year()) && (i2 = 29), a2 > i2 && (a2 = i2);
   }
   a2 <= 0 && (a2 = 1);
   let r2 = e22.clone();
@@ -11246,7 +11246,7 @@ var J2 = {milliseconds: (e22, a2) => {
   return (a2 -= 1) <= 0 ? a2 = 0 : a2 >= 365 && (a2 = 364), e22 = (e22 = e22.startOf("year")).add(a2, "day"), yn(e22, r2, "hour"), (e22 = Pe3(e22, r2, t2, "year")).epoch;
 }};
 var ro = (e22) => e22 = (e22 = (e22 = e22.minute(0)).second(0)).millisecond(1);
-var Gl = {millisecond: function(e22) {
+var Pl = {millisecond: function(e22) {
   if (e22 !== void 0) {
     let a2 = this.clone();
     return a2.epoch = J2.milliseconds(a2, e22), a2;
@@ -11314,7 +11314,7 @@ var Gl = {millisecond: function(e22) {
 }, iso: function(e22) {
   return e22 !== void 0 ? this.set(e22) : this.format("iso");
 }};
-var Pl = {date: function(e22, a2) {
+var Nl = {date: function(e22, a2) {
   if (e22 !== void 0) {
     let t2 = this.clone();
     return (e22 = parseInt(e22, 10)) && (t2.epoch = J2.date(t2, e22, a2)), t2;
@@ -11335,7 +11335,7 @@ var Pl = {date: function(e22, a2) {
   let t2 = this.clone();
   return t2 = t2.day(e22, a2), t2;
 }};
-var Nl = {dayOfYear: function(e22, a2) {
+var Bl = {dayOfYear: function(e22, a2) {
   if (e22 !== void 0) {
     let i2 = this.clone();
     return i2.epoch = J2.dayOfYear(i2, e22, a2), i2;
@@ -11440,16 +11440,16 @@ var Nl = {dayOfYear: function(e22, a2) {
   let a2 = Math.floor(this.year() / 1e3);
   return a2 >= 0 && (a2 += 1), a2;
 }};
-var W3 = Object.assign({}, Gl, Pl, Nl);
+var W3 = Object.assign({}, Pl, Nl, Bl);
 W3.milliseconds = W3.millisecond, W3.seconds = W3.second, W3.minutes = W3.minute, W3.hours = W3.hour, W3.hour24 = W3.hour, W3.h12 = W3.hour12, W3.h24 = W3.hour24, W3.days = W3.day;
-var Bl = (e22) => {
+var Ml = (e22) => {
   Object.keys(W3).forEach((a2) => {
     e22.prototype[a2] = W3[a2];
   });
 };
-var Ml = p2.isLeapYear;
+var zl = p2.isLeapYear;
 var vn = function(e22, a2) {
-  return e22 === 1 && Ml(a2) ? 29 : De3[e22];
+  return e22 === 1 && zl(a2) ? 29 : De3[e22];
 };
 var An = {months: (e22, a2) => {
   if (e22.month > 0) {
@@ -11478,9 +11478,9 @@ var An = {months: (e22, a2) => {
 var ce3 = ["millisecond", "second", "minute", "hour", "date", "month"];
 var Ne3 = {second: ce3.slice(0, 1), minute: ce3.slice(0, 2), quarterhour: ce3.slice(0, 2), hour: ce3.slice(0, 3), date: ce3.slice(0, 4), month: ce3.slice(0, 4), quarter: ce3.slice(0, 4), season: ce3.slice(0, 4), year: ce3, decade: ce3, century: ce3};
 Ne3.week = Ne3.hour, Ne3.season = Ne3.date, Ne3.quarter = Ne3.date;
-var zl = {year: true, quarter: true, season: true, month: true, week: true, date: true};
-var Ol = {month: true, quarter: true, season: true, year: true};
-var Fl = (e22) => {
+var Ol = {year: true, quarter: true, season: true, month: true, week: true, date: true};
+var Fl = {month: true, quarter: true, season: true, year: true};
+var Vl = (e22) => {
   e22.prototype.add = function(a2, t2) {
     let r2 = this.clone();
     if (!t2 || a2 === 0)
@@ -11492,7 +11492,7 @@ var Fl = (e22) => {
     let i2 = {};
     if (Ne3[t2] && Ne3[t2].forEach((o2) => {
       i2[o2] = n2[o2]();
-    }), zl[t2]) {
+    }), Ol[t2]) {
       let o2 = n2.timezone().current.offset - r2.timezone().current.offset;
       r2.epoch += 3600 * o2 * 1e3;
     }
@@ -11530,7 +11530,7 @@ var Fl = (e22) => {
       }
     } else
       t2 === "decade" ? i2.year = r2.year() + 10 : t2 === "century" && (i2.year = r2.year() + 100);
-    if (Ol[t2]) {
+    if (Fl[t2]) {
       let o2 = De3[i2.month];
       i2.date = n2.date(), i2.date > o2 && (i2.date = o2);
     }
@@ -11541,7 +11541,7 @@ var Fl = (e22) => {
 };
 var Ea2 = {millisecond: (e22) => e22.epoch, second: (e22) => [e22.year(), e22.month(), e22.date(), e22.hour(), e22.minute(), e22.second()].join("-"), minute: (e22) => [e22.year(), e22.month(), e22.date(), e22.hour(), e22.minute()].join("-"), hour: (e22) => [e22.year(), e22.month(), e22.date(), e22.hour()].join("-"), day: (e22) => [e22.year(), e22.month(), e22.date()].join("-"), week: (e22) => [e22.year(), e22.week()].join("-"), month: (e22) => [e22.year(), e22.month()].join("-"), quarter: (e22) => [e22.year(), e22.quarter()].join("-"), year: (e22) => e22.year()};
 Ea2.date = Ea2.day;
-var Vl = (e22) => {
+var Dl = (e22) => {
   let a2 = {isAfter: function(t2) {
     t2 = p2.beADate(t2, this);
     let r2 = p2.getEpoch(t2);
@@ -11566,7 +11566,7 @@ var Vl = (e22) => {
     e22.prototype[t2] = a2[t2];
   });
 };
-var Dl = (e22) => {
+var Rl = (e22) => {
   let a2 = {i18n: (t2) => {
     p2.isObject(t2.days) && re3.set(t2.days), p2.isObject(t2.months) && ve3.set(t2.months), p2.isBoolean(t2.useTitleCase) && Ui2.set(t2.useTitleCase);
   }};
@@ -11574,11 +11574,11 @@ var Dl = (e22) => {
     e22.prototype[t2] = a2[t2];
   });
 };
-var Rl = Fu;
-var io = wl;
-var jl = Bl;
-var Wl = Fl;
-var Zl = (e22) => {
+var jl = Vu;
+var io = xl;
+var Wl = Ml;
+var Zl = Vl;
+var Xl = (e22) => {
   e22.prototype.isSame = function(a2, t2, r2 = true) {
     let n2 = this;
     if (!t2)
@@ -11590,12 +11590,12 @@ var Zl = (e22) => {
     return typeof a2 != "string" && typeof a2 != "number" || (a2 = new e22(a2, this.timezone.name)), t2 = t2.replace(/s$/, ""), r2 === true && n2.tz !== a2.tz && ((a2 = a2.clone()).tz = n2.tz), Ea2[t2] ? Ea2[t2](n2) === Ea2[t2](a2) : null;
   };
 };
-var Xl = Vl;
 var Hl = Dl;
+var Ll = Rl;
 var Cn = Wi2;
 var de3 = function(e22, a2, t2 = {}) {
   this.epoch = null, this.tz = bt2(a2, Cn), this.silent = t2.silent || true, this.british = t2.dmy || t2.british, this._weekStart = 1, t2.weekStart !== void 0 && (this._weekStart = t2.weekStart), this._today = {}, t2.today !== void 0 && (this._today = t2.today), Object.defineProperty(this, "d", {get: function() {
-    let n2 = Rl(this), i2 = (new Date(this.epoch).getTimezoneOffset() || 0) + 60 * n2;
+    let n2 = jl(this), i2 = (new Date(this.epoch).getTimezoneOffset() || 0) + 60 * n2;
     i2 = 60 * i2 * 1e3;
     let o2 = this.epoch + i2;
     return new Date(o2);
@@ -11611,9 +11611,9 @@ Object.keys(io).forEach((e22) => {
   return this.toNativeDate();
 }, de3.prototype.toNativeDate = function() {
   return new Date(this.epoch);
-}, jl(de3), Wl(de3), Zl(de3), Xl(de3), Hl(de3);
+}, Wl(de3), Zl(de3), Xl(de3), Hl(de3), Ll(de3);
 var ie3 = de3;
-var Ll = (e22, a2) => {
+var Yl = (e22, a2) => {
   let t2 = new ie3(null), r2 = new ie3(null);
   t2 = t2.time(e22), r2 = a2 ? r2.time(a2) : t2.add(59, "minutes");
   let n2 = t2.hour(), i2 = r2.hour();
@@ -11655,7 +11655,7 @@ ee3.now = (e22, a2) => {
 }, ee3.min = function(e22, a2) {
   let t2 = new ie3(null, e22, a2);
   return t2.epoch = -864e13, t2;
-}, ee3.whereIts = Ll, ee3.version = "6.16.3", ee3.plugin = ee3.extend;
+}, ee3.whereIts = Yl, ee3.version = "6.16.3", ee3.plugin = ee3.extend;
 var pt2 = ee3;
 var oo = function(e22, a2) {
   let t2 = Math.min(e22.length, a2.length);
@@ -11667,7 +11667,7 @@ var oo = function(e22, a2) {
   }
   return "";
 };
-var Yl = function(e22) {
+var _l = function(e22) {
   e22.sort();
   for (let a2 = 1; a2 < e22.length; a2++)
     e22[a2 - 1] === e22[a2] && e22.splice(a2, 1);
@@ -11722,14 +11722,14 @@ var Tn = function(e22) {
   }
   return a2;
 };
-var _l = ";";
-var Jl = ":";
+var Jl = ";";
+var Ul = ":";
 var lo = ",";
-var Ul = "!";
+var Ql = "!";
 var gt2 = 36;
-var Ql = function(e22, a2) {
+var Kl = function(e22, a2) {
   let t2 = "", r2 = "";
-  e22.isTerminal(a2) && (t2 += Ul);
+  e22.isTerminal(a2) && (t2 += Ql);
   let n2 = e22.nodeProps(a2);
   for (let i2 = 0; i2 < n2.length; i2++) {
     let o2 = n2[i2];
@@ -11763,7 +11763,7 @@ var mo = function(e22, a2) {
     mo(e22, a2[t2[r2]]);
   a2._n = e22.pos++, e22.nodes.unshift(a2);
 };
-var Kl = function(e22) {
+var $l = function(e22) {
   e22.nodes = [], e22.nodeCount = 0, e22.syms = {}, e22.symCount = 0, e22.pos = 0, e22.optimize(), e22.histAbs = new In(), e22.histRel = new In(), mo(e22, e22.root), e22.nodeCount = e22.nodes.length, e22.prepDFS(), co(e22, e22.root), e22.symCount = function(a2) {
     a2.histAbs = a2.histAbs.highest(gt2);
     let t2 = [];
@@ -11776,20 +11776,20 @@ var Kl = function(e22) {
   for (let a2 = 0; a2 < e22.symCount; a2++)
     e22.syms[e22.histAbs[a2][0]] = ra2(a2);
   for (let a2 = 0; a2 < e22.nodeCount; a2++)
-    e22.nodes[a2] = Ql(e22, e22.nodes[a2]);
+    e22.nodes[a2] = Kl(e22, e22.nodes[a2]);
   for (let a2 = e22.symCount - 1; a2 >= 0; a2--)
-    e22.nodes.unshift(ra2(a2) + Jl + ra2(e22.nodeCount - e22.histAbs[a2][0] - 1));
-  return e22.nodes.join(_l);
+    e22.nodes.unshift(ra2(a2) + Ul + ra2(e22.nodeCount - e22.histAbs[a2][0] - 1));
+  return e22.nodes.join(Jl);
 };
-var $l = new RegExp("[0-9A-Z,;!:|¦]");
-var ql = {insertWords: function(e22) {
+var ql = new RegExp("[0-9A-Z,;!:|¦]");
+var ec2 = {insertWords: function(e22) {
   if (e22 !== void 0) {
     typeof e22 == "string" && (e22 = e22.split(/[^a-zA-Z]+/));
     for (let a2 = 0; a2 < e22.length; a2++)
       e22[a2] = e22[a2].toLowerCase();
-    Yl(e22);
+    _l(e22);
     for (let a2 = 0; a2 < e22.length; a2++)
-      e22[a2].match($l) === null && this.insert(e22[a2]);
+      e22[a2].match(ql) === null && this.insert(e22[a2]);
   }
 }, insert: function(e22) {
   this._insert(e22, this.root);
@@ -11859,15 +11859,15 @@ var ql = {insertWords: function(e22) {
       return i2 !== a2.slice(0, i2.length) ? t2[i2] : this.uniqueNode(e22.slice(i2.length), a2.slice(i2.length), t2[i2]);
   }
 }, pack: function() {
-  return Kl(this);
+  return $l(this);
 }};
-Object.keys(ql).forEach(function(e22) {
+Object.keys(ec2).forEach(function(e22) {
 });
-var ec2 = function(e22, a2, t2) {
+var ac2 = function(e22, a2, t2) {
   let r2 = Tn(a2);
   return r2 < e22.symCount ? e22.syms[r2] : t2 + r2 + 1 - e22.symCount;
 };
-var ac2 = function(e22) {
+var tc2 = function(e22) {
   let a2 = {nodes: e22.split(";"), syms: [], symCount: 0};
   return e22.match(":") && function(t2) {
     let r2 = new RegExp("([0-9A-Z]+):([0-9A-Z]+)");
@@ -11894,20 +11894,20 @@ var ac2 = function(e22) {
           r2.push(m2);
           continue;
         }
-        let h2 = ec2(t2, d2, i2);
+        let h2 = ac2(t2, d2, i2);
         n2(h2, m2);
       }
     };
     return n2(0, ""), r2;
   }(a2);
 };
-var tc2 = function(e22) {
+var nc2 = function(e22) {
   let a2 = e22.split("|").reduce((r2, n2) => {
     let i2 = n2.split("¦");
     return r2[i2[0]] = i2[1], r2;
   }, {}), t2 = {};
   return Object.keys(a2).forEach(function(r2) {
-    let n2 = ac2(a2[r2]);
+    let n2 = tc2(a2[r2]);
     r2 === "true" && (r2 = true);
     for (let i2 = 0; i2 < n2.length; i2++) {
       let o2 = n2[i2];
@@ -11915,68 +11915,68 @@ var tc2 = function(e22) {
     }
   }), t2;
 };
-var nc2 = "Africa/Abidjan¦a2bouake,daloa,san ped1t0yamoussouk1;g,ogo;ro;b0frica/timbuktu;idjan,obo|Africa/Algiers¦a5b3c2dz,oran,s1t0;ebessa,iaret;etif,idi bel abbes;hlef,onstantine;a0iskra,lida,oumerdas;b ezzouar,tna;lg0nnaba;eria,iers|Africa/Cairo¦a4bani suwayf,c3damanhur,eg2giza,halw6i1kafr ad dawwar,luxor,new c3port said,qina,s0tanta,zagazig;hibin al kawm,ohag,uez;dku,smail6;!ypt;airo;l2s0;w0yut;an; 1exandr0;ia;fayyum,m0;a0inya;hallah al kubra,nsurah|Africa/El_Aaiun¦e0laayoune,western sahara;h,l aaiun|Africa/Ceuta¦ceuta0;!melilla|Africa/Accra¦a2gh1kumasi,ta0;koradi,male;!ana;ccra,tsiaman|Africa/Bissau¦b1g0;uinea b0w;issau|Africa/Nairobi¦africa7e2kisumu,m1na0thika,yt;irobi,kuru;ayotte,ombasa;. africa standard 3a0ldoret;st0t; africa0ern africa;! 0;time; eastern,/asmera|Africa/Monrovia¦l0monrov1;iber0r;ia|Africa/Tripoli¦a3benghazi,l1misrat4t0zawi2;arhuna,ripoli;ib0y;ya;l khums,z zawiy0;ah|Africa/Casablanca¦a9casablanca,f8kenit7m4oujda angad,rabat,sa2t0;angier,e0;ma5touan;fi,le0;! al jadida;a1ekn3o0;hammedia,rocco;!rrakesh;ra;es;gadir,l hoceima|Africa/Maputo¦beira,c4ma2na1quelimane,z0;imbabwe,w;ca1mpu1;puto,to0;la;entral africa time,himoio|Africa/Windhoek¦africa central,na0windhoek;!mibia0;! standard time|Africa/Lagos¦aYbWcVeUgTiPjOkaMlKmHnFoCport harcourt,sBuAw0zarG;. central africa6a5est0; 0ern1;africa1central0; africa;! 0;s2t3;rCst,t;! s0;tandard t0;ime;gep,muah5yo;a9hagamu,okoto;kFn1w0yo;er5o;do,itsha;g,iger0newi;ia;a0in5ubi;idugu0kurdi;ri;agos,ek0;ki;du0no,tsi0;na;imeEos;badan,jebu ode,k1l0seAwo;a orangun,esa,or6;eAi7ot ekp0;ene;ombe,usau;bute ikorodu,fon alaaye,nugu;alabar,hakwama;auchi,en0;in;b2do1frica western,ku0tani;re; ekiti;a,eoku1u0;ja;ta|Africa/Khartoum¦a6c5el 4k2ny3omdurm1port sud1s0wad medani;d,inga,ud0;an;ass0hartoum,osti;ala;dae2fasher,obeid;at,entral africa;d damaz0l qadarif;in|Africa/Juba¦juba,s0winejok;outh sudan,s|Africa/Sao_Tome¦s0;ao tome,t|Africa/Ndjamena¦chad,n0td;'d0d0;jamena|Africa/Tunis¦sfax,t0;n,unis0;!ia|Africa/Johannesburg¦africa southern,bEcAd9east londBjohannesHk7newcastDp6r5s2tembisa,uitenhage,v1w0za;elkom,itbank;anderbijlpark,ereeniging;ast,o0prings;uth africa0weto;! standard time;andBichards bay,oodepoort;aarl,ietermaritzAort elizabeth,retoria;lerk0ruger0;sdorp;iepsloot,urb5;a1enturi0;on;pe town,rletonvil0;le;enoni,loemfontein,o1rakp0;an;ks0tshabelo;burg|America/Argentina/Buenos_Aires¦argentina/buenos aires|America/Argentina/Cordoba¦a0;merica/0rgentina/c1;c0rosario;ordoba|America/Argentina/Salta¦argentina/salta|America/Argentina/Jujuy¦a0;meric0rgentin0;a/jujuy|America/Argentina/Tucuman¦argentina/tucuman|America/Argentina/Catamarca¦a0;merica/0rgentina/c1;argentina/comodrivadavia,c0;atamarca|America/Argentina/La_Rioja¦argentina/la rioja|America/Argentina/San_Juan¦argentina/san juan|America/Argentina/Mendoza¦a0;meric0rgentin0;a/mendoza|America/Argentina/San_Luis¦argentina/san luis|America/Argentina/Rio_Gallegos¦argentina/rio gallegos|America/Argentina/Ushuaia¦argentina/ushuaia|America/Barbados¦b0;arbados,b|America/La_Paz¦bo1cochabamba,la paz,oruro,s0;anta cruz de la sierra,ucre;!livia0t;! time|America/Noronha¦atlantic islands,brazil/den0fernando de noronha standard time,n0;oronha|America/Belem¦ananindeua,belem,macapa,par0;auapebas,á (east) amapá|America/Fortaleza¦ca2fortaleza,imperatriz,j1m0natal,sao luis,teresina;aracanau,ossoro;oao pessoa,uazeiro do norte;mpina grande,ucaia|America/Recife¦caruaru,jaboatao2olinda,p0recife;aulista,e0;rnambuco,trolina;! dos guararapes|America/Araguaina¦araguaina,palmas,tocantins|America/Maceio¦a0maceio;lagoassergipe,racaju|America/Bahia¦bahia,camacari,feira de santa0itabu0salvador,vitoria da conquista;na|America/Sao_Paulo¦a14b0Tc0Md0Je0Hf0Fg0Ahortol09i05j02l01mXnVosasco,pLriFs4ta3uber2v0;i0olta redon18;amao,la velha,tor14;a0Ml06;boao da ser00uba0Y;a2e1oroNu0;maLzano;rXte lago0L;nt4o 0;bernardo do campo,carl03jo0leopolLpaulo,vicE;ao de meriti,se0;! do0; rio p8s camp00;a 1o0; andDs;barbara d'oes0Nluz0Rmar0R;beirao 3o0;! 0;cla0de janei0g6ver7;ro;das nev07p0;reto;asso fun8e7iraci6lanalti0Mo4r0;aia g1esidente prud0;en0E;ran0;de;nta grossa,rto aleg0;re;caW;lotYtro0D;do;iteroi,ov0;aJo hamburgo;a1o0;gi das cruzSntes clarD;ri0ua;l05n6;imei2ondri06;acarei,oinville,u0;iz de fo0ndi9;ra;ndaia2patin1ta0;bor6pevi,quaquece1;ga;tuG;andW;o3ravat2uaru0;ja,lh0;os;ai;iQvernador valadarC;loria5oz do0ran2; iguacu;. south america Gast south ameri0mbu;ca;i0uque de caxi8;adema,vi0;noL;a1o0uriti2;ntagem,tI;choeiro de itapemirBmp1no3rapicui0scavel,xias do sul;ba;in1os dos goytacaz0;es;as;a9e5lumenau,r0;!a0st,t;silia1zil0;!/east;! 0;standard time;l1t0;im;ford roxo,o horizon0;te;rueri,uru;lvora4merica3na2parecida de goi0;an0;ia;polis;na;da|America/Campo_Grande¦campo grande,mato grosso do sul|America/Cuiaba¦cuiaba,mato grosso,varzea grande|America/Santarem¦pará (west),santarem|America/Porto_Velho¦porto velho,rondônia|America/Boa_Vista¦amazon1boa vista,central brazil0roraima;!ian0;! standard time|America/Manaus¦am0brazil/west,manaus;azonas (east),t|America/Eirunepe¦a0eirunepe;cre standard time,mazonas (west)|America/Rio_Branco¦a0brazil/a0rio branco;cre|America/Nassau¦b0nassau;ahamas,s|America/Belize¦b0;elize,z|America/St_Johns¦canada/newfoundland,n0st johns;d2ewfoundland0st,t;! 0;labrador (southeast),standard time;dt,t|America/Halifax¦a2canada/atlantic,halifax,n1p0;ei,rince edward island;ew brunswick,ova scotia;dt,st,tlantic0;! - ns (most areas) pe|America/Glace_Bay¦atlantic - ns (cape breton),glace bay|America/Moncton¦atlantic - new brunswick,moncton|America/Goose_Bay¦atlantic - labrador (most areas),goose bay|America/Blanc-Sablon¦ast - qc (lower north shore),blanc sablon|America/Toronto¦america/moBb9ca7eastern - onqc (most areas),gatineau,hamilAkitchener,l4m3nepe2o0quebec,richmond hill,toronto,vaugh2windsor;n5sh0tt0;awa;an;arkham,ississauga,o7;av7on0;don on0gueuil;tario;!nada0;!/eastern;arrie,ramp0;ton;ntre0;al|America/Nipigon¦nipigon|America/Thunder_Bay¦eastern - on (thunder bay),thunder bay|America/Iqaluit¦eastern - nu (most east areas),iqaluit|America/Pangnirtung¦eastern - nu (pangnirtung),pangnirtung|America/Atikokan¦atikokan,est - on (atikokan) nu (coral h)|America/Winnipeg¦c0m1winnipeg;anada/central,entral - on (west) m0;anitoba|America/Rainy_River¦central - on (rainy rft frances),rainy river|America/Resolute¦central - nu (resolute),resolute|America/Rankin_Inlet¦central - nu (central),rankin inlet|America/Regina¦c1regina,saskat0;c1oon;anada/saskatc0st - sk (most areas);hewan|America/Swift_Current¦cst - sk (midwest),swift current|America/Edmonton¦alberta,ca0edmonton,mountain - ab bc (e) sk (w);lgary,nada/mountain|America/Cambridge_Bay¦cambridge bay,mountain - nu (west)|America/Yellowknife¦mountain - nt (central),yellowknife|America/Inuvik¦inuvik,mountain - nt (west)|America/Creston¦creston,mst - bc (creston)|America/Dawson_Creek¦dawson creek,mst - bc (dawson crft st john)|America/Fort_Nelson¦fort nelson,mst - bc (ft nelson)|America/Whitehorse¦canada/yukon,pacific - yukon (south),whitehorse|America/Dawson¦dawson,pacific - yukon (north)|America/Vancouver¦b2canada/pacific,ladn1okanagan,pacific - bc (most areas),surrey,v0yukon;ancouv0ictor2;er;ritish columb0urnaby;ia|America/Santiago¦a7c4iquique,la pintana,puente alto,rancagua,san3t1v0;alparaiso,ina del mar;alca0emuco;!huano; bernardo,tiago;hile1l0oncepcion;!st,t;! (most areas),/continental;ntofagasta,rica|America/Punta_Arenas¦punta arenas,region of magallanes|America/Bogota¦armenGbBc7dosquebradas,floridablanca,i6m5neiva,p3s1v0;alledupar,illavicencio;anta marCincelejo,o0;acha,ledad;a0erei9opayan;lmi8sto;anizales,edellin,onterA;bague,taguei;a2o0ucu6;!lombia0st,t;! standard time;li,rtagena;arran3ello,ogo2u0;caramanga,enaventu0;ra;ta;cabermeja,quilla;ia|America/Costa_Rica¦c0;osta rica,r|America/Havana¦arroyo naranjo,b7c2diez de octubre,guantan9h1las tunas,pinar del rio,sant0;a clara,iago de cuba;avana,olguin;amaguey,i2u0;!ba0;! standard time;e0udad camilo cie0;nfueg1;ay1oyer0;os;amo|America/Curacao¦curacao,s0;t maarten,x|America/Santo_Domingo¦bella vista,do5la romana,san0; pedro de macoris,t0;iago de los caballeros,o domingo0;! 0;e0oe0;ste;!minican republic|America/Guayaquil¦cuenca,ec1guayaquil,ma0quito,santo domingo de los colorados;chala,nta;!uador0;! 0;(mainland),time|America/Cayenne¦cayenne,french guiana1gf0;!t;! time|America/Nuuk¦america/godthab,nuuk|America/Danmarkshavn¦danmarkshavn,national park (east coast)|America/Scoresbysund¦e1greenland eastern,scoresbysund0;!/ittoqqortoormiit;ast greenland1g0;st,t;! standard time|America/Thule¦thule0;!/pituffik|America/Guatemala¦g0mixco,villa nueva;t,uatemala|America/Guyana¦g0;eorgetown,uyana1y0;!t;! time|America/Tegucigalpa¦h0san pedro sula,tegucigalpa;n,onduras|America/Port-au-Prince¦c2p0;etionville,ort 0;au prince,de paix;arrefour,roix des bouquets|America/Jamaica¦j1k0new k0;ingston;amaica,m|America/Martinique¦m0;artinique,q|America/Mexico_City¦a0Gb0EcVduran09ecatepec de morel07guQhPiNjalis0Ileon de los alda03mInHoGpEqDs9t4uruap01v2x1yucat01za0;catec09pop00;alapa de enriqu0Ki0Gochimil0G;e0illahermosa;nustiano carranza,racruz;a3e7la1o0uxt00;luRnaZ;huac,l0quepaque,xcaY;nepantXpT;bas09maulip01pachuW;an0oledad de graciano sanch0C; luis potosi,t0;a maria chimal0iago de q1;huN;ueretaD;achuca de soFoza rica de6ue0;bPrto vallarZ;axaGjo de agua;aucalpan02icolas rome9uevo le01;agdalena contrerRexico3i1orel0x;ia,os;choFguel0; h3;! city,/general;rap5xtapalu9zta0;cSpalapa;idalJ;a1erre0stavo adolfo made0;ro;dalajara,naj0;ua0;to;eFhiCiudad Ao3u0;au1ernava0;ca;htemoc,titlan izcalli;a4l2yo0;ac0;an;i0onia del valle;ma;cChui0tzacoalc2;la;lopez mate0nezahualcoyotl;os;ap1lpancin0;go;as;laya,ntral 0;mexic0time;an,o;enito6uenavis0;ta;capulco3guascalientes,lvaro obreg2zcapotz0;al0;co;on; de0; juar0;ez|America/Cancun¦cancun,eastern standard time - quintana roo|America/Merida¦c0merida;ampeche,entral time - campecheyucatán|America/Monterrey¦c5g4mon3sa1t0victoria de durango;ampico,orreon;ltillo,n0; nicolas de los garza,ta catarina;clova,terrey;omez palacio,uadalupe;entral time - durango coahuilanuevo leóntamaulipas (most areas),iudad 0;apodaca,general escobedo,madero,victoria|America/Matamoros¦central time us - coahuilanuevo leóntamaulipas (us border),heroica m0m0nuevo laredo,reynosa;atamoros|America/Mazatlan¦culiac1los mochis,m0tepic;azatl0exico/bajasur,ountain time - baja california surnayaritsinaloa;an|America/Chihuahua¦chihuahua,m0;exic1ountain 0;mexico,standard time (mexico),time - chihuahua (most areas);an pacific standard time,o pacific|America/Ojinaga¦ciudad juarez,mountain time us - chihuahua (us border),ojinaga|America/Hermosillo¦ciudad obregon,hermosillo,mountain standard time - sonora,nogales|America/Tijuana¦america/e1e1mexic0pacific time us - baja california,tijuana;ali,o/bajanorte;nsenada|America/Bahia_Banderas¦bahia0central time - bahía de0; banderas|America/Managua¦man1ni0;!car0;agua|America/Panama¦pa0san miguelito;!nama|America/Lima¦arequiAc6huanc9i5juliaca,lima,p2sant1t0;acna,rujillo;a anita   los ficus,iago de sur5;e0iura,ucall7;!ru0t;! standard time;ca,quitos;allao,hi1us0;co;cl0mbote;ayo;pa|America/Miquelon¦m8p6s0;aint pierre1t0; pierre a3. pierre & miquelon s2;! 0;a1s0;tandard time;nd1;ierre0m; m0;iquelon|America/Puerto_Rico¦atlantic standard time,bayamon,p0;r,uerto rico|America/Asuncion¦asuncion,c3p0san lorenzo;araguay1y0;!st,t;! standard time;apiata,iudad del este|America/Paramaribo¦paramaribo,s0;r1uriname0;! time;!t|America/El_Salvador¦el1s0;an0oyapango,v; salvador|America/Grand_Turk¦grand turk,t0;c,urks and caicos|America/Port_of_Spain¦america/virg0port of spa0;in|America/New_York¦a0Pb0Mc0Fd0Ee0Af06g04hialeah,i01jZkYlexingtonXmTnMoKpIquHrDsAt7u5v3w0yonkers;ashington1est 0inston salem,orcD;raEvirgin03;! dc;ermont,irginia0;! beach;nited states,s0;!/0J;a0enne1he bronx,oleD;llaha0mpa;ssee;outh 1t0;. petersburg,aten3;bo0AcC;a2hode1ichmo04och0;ester; is01;lei2;eens,intana roo;ennsylvanMhiladelphMittsbur0rovidence;gh;hio,rlan0;do;ew3or1y0;!c;folk,th c0;aroliD; 0ark,port news;hampshiWje8york0;! staS;a1eads,i0;ami,chig1;ine,nhatt0ryLssachusetts;an;! fayetN;entucky,nox9;acks2e0;rsey;ndia1r0;on5;na;eorg0reensboro;ia;ayette1l0ort lauderda2;!orida;vil0;le;ast0dt,st; flatbush,ern0;! 0;(most areas),standard time;elawa9urham;ape coral,h3incinnati,leve1o0;lumbus,nnecticut;la0;nd;a0esapeake;rlot0ttanooga;te;altimo1o0rooklyn,uffalo;st3;re;kr1merica 0tlanta;eastern;on|America/Detroit¦detroit,eastern - mi (most areas),grand rapids,us/michigan|America/Kentucky/Louisville¦america0kentucky0;/louisville|America/Kentucky/Monticello¦kentucky/monticello|America/Indiana/Indianapolis¦americ0indian0us/east-indiana;a/indianapolis|America/Indiana/Vincennes¦indiana/vincennes|America/Indiana/Winamac¦indiana/winamac|America/Indiana/Marengo¦indiana/marengo|America/Indiana/Petersburg¦indiana/petersburg|America/Indiana/Vevay¦indiana/vevay|America/Chicago¦aVbScQdPfort worth,gOhNiLkZlImBn7o6plano,s3t1us/02wi0;chiFsconsV;ex0ulsa;!as;a0hreveport,ou4t 1;int 0n antonio;louGpaul;klahoWmaha,verland park;ashLe1or0;th dako7;braska,w 0;orleans,south me6;adisMe5i1o0;biHntgomery;lwaukee,nne1ss0;issippi,ouri;apol6so0;ta;mph4;aredo,i0ouisiana,ubb1;ncoln,ttle r0;ock;llino0owa,rving;is;oustAunts5;arland,rand prairie;allAes moines;dt,entral0hicago,orpus christi,st;! (most areas);aton rouge,rowns0;vil0;le;laba7m5r1ust0;in;k1lingt0;on;ans0;as;arillo,erica 0;central;ma|America/Indiana/Tell_City¦indiana/tell city|America/Indiana/Knox¦indiana/knox,us/indiana-starke|America/Menominee¦central - mi (wisconsin border),menominee|America/North_Dakota/Center¦north dakota/center|America/North_Dakota/New_Salem¦north dakota/new salem|America/North_Dakota/Beulah¦north dakota/beulah|America/Denver¦a1colorado springs,denver,el paso,m0navajo,salt lake,us/mountain;dt,ountain (most areas),st;lbuquerque,merica/shiprock,urora|America/Boise¦america mountain,boise,mountain0;! 0;- id (south) or (east),standard time|America/Phoenix¦a8c7g5idaho,m4n3phoenix,s2t1u0wyoming;s/a7tah;empe,ucson;cottsd3inaloa,onora;ayarit,ew mexico;aryv1esa,onta4st - arizona (except navajo);ilbert,lend0;ale;handler,olorado;rizo0;na|America/Los_Angeles¦aZbaXcVfRgarden grove,hOirviNlJmoGnFoCp8r7s0tacoma,us/00washington state;a1eattle,f,p0tocktPunrise manor;okaLringF;cramenFn0; 1ta 0;aPclariR;bernardiNdiego,fran0jo4;!cisco;ancho cucamonga,eLiver5;a0dt,ort5st;cific1radi0;se;! standard time;ak1cean0regDxnard;side;land;evada,orth las6;des1reno0; valley;to;a1o0;ng4s angeles;!s0; vegas;ne;enders1untington0; beach;on;onta2re0;mont,s0;no;na;a2hula vis0;ta;ja ca0kersfield;lifornia;merica 0naheim;pacific|America/Anchorage¦a0us/alaska;h4k4laska0nchorage;! 1n0;! s1;(most areas),s0;tandard time;dt,st|America/Juneau¦alaska - juneau area,juneau|America/Sitka¦alaska - sitka area,sitka|America/Metlakatla¦alaska - annette island,metlakatla|America/Yakutat¦alaska - y0y0;akutat|America/Nome¦alaska (west),nome|America/Adak¦a0hawaii standard time,us/aleutian;dak,leutian islands,merica/atka|America/Montevideo¦montevideo2u0;ruguay1y0;!st,t;! standard time|America/Caracas¦alto barinJbarIcCguaAm7p6san5turmeEv0;alencia,e0;!nezuela0t;! 0n;standard t0t0;ime; cristobal,ta teresa del tuy;eta4uerto la cruz;a0ucumpiz;raca0turin;ibo,y;ren8ti0;re;a4iudad 2o1u0;a,m2;ro;bolivar,guay0;ana;bim1rac1;in0quisimeto,uta;as|Asia/Dubai¦a4dubai,g2musaff1om0ras al khaim1sharj1;!an;ah;st,ulf0;! standard time;bu dhabi,jman|Asia/Kabul¦af1herat,jalalabad,ka0mazar e sharif;bul,ndahar;!ghanistan0t;! 0;standard t0t0;ime|Asia/Yerevan¦a0caucasus1yerevan;m,rmenia0;! standard time|Asia/Baku¦az0baku,ganja,lankaran,sumqayit;!erbaijan0t;! standard time|Asia/Dhaka¦asia/dacca,bDcBd9jess8khul7mymensingh,na4pa3ra2s1t0;angail,ungi;aid8hib4ylhet;jshahi,ng7;b3ltan,r naogaon;gar5r0t3;ayan0singdi;ganj;na;ore;haka,inaj0;pur;hattogram,o0;milla,x's bazar;a0d,ogra;gerhat,ngladesh0rishal;! standard time|Asia/Brunei¦b0;dt,n1runei0;! darussalam time;!t|Asia/Thimphu¦asia/thimbu,b0thimphu;hutan0t;! time|Asia/Shanghai¦0:3I;1:38;2:36;3:39;4:3C;a3Eb31c2Nd2He30f2Cg26h1Qji1Ek1Bl0Ym0Wn0Tordos,p0Pq0Lrizh10s08t01wSxLyEz5;aoCh6i5ouc3unyi;bo,go0;a7en6ouk2u5; c3h33maWzh2;g2Vj1Izh2;b1Ung5o3D;jiakou5zh2;! shi xuanhua qu;ya0z27;an9i7u5;ci,e18n5;c3fu;b4c9n5ya0;cZgk2;c3g5ji,t2S;j17qu1sh16zh2;i6uc5;ha0;a6n5uyi0;di,gt2Nh1Fi0pu,t2Nx13ya0;m17n5;!g5ni0t0Eya0;t1ya0;aBe9u5;h6so0w1Bx5zh2;i,ue;a5u;i,n;i0Hn5;sh1zh2;fang5nxi1;di1;a8i6ong5;chuans0XhDli02sh1;an5eli0;j4sh0Z;i6ng5;gu,sh1;an,hec1Wyu1zh2;anmi0hAi8u5;i5zh2;h5zh2;ua;c5pi0;hu1;a7en6i5uangya14;jiaz15qi,y1;gli,ya0zh0G;n6o5s0I;gu1xi0;g5t2;h1Rqiu,rKyu;i5uan1J;aFn5o14qih0N;g5huangdH;dGh1N;an0Ting7rc,u5;ti1yang5;! H;ding0QxZ;an5eijYingbo;ch5ji0ni0to0ya0;a0o0;entoug2ianRuda5;njU;aEi8u5;anc3o6qi5;ao;he,ya0;a7jPn5upansh01;fTxia 5yi;chengguanI;n0Do5;c3y5;a0u1;i0Wn5ohek2;g5zh2;fa0;ai6un5;mi0sh1;fe0yu1;'1aAe9l4n6u5xi;jCt0W;an,c3g5i0zh2;de5li0zh2;zhE;ya0;musi,n8o5xi0;j6z5;uo;ia0;g5shF;m7xi;aFeBkt,ohhot,u5;a6i0Dlan ergi,m5n1;en;i7ng5y4;ga0s5;hi;'1b8n1;bi,f7ga0ng5ze;sh5ya0;ui;ei;i7n5rb4;d1g5;u,zh2;c3k2l5;ar;a9u5;an6i5li;l4ya0zh2;g5k2;do0yu1zh2;nsu,opi0;en7o6u5;ji1shQx4zh2;sh1;d2g5;hua0;a6eNong5;gu1hT;d6lian5ndo0qi0to0;!g;o5uk2;nghP;angHh5n,t;aAen7i5oYuG;fe0na5;! standard K;g5zh2;d5zho0;e,u;ng6o5;ya0zh2;ch7de,sh6zh5;i,ou;a,u;un;zh2;aBe5;i6n5;gbu,xi;'1h7jing5;! 5;time;ai;i7o5yan nur;di0t2;ou;c3sh1y4;an;he0;nAsia/5;ch6harb4;in;o5ungki0;ng5;qi0;da,qi0sh5ya0;an,un;ng|Asia/Urumqi¦a6changji,huoche5k3shihezi,turp2urumqi,xin1zh0;anjia4ongsh1;jiang time,yu0;an;a0orla;ramay,s2;ng;ksu,ral,sia/kas0;hgar|Asia/Nicosia¦cy0nicosia;!prus0;! (most areas)|Asia/Famagusta¦famagusta,northern cyprus|Asia/Tbilisi¦ge1kuta0tbil0;isi;!orgia0t;! 1n0;! 0;standard time|Asia/Hong_Kong¦h0kowloon,tsuen wan;k2ong0; kong0kong;! standard time;!st|Asia/Jakarta¦bScQdepPiNjKkediri,lJmGpArengasdengklPs4t2w0yogyakM;est0ib; indonesia,ern indonesia time;a0egal;n4sikmal3;ema4itubondo,outh tan3u0;kabumi,medaRra0;b0kF;aya;ge0;raN;a4e1robolinggo,urw0;akAokerto;ka1ma0rcut;laJtangsiantar;long2nbaru;daHl3mulaHruH;a1ed0;an;diun,laE;embaD;a0ember;k0mbi,vasumatra;arta;d,ndonesia0;! western;ok;i0urug;ampea,bino5leungsir,mahi,putat,rebon;a1e0injai,ogor;kasi,ngkulu;nd0tam;a0u1; aceh,r lampu0;ng|Asia/Pontianak¦borneo (westcentral),pontianak,tanjung pinang|Asia/Makassar¦b6c4denpa3indonesia central,k2l1ma0palu,samarinda,wita;kas2nado,taram;abuan bajo,oa jan7;endari,upang;sar;entral indonesia0ity of bal3;! time;a0orneo (eastsouth) sulawesi/celebesbalinusa tengarra timor (west);l0njarmasin;ikpap0;an|Asia/Jayapura¦ambon,east0indonesia eastern,jayapura,new guinea (west papua / irian jaya) malukus/moluccas,wit; indonesia,ern indonesia time|Asia/Jerusalem¦ashdod,beersheba,haifa,i2j0petah tiqwa,rishon leziyyon,tel aviv,west je1;e0mt;rusalem;d1l,srael0;! standard time;dt,t|Asia/Kolkata¦0:3C;1:3K;2:2D;3:3L;4:3I;5:38;a36b2Ec25d1Xe1Vf1Tg1Gh1Di19j14k0Ql0Lm0Dn06odis3KpWquthbull5rOsGtAu9v6warang2Nyamun1Q;a7el1Vi6;jayawa2Wsakha0IzianagD;doda2Prana12;daip0jja24lhasn1ttar pradesh;a9eYh8iru6umk0;chirap0Nnelve2p6vottiy0;a39p0;ane,iruvananthapur0Ooothuku2Zriss0;mb6njo1Y;ar0M;aCecunder4hAi9lst,o8r1Gu6;jan37r6;at,endr1D;l5nip2O;k3liguLngrau2rK;ahj20i6ri2Pya0M;mo1Nvaji08;har1Ylem,mbh25ng2t05ug0Z;a7e0Foh6;iJtak;ebare2iAj8m6nc1Htl0Burke37;ag6g6p0;und09;a6kot;hmund27sth2B;ch0p0;aAimp9roddat0u6;ducher24n6rn18;a6e;sa;ri;li,n8rbha7t6;ia2Vna;ni;chku2Ti6;ha2Gp22;a8e7izam4o6;i1Wwrang5;l0Tw del0Z;di2Kg8i0Fjaf2Fn6re2Oshik,vi mumb16;ded,g6;i,loi j1W;ercoil,p0;a9eerut,irz5o8u6yso0Z;lugu,mb11rwa1Jzaffar6;n1p0;nghyr,rad4;chili8d7harasht1Gleg08n6thu1Gu;ga0Jip0;hya,ur0W;patnH;a8u6;cknow,dhia6;na;l bahadur6t0; n1;aEhaCo9u6;kat7lt6rno1P;a2i;pal2;l6rXta,zhikode;h5ka1Kl6;am;nd6ragp0;wa;kina14l9marPnp0r6shmir,tih3;i7na6ol ba19;l,tW;mn1;lakuric04y12;a7han6odOunagadh;si;b0Sip0l7m6;mu,n1shedp0;andh3gHna;chalkaranji,mph0Jn6st;!d6;ia6o01;! standard time,n;a7is3ospet,u6;b2g2;o0Ip0ridw3;aDhazi4oAreater noi0Nu7wali6y05;or;jar0PlbarRnt0rg7wa6;ha12;aon;rak7sa6;ba;hp0;juw9n6ya;dh7g6;an1;in1;aka;ar6iroz4;id4rukh4;l6taw0M;loG;aBe9h7indigul,ombPurg6;!ap0;anb0Uul6;ia;hra dun,l6was;hi;rbhan6vange9;ga;a09h9o6uttack;ch7imbato6;re;in;a7enn6;ai;nd6pM;a6i0C;!nn1;aOeLhCiAor8rahm5u6;landshahr,rh6;anp0;iv2;li;d3har sharif,j5kan07l6;asp0imoD;aBi8op7u6;baneshw3sav6;al;l7wan6;di,i;ai,wa7;g7ratp0tpa6vn1yand3;ra;alp0;l6ngaluru;gaum,la6;ry;hBli,r7thin6;da;a7ddham6eilly;an;n1s6;at;a7rai6;gh;ramp0;gQhmLizawl,jmKkoRlHmDnant5rrBs7urang4va6;di;ans8ia/ca6;lcut6;ta;ol;ah;ap0;arnath,batt0r6;ava6its3oA;ti;ur;appuz7i6lah4w3;garh;ha;er;adn1ed4;ab6;ad;ag3;ar;arta6ra;la|Asia/Baghdad¦a4ba3dihok,erbil,i2k1mosul,na0ramadi;jaf,sirB;arbala,irkuk,uwait;q,raq;ghdad,sr9;bu ghurayb,d diw6l 5rab0s sulaym6;! 3i0;a0c;!n0;! 0;standard time;amar2basrah al qadim2falluj2hill2kut,mawsil al jadid2;an0;iy0;ah|Asia/Tehran¦aRbNgorgXhamWiKkCmaBn8orumiy7pasragad branch,q4rasht,s2t1varam6yazd,za0;hedWnjW;abHehrV;a0hirSirjU;bzevar,nandEri,v3;a0om;rchak,zv0;in;eh;a0eyshabur;jaf0zar0;ab4;layer,shh3;a4erman3ho0;meyni sErram0wy;ab0sD;ad;!shah;h1r0;aj;riz;r0sfahC;!an0dt,st;! standard time;a2irjand,o0uk9;jnu0ruje0;rd;b3ndar abbas;b4hv3m2r1zads0;hahr;ak,dabil;ol;az;ad0;an|Asia/Amman¦amm1irbid,jo0russeifa,wadi as sir,zarqa;!rd0;an|Asia/Tokyo¦0:11;1:19;a17ch15fu0Ygifu13h0Ni0Hj0EkYmSnLoJsEt8u7waka04y2;a5o2;k2no;kaic1Ao2;ha0Xsu0;maJo;ji,tsun0E;aka6o2sukuba;k4makom04y2;a0So2;hNna0ta;oro02us0Pyo04;m0Irazu0sa1tsu1;a4endZhi3o0u2;i0Yzu0;monose1zuo0;ita0Lk2ppoKsebo;ai,u05;dawa04i0Uka2sa0t0D;ya0Iza1;a5eyaga0Oi2umazu;i3shi2; tokyo0Hnomiya ha0F;ga0P;g2ha,ra0F;a2oW;no,o0sa1;a4i2orio0;na2to,yaza1;mirinkan,to;chiCeb3tsu2;do,m7ya06;as0H;aAi8o6u2y5;mam4r3shi2;ro;ashi1e,uG;oto;be,c0Bfu,ri2shigaJ;yaY;shiwa2takyushu;da;gosUkogawacho honmJmirenjaku,na7s4wa2;g2sa1;oe,uc05;hiZu2;g2kabe;ai;zaW;apan2dt,oetIp,st;! standard ti2;me;bara1chi3ta2wa1zu2;mi;ha4n2;omi2;ya;ra;a7i2oncho;meAr3t2;acP;a3os2;a1hiB;kaLtsu0;chi4kodate,mam2;at2;su;nohe,o2;ji;ji7ku2;i5o0s2ya3;hi2;ma;ka; sB;!sa5;i2ofu;ba,g4;geoshimo,k5mag3njo,omori,sahika2tsugi;wa;asa1;ki;as3i2;ta;hi|Asia/Bishkek¦bishkek,k0osh;g2yrgy0;stan,zstan0;! time;!t|Asia/Pyongyang¦chongjin,h5k3n2pyongya8s0won6;ariw0inui8unch'0;on;amp'o,orth korea;a0p;eso3nggye;a1ungnam,ye0;san;e1mhu0;ng;ju|Asia/Seoul¦anPbuMchHdaeGgChwaseoQiBjeAk7m6pohaFrok,s2u1wonJy0;aCeosu;ijeongbuPlsL;e1outh korea,u0;nEwH;joAo0;ngnamLul;asGokpo;imhae,orea0r,st,wangmyo7;! 0n 0;standard time;ju,on8;cCksBn6;angneu2oyaDu1wa0;ng5;mi,ns8riC;ng;gu,je4;angw3eon2in1un0;che2;ju;an,gju6;on;c1s0;an;heon2;san1ya0;ng0; si|Asia/Almaty¦a8central asia6east kazakhstan7k2nur sultan,p1s0taraz,ust kamenogorsk;emey,hymkent;avlodar,etropavl;a0z;ragandy,zakhstan0;! 0;(most areas),eastern;! standard0; time;lm0stana;aty,t|Asia/Qyzylorda¦kyzyl1qyzylorda0;!/kyzylorda/kzyl-0;orda|Asia/Qostanay¦k0q0;ostanay|Asia/Aqtobe¦a0;k1qt0;o1öbe/ak0;to0;be|Asia/Aqtau¦a1kazakhstan western,mangghystaū/mankis2west asia0;! standard3;lma1q0;tau; ata,-ata0; time|Asia/Atyrau¦atyra0;u,ū/atirau/gur'yev|Asia/Oral¦oral,west kazakhstan|Asia/Beirut¦bei2e1l0ra's bay2;b,ebanon;astern european standard time,urope eastern;rut|Asia/Colombo¦colombo,dehiwala mount lavinia,lk,moratuwa,sri lanka|Asia/Yangon¦asia/rango3b2kyain seikgyi township,m0nay pyi taw,pathein,sittwe,yang3;a0eiktila,m,onywa,yanmar;ndalay,wlamyine;ago,urma;on|Asia/Ulaanbaatar¦m2ula0;anbaatar0n bator,t;! standard time;n,ongolia0;! (most areas)|Asia/Hovd¦bayan-ölgiigovi-altaihovduvszavkhan,hov3w0;. mongolia 4est0; 0ern 0;mongolia;d0t;! 0;standard time|Asia/Choibalsan¦choibalsan,dornodsükhbaatar|Asia/Macau¦asia/macao,m0;acau,o|Asia/Kuala_Lumpur¦alor setar,bukit mertajEgeorge town,ipoh,johor bahDk8m4petali3s0taipiC;e1hah alDu0;ba1ngai petani;pa9remb7;ng jaya;ala0y;cca,ysia0;! 0;(peninsula),time;ampung baru suba3la3ota bha4ua0;la 1nt0;an;lumpur,terengganu;ng;ru;am|Asia/Kuching¦k2miri,s0tawau;a0ibu;bahsarawak,ndakan;ota kinabalu,uching|Asia/Kathmandu¦asia/kat3biratnagar,kath3n1p0;atan,okhara;epal,p0;!t;mandu|Asia/Manila¦an04bWcRdaPgeneral santOiMlJmCnaBoAp4quezIsan1ta0zamboanga;clobZguig,rlac,ytE; 1t0;a ro2ol;fernando,jose del monte,pab01;a3h1uerto prince0;sa;!ilippine0t; standard time,s;gadiRnalanoy,s0;ay,ig;longapo,rmoc;ga,votQ;a0eycauayN;balacat,gugpo poblaci4kati,l3n0;da1ila,silingLtamp0;ay;luyong,ue;ingDol6;on;a1egaspi,i0ucena;bertad,pa;pu lapu,s p4;l0mus;igCoiH;os;smar0v5;inB;a0ebu,otabato;b1gayan de oro,in5l0;amba,ooc6;anatu5uy0;ao;a4inan2u0;d0tu2;ta;!gon0;an;co1guio,tang0;as;lod,or;geles,tipo0;lo|Asia/Karachi¦bKchiniJdera ghaziHfaisalGgujraFhyderGislamGjhang sadr,kDlaCm7nawabshah,okaAp4quetta,ra3s0;a1h0ialkIukkM;ahkHekhupu8;ddiqDhiwal,rgodha;him yarDwalpindi;akistan1eshawar,k0;!t;! standard time;a3i1u0;lt9zaffar7;ngo0rpur khas;ra;lir cantonment,rd6;hore,rkana;a0otli;moke,rachi,s8;n5t;abad; kh0;an;ot;a1himber,ure0;wala;hawalp0ttagram;ur|Asia/Gaza¦gaza1p0;alestine,s;! strip|Asia/Hebron¦east jerusalem,hebron,west bank|Asia/Qatar¦ar rayyan,doha,qa0;!tar|Asia/Yekaterinburg¦chelyabin7eka5k4magnitogor7nizhn3or2perm,s1tyumen,ufa,yek0zlatoust;a4t;terlitamak,urgut;enburg,sk;evartov3y tagil;amensk ural'skiy,urgan;terinburg0;! standard time;sk|Asia/Omsk¦oms0;k0t;! standard time|Asia/Novosibirsk¦n0siber4;. central asia 4o0;rth central as2v0;osibirsk0t;! 1;ia;standard time|Asia/Barnaul¦b0;arnaul,iysk|Asia/Tomsk¦tomsk|Asia/Novokuznetsk¦kemerovo,novokuznet0prokop'yev0;sk|Asia/Krasnoyarsk¦kra0north asia1;snoyarsk0t;! standard time|Asia/Irkutsk¦angar2brat2irk0north asia east1ulan ude;t,utsk0;! standard time;sk|Asia/Chita¦chita|Asia/Yakutsk¦blagoveshchensk,yak0;t,utsk0;! standard time|Asia/Khandyga¦khandyga|Asia/Vladivostok¦k2vla0;divostok0t;! standard time;habarovsk0omsomolsk on amur;! vtoroy|Asia/Ust-Nera¦ust nera|Asia/Magadan¦mag0;adan0t;! standard time|Asia/Sakhalin¦sak0yuzhno sakhalinsk;halin0t;! standard time|Asia/Srednekolymsk¦chokurdakh,sre0;dnekolymsk0t;! standard time|Asia/Kamchatka¦kamchatka,pet0;ropavlovsk0t; kamchatsky,-kamchatski standard time|Asia/Anadyr¦ana0;dyr0t;! standard time|Asia/Riyadh¦a6burayd5dammam,ha4jedd5khamis mushait,me3najran,riyadh,sultan5ta2y0;anbu,e0;!men;'if,buk;cca,dina;'il,far al batin;ah;bha,l 0;hufuf,jubayl,kharj,mubarraz|Asia/Singapore¦s0woodlands;g1ingapore0;! standard time;!t|Asia/Damascus¦a4d3h2latak1sy0;!r0;ia;am2oms;amascus,eir ez zor;leppo,r raqq0;ah|Asia/Bangkok¦bangkok,ch8h6indochina3mueang nontha9na2pak kret,s0udon thani;amut prakan,e asia0i racha,outh east asia;! standard t3;khon ratchasima,m dinh;! 0;(most areas),t0;ime;a0ue;iphong,noi,t y2;iang m1on 0;buri;ai|Asia/Dushanbe¦dushanbe,t0;ajikistan1j0;!t;! time|Asia/Dili¦dili,east timor1tl0;!t;! time|Asia/Ashgabat¦as4t0;m2urkmen0;a3istan0;! standard time;!st,t;hga0ia/ashkhabad;bat|Asia/Taipei¦banqiao,h7k5roc,t0;a0w;i0oyu2;ch3n1pei0w1;! standard time;an;aohsi0eel0;ung;sinchu,ualien|Asia/Samarkand¦bukhara,nukus,qarshi,samarkand,uzbekistan 0;(west),standard time|Asia/Tashkent¦andij2namangan,qo`q2tashkent,uz0;!bekistan0t;! (east);on|Asia/Ho_Chi_Minh¦asia/saig4bien hoa,can tho,da 2ho chi minh,nha tr3qui nh4rach gia,sa dec,thi xa phu my,v0;ietnam0n,ung tau;! (south);lat,n0;ang;on|Atlantic/Bermuda¦b0;ermuda,m|Atlantic/Cape_Verde¦c0;a1v0;!t;bo verde,pe verde0;! standard time|Atlantic/Canary¦canary0las palmas de gran canaria,santa cruz de tenerife;! islands|Atlantic/Stanley¦f0stanley;alkland1k0;!st;! island0;!s0;! summer time|Atlantic/Faroe¦atlantic/faeroe,f0;aroe0o;! islands|Atlantic/South_Georgia¦gs,south georgia0;! time|Atlantic/Reykjavik¦i0reykjavik;celand,s|Atlantic/Madeira¦madeira0;! islands|Atlantic/Azores¦azo0hmt;res0st,t;! standard time|Australia/Lord_Howe¦australia/lhi,l0;h2ord howe0;! 0;island,standard time;dt,st|Australia/Hobart¦australia/1hobart,tasmania0;! (most areas);currie,tasmania|Australia/Melbourne¦australia/victoria,geelong,melbourne|Australia/Sydney¦au0c4new south wales (most areas),sydney,wollongong;!s0; east3tralia0;! eastern,/0n eastern 4;act,c0nsw;anberra;!ern0;! 0;standard time|Australia/Broken_Hill¦australia/yancowinna,broken hill,new south wales (yancowinna)|Australia/Brisbane¦a1brisbane,gold co3logan,queensland0townsville;! (most areas);e2ustralia0;/queensland,n e0;ast;dt,st|Australia/Lindeman¦lindeman,queensland (whitsunday islands)|Australia/Adelaide¦a2cen0south1;. australia 4tral0; australia;c3delaide,ustralia0; central,/south,n central0;! 0;standard time;dt,st|Australia/Darwin¦australia/north,darwin,northern territory|Australia/Perth¦a3perth,w0;. australia6est0; australia,ern australia0;! (most areas);ustralia1w0;dt,st; western,/west,n west0;!ern0; standard time|Australia/Eucla¦a0cw5eucla,western australia (eucla);cw6us0; central w2tralia0; centralwestern,n central western0;! 2;. 1e0;st;standard time;dt,st|Indian/Cocos¦c0;c3ocos0;! island0;!s0;! time;!t|Indian/Christmas¦c0;hristmas1x0;!t;! island0;! time|Indian/Chagos¦british indian ocean territory,c4i0;ndian 1o0;!t;c1ocean0;! time;hagos|Indian/Mauritius¦m0port louis;auritius1u0;!t;! standard time|Indian/Maldives¦m0;aldives1v0;!t;! time|Indian/Reunion¦r0;e1éunion0; time,crozetscattered islands;t,union|Indian/Mahe¦mahe,s0;c,eychelles0;! time|Indian/Kerguelen¦french southern2kerguelen1tf0;!t;!st paul islandamsterdam island;! 0;& antarctic time,and antarctic0;! lands|Europe/Andorra¦a0;d,ndorra|Europe/Tirane¦al1tiran0;a,e;!bania|Europe/Vienna¦a0donaustadt,favoriten,graz,linz,vienna;t,ustria|Europe/Brussels¦antwerpen,b0charleroi,gent,liege;e0russels;!lgium|Europe/Sofia¦b0plovdiv,sof2varna;g,u0;lgar0rgas;ia|Europe/Minsk¦b2h1m0viteb3;ahilyow,in2;omyel,rodna;abruy0elarus,rest,y;sk|Europe/Zurich¦geneve,li0swiss time,zurich;!echtenstein|Europe/Prague¦brno,ostrava,prague,s0;k,lovakia|Europe/Berlin¦a00bScQdOeMfrLgeJhaEkClAm4n3oberhaus04rostoBs1w0;andsbek,iesbad03uppert8;a0tuttgaL;arbrueck01xony;eue neustadt,uernbeY;a3e2iddle european,oenchengladba1u0;enst9ni0;ch;st,t;gdeSinz,nnheim,rienth0;al;eipzJuebe0;ck;a0iKoeln,rL;rlsruhe,ssJ;gPlle (saale),m1nnov0rM;er;burg0m;! 0;mitte,nord;lsenkirJrmany0;! (most areas);ankfurt am maDeiF;imsbuettArfu0ssH;rt;e,ortmund,resdFu0;esseldorf,isB;e0hemnitz;ntral europe,st,t;avaria,erl6iel5o2r0;aunschwe0emA;ig;chum0nn;! hord0;el;efeld;in;a2ltona,ugs0;bu0;rg;ch0;en|Europe/Copenhagen¦arhus,copenhagen,d0;enmark,k|Europe/Tallinn¦e0tallinn;e,stonia|Europe/Madrid¦aMbJcHeGfuenDgCjerez de la frontera,lBm8ovieFp6s1terrassa,v0zaragoza;alladol9igo;a1evilla,pain0;! (mainland);badell,n0; sebastian,t0; marti,ander,s montjuic;a0uente de vallecas;lma,mpD;a0ostolGurcF;dr0laga;id;atiEeganD;asteiz / vitorBijon,ran1;carral el par1labr0;ada;do;ixample,lche,s;a0iudad lineal;rabanchel,stello de la pla7;a0ilbao,urgos;da0rce0sque;lo4; coru3l0;cala de henar1icante,mer0;ia;es;na|Europe/Helsinki¦espoo,fi1helsinki,t0vantaa;ampere,urku;!nland|Europe/Paris¦bordeaux,ceDeurope central,frBl9m8n6paris,r3s0toulouE;aint 1t0; 0rasbourg;etienne;e1omance0;! A;ims,nn1;ant0i5ormandy;es;arsei1ontpellier;e havre,i0yon;lle;!an0;ce;ntral european 1rgy pontoi0;se;standard time|Europe/London¦a0Hb05c02dZeXgUhSiPjeOkingston upon hull,lJmHnBoxTp9reading,s1w0yF;arwick05igan,olverha7;heffield,o3t2u1w0;an4iH;ffolk,nderland,sUttM;afOoke on tre05;meUuth0;a1end on 0;sea;mptH;ly0orts0restG;mouth;ew4o0;r0ttinghamO;th0wD; y0amptonM;orkQ;castle upon tyne,port;ancheLi0;dlan4lton keynes;ancaMdn,e2i1o0ut6;nd5;ncolnKverP;e0icesterE;ds;!rsQ;psw1slingt0;on;ich;ampDert0;fordC;b1l0mt standard time;asgow,oucesterA;!-eA;dinburgh,s0urope/belI;sex;erby1o0udlF;rset;!sh5;a1ity of westmin0oventry,rawlC;ster;mbridge1rdiff;e8ir7lack5r2st,uckingham0;sh0;ire;adford,e1i0;st2tish;nt;po0;ol;kenhead,mingham;l1xl0;ey;fast;berdeen,rchway|Europe/Gibraltar¦gi0;!braltar|Europe/Athens¦athens,gr0thessaloniki;!eece|Europe/Budapest¦budapest,debrecen,hu0;!ngary|Europe/Dublin¦cork,dublin,eire,i0;e,reland|Europe/Rome¦b9c8florence,genoa,m7naples,p4rome,sicily,t2v0;a0eroA;!tican city;aran2rieste,u0;rin,scany;a1ra0;to;dova,lermo;essi3ilan;atan1orsica;ari,olog1resc0;ia;na|Europe/Vilnius¦k1l0vilnius;ithuania,t;aunas,laipeda|Europe/Luxembourg¦lu0;!xembourg|Europe/Riga¦e1kalt,l0riga;atvia,v;ast europe,e0;st,t|Europe/Monaco¦m0;c,onaco|Europe/Chisinau¦chisinau,europe/tiraspol,m0;d,oldova|Europe/Malta¦m0;alta,t|Europe/Amsterdam¦a3eindhov2groning2n1rot4t0utrecht;he hague,ilburg;etherlands,l;en;lmere stad,ms0;terdam|Europe/Oslo¦berg1oslo,s0;j,valbard and jan may0;en|Europe/Warsaw¦bDczestochowa,g9k7l5mokot8p3radFs2torun,w0zabrze;ars0rocl0;aw;osnowiec,zczec3;l,o0raga poludnie;land,znan;odz,ubl0;in;ato2iel3rak0;ow;d2li0;wi0;ce;ansk,ynia;i2y0;dgoszcz,t0;om;alystok,elsko biala|Europe/Lisbon¦amadora,europe western,lisbon,p2we0;st0t;! europe,ern european standard time;ort0t;o,ugal0;! (mainland)|Europe/Bucharest¦b3c2gala1iasi,oradea,ploies1ro0timisoara;!mania;ti;luj napoca,onstanta,raiova;ra0ucharest;ila,sov|Europe/Belgrade¦belgrade,n1pristina,s0;i,lovenia;is,ovi sad|Europe/Kaliningrad¦kaliningrad|Europe/Moscow¦ar0Cb09c06dzerzh05fet,grozn04ivano03kXlipet0EmQnMorel,pJrFs8t6v2w-su,y0zelenograd;a0oshkar oV;roslavl,sene01;asyl'evsky ostrHelikiLladi2o0ykhino zhulebS;l0ronezh;gograOogda;kavkaz,m07;a0uPver;ganrog,mbC;a4ever3hakhty,molen05ochi,t0yktyvkQ; 4a0;ryy osk0vrop0;ol;nRodvS;int 0rW;petersburg;ostov na donu,u1y0;azKbO;!ssia0;!n9;e1odolUsk0;ov;nza,trozavodS;a2izhn0ovorossiyR;ekamQi0;y novM;berezhnyye chelny,l'chik;a3dst,oscow1s0urmJ;d,k;! standar0;d time;khachka1r'0;ino;la;a2himki,ostroma,rasno0urG;d0gvargeisky;ar;l1z0;an;ininsk5uga;vo;yy;in8;entraln1he0;boksary,repovets;iy;el1ry0;an3;gorod;khangel'1mav0;ir;sk|Europe/Simferopol¦simferopol|Europe/Kirov¦kirov|Europe/Volgograd¦vol0;gograd,t,zhskiy|Europe/Astrakhan¦astrakhan|Europe/Saratov¦balakovo,saratov|Europe/Ulyanovsk¦ulyanovsk|Europe/Samara¦izhevsk,s0togliatti on the volga;am0yzran;ara0t;! standard time|Europe/Stockholm¦goeteborg,malmoe,s0;e,tockholm,weden|Europe/Istanbul¦a00bUcSdQeNgMiKkImDosmCs6t1u0v07zeytinburnu;eskuedYmrB;arsus,r3urkey0;! 0;standard t0t0;ime;!abzon,t;a3i1ultan0;beyJgazi;sIv0;as,erek;msun,n0;cakt5liurfa;aniye;a1er0uratpaH;kezefendi,sin;l0niF;atOt0;epe;a0irikkale,onMutahM;hramanmaras,rabaglFyseP;stanbul,zmi0;r,t;aziantep,ebze;lazig,rzurum,s0;en0kiC;l8yurt;eniz0iyarbakB;li;ankaCor0;lu,um;a1ur0;sa;gcil2hcelievl1likes5sak4t0;ikent,m9;er;ar;d5n2rnavutkoey,ta0;seh0;ir;kara,ta0;k0l0;ya;a1iyam0;an;na,paza0;ri|Europe/Kiev¦bila tserkHcherEdChorlBivano frankivDk7l6m4odessa,poltaHrivne,sumy,ternopil,u2vinnyts1z0;aporizhzh0hytomyr;ya;a,kraine0;! (most areas);a0ykolayB;ki5riupol;ut6v9;amyanske,h1iev,r0y8;emenchuk,opyv1yvyy rih;ark6erson,mel0;nytskyy;ivka;nipro,onet0;sk;kasy,ni0;h0vtsi;iv;va|Europe/Uzhgorod¦ruthenia,uzhgorod|Europe/Zaporozhye¦luhansk,sevastopol,zaporozh0;'ye/zaporizhia lugansk/luhansk (east),ye|Antarctica/Casey¦casey0;! time|Antarctica/Davis¦a1davis0;! time;ntarctica,q|Antarctica/DumontDUrville¦dumont0;-d0d1;'0’urville time;urville|Antarctica/Mawson¦mawson0;! time|Antarctica/Palmer¦chile standard time,palmer|Antarctica/Rothera¦rothera|Antarctica/Syowa¦syowa0;! time|Antarctica/Troll¦troll0;! research station|Antarctica/Vostok¦vost0;!ok0;! time|Antarctica/Macquarie¦macquarie0;! island|Pacific/Pago_Pago¦pa0samoamidway,us1;cific0go pago;/samoa|Pacific/Rarotonga¦c0rarotonga;k2ook0;! islands0;! standard time;!t|Pacific/Easter¦chile/easterisland,e0;as0mt;st,t0;!er0;! island0;! standard time|Pacific/Galapagos¦gal0;apagos,t,ápagos islands|Pacific/Fiji¦f0;iji1j0;!st,t;! standard time|Pacific/Chuuk¦chuuk1pacific/0;truk,y1;!/truky0;ap|Pacific/Pohnpei¦f3micro4p0;acific/1f,ohnpei0;!/0;ponape;m,rench poly0;nesia|Pacific/Kosrae¦kosrae0;! time|Pacific/Guam¦ch1guam,mp,northern mariana islands,west0; pacific1ern pacific;amorro0st;! standard time|Pacific/Tarawa¦gilbert islands0tarawa;! time|Pacific/Enderbury¦enderbury,phoenix islands0;! time|Pacific/Kiritimati¦ki3line islands0;! 0;standard t0t0;ime;!ri0;bati,timati0;! island|Pacific/Majuro¦m0;a0h;juro,rshall islands0;! (most areas)|Pacific/Kwajalein¦kwajalein,marshall islands time|Pacific/Noumea¦n0;c,ew caledonia0oumea;! standard time|Pacific/Nauru¦n0;auru0r;! time|Pacific/Niue¦n0;iue1u0;!t;! time|Pacific/Auckland¦auckland,christchurch,manukau,n0wellington;ew zealand1orth shore,z0;!dt,mt,st;! 0;standard t0t0;ime|Pacific/Chatham¦cha0nz-chat;dt,st,tham0;! 0;islands0s1;! s0;tandard time|Pacific/Tahiti¦society islands,tahiti0;! time|Pacific/Marquesas¦marquesas0;! 0;islands,standard t0t0;ime|Pacific/Gambier¦gambier0;! 0;islands,time|Pacific/Port_Moresby¦p0;apua new guinea0g,ort moresby;! (most areas)|Pacific/Bougainville¦bougainville,guinea0papua new guinea time;!n|Pacific/Pitcairn¦p0;itcairn0n;! time|Pacific/Palau¦p0;alau0w;! time|Pacific/Guadalcanal¦guadalcanal,s0;b,olomon0;! islands0;! time|Pacific/Fakaofo¦fakaofo,t0;k1okelau0;! time;!t|Pacific/Tongatapu¦nuku'alofa,to0;!nga0;! standard time,tapu|Pacific/Funafuti¦funafuti,t0;uvalu0v;! time|Pacific/Wake¦u2wake0;! island0;! time;m,s minor outlying islands|Pacific/Honolulu¦aleutian2h0pacific/johnston,us/hawaii;awaii0onolulu,st;! aleutian,-aleutian 1;! 0;standard time|Pacific/Efate¦efate,v0;anuatu0u;! standard time|Pacific/Wallis¦w0;allis0f;! 0;& futuna time,and futuna|Pacific/Apia¦apia,s2w0;est0s; samoa time,ern s0;amoa|ETC/GMT¦gmt|Etc/GMT¦coordinated universal1greenwich0;! mean0; time|Etc/UTC¦etc/uct,u0zulu;ct,niversal,tc|America/Argentina¦arNbKcHformosa,jGla EmBneuquen,pAquilmJr9sa1t0;ierra del fuego (tLucumán (tm);lta6n0; 2t0;a 0iago del estero;cruz (sc),fe;juan1luis0miguel de tucuman,salvador de jujuy;! (sl);! (sj);! (salpnqrn);esistencia,osario;araDilar,osadas;ar del p3e0oron;ndoza0rlo;! (mz);p0rioja (lr);lata;ose c paz,ujuy (jy);atamarca (ct) chubut (ch),or0;doba,rient0;es;ahia blanca,uenos aires0;! (bac0;f);!genti0;na|Australia/Currie¦tasmania (king island)|America/Godthab¦g3w0;est greenland1g0;st,t;! s3;l,reenland0;! 0;(most areas),s0western;tandard time|America/Kentucky¦eastern - ky (0louisville;louisville area),wayne)|America/Indiana¦central 3eastern - in (0fort wayne,indianapolis;crawfor1dadukmn),most areas),p0switzerlan1;i3ulaski);d);- in (0standard time;perry),star0;ke)|America/North_Dakota¦central - nd (0;m0oliv1;erc0orton rural);er)|Africa/Kinshasa¦c3ki2m0;a0bandaka;sina,tadi;kwit,nshasa;d,ongo|Africa/Luanda¦huambo,l0n'dalatando;obito,uanda|Africa/Addis_Ababa¦addis ababa,dire dawa,mek'ele,nazret|Africa/Dar_es_Salaam¦arusha,d1m0tanga,zanzibar;beya,orogoro,wanza;ar es salaam,odoma|Africa/Mogadishu¦berbera,hargeysa,jamaame,kismayo,m0;arka,ogadishu|Africa/Dakar¦dakar,pikine,t0;hies0ouba;! nones|Asia/Aden¦a0ibb,mukalla,sanaa,taiz;den,l hudaydah|Africa/Conakry¦c0;amayenne,onakry|Asia/Phnom_Penh¦ict,phnom penh,takeo|Africa/Harare¦bulawayo,chitungwiza,har0mut0;are|Indian/Antananarivo¦ant0toamasina;ananarivo,sirabe|Africa/Lubumbashi¦b3k2l1m0tshikapa;buji mayi,wene ditu;ikasi,ubumbashi;ananga,isanga1olwezi;e0ukavu;ni|Africa/Kampala¦kampala|Africa/Douala¦b1douala,edea,gar2kousseri,loum,m0ngaoundere,yaounde;ar1okolo;a1ert0;oua;foussam,menda|Africa/Bamako¦bamako|Africa/Brazzaville¦brazzaville,pointe noire|Africa/Lusaka¦k0lusaka,ndola;ab0it0;we|Africa/Ouagadougou¦bobo dioulasso,ouagadougou|Africa/Freetown¦freetown|Asia/Muscat¦muscat,seeb|Africa/Porto-Novo¦abomey calavi,coton0djoug0porto novo;ou|Africa/Niamey¦niamey,zinder|Africa/Lome¦lome|Africa/Kigali¦kigali|Europe/Zagreb¦split,zagreb|Europe/Sarajevo¦banja luka,sarajevo|Africa/Nouakchott¦nouakchott|Africa/Blantyre¦blantyre,lilongwe,mzuzu|Asia/Kuwait¦al ahmadi|Africa/Djibouti¦djibouti|Africa/Libreville¦libreville|Africa/Asmara¦asmara|Africa/Bangui¦bangui|Europe/Skopje¦skopje|Europe/Bratislava¦bratislava,kosice|Africa/Banjul¦serekunda|Africa/Bujumbura¦bujumbura|Europe/Ljubljana¦ljubljana|Europe/Podgorica¦podgorica|Africa/Gaborone¦gaborone|Asia/Vientiane¦vientiane|Asia/Saigon¦ho chi minh city|America/Port_Of_Spain¦vi0;!rgin islands|America/Port-au-prince¦h0;aiti,t|Pacific/Norfolk¦n0;f,orfolk 0;island0s1;! s0;tandard time|America/Buenos_Aires¦ar0;gentina standard time,st,t|Pacific/Midway¦s0;amoa standard time,dt,st|Asia/Katmandu¦nepal 0;standard t0t0;ime|Asia/Rangoon¦myanmar 0;standard t0t0;ime|Pacific/Truk¦chuuk time,truk|Pacific/Ponape¦ponape0;! time|America/Santa_Isabel¦mexico northwest,northwest mexico standard time,pacific 0;mexico,standard time (mexico)|Brazil/Acre¦act|Asia/Thimbu¦btt";
-var rc2 = {"gmt+0": "etc/Gmt", "gmt-0": "etc/Gmt", gmt0: "etc/Gmt", "etc/gmt+0": "Etc/Gmt", "etc/gmt-0": "Etc/Gmt", "etc/gmt0": "Etc/Gmt", "msk-01 - kaliningrad": "Europe/Kaliningrad", "msk+00 - moscow area": "Europe/Moscow", "msk+00 - crimea": "Europe/Simferopol", "msk+00 - volgograd": "Europe/Volgograd", "msk+00 - kirov": "Europe/Kirov", "msk+01 - astrakhan": "Europe/Astrakhan", "msk+01 - saratov": "Europe/Saratov", "msk+01 - ulyanovsk": "Europe/Ulyanovsk", "msk+01 - samaraudmurtia": "Europe/Samara", "msk+02 - urals": "Asia/Yekaterinburg", "msk+03 - omsk": "Asia/Omsk", "msk+04 - novosibirsk": "Asia/Novosibirsk", "msk+04 - altai": "Asia/Barnaul", "msk+04 - tomsk": "Asia/Tomsk", "msk+04 - kemerovo": "Asia/Novokuznetsk", "msk+04 - krasnoyarsk area": "Asia/Krasnoyarsk", "msk+05 - irkutskburyatia": "Asia/Irkutsk", "msk+06 - zabaykalsky": "Asia/Chita", "msk+06 - lena river": "Asia/Yakutsk", "msk+06 - tomponskyust-maysky": "Asia/Khandyga", "msk+07 - amur river": "Asia/Vladivostok", "msk+07 - oymyakonsky": "Asia/Ust-Nera", "msk+08 - magadan": "Asia/Magadan", "msk+08 - sakhalin island": "Asia/Sakhalin", "msk+08 - sakha (e) north kuril is": "Asia/Srednekolymsk", "msk+09 - kamchatka": "Asia/Kamchatka", "msk+09 - bering sea": "Asia/Anadyr", "antarctica/south_pole": "Pacific/Auckland", "america/buenos_aires": "America/Argentina/Buenos_Aires", "america/coral_harbour": "America/Atikokan", "america/fort_wayne": "America/Indiana/Indianapolis", "america/knox_in": "America/Indiana/Knox", "america/porto_acre": "America/Rio_Branco", "america/santa_isabel": "America/Tijuana", "asia/tel_aviv": "Asia/Jerusalem", "asia/ujung_pandang": "Asia/Makassar", "asia/ulan_bator": "Asia/Ulaanbaatar", "atlantic/jan_mayen": "Europe/Oslo"};
-var ic2 = /(\-?[0-9]+)h(rs)?/i;
-var oc2 = /(\-?[0-9]+)/;
-var sc2 = /utc([\-+]?[0-9]+)/i;
-var uc2 = /gmt([\-+]?[0-9]+)/i;
+var rc2 = "Africa/Abidjan¦a2bouake,daloa,san ped1t0yamoussouk1;g,ogo;ro;b0frica/timbuktu;idjan,obo|Africa/Algiers¦a5b3c2dz,oran,s1t0;ebessa,iaret;etif,idi bel abbes;hlef,onstantine;a0iskra,lida,oumerdas;b ezzouar,tna;lg0nnaba;eria,iers|Africa/Cairo¦a4bani suwayf,c3damanhur,eg2giza,halw6i1kafr ad dawwar,luxor,new c3port said,qina,s0tanta,zagazig;hibin al kawm,ohag,uez;dku,smail6;!ypt;airo;l2s0;w0yut;an; 1exandr0;ia;fayyum,m0;a0inya;hallah al kubra,nsurah|Africa/El_Aaiun¦e0laayoune,western sahara;h,l aaiun|Africa/Ceuta¦ceuta0;!melilla|Africa/Accra¦a2gh1kumasi,ta0;koradi,male;!ana;ccra,tsiaman|Africa/Bissau¦b1g0;uinea b0w;issau|Africa/Nairobi¦africa7e2kisumu,m1na0thika,yt;irobi,kuru;ayotte,ombasa;. africa standard 3a0ldoret;st0t; africa0ern africa;! 0;time; eastern,/asmera|Africa/Monrovia¦l0monrov1;iber0r;ia|Africa/Tripoli¦a3benghazi,l1misrat4t0zawi2;arhuna,ripoli;ib0y;ya;l khums,z zawiy0;ah|Africa/Casablanca¦a9casablanca,f8kenit7m4oujda angad,rabat,sa2t0;angier,e0;ma5touan;fi,le0;! al jadida;a1ekn3o0;hammedia,rocco;!rrakesh;ra;es;gadir,l hoceima|Africa/Maputo¦beira,c4ma2na1quelimane,z0;imbabwe,w;ca1mpu1;puto,to0;la;entral africa time,himoio|Africa/Windhoek¦africa central,na0windhoek;!mibia0;! standard time|Africa/Lagos¦aYbWcVeUgTiPjOkaMlKmHnFoCport harcourt,sBuAw0zarG;. central africa6a5est0; 0ern1;africa1central0; africa;! 0;s2t3;rCst,t;! s0;tandard t0;ime;gep,muah5yo;a9hagamu,okoto;kFn1w0yo;er5o;do,itsha;g,iger0newi;ia;a0in5ubi;idugu0kurdi;ri;agos,ek0;ki;du0no,tsi0;na;imeEos;badan,jebu ode,k1l0seAwo;a orangun,esa,or6;eAi7ot ekp0;ene;ombe,usau;bute ikorodu,fon alaaye,nugu;alabar,hakwama;auchi,en0;in;b2do1frica western,ku0tani;re; ekiti;a,eoku1u0;ja;ta|Africa/Khartoum¦a6c5el 4k2ny3omdurm1port sud1s0wad medani;d,inga,ud0;an;ass0hartoum,osti;ala;dae2fasher,obeid;at,entral africa;d damaz0l qadarif;in|Africa/Juba¦juba,s0winejok;outh sudan,s|Africa/Sao_Tome¦s0;ao tome,t|Africa/Ndjamena¦chad,n0td;'d0d0;jamena|Africa/Tunis¦sfax,t0;n,unis0;!ia|Africa/Johannesburg¦africa southern,bEcAd9east londBjohannesHk7newcastDp6r5s2tembisa,uitenhage,v1w0za;elkom,itbank;anderbijlpark,ereeniging;ast,o0prings;uth africa0weto;! standard time;andBichards bay,oodepoort;aarl,ietermaritzAort elizabeth,retoria;lerk0ruger0;sdorp;iepsloot,urb5;a1enturi0;on;pe town,rletonvil0;le;enoni,loemfontein,o1rakp0;an;ks0tshabelo;burg|America/Argentina/Buenos_Aires¦argentina/buenos aires|America/Argentina/Cordoba¦a0;merica/0rgentina/c1;c0rosario;ordoba|America/Argentina/Salta¦argentina/salta|America/Argentina/Jujuy¦a0;meric0rgentin0;a/jujuy|America/Argentina/Tucuman¦argentina/tucuman|America/Argentina/Catamarca¦a0;merica/0rgentina/c1;argentina/comodrivadavia,c0;atamarca|America/Argentina/La_Rioja¦argentina/la rioja|America/Argentina/San_Juan¦argentina/san juan|America/Argentina/Mendoza¦a0;meric0rgentin0;a/mendoza|America/Argentina/San_Luis¦argentina/san luis|America/Argentina/Rio_Gallegos¦argentina/rio gallegos|America/Argentina/Ushuaia¦argentina/ushuaia|America/Barbados¦b0;arbados,b|America/La_Paz¦bo1cochabamba,la paz,oruro,s0;anta cruz de la sierra,ucre;!livia0t;! time|America/Noronha¦atlantic islands,brazil/den0fernando de noronha standard time,n0;oronha|America/Belem¦ananindeua,belem,macapa,par0;auapebas,á (east) amapá|America/Fortaleza¦ca2fortaleza,imperatriz,j1m0natal,sao luis,teresina;aracanau,ossoro;oao pessoa,uazeiro do norte;mpina grande,ucaia|America/Recife¦caruaru,jaboatao2olinda,p0recife;aulista,e0;rnambuco,trolina;! dos guararapes|America/Araguaina¦araguaina,palmas,tocantins|America/Maceio¦a0maceio;lagoassergipe,racaju|America/Bahia¦bahia,camacari,feira de santa0itabu0salvador,vitoria da conquista;na|America/Sao_Paulo¦a14b0Tc0Md0Je0Hf0Fg0Ahortol09i05j02l01mXnVosasco,pLriFs4ta3uber2v0;i0olta redon18;amao,la velha,tor14;a0Ml06;boao da ser00uba0Y;a2e1oroNu0;maLzano;rXte lago0L;nt4o 0;bernardo do campo,carl03jo0leopolLpaulo,vicE;ao de meriti,se0;! do0; rio p8s camp00;a 1o0; andDs;barbara d'oes0Nluz0Rmar0R;beirao 3o0;! 0;cla0de janei0g6ver7;ro;das nev07p0;reto;asso fun8e7iraci6lanalti0Mo4r0;aia g1esidente prud0;en0E;ran0;de;nta grossa,rto aleg0;re;caW;lotYtro0D;do;iteroi,ov0;aJo hamburgo;a1o0;gi das cruzSntes clarD;ri0ua;l05n6;imei2ondri06;acarei,oinville,u0;iz de fo0ndi9;ra;ndaia2patin1ta0;bor6pevi,quaquece1;ga;tuG;andW;o3ravat2uaru0;ja,lh0;os;ai;iQvernador valadarC;loria5oz do0ran2; iguacu;. south america Gast south ameri0mbu;ca;i0uque de caxi8;adema,vi0;noL;a1o0uriti2;ntagem,tI;choeiro de itapemirBmp1no3rapicui0scavel,xias do sul;ba;in1os dos goytacaz0;es;as;a9e5lumenau,r0;!a0st,t;silia1zil0;!/east;! 0;standard time;l1t0;im;ford roxo,o horizon0;te;rueri,uru;lvora4merica3na2parecida de goi0;an0;ia;polis;na;da|America/Campo_Grande¦campo grande,mato grosso do sul|America/Cuiaba¦cuiaba,mato grosso,varzea grande|America/Santarem¦pará (west),santarem|America/Porto_Velho¦porto velho,rondônia|America/Boa_Vista¦amazon1boa vista,central brazil0roraima;!ian0;! standard time|America/Manaus¦am0brazil/west,manaus;azonas (east),t|America/Eirunepe¦a0eirunepe;cre standard time,mazonas (west)|America/Rio_Branco¦a0brazil/a0rio branco;cre|America/Nassau¦b0nassau;ahamas,s|America/Belize¦b0;elize,z|America/St_Johns¦canada/newfoundland,n0st johns;d2ewfoundland0st,t;! 0;labrador (southeast),standard time;dt,t|America/Halifax¦a2canada/atlantic,halifax,n1p0;ei,rince edward island;ew brunswick,ova scotia;dt,st,tlantic0;! - ns (most areas) pe|America/Glace_Bay¦atlantic - ns (cape breton),glace bay|America/Moncton¦atlantic - new brunswick,moncton|America/Goose_Bay¦atlantic - labrador (most areas),goose bay|America/Blanc-Sablon¦ast - qc (lower north shore),blanc sablon|America/Toronto¦america/moBb9ca7eastern - onqc (most areas),gatineau,hamilAkitchener,l4m3nepe2o0quebec,richmond hill,toronto,vaugh2windsor;n5sh0tt0;awa;an;arkham,ississauga,o7;av7on0;don on0gueuil;tario;!nada0;!/eastern;arrie,ramp0;ton;ntre0;al|America/Nipigon¦nipigon|America/Thunder_Bay¦eastern - on (thunder bay),thunder bay|America/Iqaluit¦eastern - nu (most east areas),iqaluit|America/Pangnirtung¦eastern - nu (pangnirtung),pangnirtung|America/Atikokan¦atikokan,est - on (atikokan) nu (coral h)|America/Winnipeg¦c0m1winnipeg;anada/central,entral - on (west) m0;anitoba|America/Rainy_River¦central - on (rainy rft frances),rainy river|America/Resolute¦central - nu (resolute),resolute|America/Rankin_Inlet¦central - nu (central),rankin inlet|America/Regina¦c1regina,saskat0;c1oon;anada/saskatc0st - sk (most areas);hewan|America/Swift_Current¦cst - sk (midwest),swift current|America/Edmonton¦alberta,ca0edmonton,mountain - ab bc (e) sk (w);lgary,nada/mountain|America/Cambridge_Bay¦cambridge bay,mountain - nu (west)|America/Yellowknife¦mountain - nt (central),yellowknife|America/Inuvik¦inuvik,mountain - nt (west)|America/Creston¦creston,mst - bc (creston)|America/Dawson_Creek¦dawson creek,mst - bc (dawson crft st john)|America/Fort_Nelson¦fort nelson,mst - bc (ft nelson)|America/Whitehorse¦canada/yukon,pacific - yukon (south),whitehorse|America/Dawson¦dawson,pacific - yukon (north)|America/Vancouver¦b2canada/pacific,ladn1okanagan,pacific - bc (most areas),surrey,v0yukon;ancouv0ictor2;er;ritish columb0urnaby;ia|America/Santiago¦a7c4iquique,la pintana,puente alto,rancagua,san3t1v0;alparaiso,ina del mar;alca0emuco;!huano; bernardo,tiago;hile1l0oncepcion;!st,t;! (most areas),/continental;ntofagasta,rica|America/Punta_Arenas¦punta arenas,region of magallanes|America/Bogota¦armenGbBc7dosquebradas,floridablanca,i6m5neiva,p3s1v0;alledupar,illavicencio;anta marCincelejo,o0;acha,ledad;a0erei9opayan;lmi8sto;anizales,edellin,onterA;bague,taguei;a2o0ucu6;!lombia0st,t;! standard time;li,rtagena;arran3ello,ogo2u0;caramanga,enaventu0;ra;ta;cabermeja,quilla;ia|America/Costa_Rica¦c0;osta rica,r|America/Havana¦arroyo naranjo,b7c2diez de octubre,guantan9h1las tunas,pinar del rio,sant0;a clara,iago de cuba;avana,olguin;amaguey,i2u0;!ba0;! standard time;e0udad camilo cie0;nfueg1;ay1oyer0;os;amo|America/Curacao¦curacao,s0;t maarten,x|America/Santo_Domingo¦bella vista,do5la romana,san0; pedro de macoris,t0;iago de los caballeros,o domingo0;! 0;e0oe0;ste;!minican republic|America/Guayaquil¦cuenca,ec1guayaquil,ma0quito,santo domingo de los colorados;chala,nta;!uador0;! 0;(mainland),time|America/Cayenne¦cayenne,french guiana1gf0;!t;! time|America/Nuuk¦america/godthab,nuuk|America/Danmarkshavn¦danmarkshavn,national park (east coast)|America/Scoresbysund¦e1greenland eastern,scoresbysund0;!/ittoqqortoormiit;ast greenland1g0;st,t;! standard time|America/Thule¦thule0;!/pituffik|America/Guatemala¦g0mixco,villa nueva;t,uatemala|America/Guyana¦g0;eorgetown,uyana1y0;!t;! time|America/Tegucigalpa¦h0san pedro sula,tegucigalpa;n,onduras|America/Port-au-Prince¦c2p0;etionville,ort 0;au prince,de paix;arrefour,roix des bouquets|America/Jamaica¦j1k0new k0;ingston;amaica,m|America/Martinique¦m0;artinique,q|America/Mexico_City¦a0Gb0EcVduran09ecatepec de morel07guQhPiNjalis0Ileon de los alda03mInHoGpEqDs9t4uruap01v2x1yucat01za0;catec09pop00;alapa de enriqu0Ki0Gochimil0G;e0illahermosa;nustiano carranza,racruz;a3e7la1o0uxt00;luRnaZ;huac,l0quepaque,xcaY;nepantXpT;bas09maulip01pachuW;an0oledad de graciano sanch0C; luis potosi,t0;a maria chimal0iago de q1;huN;ueretaD;achuca de soFoza rica de6ue0;bPrto vallarZ;axaGjo de agua;aucalpan02icolas rome9uevo le01;agdalena contrerRexico3i1orel0x;ia,os;choFguel0; h3;! city,/general;rap5xtapalu9zta0;cSpalapa;idalJ;a1erre0stavo adolfo made0;ro;dalajara,naj0;ua0;to;eFhiCiudad Ao3u0;au1ernava0;ca;htemoc,titlan izcalli;a4l2yo0;ac0;an;i0onia del valle;ma;cChui0tzacoalc2;la;lopez mate0nezahualcoyotl;os;ap1lpancin0;go;as;laya,ntral 0;mexic0time;an,o;enito6uenavis0;ta;capulco3guascalientes,lvaro obreg2zcapotz0;al0;co;on; de0; juar0;ez|America/Cancun¦cancun,eastern standard time - quintana roo|America/Merida¦c0merida;ampeche,entral time - campecheyucatán|America/Monterrey¦c5g4mon3sa1t0victoria de durango;ampico,orreon;ltillo,n0; nicolas de los garza,ta catarina;clova,terrey;omez palacio,uadalupe;entral time - durango coahuilanuevo leóntamaulipas (most areas),iudad 0;apodaca,general escobedo,madero,victoria|America/Matamoros¦central time us - coahuilanuevo leóntamaulipas (us border),heroica m0m0nuevo laredo,reynosa;atamoros|America/Mazatlan¦culiac1los mochis,m0tepic;azatl0exico/bajasur,ountain time - baja california surnayaritsinaloa;an|America/Chihuahua¦chihuahua,m0;exic1ountain 0;mexico,standard time (mexico),time - chihuahua (most areas);an pacific standard time,o pacific|America/Ojinaga¦ciudad juarez,mountain time us - chihuahua (us border),ojinaga|America/Hermosillo¦ciudad obregon,hermosillo,mountain standard time - sonora,nogales|America/Tijuana¦america/e1e1mexic0pacific time us - baja california,tijuana;ali,o/bajanorte;nsenada|America/Bahia_Banderas¦bahia0central time - bahía de0; banderas|America/Managua¦man1ni0;!car0;agua|America/Panama¦pa0san miguelito;!nama|America/Lima¦arequiAc6huanc9i5juliaca,lima,p2sant1t0;acna,rujillo;a anita   los ficus,iago de sur5;e0iura,ucall7;!ru0t;! standard time;ca,quitos;allao,hi1us0;co;cl0mbote;ayo;pa|America/Miquelon¦m8p6s0;aint pierre1t0; pierre a3. pierre & miquelon s2;! 0;a1s0;tandard time;nd1;ierre0m; m0;iquelon|America/Puerto_Rico¦atlantic standard time,bayamon,p0;r,uerto rico|America/Asuncion¦asuncion,c3p0san lorenzo;araguay1y0;!st,t;! standard time;apiata,iudad del este|America/Paramaribo¦paramaribo,s0;r1uriname0;! time;!t|America/El_Salvador¦el1s0;an0oyapango,v; salvador|America/Grand_Turk¦grand turk,t0;c,urks and caicos|America/Port_of_Spain¦america/virg0port of spa0;in|America/New_York¦a0Pb0Mc0Fd0Ee0Af06g04hialeah,i01jZkYlexingtonXmTnMoKpIquHrDsAt7u5v3w0yonkers;ashington1est 0inston salem,orcD;raEvirgin03;! dc;ermont,irginia0;! beach;nited states,s0;!/0J;a0enne1he bronx,oleD;llaha0mpa;ssee;outh 1t0;. petersburg,aten3;bo0AcC;a2hode1ichmo04och0;ester; is01;lei2;eens,intana roo;ennsylvanMhiladelphMittsbur0rovidence;gh;hio,rlan0;do;ew3or1y0;!c;folk,th c0;aroliD; 0ark,port news;hampshiWje8york0;! staS;a1eads,i0;ami,chig1;ine,nhatt0ryLssachusetts;an;! fayetN;entucky,nox9;acks2e0;rsey;ndia1r0;on5;na;eorg0reensboro;ia;ayette1l0ort lauderda2;!orida;vil0;le;ast0dt,st; flatbush,ern0;! 0;(most areas),standard time;elawa9urham;ape coral,h3incinnati,leve1o0;lumbus,nnecticut;la0;nd;a0esapeake;rlot0ttanooga;te;altimo1o0rooklyn,uffalo;st3;re;kr1merica 0tlanta;eastern;on|America/Detroit¦detroit,eastern - mi (most areas),grand rapids,us/michigan|America/Kentucky/Louisville¦america0kentucky0;/louisville|America/Kentucky/Monticello¦kentucky/monticello|America/Indiana/Indianapolis¦americ0indian0us/east-indiana;a/indianapolis|America/Indiana/Vincennes¦indiana/vincennes|America/Indiana/Winamac¦indiana/winamac|America/Indiana/Marengo¦indiana/marengo|America/Indiana/Petersburg¦indiana/petersburg|America/Indiana/Vevay¦indiana/vevay|America/Chicago¦aVbScQdPfort worth,gOhNiLkZlImBn7o6plano,s3t1us/02wi0;chiFsconsV;ex0ulsa;!as;a0hreveport,ou4t 1;int 0n antonio;louGpaul;klahoWmaha,verland park;ashLe1or0;th dako7;braska,w 0;orleans,south me6;adisMe5i1o0;biHntgomery;lwaukee,nne1ss0;issippi,ouri;apol6so0;ta;mph4;aredo,i0ouisiana,ubb1;ncoln,ttle r0;ock;llino0owa,rving;is;oustAunts5;arland,rand prairie;allAes moines;dt,entral0hicago,orpus christi,st;! (most areas);aton rouge,rowns0;vil0;le;laba7m5r1ust0;in;k1lingt0;on;ans0;as;arillo,erica 0;central;ma|America/Indiana/Tell_City¦indiana/tell city|America/Indiana/Knox¦indiana/knox,us/indiana-starke|America/Menominee¦central - mi (wisconsin border),menominee|America/North_Dakota/Center¦north dakota/center|America/North_Dakota/New_Salem¦north dakota/new salem|America/North_Dakota/Beulah¦north dakota/beulah|America/Denver¦a1colorado springs,denver,el paso,m0navajo,salt lake,us/mountain;dt,ountain (most areas),st;lbuquerque,merica/shiprock,urora|America/Boise¦america mountain,boise,mountain0;! 0;- id (south) or (east),standard time|America/Phoenix¦a8c7g5idaho,m4n3phoenix,s2t1u0wyoming;s/a7tah;empe,ucson;cottsd3inaloa,onora;ayarit,ew mexico;aryv1esa,onta4st - arizona (except navajo);ilbert,lend0;ale;handler,olorado;rizo0;na|America/Los_Angeles¦aZbaXcVfRgarden grove,hOirviNlJmoGnFoCp8r7s0tacoma,us/00washington state;a1eattle,f,p0tocktPunrise manor;okaLringF;cramenFn0; 1ta 0;aPclariR;bernardiNdiego,fran0jo4;!cisco;ancho cucamonga,eLiver5;a0dt,ort5st;cific1radi0;se;! standard time;ak1cean0regDxnard;side;land;evada,orth las6;des1reno0; valley;to;a1o0;ng4s angeles;!s0; vegas;ne;enders1untington0; beach;on;onta2re0;mont,s0;no;na;a2hula vis0;ta;ja ca0kersfield;lifornia;merica 0naheim;pacific|America/Anchorage¦a0us/alaska;h4k4laska0nchorage;! 1n0;! s1;(most areas),s0;tandard time;dt,st|America/Juneau¦alaska - juneau area,juneau|America/Sitka¦alaska - sitka area,sitka|America/Metlakatla¦alaska - annette island,metlakatla|America/Yakutat¦alaska - y0y0;akutat|America/Nome¦alaska (west),nome|America/Adak¦a0hawaii standard time,us/aleutian;dak,leutian islands,merica/atka|America/Montevideo¦montevideo2u0;ruguay1y0;!st,t;! standard time|America/Caracas¦alto barinJbarIcCguaAm7p6san5turmeEv0;alencia,e0;!nezuela0t;! 0n;standard t0t0;ime; cristobal,ta teresa del tuy;eta4uerto la cruz;a0ucumpiz;raca0turin;ibo,y;ren8ti0;re;a4iudad 2o1u0;a,m2;ro;bolivar,guay0;ana;bim1rac1;in0quisimeto,uta;as|Asia/Dubai¦a4dubai,g2musaff1om0ras al khaim1sharj1;!an;ah;st,ulf0;! standard time;bu dhabi,jman|Asia/Kabul¦af1herat,jalalabad,ka0mazar e sharif;bul,ndahar;!ghanistan0t;! 0;standard t0t0;ime|Asia/Yerevan¦a0caucasus1yerevan;m,rmenia0;! standard time|Asia/Baku¦az0baku,ganja,lankaran,sumqayit;!erbaijan0t;! standard time|Asia/Dhaka¦asia/dacca,bDcBd9jess8khul7mymensingh,na4pa3ra2s1t0;angail,ungi;aid8hib4ylhet;jshahi,ng7;b3ltan,r naogaon;gar5r0t3;ayan0singdi;ganj;na;ore;haka,inaj0;pur;hattogram,o0;milla,x's bazar;a0d,ogra;gerhat,ngladesh0rishal;! standard time|Asia/Brunei¦b0;dt,n1runei0;! darussalam time;!t|Asia/Thimphu¦asia/thimbu,b0thimphu;hutan0t;! time|Asia/Shanghai¦0:3I;1:38;2:36;3:39;4:3C;a3Eb31c2Nd2He30f2Cg26h1Qji1Ek1Bl0Ym0Wn0Tordos,p0Pq0Lrizh10s08t01wSxLyEz5;aoCh6i5ouc3unyi;bo,go0;a7en6ouk2u5; c3h33maWzh2;g2Vj1Izh2;b1Ung5o3D;jiakou5zh2;! shi xuanhua qu;ya0z27;an9i7u5;ci,e18n5;c3fu;b4c9n5ya0;cZgk2;c3g5ji,t2S;j17qu1sh16zh2;i6uc5;ha0;a6n5uyi0;di,gt2Nh1Fi0pu,t2Nx13ya0;m17n5;!g5ni0t0Eya0;t1ya0;aBe9u5;h6so0w1Bx5zh2;i,ue;a5u;i,n;i0Hn5;sh1zh2;fang5nxi1;di1;a8i6ong5;chuans0XhDli02sh1;an5eli0;j4sh0Z;i6ng5;gu,sh1;an,hec1Wyu1zh2;anmi0hAi8u5;i5zh2;h5zh2;ua;c5pi0;hu1;a7en6i5uangya14;jiaz15qi,y1;gli,ya0zh0G;n6o5s0I;gu1xi0;g5t2;h1Rqiu,rKyu;i5uan1J;aFn5o14qih0N;g5huangdH;dGh1N;an0Ting7rc,u5;ti1yang5;! H;ding0QxZ;an5eijYingbo;ch5ji0ni0to0ya0;a0o0;entoug2ianRuda5;njU;aEi8u5;anc3o6qi5;ao;he,ya0;a7jPn5upansh01;fTxia 5yi;chengguanI;n0Do5;c3y5;a0u1;i0Wn5ohek2;g5zh2;fa0;ai6un5;mi0sh1;fe0yu1;'1aAe9l4n6u5xi;jCt0W;an,c3g5i0zh2;de5li0zh2;zhE;ya0;musi,n8o5xi0;j6z5;uo;ia0;g5shF;m7xi;aFeBkt,ohhot,u5;a6i0Dlan ergi,m5n1;en;i7ng5y4;ga0s5;hi;'1b8n1;bi,f7ga0ng5ze;sh5ya0;ui;ei;i7n5rb4;d1g5;u,zh2;c3k2l5;ar;a9u5;an6i5li;l4ya0zh2;g5k2;do0yu1zh2;nsu,opi0;en7o6u5;ji1shQx4zh2;sh1;d2g5;hua0;a6eNong5;gu1hT;d6lian5ndo0qi0to0;!g;o5uk2;nghP;angHh5n,t;aAen7i5oYuG;fe0na5;! standard K;g5zh2;d5zho0;e,u;ng6o5;ya0zh2;ch7de,sh6zh5;i,ou;a,u;un;zh2;aBe5;i6n5;gbu,xi;'1h7jing5;! 5;time;ai;i7o5yan nur;di0t2;ou;c3sh1y4;an;he0;nAsia/5;ch6harb4;in;o5ungki0;ng5;qi0;da,qi0sh5ya0;an,un;ng|Asia/Urumqi¦a6changji,huoche5k3shihezi,turp2urumqi,xin1zh0;anjia4ongsh1;jiang time,yu0;an;a0orla;ramay,s2;ng;ksu,ral,sia/kas0;hgar|Asia/Nicosia¦cy0nicosia;!prus0;! (most areas)|Asia/Famagusta¦famagusta,northern cyprus|Asia/Tbilisi¦ge1kuta0tbil0;isi;!orgia0t;! 1n0;! 0;standard time|Asia/Hong_Kong¦h0kowloon,tsuen wan;k2ong0; kong0kong;! standard time;!st|Asia/Jakarta¦bScQdepPiNjKkediri,lJmGpArengasdengklPs4t2w0yogyakM;est0ib; indonesia,ern indonesia time;a0egal;n4sikmal3;ema4itubondo,outh tan3u0;kabumi,medaRra0;b0kF;aya;ge0;raN;a4e1robolinggo,urw0;akAokerto;ka1ma0rcut;laJtangsiantar;long2nbaru;daHl3mulaHruH;a1ed0;an;diun,laE;embaD;a0ember;k0mbi,vasumatra;arta;d,ndonesia0;! western;ok;i0urug;ampea,bino5leungsir,mahi,putat,rebon;a1e0injai,ogor;kasi,ngkulu;nd0tam;a0u1; aceh,r lampu0;ng|Asia/Pontianak¦borneo (westcentral),pontianak,tanjung pinang|Asia/Makassar¦b6c4denpa3indonesia central,k2l1ma0palu,samarinda,wita;kas2nado,taram;abuan bajo,oa jan7;endari,upang;sar;entral indonesia0ity of bal3;! time;a0orneo (eastsouth) sulawesi/celebesbalinusa tengarra timor (west);l0njarmasin;ikpap0;an|Asia/Jayapura¦ambon,east0indonesia eastern,jayapura,new guinea (west papua / irian jaya) malukus/moluccas,wit; indonesia,ern indonesia time|Asia/Jerusalem¦ashdod,beersheba,haifa,i2j0petah tiqwa,rishon leziyyon,tel aviv,west je1;e0mt;rusalem;d1l,srael0;! standard time;dt,t|Asia/Kolkata¦0:3C;1:3K;2:2D;3:3L;4:3I;5:38;a36b2Ec25d1Xe1Vf1Tg1Gh1Di19j14k0Ql0Lm0Dn06odis3KpWquthbull5rOsGtAu9v6warang2Nyamun1Q;a7el1Vi6;jayawa2Wsakha0IzianagD;doda2Prana12;daip0jja24lhasn1ttar pradesh;a9eYh8iru6umk0;chirap0Nnelve2p6vottiy0;a39p0;ane,iruvananthapur0Ooothuku2Zriss0;mb6njo1Y;ar0M;aCecunder4hAi9lst,o8r1Gu6;jan37r6;at,endr1D;l5nip2O;k3liguLngrau2rK;ahj20i6ri2Pya0M;mo1Nvaji08;har1Ylem,mbh25ng2t05ug0Z;a7e0Foh6;iJtak;ebare2iAj8m6nc1Htl0Burke37;ag6g6p0;und09;a6kot;hmund27sth2B;ch0p0;aAimp9roddat0u6;ducher24n6rn18;a6e;sa;ri;li,n8rbha7t6;ia2Vna;ni;chku2Ti6;ha2Gp22;a8e7izam4o6;i1Wwrang5;l0Tw del0Z;di2Kg8i0Fjaf2Fn6re2Oshik,vi mumb16;ded,g6;i,loi j1W;ercoil,p0;a9eerut,irz5o8u6yso0Z;lugu,mb11rwa1Jzaffar6;n1p0;nghyr,rad4;chili8d7harasht1Gleg08n6thu1Gu;ga0Jip0;hya,ur0W;patnH;a8u6;cknow,dhia6;na;l bahadur6t0; n1;aEhaCo9u6;kat7lt6rno1P;a2i;pal2;l6rXta,zhikode;h5ka1Kl6;am;nd6ragp0;wa;kina14l9marPnp0r6shmir,tih3;i7na6ol ba19;l,tW;mn1;lakuric04y12;a7han6odOunagadh;si;b0Sip0l7m6;mu,n1shedp0;andh3gHna;chalkaranji,mph0Jn6st;!d6;ia6o01;! standard time,n;a7is3ospet,u6;b2g2;o0Ip0ridw3;aDhazi4oAreater noi0Nu7wali6y05;or;jar0PlbarRnt0rg7wa6;ha12;aon;rak7sa6;ba;hp0;juw9n6ya;dh7g6;an1;in1;aka;ar6iroz4;id4rukh4;l6taw0M;loG;aBe9h7indigul,ombPurg6;!ap0;anb0Uul6;ia;hra dun,l6was;hi;rbhan6vange9;ga;a09h9o6uttack;ch7imbato6;re;in;a7enn6;ai;nd6pM;a6i0C;!nn1;aOeLhCiAor8rahm5u6;landshahr,rh6;anp0;iv2;li;d3har sharif,j5kan07l6;asp0imoD;aBi8op7u6;baneshw3sav6;al;l7wan6;di,i;ai,wa7;g7ratp0tpa6vn1yand3;ra;alp0;l6ngaluru;gaum,la6;ry;hBli,r7thin6;da;a7ddham6eilly;an;n1s6;at;a7rai6;gh;ramp0;gQhmLizawl,jmKkoRlHmDnant5rrBs7urang4va6;di;ans8ia/ca6;lcut6;ta;ol;ah;ap0;arnath,batt0r6;ava6its3oA;ti;ur;appuz7i6lah4w3;garh;ha;er;adn1ed4;ab6;ad;ag3;ar;arta6ra;la|Asia/Baghdad¦a4ba3dihok,erbil,i2k1mosul,na0ramadi;jaf,sirB;arbala,irkuk,uwait;q,raq;ghdad,sr9;bu ghurayb,d diw6l 5rab0s sulaym6;! 3i0;a0c;!n0;! 0;standard time;amar2basrah al qadim2falluj2hill2kut,mawsil al jadid2;an0;iy0;ah|Asia/Tehran¦aRbNgorgXhamWiKkCmaBn8orumiy7pasragad branch,q4rasht,s2t1varam6yazd,za0;hedWnjW;abHehrV;a0hirSirjU;bzevar,nandEri,v3;a0om;rchak,zv0;in;eh;a0eyshabur;jaf0zar0;ab4;layer,shh3;a4erman3ho0;meyni sErram0wy;ab0sD;ad;!shah;h1r0;aj;riz;r0sfahC;!an0dt,st;! standard time;a2irjand,o0uk9;jnu0ruje0;rd;b3ndar abbas;b4hv3m2r1zads0;hahr;ak,dabil;ol;az;ad0;an|Asia/Amman¦amm1irbid,jo0russeifa,wadi as sir,zarqa;!rd0;an|Asia/Tokyo¦0:11;1:19;a17ch15fu0Ygifu13h0Ni0Hj0EkYmSnLoJsEt8u7waka04y2;a5o2;k2no;kaic1Ao2;ha0Xsu0;maJo;ji,tsun0E;aka6o2sukuba;k4makom04y2;a0So2;hNna0ta;oro02us0Pyo04;m0Irazu0sa1tsu1;a4endZhi3o0u2;i0Yzu0;monose1zuo0;ita0Lk2ppoKsebo;ai,u05;dawa04i0Uka2sa0t0D;ya0Iza1;a5eyaga0Oi2umazu;i3shi2; tokyo0Hnomiya ha0F;ga0P;g2ha,ra0F;a2oW;no,o0sa1;a4i2orio0;na2to,yaza1;mirinkan,to;chiCeb3tsu2;do,m7ya06;as0H;aAi8o6u2y5;mam4r3shi2;ro;ashi1e,uG;oto;be,c0Bfu,ri2shigaJ;yaY;shiwa2takyushu;da;gosUkogawacho honmJmirenjaku,na7s4wa2;g2sa1;oe,uc05;hiZu2;g2kabe;ai;zaW;apan2dt,oetIp,st;! standard ti2;me;bara1chi3ta2wa1zu2;mi;ha4n2;omi2;ya;ra;a7i2oncho;meAr3t2;acP;a3os2;a1hiB;kaLtsu0;chi4kodate,mam2;at2;su;nohe,o2;ji;ji7ku2;i5o0s2ya3;hi2;ma;ka; sB;!sa5;i2ofu;ba,g4;geoshimo,k5mag3njo,omori,sahika2tsugi;wa;asa1;ki;as3i2;ta;hi|Asia/Bishkek¦bishkek,k0osh;g2yrgy0;stan,zstan0;! time;!t|Asia/Pyongyang¦chongjin,h5k3n2pyongya8s0won6;ariw0inui8unch'0;on;amp'o,orth korea;a0p;eso3nggye;a1ungnam,ye0;san;e1mhu0;ng;ju|Asia/Seoul¦anPbuMchHdaeGgChwaseoQiBjeAk7m6pohaFrok,s2u1wonJy0;aCeosu;ijeongbuPlsL;e1outh korea,u0;nEwH;joAo0;ngnamLul;asGokpo;imhae,orea0r,st,wangmyo7;! 0n 0;standard time;ju,on8;cCksBn6;angneu2oyaDu1wa0;ng5;mi,ns8riC;ng;gu,je4;angw3eon2in1un0;che2;ju;an,gju6;on;c1s0;an;heon2;san1ya0;ng0; si|Asia/Almaty¦a8central asia6east kazakhstan7k2nur sultan,p1s0taraz,ust kamenogorsk;emey,hymkent;avlodar,etropavl;a0z;ragandy,zakhstan0;! 0;(most areas),eastern;! standard0; time;lm0stana;aty,t|Asia/Qyzylorda¦kyzyl1qyzylorda0;!/kyzylorda/kzyl-0;orda|Asia/Qostanay¦k0q0;ostanay|Asia/Aqtobe¦a0;k1qt0;o1öbe/ak0;to0;be|Asia/Aqtau¦a1kazakhstan western,mangghystaū/mankis2west asia0;! standard3;lma1q0;tau; ata,-ata0; time|Asia/Atyrau¦atyra0;u,ū/atirau/gur'yev|Asia/Oral¦oral,west kazakhstan|Asia/Beirut¦bei2e1l0ra's bay2;b,ebanon;astern european standard time,urope eastern;rut|Asia/Colombo¦colombo,dehiwala mount lavinia,lk,moratuwa,sri lanka|Asia/Yangon¦asia/rango3b2kyain seikgyi township,m0nay pyi taw,pathein,sittwe,yang3;a0eiktila,m,onywa,yanmar;ndalay,wlamyine;ago,urma;on|Asia/Ulaanbaatar¦m2ula0;anbaatar0n bator,t;! standard time;n,ongolia0;! (most areas)|Asia/Hovd¦bayan-ölgiigovi-altaihovduvszavkhan,hov3w0;. mongolia 4est0; 0ern 0;mongolia;d0t;! 0;standard time|Asia/Choibalsan¦choibalsan,dornodsükhbaatar|Asia/Macau¦asia/macao,m0;acau,o|Asia/Kuala_Lumpur¦alor setar,bukit mertajEgeorge town,ipoh,johor bahDk8m4petali3s0taipiC;e1hah alDu0;ba1ngai petani;pa9remb7;ng jaya;ala0y;cca,ysia0;! 0;(peninsula),time;ampung baru suba3la3ota bha4ua0;la 1nt0;an;lumpur,terengganu;ng;ru;am|Asia/Kuching¦k2miri,s0tawau;a0ibu;bahsarawak,ndakan;ota kinabalu,uching|Asia/Kathmandu¦asia/kat3biratnagar,kath3n1p0;atan,okhara;epal,p0;!t;mandu|Asia/Manila¦an04bWcRdaPgeneral santOiMlJmCnaBoAp4quezIsan1ta0zamboanga;clobZguig,rlac,ytE; 1t0;a ro2ol;fernando,jose del monte,pab01;a3h1uerto prince0;sa;!ilippine0t; standard time,s;gadiRnalanoy,s0;ay,ig;longapo,rmoc;ga,votQ;a0eycauayN;balacat,gugpo poblaci4kati,l3n0;da1ila,silingLtamp0;ay;luyong,ue;ingDol6;on;a1egaspi,i0ucena;bertad,pa;pu lapu,s p4;l0mus;igCoiH;os;smar0v5;inB;a0ebu,otabato;b1gayan de oro,in5l0;amba,ooc6;anatu5uy0;ao;a4inan2u0;d0tu2;ta;!gon0;an;co1guio,tang0;as;lod,or;geles,tipo0;lo|Asia/Karachi¦bKchiniJdera ghaziHfaisalGgujraFhyderGislamGjhang sadr,kDlaCm7nawabshah,okaAp4quetta,ra3s0;a1h0ialkIukkM;ahkHekhupu8;ddiqDhiwal,rgodha;him yarDwalpindi;akistan1eshawar,k0;!t;! standard time;a3i1u0;lt9zaffar7;ngo0rpur khas;ra;lir cantonment,rd6;hore,rkana;a0otli;moke,rachi,s8;n5t;abad; kh0;an;ot;a1himber,ure0;wala;hawalp0ttagram;ur|Asia/Gaza¦gaza1p0;alestine,s;! strip|Asia/Hebron¦east jerusalem,hebron,west bank|Asia/Qatar¦ar rayyan,doha,qa0;!tar|Asia/Yekaterinburg¦chelyabin7eka5k4magnitogor7nizhn3or2perm,s1tyumen,ufa,yek0zlatoust;a4t;terlitamak,urgut;enburg,sk;evartov3y tagil;amensk ural'skiy,urgan;terinburg0;! standard time;sk|Asia/Omsk¦oms0;k0t;! standard time|Asia/Novosibirsk¦n0siber4;. central asia 4o0;rth central as2v0;osibirsk0t;! 1;ia;standard time|Asia/Barnaul¦b0;arnaul,iysk|Asia/Tomsk¦tomsk|Asia/Novokuznetsk¦kemerovo,novokuznet0prokop'yev0;sk|Asia/Krasnoyarsk¦kra0north asia1;snoyarsk0t;! standard time|Asia/Irkutsk¦angar2brat2irk0north asia east1ulan ude;t,utsk0;! standard time;sk|Asia/Chita¦chita|Asia/Yakutsk¦blagoveshchensk,yak0;t,utsk0;! standard time|Asia/Khandyga¦khandyga|Asia/Vladivostok¦k2vla0;divostok0t;! standard time;habarovsk0omsomolsk on amur;! vtoroy|Asia/Ust-Nera¦ust nera|Asia/Magadan¦mag0;adan0t;! standard time|Asia/Sakhalin¦sak0yuzhno sakhalinsk;halin0t;! standard time|Asia/Srednekolymsk¦chokurdakh,sre0;dnekolymsk0t;! standard time|Asia/Kamchatka¦kamchatka,pet0;ropavlovsk0t; kamchatsky,-kamchatski standard time|Asia/Anadyr¦ana0;dyr0t;! standard time|Asia/Riyadh¦a6burayd5dammam,ha4jedd5khamis mushait,me3najran,riyadh,sultan5ta2y0;anbu,e0;!men;'if,buk;cca,dina;'il,far al batin;ah;bha,l 0;hufuf,jubayl,kharj,mubarraz|Asia/Singapore¦s0woodlands;g1ingapore0;! standard time;!t|Asia/Damascus¦a4d3h2latak1sy0;!r0;ia;am2oms;amascus,eir ez zor;leppo,r raqq0;ah|Asia/Bangkok¦bangkok,ch8h6indochina3mueang nontha9na2pak kret,s0udon thani;amut prakan,e asia0i racha,outh east asia;! standard t3;khon ratchasima,m dinh;! 0;(most areas),t0;ime;a0ue;iphong,noi,t y2;iang m1on 0;buri;ai|Asia/Dushanbe¦dushanbe,t0;ajikistan1j0;!t;! time|Asia/Dili¦dili,east timor1tl0;!t;! time|Asia/Ashgabat¦as4t0;m2urkmen0;a3istan0;! standard time;!st,t;hga0ia/ashkhabad;bat|Asia/Taipei¦banqiao,h7k5roc,t0;a0w;i0oyu2;ch3n1pei0w1;! standard time;an;aohsi0eel0;ung;sinchu,ualien|Asia/Samarkand¦bukhara,nukus,qarshi,samarkand,uzbekistan 0;(west),standard time|Asia/Tashkent¦andij2namangan,qo`q2tashkent,uz0;!bekistan0t;! (east);on|Asia/Ho_Chi_Minh¦asia/saig4bien hoa,can tho,da 2ho chi minh,nha tr3qui nh4rach gia,sa dec,thi xa phu my,v0;ietnam0n,ung tau;! (south);lat,n0;ang;on|Atlantic/Bermuda¦b0;ermuda,m|Atlantic/Cape_Verde¦c0;a1v0;!t;bo verde,pe verde0;! standard time|Atlantic/Canary¦canary0las palmas de gran canaria,santa cruz de tenerife;! islands|Atlantic/Stanley¦f0stanley;alkland1k0;!st;! island0;!s0;! summer time|Atlantic/Faroe¦atlantic/faeroe,f0;aroe0o;! islands|Atlantic/South_Georgia¦gs,south georgia0;! time|Atlantic/Reykjavik¦i0reykjavik;celand,s|Atlantic/Madeira¦madeira0;! islands|Atlantic/Azores¦azo0hmt;res0st,t;! standard time|Australia/Lord_Howe¦australia/lhi,l0;h2ord howe0;! 0;island,standard time;dt,st|Australia/Hobart¦australia/1hobart,tasmania0;! (most areas);currie,tasmania|Australia/Melbourne¦australia/victoria,geelong,melbourne|Australia/Sydney¦au0c4new south wales (most areas),sydney,wollongong;!s0; east3tralia0;! eastern,/0n eastern 4;act,c0nsw;anberra;!ern0;! 0;standard time|Australia/Broken_Hill¦australia/yancowinna,broken hill,new south wales (yancowinna)|Australia/Brisbane¦a1brisbane,gold co3logan,queensland0townsville;! (most areas);e2ustralia0;/queensland,n e0;ast;dt,st|Australia/Lindeman¦lindeman,queensland (whitsunday islands)|Australia/Adelaide¦a2cen0south1;. australia 4tral0; australia;c3delaide,ustralia0; central,/south,n central0;! 0;standard time;dt,st|Australia/Darwin¦australia/north,darwin,northern territory|Australia/Perth¦a3perth,w0;. australia6est0; australia,ern australia0;! (most areas);ustralia1w0;dt,st; western,/west,n west0;!ern0; standard time|Australia/Eucla¦a0cw5eucla,western australia (eucla);cw6us0; central w2tralia0; centralwestern,n central western0;! 2;. 1e0;st;standard time;dt,st|Indian/Cocos¦c0;c3ocos0;! island0;!s0;! time;!t|Indian/Christmas¦c0;hristmas1x0;!t;! island0;! time|Indian/Chagos¦british indian ocean territory,c4i0;ndian 1o0;!t;c1ocean0;! time;hagos|Indian/Mauritius¦m0port louis;auritius1u0;!t;! standard time|Indian/Maldives¦m0;aldives1v0;!t;! time|Indian/Reunion¦r0;e1éunion0; time,crozetscattered islands;t,union|Indian/Mahe¦mahe,s0;c,eychelles0;! time|Indian/Kerguelen¦french southern2kerguelen1tf0;!t;!st paul islandamsterdam island;! 0;& antarctic time,and antarctic0;! lands|Europe/Andorra¦a0;d,ndorra|Europe/Tirane¦al1tiran0;a,e;!bania|Europe/Vienna¦a0donaustadt,favoriten,graz,linz,vienna;t,ustria|Europe/Brussels¦antwerpen,b0charleroi,gent,liege;e0russels;!lgium|Europe/Sofia¦b0plovdiv,sof2varna;g,u0;lgar0rgas;ia|Europe/Minsk¦b2h1m0viteb3;ahilyow,in2;omyel,rodna;abruy0elarus,rest,y;sk|Europe/Zurich¦geneve,li0swiss time,zurich;!echtenstein|Europe/Prague¦brno,ostrava,prague,s0;k,lovakia|Europe/Berlin¦a00bScQdOeMfrLgeJhaEkClAm4n3oberhaus04rostoBs1w0;andsbek,iesbad03uppert8;a0tuttgaL;arbrueck01xony;eue neustadt,uernbeY;a3e2iddle european,oenchengladba1u0;enst9ni0;ch;st,t;gdeSinz,nnheim,rienth0;al;eipzJuebe0;ck;a0iKoeln,rL;rlsruhe,ssJ;gPlle (saale),m1nnov0rM;er;burg0m;! 0;mitte,nord;lsenkirJrmany0;! (most areas);ankfurt am maDeiF;imsbuettArfu0ssH;rt;e,ortmund,resdFu0;esseldorf,isB;e0hemnitz;ntral europe,st,t;avaria,erl6iel5o2r0;aunschwe0emA;ig;chum0nn;! hord0;el;efeld;in;a2ltona,ugs0;bu0;rg;ch0;en|Europe/Copenhagen¦arhus,copenhagen,d0;enmark,k|Europe/Tallinn¦e0tallinn;e,stonia|Europe/Madrid¦aMbJcHeGfuenDgCjerez de la frontera,lBm8ovieFp6s1terrassa,v0zaragoza;alladol9igo;a1evilla,pain0;! (mainland);badell,n0; sebastian,t0; marti,ander,s montjuic;a0uente de vallecas;lma,mpD;a0ostolGurcF;dr0laga;id;atiEeganD;asteiz / vitorBijon,ran1;carral el par1labr0;ada;do;ixample,lche,s;a0iudad lineal;rabanchel,stello de la pla7;a0ilbao,urgos;da0rce0sque;lo4; coru3l0;cala de henar1icante,mer0;ia;es;na|Europe/Helsinki¦espoo,fi1helsinki,t0vantaa;ampere,urku;!nland|Europe/Paris¦bordeaux,ceDeurope central,frBl9m8n6paris,r3s0toulouE;aint 1t0; 0rasbourg;etienne;e1omance0;! A;ims,nn1;ant0i5ormandy;es;arsei1ontpellier;e havre,i0yon;lle;!an0;ce;ntral european 1rgy pontoi0;se;standard time|Europe/London¦a0Hb05c02dZeXgUhSiPjeOkingston upon hull,lJmHnBoxTp9reading,s1w0yF;arwick05igan,olverha7;heffield,o3t2u1w0;an4iH;ffolk,nderland,sUttM;afOoke on tre05;meUuth0;a1end on 0;sea;mptH;ly0orts0restG;mouth;ew4o0;r0ttinghamO;th0wD; y0amptonM;orkQ;castle upon tyne,port;ancheLi0;dlan4lton keynes;ancaMdn,e2i1o0ut6;nd5;ncolnKverP;e0icesterE;ds;!rsQ;psw1slingt0;on;ich;ampDert0;fordC;b1l0mt standard time;asgow,oucesterA;!-eA;dinburgh,s0urope/belI;sex;erby1o0udlF;rset;!sh5;a1ity of westmin0oventry,rawlC;ster;mbridge1rdiff;e8ir7lack5r2st,uckingham0;sh0;ire;adford,e1i0;st2tish;nt;po0;ol;kenhead,mingham;l1xl0;ey;fast;berdeen,rchway|Europe/Gibraltar¦gi0;!braltar|Europe/Athens¦athens,gr0thessaloniki;!eece|Europe/Budapest¦budapest,debrecen,hu0;!ngary|Europe/Dublin¦cork,dublin,eire,i0;e,reland|Europe/Rome¦b9c8florence,genoa,m7naples,p4rome,sicily,t2v0;a0eroA;!tican city;aran2rieste,u0;rin,scany;a1ra0;to;dova,lermo;essi3ilan;atan1orsica;ari,olog1resc0;ia;na|Europe/Vilnius¦k1l0vilnius;ithuania,t;aunas,laipeda|Europe/Luxembourg¦lu0;!xembourg|Europe/Riga¦e1kalt,l0riga;atvia,v;ast europe,e0;st,t|Europe/Monaco¦m0;c,onaco|Europe/Chisinau¦chisinau,europe/tiraspol,m0;d,oldova|Europe/Malta¦m0;alta,t|Europe/Amsterdam¦a3eindhov2groning2n1rot4t0utrecht;he hague,ilburg;etherlands,l;en;lmere stad,ms0;terdam|Europe/Oslo¦berg1oslo,s0;j,valbard and jan may0;en|Europe/Warsaw¦bDczestochowa,g9k7l5mokot8p3radFs2torun,w0zabrze;ars0rocl0;aw;osnowiec,zczec3;l,o0raga poludnie;land,znan;odz,ubl0;in;ato2iel3rak0;ow;d2li0;wi0;ce;ansk,ynia;i2y0;dgoszcz,t0;om;alystok,elsko biala|Europe/Lisbon¦amadora,europe western,lisbon,p2we0;st0t;! europe,ern european standard time;ort0t;o,ugal0;! (mainland)|Europe/Bucharest¦b3c2gala1iasi,oradea,ploies1ro0timisoara;!mania;ti;luj napoca,onstanta,raiova;ra0ucharest;ila,sov|Europe/Belgrade¦belgrade,n1pristina,s0;i,lovenia;is,ovi sad|Europe/Kaliningrad¦kaliningrad|Europe/Moscow¦ar0Cb09c06dzerzh05fet,grozn04ivano03kXlipet0EmQnMorel,pJrFs8t6v2w-su,y0zelenograd;a0oshkar oV;roslavl,sene01;asyl'evsky ostrHelikiLladi2o0ykhino zhulebS;l0ronezh;gograOogda;kavkaz,m07;a0uPver;ganrog,mbC;a4ever3hakhty,molen05ochi,t0yktyvkQ; 4a0;ryy osk0vrop0;ol;nRodvS;int 0rW;petersburg;ostov na donu,u1y0;azKbO;!ssia0;!n9;e1odolUsk0;ov;nza,trozavodS;a2izhn0ovorossiyR;ekamQi0;y novM;berezhnyye chelny,l'chik;a3dst,oscow1s0urmJ;d,k;! standar0;d time;khachka1r'0;ino;la;a2himki,ostroma,rasno0urG;d0gvargeisky;ar;l1z0;an;ininsk5uga;vo;yy;in8;entraln1he0;boksary,repovets;iy;el1ry0;an3;gorod;khangel'1mav0;ir;sk|Europe/Simferopol¦simferopol|Europe/Kirov¦kirov|Europe/Volgograd¦vol0;gograd,t,zhskiy|Europe/Astrakhan¦astrakhan|Europe/Saratov¦balakovo,saratov|Europe/Ulyanovsk¦ulyanovsk|Europe/Samara¦izhevsk,s0togliatti on the volga;am0yzran;ara0t;! standard time|Europe/Stockholm¦goeteborg,malmoe,s0;e,tockholm,weden|Europe/Istanbul¦a00bUcSdQeNgMiKkImDosmCs6t1u0v07zeytinburnu;eskuedYmrB;arsus,r3urkey0;! 0;standard t0t0;ime;!abzon,t;a3i1ultan0;beyJgazi;sIv0;as,erek;msun,n0;cakt5liurfa;aniye;a1er0uratpaH;kezefendi,sin;l0niF;atOt0;epe;a0irikkale,onMutahM;hramanmaras,rabaglFyseP;stanbul,zmi0;r,t;aziantep,ebze;lazig,rzurum,s0;en0kiC;l8yurt;eniz0iyarbakB;li;ankaCor0;lu,um;a1ur0;sa;gcil2hcelievl1likes5sak4t0;ikent,m9;er;ar;d5n2rnavutkoey,ta0;seh0;ir;kara,ta0;k0l0;ya;a1iyam0;an;na,paza0;ri|Europe/Kiev¦bila tserkHcherEdChorlBivano frankivDk7l6m4odessa,poltaHrivne,sumy,ternopil,u2vinnyts1z0;aporizhzh0hytomyr;ya;a,kraine0;! (most areas);a0ykolayB;ki5riupol;ut6v9;amyanske,h1iev,r0y8;emenchuk,opyv1yvyy rih;ark6erson,mel0;nytskyy;ivka;nipro,onet0;sk;kasy,ni0;h0vtsi;iv;va|Europe/Uzhgorod¦ruthenia,uzhgorod|Europe/Zaporozhye¦luhansk,sevastopol,zaporozh0;'ye/zaporizhia lugansk/luhansk (east),ye|Antarctica/Casey¦casey0;! time|Antarctica/Davis¦a1davis0;! time;ntarctica,q|Antarctica/DumontDUrville¦dumont0;-d0d1;'0’urville time;urville|Antarctica/Mawson¦mawson0;! time|Antarctica/Palmer¦chile standard time,palmer|Antarctica/Rothera¦rothera|Antarctica/Syowa¦syowa0;! time|Antarctica/Troll¦troll0;! research station|Antarctica/Vostok¦vost0;!ok0;! time|Antarctica/Macquarie¦macquarie0;! island|Pacific/Pago_Pago¦pa0samoamidway,us1;cific0go pago;/samoa|Pacific/Rarotonga¦c0rarotonga;k2ook0;! islands0;! standard time;!t|Pacific/Easter¦chile/easterisland,e0;as0mt;st,t0;!er0;! island0;! standard time|Pacific/Galapagos¦gal0;apagos,t,ápagos islands|Pacific/Fiji¦f0;iji1j0;!st,t;! standard time|Pacific/Chuuk¦chuuk1pacific/0;truk,y1;!/truky0;ap|Pacific/Pohnpei¦f3micro4p0;acific/1f,ohnpei0;!/0;ponape;m,rench poly0;nesia|Pacific/Kosrae¦kosrae0;! time|Pacific/Guam¦ch1guam,mp,northern mariana islands,west0; pacific1ern pacific;amorro0st;! standard time|Pacific/Tarawa¦gilbert islands0tarawa;! time|Pacific/Enderbury¦enderbury,phoenix islands0;! time|Pacific/Kiritimati¦ki3line islands0;! 0;standard t0t0;ime;!ri0;bati,timati0;! island|Pacific/Majuro¦m0;a0h;juro,rshall islands0;! (most areas)|Pacific/Kwajalein¦kwajalein,marshall islands time|Pacific/Noumea¦n0;c,ew caledonia0oumea;! standard time|Pacific/Nauru¦n0;auru0r;! time|Pacific/Niue¦n0;iue1u0;!t;! time|Pacific/Auckland¦auckland,christchurch,manukau,n0wellington;ew zealand1orth shore,z0;!dt,mt,st;! 0;standard t0t0;ime|Pacific/Chatham¦cha0nz-chat;dt,st,tham0;! 0;islands0s1;! s0;tandard time|Pacific/Tahiti¦society islands,tahiti0;! time|Pacific/Marquesas¦marquesas0;! 0;islands,standard t0t0;ime|Pacific/Gambier¦gambier0;! 0;islands,time|Pacific/Port_Moresby¦p0;apua new guinea0g,ort moresby;! (most areas)|Pacific/Bougainville¦bougainville,guinea0papua new guinea time;!n|Pacific/Pitcairn¦p0;itcairn0n;! time|Pacific/Palau¦p0;alau0w;! time|Pacific/Guadalcanal¦guadalcanal,s0;b,olomon0;! islands0;! time|Pacific/Fakaofo¦fakaofo,t0;k1okelau0;! time;!t|Pacific/Tongatapu¦nuku'alofa,to0;!nga0;! standard time,tapu|Pacific/Funafuti¦funafuti,t0;uvalu0v;! time|Pacific/Wake¦u2wake0;! island0;! time;m,s minor outlying islands|Pacific/Honolulu¦aleutian2h0pacific/johnston,us/hawaii;awaii0onolulu,st;! aleutian,-aleutian 1;! 0;standard time|Pacific/Efate¦efate,v0;anuatu0u;! standard time|Pacific/Wallis¦w0;allis0f;! 0;& futuna time,and futuna|Pacific/Apia¦apia,s2w0;est0s; samoa time,ern s0;amoa|ETC/GMT¦gmt|Etc/GMT¦coordinated universal1greenwich0;! mean0; time|Etc/UTC¦etc/uct,u0zulu;ct,niversal,tc|America/Argentina¦arNbKcHformosa,jGla EmBneuquen,pAquilmJr9sa1t0;ierra del fuego (tLucumán (tm);lta6n0; 2t0;a 0iago del estero;cruz (sc),fe;juan1luis0miguel de tucuman,salvador de jujuy;! (sl);! (sj);! (salpnqrn);esistencia,osario;araDilar,osadas;ar del p3e0oron;ndoza0rlo;! (mz);p0rioja (lr);lata;ose c paz,ujuy (jy);atamarca (ct) chubut (ch),or0;doba,rient0;es;ahia blanca,uenos aires0;! (bac0;f);!genti0;na|Australia/Currie¦tasmania (king island)|America/Godthab¦g3w0;est greenland1g0;st,t;! s3;l,reenland0;! 0;(most areas),s0western;tandard time|America/Kentucky¦eastern - ky (0louisville;louisville area),wayne)|America/Indiana¦central 3eastern - in (0fort wayne,indianapolis;crawfor1dadukmn),most areas),p0switzerlan1;i3ulaski);d);- in (0standard time;perry),star0;ke)|America/North_Dakota¦central - nd (0;m0oliv1;erc0orton rural);er)|Africa/Kinshasa¦c3ki2m0;a0bandaka;sina,tadi;kwit,nshasa;d,ongo|Africa/Luanda¦huambo,l0n'dalatando;obito,uanda|Africa/Addis_Ababa¦addis ababa,dire dawa,mek'ele,nazret|Africa/Dar_es_Salaam¦arusha,d1m0tanga,zanzibar;beya,orogoro,wanza;ar es salaam,odoma|Africa/Mogadishu¦berbera,hargeysa,jamaame,kismayo,m0;arka,ogadishu|Africa/Dakar¦dakar,pikine,t0;hies0ouba;! nones|Asia/Aden¦a0ibb,mukalla,sanaa,taiz;den,l hudaydah|Africa/Conakry¦c0;amayenne,onakry|Asia/Phnom_Penh¦ict,phnom penh,takeo|Africa/Harare¦bulawayo,chitungwiza,har0mut0;are|Indian/Antananarivo¦ant0toamasina;ananarivo,sirabe|Africa/Lubumbashi¦b3k2l1m0tshikapa;buji mayi,wene ditu;ikasi,ubumbashi;ananga,isanga1olwezi;e0ukavu;ni|Africa/Kampala¦kampala|Africa/Douala¦b1douala,edea,gar2kousseri,loum,m0ngaoundere,yaounde;ar1okolo;a1ert0;oua;foussam,menda|Africa/Bamako¦bamako|Africa/Brazzaville¦brazzaville,pointe noire|Africa/Lusaka¦k0lusaka,ndola;ab0it0;we|Africa/Ouagadougou¦bobo dioulasso,ouagadougou|Africa/Freetown¦freetown|Asia/Muscat¦muscat,seeb|Africa/Porto-Novo¦abomey calavi,coton0djoug0porto novo;ou|Africa/Niamey¦niamey,zinder|Africa/Lome¦lome|Africa/Kigali¦kigali|Europe/Zagreb¦split,zagreb|Europe/Sarajevo¦banja luka,sarajevo|Africa/Nouakchott¦nouakchott|Africa/Blantyre¦blantyre,lilongwe,mzuzu|Asia/Kuwait¦al ahmadi|Africa/Djibouti¦djibouti|Africa/Libreville¦libreville|Africa/Asmara¦asmara|Africa/Bangui¦bangui|Europe/Skopje¦skopje|Europe/Bratislava¦bratislava,kosice|Africa/Banjul¦serekunda|Africa/Bujumbura¦bujumbura|Europe/Ljubljana¦ljubljana|Europe/Podgorica¦podgorica|Africa/Gaborone¦gaborone|Asia/Vientiane¦vientiane|Asia/Saigon¦ho chi minh city|America/Port_Of_Spain¦vi0;!rgin islands|America/Port-au-prince¦h0;aiti,t|Pacific/Norfolk¦n0;f,orfolk 0;island0s1;! s0;tandard time|America/Buenos_Aires¦ar0;gentina standard time,st,t|Pacific/Midway¦s0;amoa standard time,dt,st|Asia/Katmandu¦nepal 0;standard t0t0;ime|Asia/Rangoon¦myanmar 0;standard t0t0;ime|Pacific/Truk¦chuuk time,truk|Pacific/Ponape¦ponape0;! time|America/Santa_Isabel¦mexico northwest,northwest mexico standard time,pacific 0;mexico,standard time (mexico)|Brazil/Acre¦act|Asia/Thimbu¦btt";
+var ic2 = {"gmt+0": "etc/Gmt", "gmt-0": "etc/Gmt", gmt0: "etc/Gmt", "etc/gmt+0": "Etc/Gmt", "etc/gmt-0": "Etc/Gmt", "etc/gmt0": "Etc/Gmt", "msk-01 - kaliningrad": "Europe/Kaliningrad", "msk+00 - moscow area": "Europe/Moscow", "msk+00 - crimea": "Europe/Simferopol", "msk+00 - volgograd": "Europe/Volgograd", "msk+00 - kirov": "Europe/Kirov", "msk+01 - astrakhan": "Europe/Astrakhan", "msk+01 - saratov": "Europe/Saratov", "msk+01 - ulyanovsk": "Europe/Ulyanovsk", "msk+01 - samaraudmurtia": "Europe/Samara", "msk+02 - urals": "Asia/Yekaterinburg", "msk+03 - omsk": "Asia/Omsk", "msk+04 - novosibirsk": "Asia/Novosibirsk", "msk+04 - altai": "Asia/Barnaul", "msk+04 - tomsk": "Asia/Tomsk", "msk+04 - kemerovo": "Asia/Novokuznetsk", "msk+04 - krasnoyarsk area": "Asia/Krasnoyarsk", "msk+05 - irkutskburyatia": "Asia/Irkutsk", "msk+06 - zabaykalsky": "Asia/Chita", "msk+06 - lena river": "Asia/Yakutsk", "msk+06 - tomponskyust-maysky": "Asia/Khandyga", "msk+07 - amur river": "Asia/Vladivostok", "msk+07 - oymyakonsky": "Asia/Ust-Nera", "msk+08 - magadan": "Asia/Magadan", "msk+08 - sakhalin island": "Asia/Sakhalin", "msk+08 - sakha (e) north kuril is": "Asia/Srednekolymsk", "msk+09 - kamchatka": "Asia/Kamchatka", "msk+09 - bering sea": "Asia/Anadyr", "antarctica/south_pole": "Pacific/Auckland", "america/buenos_aires": "America/Argentina/Buenos_Aires", "america/coral_harbour": "America/Atikokan", "america/fort_wayne": "America/Indiana/Indianapolis", "america/knox_in": "America/Indiana/Knox", "america/porto_acre": "America/Rio_Branco", "america/santa_isabel": "America/Tijuana", "asia/tel_aviv": "Asia/Jerusalem", "asia/ujung_pandang": "Asia/Makassar", "asia/ulan_bator": "Asia/Ulaanbaatar", "atlantic/jan_mayen": "Europe/Oslo"};
+var oc2 = /(\-?[0-9]+)h(rs)?/i;
+var sc2 = /(\-?[0-9]+)/;
+var uc2 = /utc([\-+]?[0-9]+)/i;
+var lc2 = /gmt([\-+]?[0-9]+)/i;
 var yt2 = function(e22) {
   return e22 = Number(e22), e22 > -13 && e22 < 13 ? (e22 = e22 * -1, e22 = (e22 > 0 ? "+" : "") + e22, "Etc/GMT" + e22) : null;
 };
-var lc2 = function(e22) {
-  let a2 = e22.match(ic2);
-  if (a2 !== null || (a2 = e22.match(sc2), a2 !== null))
+var cc2 = function(e22) {
+  let a2 = e22.match(oc2);
+  if (a2 !== null || (a2 = e22.match(uc2), a2 !== null))
     return yt2(a2[1]);
-  if (a2 = e22.match(uc2), a2 !== null) {
+  if (a2 = e22.match(lc2), a2 !== null) {
     let t2 = Number(a2[1]) * -1;
     return yt2(t2);
   }
-  return a2 = e22.match(oc2), a2 !== null ? yt2(a2[1]) : null;
+  return a2 = e22.match(sc2), a2 !== null ? yt2(a2[1]) : null;
 };
-var z2 = tc2(nc2);
-z2 = Object.assign(z2, rc2);
+var z2 = nc2(rc2);
+z2 = Object.assign(z2, ic2);
 Object.keys(z2).filter((e22) => {
   let a2 = z2[e22];
   typeof a2 == "string" && (a2 = a2.toLowerCase(), z2[a2] === void 0 && (z2[a2] = z2[e22]));
 });
-var cc2 = (e22) => (e22 = e22.replace(/^in /g, ""), e22 = e22.replace(/ time/g, ""), e22 = e22.replace(/ (standard|daylight|summer)/g, ""), e22 = e22.replace(/ - .*/g, ""), e22 = e22.replace(/, .*/g, ""), e22.trim());
-var dc2 = function(e22) {
+var dc2 = (e22) => (e22 = e22.replace(/^in /g, ""), e22 = e22.replace(/ time/g, ""), e22 = e22.replace(/ (standard|daylight|summer)/g, ""), e22 = e22.replace(/ - .*/g, ""), e22 = e22.replace(/, .*/g, ""), e22.trim());
+var mc2 = function(e22) {
   return e22 = e22.replace(/\b(east|west|north|south)ern/g, "$1"), e22 = e22.replace(/\b(africa|america|australia)n/g, "$1"), e22 = e22.replace(/\beuropean/g, "europe"), e22 = e22.replace(/\islands/g, "island"), e22 = e22.replace(/.*\//g, ""), e22.trim();
 };
-var mc2 = function(e22) {
+var hc2 = function(e22) {
   return e22 = e22.replace(/\(.*\)/, ""), e22.trim();
 };
-var hc2 = function(e22) {
+var bc2 = function(e22) {
   if (!e22)
     return null;
   if (e22 = e22.toLowerCase().trim(), z2.hasOwnProperty(e22))
     return z2[e22];
   if (/[0-9]/.test(e22)) {
-    let t2 = lc2(e22);
+    let t2 = cc2(e22);
     if (t2)
       return [t2];
   }
-  if (e22 = cc2(e22), z2.hasOwnProperty(e22))
+  if (e22 = dc2(e22), z2.hasOwnProperty(e22))
     return z2[e22];
   let a2 = e22 + " time";
-  return z2.hasOwnProperty(a2) || (a2 = e22 + " standard time", z2.hasOwnProperty(a2)) ? z2[a2] : (e22 = dc2(e22), z2.hasOwnProperty(e22) || (e22 = mc2(e22), z2.hasOwnProperty(e22)) ? z2[e22] : (a2 = e22 + " time", z2.hasOwnProperty(a2) || (a2 = e22 + " standard time", z2.hasOwnProperty(a2)) ? z2[a2] : null));
+  return z2.hasOwnProperty(a2) || (a2 = e22 + " standard time", z2.hasOwnProperty(a2)) ? z2[a2] : (e22 = mc2(e22), z2.hasOwnProperty(e22) || (e22 = hc2(e22), z2.hasOwnProperty(e22)) ? z2[e22] : (a2 = e22 + " time", z2.hasOwnProperty(a2) || (a2 = e22 + " standard time", z2.hasOwnProperty(a2)) ? z2[a2] : null));
 };
-var bc2 = [{name: "India Time", abbr: null, aliases: ["india", "indian", "india standard time", "chennai", "kolkata", "mumbai", "new delhi"], ids: ["Asia/Kolkata", "Asia/Calcutta", "Asia/Colombo"], std: {name: "India Standard Time", abbr: "IST", offset: 5.5}, dst: {}, long: "(UTC+05:30) Chennai, Kolkata, Mumbai, New Delhi", hem: "n"}, {name: "China Time", abbr: null, aliases: ["china", "china standard time", "beijing", "chongqing", "hong kong", "urumqi"], ids: ["Asia/Shanghai", "Asia/Macau", "Asia/Urumqi"], std: {abbr: "CST", name: "China Standard Time", offset: 8}, dst: {}, long: "(UTC+08:00) Beijing, Chongqing, Hong Kong, Urumqi", hem: "n"}, {name: "Central European Time", abbr: null, aliases: ["europe central", "romance standard time", "brussels", "copenhagen", "madrid", "paris", "romance"], ids: ["Europe/Paris", "Africa/Ceuta", "Arctic/Longyearbyen", "Europe/Amsterdam", "Europe/Andorra", "Europe/Belgrade", "Europe/Berlin", "Europe/Bratislava", "Europe/Brussels", "Europe/Budapest", "Europe/Busingen", "Europe/Copenhagen", "Europe/Gibraltar", "Europe/Ljubljana", "Europe/Luxembourg", "Europe/Madrid", "Europe/Malta", "Europe/Monaco", "Europe/Oslo", "Europe/Podgorica", "Europe/Prague", "Europe/Rome", "Europe/San_Marino", "Europe/Sarajevo", "Europe/Skopje", "Europe/Stockholm", "Europe/Tirane", "Europe/Vaduz", "Europe/Vatican", "Europe/Vienna", "Europe/Warsaw", "Europe/Zagreb", "Europe/Zurich"], std: {abbr: "CET", name: "Central European Standard Time", offset: 1}, dst: {abbr: "CEST", name: "Central European Summer Time", offset: 2}, long: "(UTC+01:00) Brussels, Copenhagen, Madrid, Paris", hem: "n"}, {name: "", dupe: true, ids: ["America/Puerto_Rico", "America/Montserrat", "America/Port_of_Spain", "America/Santo_Domingo", "America/St_Barthelemy", "America/St_Kitts", "America/St_Lucia", "America/St_Thomas", "America/St_Vincent", "America/Tortola", "America/Grenada", "America/Guadeloupe", "America/Kralendijk", "America/Lower_Princes", "America/Marigot", "America/Martinique", "America/Anguilla", "America/Antigua", "America/Aruba", "America/Barbados", "America/Blanc-Sablon", "America/Curacao", "America/Dominica"], std: {name: "Atlantic Standard Time", abbr: "AST", offset: -4}, dst: {}, hem: "n"}, {name: "Greenwich Mean Time", abbr: null, aliases: ["gmt", "zulu", "utc", "coordinated universal time"], ids: ["Etc/GMT", "Africa/Abidjan", "Africa/Accra", "Africa/Bamako", "Africa/Banjul", "Africa/Bissau", "Africa/Conakry", "Africa/Dakar", "Africa/Freetown", "Africa/Lome", "Africa/Monrovia", "Africa/Nouakchott", "Africa/Ouagadougou", "Africa/Sao_Tome", "America/Danmarkshavn", "Atlantic/Reykjavik", "Atlantic/St_Helena", "Etc/UTC"], std: {name: "Greenwich Mean Time", abbr: "GMT", offset: 0}, dst: {}, long: "(UTC) Coordinated Universal Time", hem: "n"}, {name: "Eastern European Time", abbr: null, aliases: ["europe eastern"], ids: ["Asia/Beirut", "Asia/Famagusta", "Asia/Nicosia", "Europe/Athens", "Europe/Bucharest", "Europe/Chisinau", "Europe/Helsinki", "Europe/Kiev", "Europe/Mariehamn", "Europe/Riga", "Europe/Sofia", "Europe/Tallinn", "Europe/Uzhgorod", "Europe/Vilnius", "Europe/Zaporozhye"], std: {abbr: "EET", name: "Eastern European Standard Time", offset: 2}, dst: {abbr: "EEST", name: "Eastern European Summer Time", offset: 3}, hem: "n"}, {name: "", dupe: true, ids: ["America/Indiana", "America/North_Dakota", "America/Belize", "America/Costa_Rica", "America/El_Salvador", "America/Guatemala", "America/Indiana/Knox", "America/Indiana/Tell_City", "America/Managua", "America/North_Dakota/Beulah", "America/North_Dakota/Center", "America/North_Dakota/New_Salem", "America/Regina", "America/Swift_Current", "America/Tegucigalpa"], std: {name: "Central Standard Time", abbr: "CST", offset: -6}, hem: "n"}, {name: "Eastern Time", abbr: "ET", aliases: ["america eastern", "eastern standard time", "eastern"], ids: ["America/New_York", "America/Detroit", "America/Grand_Turk", "America/Indianapolis", "America/Iqaluit", "America/Louisville", "America/Nassau", "America/Nipigon", "America/Pangnirtung", "America/Port-au-Prince", "America/Thunder_Bay", "America/Toronto", "America/Montreal", "America/Kentucky"], std: {name: "Eastern Standard Time", abbr: "EST", offset: -5}, dst: {name: "Eastern Daylight Time", abbr: "EDT", offset: -4}, long: "(UTC-05:00) Eastern Time (US & Canada)", hem: "n"}, {name: "Argentina Time", abbr: "ART", aliases: ["argentina", "arst", "argentina standard time", "buenos aires"], ids: ["America/Buenos_Aires", "America/Argentina/La_Rioja", "America/Argentina/Rio_Gallegos", "America/Argentina/Salta", "America/Argentina/San_Juan", "America/Argentina/San_Luis", "America/Argentina/Tucuman", "America/Argentina/Ushuaia", "America/Catamarca", "America/Cordoba", "America/Jujuy", "America/Mendoza", "Antarctica/Rothera", "America/Argentina"], std: {name: "Argentina Standard Time", abbr: "ART", offset: -3}, dst: {}, long: "(UTC-03:00) City of Buenos Aires", hem: "s"}, {name: "", dupe: true, ids: ["America/Coral_Harbour", "America/Indiana/Marengo", "America/Indiana/Petersburg", "America/Indiana/Vevay", "America/Indiana/Vincennes", "America/Indiana/Winamac", "America/Kentucky/Monticello", "America/Cancun", "America/Cayman", "America/Jamaica", "America/Panama"], std: {name: "Eastern Standard Time", abbr: "EST", offset: -5}, hem: "n"}, {name: "East Africa Time", abbr: null, aliases: ["africa eastern", "e. africa standard time", "nairobi", "east africa", "eastern africa"], ids: ["Africa/Nairobi", "Africa/Addis_Ababa", "Africa/Asmera", "Africa/Dar_es_Salaam", "Africa/Djibouti", "Africa/Kampala", "Africa/Mogadishu", "Indian/Comoro", "Indian/Mayotte"], std: {name: "East Africa Time", abbr: "EAT", offset: 3}, dst: {}, long: "(UTC+03:00) Nairobi", hem: "n"}, {name: "West Africa Time", abbr: "WAT", aliases: ["africa western", "wast", "western africa", "w. central africa standard time", "west central africa", "w. central africa"], ids: ["Africa/Lagos", "Africa/Bangui", "Africa/Douala", "Africa/Libreville", "Africa/Malabo", "Africa/Ndjamena", "Africa/Niamey", "Africa/Porto-Novo"], std: {name: "West Africa Standard Time", abbr: "WAT", offset: 1}, long: "(UTC+01:00) West Central Africa", hem: "n"}, {name: "Moscow Time", abbr: null, aliases: ["moscow", "russian standard time", "st. petersburg", "russian", "volgograd time"], ids: ["Europe/Moscow", "Europe/Astrakhan", "Europe/Minsk", "Europe/Simferopol", "Europe/Ulyanovsk", "Europe/Kirov", "Europe/Volgograd", "Asia/Volgograd"], std: {abbr: "MSK", name: "Moscow Standard Time", offset: 3}, dst: {}, long: "(UTC+03:00) Moscow, St. Petersburg", hem: "n"}, {name: "Brasilia Time", abbr: null, aliases: ["brasilia", "e. south america standard time", "east south america"], ids: ["America/Sao_Paulo", "America/Araguaina", "America/Bahia", "America/Belem", "America/Fortaleza", "America/Maceio", "America/Recife", "America/Santarem"], std: {abbr: "BRT", name: "Brasilia Standard Time", offset: -3}, dst: {}, long: "(UTC-03:00) Brasilia", hem: "s"}, {name: "Mountain Time", abbr: "MT", aliases: ["america mountain", "mountain standard time", "mountain"], ids: ["America/Boise", "America/Cambridge_Bay", "America/Denver", "America/Edmonton", "America/Inuvik", "America/Ojinaga", "America/Yellowknife"], std: {name: "Mountain Standard Time", abbr: "MST", offset: -7}, dst: {name: "Mountain Daylight Time", abbr: "MDT", offset: -6}, long: "(UTC-07:00) Mountain Time (US & Canada)", hem: "n"}, {name: "Central Time", abbr: "CT", aliases: ["america central", "central standard time", "central"], ids: ["America/Chicago", "America/Matamoros", "America/Menominee", "America/Rainy_River", "America/Rankin_Inlet", "America/Resolute", "America/Winnipeg"], std: {name: "Central Standard Time", abbr: "CST", offset: -6}, dst: {name: "Central Daylight Time", abbr: "CDT", offset: -5}, long: "(UTC-06:00) Central Time (US & Canada)", hem: "n"}, {name: "Central Africa Time", abbr: null, aliases: ["africa central", "namibia standard time", "windhoek", "namibia"], ids: ["Africa/Windhoek", "Africa/Gaborone", "Africa/Harare", "Africa/Lubumbashi", "Africa/Lusaka", "Africa/Maputo"], std: {name: "Central Africa Time", abbr: "CAT", offset: 2}, dst: {}, long: "(UTC+02:00) Windhoek", hem: "s"}, {name: "Arabian Time", abbr: null, aliases: ["arabian", "arab standard time", "kuwait", "riyadh", "arab", "arabia", "arabic"], ids: ["Asia/Baghdad", "Asia/Aden", "Asia/Bahrain", "Asia/Kuwait", "Asia/Qatar", "Asia/Riyadh"], std: {abbr: "AST", name: "Arabian Standard Time", offset: 3}, dst: {}, long: "(UTC+03:00) Kuwait, Riyadh", hem: "n"}, {name: "Alaska Time", abbr: "AKT", aliases: ["alaska", "alaskan standard time", "alaskan"], ids: ["America/Anchorage", "America/Juneau", "America/Metlakatla", "America/Nome", "America/Sitka", "America/Yakutat"], std: {name: "Alaska Standard Time", abbr: "AKST", offset: -9}, dst: {name: "Alaska Daylight Time", abbr: "AKDT", offset: -8}, long: "(UTC-09:00) Alaska", hem: "n"}, {name: "Atlantic Time", abbr: "AT", aliases: ["atlantic", "atlantic standard time"], ids: ["America/Halifax", "America/Glace_Bay", "America/Goose_Bay", "America/Moncton", "America/Thule", "Atlantic/Bermuda"], std: {name: "Atlantic Standard Time", abbr: "AST", offset: -4}, dst: {name: "Atlantic Daylight Time", abbr: "ADT", offset: -3}, long: "(UTC-04:00) Atlantic Time (Canada)", hem: "n"}, {name: "British Time", abbr: null, aliases: ["gmt", "gmt standard time", "dublin", "edinburgh", "lisbon", "london"], ids: ["Europe/London", "Europe/Dublin", "Europe/Guernsey", "Europe/Isle_of_Man", "Europe/Jersey"], std: {name: "Greenwich Mean Time", abbr: "GMT", offset: 0}, dst: {name: "British Summer Time", abbr: "BST", offset: 1}, long: "(UTC+00:00) Dublin, Edinburgh, Lisbon, London", hem: "n"}, {name: "Central Africa Time", dupe: true, ids: ["Africa/Blantyre", "Africa/Bujumbura", "Africa/Juba", "Africa/Khartoum", "Africa/Kigali"], std: {name: "Central Africa Time", abbr: "CAT", offset: 2}, dst: {}, hem: "n"}, {name: "West Kazakhstan Time", abbr: null, aliases: ["kazakhstan western", "west asia standard time", "ashgabat", "tashkent", "west asia", "alma ata"], ids: ["Asia/Aqtau", "Asia/Aqtobe", "Asia/Atyrau", "Asia/Oral", "Asia/Qyzylorda"], std: {abbr: "ALMT", name: "Alma-Ata Time", offset: 5}, dst: {}, long: "(UTC+05:00) Ashgabat, Tashkent", hem: "n"}, {name: "Eastern Australia Time", abbr: "AET", aliases: ["australia eastern", "aus eastern standard time", "canberra", "melbourne", "sydney", "aus eastern", "aus east"], ids: ["Australia/Sydney", "Antarctica/Macquarie", "Australia/Currie", "Australia/Hobart", "Australia/Melbourne"], std: {name: "Australian Eastern Standard Time", abbr: "AEST", offset: 10}, dst: {name: "Australian Eastern Daylight Time", abbr: "AEDT", offset: 11}, long: "(UTC+10:00) Canberra, Melbourne, Sydney", hem: "s"}, {name: "Western European Time", abbr: null, aliases: ["europe western"], ids: ["Europe/Lisbon", "Atlantic/Canary", "Atlantic/Faeroe", "Atlantic/Madeira"], std: {abbr: "WET", name: "Western European Standard Time", offset: 0}, dst: {abbr: "WEST", name: "Western European Summer Time", offset: 1}, hem: "n"}, {name: "Indochina Time", abbr: null, aliases: ["indochina", "se asia standard time", "bangkok", "hanoi", "jakarta", "se asia", "south east asia"], ids: ["Asia/Bangkok", "Asia/Phnom_Penh", "Asia/Saigon", "Asia/Vientiane"], std: {abbr: "ICT", name: "Indochina Time", offset: 7}, dst: {}, long: "(UTC+07:00) Bangkok, Hanoi, Jakarta", hem: "n"}, {name: "", dupe: true, abbr: "MT", std: {name: "Mountain Standard Time", abbr: "MST", offset: -7}, ids: ["America/Phoenix", "America/Creston", "America/Dawson_Creek", "America/Fort_Nelson"], hem: "n"}, {name: "Central Mexico Time", long: "(UTC-06:00) Guadalajara, Mexico City, Monterrey", aliases: ["guadalajara", "mexico city", "monterrey", "central mexico", "central mexican"], ids: ["America/Mexico_City", "America/Merida", "America/Monterrey", "America/Bahia_Banderas"], std: {name: "Central Standard Time", abbr: "CST", offset: -6}, dst: {name: "Central Daylight Time", abbr: "CDT", offset: -5}, hem: "n"}, {name: "West Africa Time", dupe: true, ids: ["Africa/Luanda", "Africa/Kinshasa", "Africa/Brazzaville"], std: {name: "West Africa Standard Time", abbr: "WAT", offset: 1}, hem: "s"}, {name: "", dupe: true, ids: ["Africa/Cairo", "Africa/Tripoli", "Europe/Kaliningrad"], std: {abbr: "EET", name: "Eastern European Standard Time", offset: 2}, hem: "n"}, {name: "South Africa Time", abbr: null, aliases: ["africa southern", "south africa standard time", "harare", "pretoria", "south africa"], ids: ["Africa/Johannesburg", "Africa/Maseru", "Africa/Mbabane"], std: {name: "South Africa Standard Time", abbr: "SAST", offset: 2}, dst: {}, long: "(UTC+02:00) Harare, Pretoria", hem: "s"}, {name: "Krasnoyarsk Time", abbr: null, aliases: ["krasnoyarsk", "north asia standard time", "north asia"], ids: ["Asia/Krasnoyarsk", "Asia/Novokuznetsk", "Asia/Barnaul"], std: {abbr: "KRAT", name: "Krasnoyarsk Standard Time", offset: 7}, dst: {}, long: "(UTC+07:00) Krasnoyarsk", hem: "n"}, {name: "Yakutsk Time", abbr: null, aliases: ["yakutsk", "yakutsk standard time"], ids: ["Asia/Yakutsk", "Asia/Chita", "Asia/Khandyga"], std: {abbr: "YAKT", name: "Yakutsk Standard Time", offset: 9}, dst: {}, long: "(UTC+09:00) Yakutsk", hem: "n"}, {name: "Pacific Time", abbr: "PT", aliases: ["america pacific", "pacific standard time", "pacific"], ids: ["America/Los_Angeles", "America/Tijuana", "America/Vancouver"], std: {name: "Pacific Standard Time", abbr: "PST", offset: -8}, dst: {name: "Pacific Daylight Time", abbr: "PDT", offset: -7}, long: "(UTC-08:00) Pacific Time (US & Canada)", hem: "n"}, {name: "Amazon Time", abbr: null, aliases: ["amazon", "central brazilian standard time", "cuiaba", "central brazilian", "central brazil"], ids: ["America/Boa_Vista", "America/Manaus", "America/Porto_Velho"], std: {abbr: "AMT", name: "Amazon Standard Time", offset: -4}, dst: {}, long: "(UTC-04:00) Cuiaba", hem: "n"}, {name: "Morocco Standard Time", offset: 1, long: "(UTC+00:00) Casablanca", aliases: ["casablanca", "morocco"], ids: ["Africa/Casablanca", "Africa/El_Aaiun"], std: {abbr: "WET", name: "Western European Standard Time", offset: 1}, dst: {abbr: "WEST", name: "Western European Summer Time", offset: 0}, hem: "n"}, {name: "", dupe: true, ids: ["Africa/Algiers", "Africa/Tunis"], std: {abbr: "CET", name: "Central European Standard Time", offset: 1}, dst: {abbr: "CEST", name: "Central European Summer Time", offset: 2}, hem: "n"}, {name: "", dupe: true, ids: ["Asia/Gaza", "Asia/Hebron"], std: {abbr: "EET", name: "Eastern European Standard Time", offset: 2}, hem: "n"}, {name: "", dupe: true, ids: ["Asia/Damascus", "Asia/Amman"], std: {abbr: "EET", name: "Eastern European Standard Time", offset: 2}, hem: "n"}, {name: "Gulf Time", abbr: null, aliases: ["gulf", "arabian standard time", "abu dhabi", "muscat", "arabian"], ids: ["Asia/Dubai", "Asia/Muscat"], std: {name: "Gulf Standard Time", abbr: "GST", offset: 4}, dst: {}, long: "(UTC+04:00) Abu Dhabi, Muscat", hem: "n"}, {name: "Samara Time", abbr: null, aliases: ["samara", "russia time zone 3", "izhevsk"], ids: ["Europe/Samara", "Europe/Saratov"], std: {abbr: "SAMT", name: "Samara Standard Time", offset: 4}, dst: {}, long: "(UTC+04:00) Izhevsk, Samara", hem: "n"}, {name: "Uzbekistan Time", abbr: null, aliases: ["uzbekistan"], ids: ["Asia/Samarkand", "Asia/Tashkent"], std: {abbr: "UZT", name: "Uzbekistan Standard Time", offset: 5}, dst: {}, hem: "n"}, {name: "East Kazakhstan Time", abbr: null, aliases: ["kazakhstan eastern", "central asia standard time", "astana", "central asia"], ids: ["Asia/Almaty", "Asia/Qostanay"], std: {abbr: "ALMT", name: "East Kazakhstan Time", offset: 6}, dst: {}, long: "(UTC+06:00) Astana", hem: "n"}, {name: "Omsk Time", abbr: null, aliases: ["omsk", "omsk standard time"], ids: ["Asia/Omsk", "Asia/Tomsk"], std: {abbr: "OMST", name: "Omsk Standard Time", offset: 6}, dst: {}, long: "(UTC+06:00) Omsk", hem: "n"}, {name: "Western Indonesia Time", abbr: null, aliases: ["indonesia western"], ids: ["Asia/Jakarta", "Asia/Pontianak"], std: {name: "Western Indonesia Time", abbr: "WIB", offset: 7}, dst: {}, hem: "s"}, {name: "Ulaanbaatar Time", abbr: null, aliases: ["mongolia", "ulaanbaatar standard time", "ulaanbaatar"], ids: ["Asia/Ulaanbaatar", "Asia/Choibalsan"], std: {abbr: "ULAT", name: "Ulaanbaatar Standard Time", offset: 8}, dst: {}, long: "(UTC+08:00) Ulaanbaatar", hem: "n"}, {name: "Malaysia Time", abbr: null, aliases: ["malaysia"], ids: ["Asia/Kuala_Lumpur", "Asia/Kuching"], std: {name: "Malaysia Time", abbr: "MYT", offset: 8}, dst: {}, hem: "s"}, {name: "Korean Time", abbr: null, aliases: ["korea", "korea standard time", "seoul"], ids: ["Asia/Seoul", "Asia/Pyongyang"], std: {abbr: "KST", name: "Korean Standard Time", offset: 9}, dst: {}, long: "(UTC+09:00) Seoul", hem: "n"}, {name: "Central Australia Time", abbr: "ACT", aliases: ["australia central", "cen. australia standard time", "adelaide", "central australia"], ids: ["Australia/Adelaide", "Australia/Broken_Hill"], std: {name: "Australian Central Standard Time", abbr: "ACST", offset: 9.5}, dst: {name: "Australian Central Daylight Time", abbr: "ACDT", offset: 10.5}, long: "(UTC+09:30) Adelaide", hem: "s"}, {name: "Brisbane Time", dupe: true, ids: ["Australia/Brisbane", "Australia/Lindeman"], std: {name: "Australian Eastern Standard Time", abbr: "AEST", offset: 10}, hem: "s"}, {name: "Vladivostok Time", abbr: null, aliases: ["vladivostok", "vladivostok standard time"], ids: ["Asia/Vladivostok", "Asia/Ust-Nera"], std: {abbr: "VLAT", name: "Vladivostok Standard Time", offset: 10}, dst: {}, long: "(UTC+10:00) Vladivostok", hem: "n"}, {name: "Chamorro Time", abbr: null, aliases: ["chamorro", "west pacific standard time", "guam", "port moresby", "west pacific", "western pacific"], ids: ["Pacific/Guam", "Pacific/Saipan"], std: {name: "Chamorro Standard Time", abbr: "ChST", offset: 10}, dst: {}, long: "(UTC+10:00) Guam, Port Moresby", hem: "n"}, {name: "Papua New Guinea Time", abbr: null, aliases: ["papua new guinea", "guinea", "guinean"], ids: ["Pacific/Bougainville", "Pacific/Port_Moresby"], std: {abbr: "PGT", name: "Papua New Guinea Time", offset: 11}, dst: {}, hem: "s"}, {name: "New Zealand Time", abbr: "NZT", aliases: ["new zealand", "new zealand standard time", "auckland", "wellington"], ids: ["Pacific/Auckland", "Antarctica/McMurdo"], std: {name: "New Zealand Standard Time", abbr: "NZST", offset: 12}, dst: {name: "New Zealand Daylight Time", abbr: "NZDT", offset: 13}, long: "(UTC+12:00) Auckland, Wellington", hem: "s"}, {name: "Marshall Islands Time", abbr: null, aliases: ["marshall islands"], ids: ["Pacific/Kwajalein", "Pacific/Majuro"], std: {abbr: "MHT", name: "Marshall Islands Time", offset: 12}, dst: {}, hem: "n"}, {name: "Samoa Time", abbr: "SST", aliases: ["samoa", "samoa standard time"], ids: ["Pacific/Midway", "Pacific/Pago_Pago"], std: {abbr: "SST", name: "Samoa Standard Time", offset: -11}, dst: {}, long: "(UTC+13:00) Samoa", hem: "n"}, {name: "Hawaii-Aleutian Time", abbr: "HAT", aliases: ["hawaii aleutian", "aleutian standard time", "aleutian"], ids: ["Pacific/Honolulu", "Pacific/Johnston"], std: {name: "Hawaii-Aleutian Standard Time", abbr: "HAST", offset: -9}, dst: {name: "Hawaii-Aleutian Daylight Time", abbr: "HADT", offset: -8}, long: "(UTC-09:00) Aleutian Islands", hem: "n"}, {name: "", dupe: true, std: {name: "Mountain Standard Time", abbr: "MST", offset: -7}, ids: ["America/Dawson", "America/Whitehorse"], hem: "n"}, {name: "Mexican Pacific Time", abbr: "HPMX", aliases: ["mexico pacific", "mountain standard time (mexico)", "chihuahua", "la paz", "mazatlan", "mountain mexico"], ids: ["America/Chihuahua", "America/Mazatlan"], std: {name: "Mexican Pacific Standard Time", abbr: "HNPMX", offset: -7}, dst: {name: "Mexican Pacific Daylight Time", abbr: "HEPMX", offset: -6}, long: "(UTC-07:00) Chihuahua, La Paz, Mazatlan", hem: "n"}, {name: "Colombia Time", abbr: "COT", aliases: ["colombia", "cost"], ids: ["America/Bogota", "Pacific/Galapagos"], std: {name: "Colombia Standard Time", abbr: "COT", offset: -5}, dst: {}, hem: "n"}, {name: "Acre Time", abbr: null, aliases: ["acre"], ids: ["America/Eirunepe", "America/Rio_Branco"], std: {abbr: "ACT", name: "Acre Standard Time", offset: -5}, dst: {}, hem: "n"}, {name: "", dupe: true, ids: ["America/Campo_Grande", "America/Cuiaba"], std: {abbr: "AMT", name: "Amazon Standard Time", offset: -4}, hem: "s"}, {name: "", dupe: true, ids: ["Antarctica/Palmer", "America/Punta_Arenas"], std: {name: "Chile Standard Time", abbr: "CLT", offset: -3}, hem: "s"}, {name: "Troll Time", dupe: true, abbr: null, aliases: ["troll research station"], ids: ["Antarctica/Troll"], std: {name: "Greenwich Mean Time", abbr: "GMT", offset: 0}, dst: {}, hem: "s"}, {name: "East Greenland Time", abbr: "HEG", aliases: ["greenland eastern"], ids: ["America/Scoresbysund"], std: {name: "East Greenland Standard Time", abbr: "HNEG", offset: 0}, dst: {name: "East Greenland Summer Time", abbr: "HEEG", offset: 1}, hem: "n"}, {name: "Israel Time", abbr: null, aliases: ["israel", "israel standard time", "jerusalem"], ids: ["Asia/Jerusalem"], std: {abbr: "IST", name: "Israel Standard Time", offset: 2}, dst: {name: "Israel Daylight Time", offset: 3}, long: "(UTC+02:00) Jerusalem", hem: "n"}, {name: "East Africa Time", dupe: true, ids: ["Indian/Antananarivo"], std: {name: "East Africa Time", abbr: "EAT", offset: 3}, dst: {}, hem: "s"}, {name: "Syowa Time", abbr: null, aliases: ["syowa"], ids: ["Antarctica/Syowa"], std: {abbr: "SYOT", name: "Syowa Time", offset: 3}, dst: {}, hem: "s"}, {name: "Turkey Time", abbr: "TRT", aliases: ["turkey", "turkey standard time", "istanbul"], ids: ["Europe/Istanbul"], std: {name: "Turkey Time", abbr: "TRT", offset: 3}, dst: {}, long: "(UTC+03:00) Istanbul", hem: "n"}, {name: "Iran Time", abbr: null, aliases: ["iran", "iran standard time", "tehran"], ids: ["Asia/Tehran"], std: {abbr: "IRST", name: "Iran Standard Time", offset: 3.5}, dst: {abbr: "IRDT", name: "Iran Daylight Time", offset: 4.5}, long: "(UTC+03:30) Tehran", hem: "n"}, {name: "Azerbaijan Time", abbr: null, aliases: ["azerbaijan", "azerbaijan standard time", "baku"], ids: ["Asia/Baku"], std: {abbr: "AZT", name: "Azerbaijan Standard Time", offset: 4}, dst: {}, long: "(UTC+04:00) Baku", hem: "n"}, {name: "Georgia Time", abbr: "GET", aliases: ["georgia", "georgian standard time", "tbilisi", "georgian"], ids: ["Asia/Tbilisi"], std: {abbr: "GET", name: "Georgia Standard Time", offset: 4}, dst: {}, long: "(UTC+04:00) Tbilisi", hem: "n"}, {name: "Armenia Time", abbr: "AMT", aliases: ["armenia", "caucasus standard time", "yerevan", "caucasus"], ids: ["Asia/Yerevan"], std: {abbr: "AMT", name: "Armenia Standard Time", offset: 4}, dst: {}, long: "(UTC+04:00) Yerevan", hem: "n"}, {name: "Seychelles Time", abbr: null, aliases: ["seychelles"], ids: ["Indian/Mahe"], std: {abbr: "SCT", name: "Seychelles Time", offset: 4}, dst: {}, hem: "n"}, {name: "Mauritius Time", abbr: null, aliases: ["mauritius", "mauritius standard time", "port louis"], ids: ["Indian/Mauritius"], std: {abbr: "MUT", name: "Mauritius Standard Time", offset: 4}, dst: {}, long: "(UTC+04:00) Port Louis", hem: "n"}, {name: "Réunion Time", abbr: null, aliases: ["reunion"], ids: ["Indian/Reunion"], std: {abbr: "RET", name: "Réunion Time", offset: 4}, dst: {}, hem: "s"}, {name: "Afghanistan Time", abbr: null, aliases: ["afghanistan", "afghanistan standard time", "kabul"], ids: ["Asia/Kabul"], std: {abbr: "AFT", name: "Afghanistan Time", offset: 4.5}, dst: {}, long: "(UTC+04:30) Kabul", hem: "n"}, {name: "Mawson Time", abbr: null, aliases: ["mawson"], ids: ["Antarctica/Mawson"], std: {abbr: "MAWT", name: "Mawson Time", offset: 5}, dst: {}, hem: "s"}, {name: "Turkmenistan Time", abbr: "TMT", aliases: ["turkmenistan", "tmst"], ids: ["Asia/Ashgabat"], std: {name: "Turkmenistan Standard Time", abbr: "TMT", offset: 5}, dst: {}, hem: "n"}, {name: "Tajikistan Time", abbr: null, aliases: ["tajikistan"], ids: ["Asia/Dushanbe"], std: {abbr: "TJT", name: "Tajikistan Time", offset: 5}, dst: {}, hem: "n"}, {name: "Pakistan Time", abbr: null, aliases: ["pakistan", "pakistan standard time", "islamabad", "karachi"], ids: ["Asia/Karachi"], std: {abbr: "PKT", name: "Pakistan Standard Time", offset: 5}, dst: {}, long: "(UTC+05:00) Islamabad, Karachi", hem: "n"}, {name: "Yekaterinburg Time", abbr: "YEKT", aliases: ["yekaterinburg", "ekaterinburg standard time", "ekaterinburg"], ids: ["Asia/Yekaterinburg"], std: {abbr: "YEKT", name: "Yekaterinburg Standard Time", offset: 5}, dst: {}, long: "(UTC+05:00) Ekaterinburg", hem: "n"}, {name: "French Southern & Antarctic Time", abbr: null, aliases: ["french southern"], ids: ["Indian/Kerguelen"], std: {abbr: "TFT", name: "French Southern & Antarctic Time", offset: 5}, dst: {}, hem: "s"}, {name: "Maldives Time", abbr: null, aliases: ["maldives"], ids: ["Indian/Maldives"], std: {abbr: "MVT", name: "Maldives Time", offset: 5}, dst: {}, hem: "n"}, {name: "Nepal Time", abbr: null, aliases: ["nepal", "nepal standard time", "kathmandu"], ids: ["Asia/Katmandu"], std: {abbr: "NPT", name: "Nepal Time", offset: 5.75}, dst: {}, long: "(UTC+05:45) Kathmandu", hem: "n"}, {name: "Vostok Time", abbr: null, aliases: ["vostok"], ids: ["Antarctica/Vostok"], std: {abbr: "MSK+4", name: "Vostok Time", offset: 6}, dst: {}, hem: "s"}, {name: "Kyrgyzstan Time", abbr: null, aliases: ["kyrgystan"], ids: ["Asia/Bishkek"], std: {abbr: "KGT", name: "Kyrgyzstan Time", offset: 6}, dst: {}, hem: "n"}, {name: "Bangladesh Time", abbr: "BST", aliases: ["bangladesh", "bangladesh standard time", "dhaka"], ids: ["Asia/Dhaka"], std: {abbr: "BST", name: "Bangladesh Standard Time", offset: 6}, dst: {}, long: "(UTC+06:00) Dhaka", hem: "n"}, {name: "Bhutan Time", abbr: null, aliases: ["bhutan"], ids: ["Asia/Thimphu"], std: {name: "Bhutan Time", abbr: "BT", offset: 6}, dst: {}, hem: "n"}, {name: "Indian Ocean Time", abbr: null, aliases: ["indian ocean", "indian chagos"], ids: ["Indian/Chagos"], std: {abbr: "IOT", name: "Indian Ocean Time", offset: 6}, dst: {}, hem: "n"}, {name: "Myanmar Time", abbr: null, aliases: ["myanmar", "myanmar standard time"], ids: ["Asia/Rangoon"], std: {abbr: "MMT", name: "Myanmar Time", offset: 6.5}, dst: {}, long: "(UTC+06:30) Yangon (Rangoon)", hem: "n"}, {name: "Cocos Islands Time", abbr: null, aliases: ["cocos"], ids: ["Indian/Cocos"], std: {abbr: "CCT", name: "Cocos Islands Time", offset: 6.5}, dst: {}, hem: "n"}, {name: "Davis Time", abbr: null, aliases: ["davis"], ids: ["Antarctica/Davis"], std: {abbr: "DAVT", name: "Davis Time", offset: 7}, dst: {}, hem: "s"}, {name: "Hovd Time", abbr: null, aliases: ["hovd", "w. mongolia standard time", "west mongolia", "western mongolia"], ids: ["Asia/Hovd"], std: {abbr: "HOVT", name: "Hovd Standard Time", offset: 7}, dst: {}, long: "(UTC+07:00) Hovd", hem: "n"}, {name: "Novosibirsk Time", abbr: null, aliases: ["novosibirsk", "n. central asia standard time", "north central asia"], ids: ["Asia/Novosibirsk"], std: {abbr: "NOVT", name: "Novosibirsk Standard Time", offset: 7}, dst: {}, long: "(UTC+07:00) Novosibirsk", hem: "n"}, {name: "Christmas Island Time", abbr: null, aliases: ["christmas"], ids: ["Indian/Christmas"], std: {abbr: "CXT", name: "Christmas Island Time", offset: 7}, dst: {}, hem: "s"}, {name: "Brunei Darussalam Time", abbr: null, aliases: ["brunei"], ids: ["Asia/Brunei"], std: {abbr: "BNT", name: "Brunei Darussalam Time", offset: 8}, dst: {}, hem: "n"}, {name: "Hong Kong Time", abbr: "HKT", aliases: ["hong kong", "hkst"], ids: ["Asia/Hong_Kong"], std: {name: "Hong Kong Standard Time", abbr: "HKT", offset: 8}, dst: {}, hem: "n"}, {name: "Irkutsk Time", abbr: null, aliases: ["irkutsk", "north asia east standard time", "north asia east"], ids: ["Asia/Irkutsk"], std: {abbr: "IRKT", name: "Irkutsk Standard Time", offset: 8}, dst: {}, long: "(UTC+08:00) Irkutsk", hem: "n"}, {name: "Central Indonesia Time", abbr: null, aliases: ["indonesia central"], ids: ["Asia/Makassar"], std: {name: "Central Indonesia Time", abbr: "WITA", offset: 8}, dst: {}, hem: "s"}, {name: "Philippine Time", abbr: null, aliases: ["philippines"], ids: ["Asia/Manila"], std: {abbr: "PHST", name: "Philippine Standard Time", offset: 8}, dst: {}, hem: "n"}, {name: "Singapore Time", abbr: null, aliases: ["singapore", "singapore standard time", "kuala lumpur"], ids: ["Asia/Singapore"], std: {name: "Singapore Standard Time", abbr: "SGT", offset: 8}, dst: {}, long: "(UTC+08:00) Kuala Lumpur, Singapore", hem: "s"}, {name: "Taipei Time", abbr: null, aliases: ["taipei", "taipei standard time"], ids: ["Asia/Taipei"], std: {abbr: "CST", name: "Taipei Standard Time", offset: 8}, dst: {}, long: "(UTC+08:00) Taipei", hem: "n"}, {name: "Western Australia Time", abbr: "AWT", aliases: ["australia western", "awdt", "w. australia standard time", "perth", "western australia", "west australia"], ids: ["Australia/Perth"], std: {name: "Australian Western Standard Time", abbr: "AWST", offset: 8}, dst: {}, long: "(UTC+08:00) Perth", hem: "s"}, {name: "Australian Central Western Time", abbr: "ACWT", aliases: ["australia centralwestern", "acwdt", "aus central w. standard time", "eucla", "aus central west"], ids: ["Australia/Eucla"], std: {name: "Australian Central Western Standard Time", abbr: "ACWST", offset: 8.75}, dst: {}, long: "(UTC+08:45) Eucla", hem: "s"}, {name: "East Timor Time", abbr: "TLT", aliases: ["east timor"], ids: ["Asia/Dili"], std: {abbr: "TLT", name: "East Timor Time", offset: 9}, dst: {}, hem: "s"}, {name: "Eastern Indonesia Time", abbr: null, aliases: ["indonesia eastern"], ids: ["Asia/Jayapura"], std: {name: "Eastern Indonesia Time", abbr: "WIT", offset: 9}, dst: {}, hem: "s"}, {name: "Japan Time", abbr: null, aliases: ["japan", "jdt", "tokyo standard time", "osaka", "sapporo", "tokyo"], ids: ["Asia/Tokyo"], std: {name: "Japan Standard Time", abbr: "JST", offset: 9}, dst: {}, long: "(UTC+09:00) Osaka, Sapporo, Tokyo", hem: "n"}, {name: "Palau Time", abbr: null, aliases: ["palau"], ids: ["Pacific/Palau"], std: {abbr: "PWT", name: "Palau Time", offset: 9}, dst: {}, hem: "n"}, {name: "", dupe: true, ids: ["Australia/Darwin"], std: {name: "Australian Central Standard Time", abbr: "ACST", offset: 9.5}, hem: "s"}, {name: "Dumont-d’Urville Time", abbr: null, aliases: ["dumontdurville"], ids: ["Antarctica/DumontDUrville"], std: {abbr: "CLST", name: "Dumont-d’Urville Time", offset: 10}, dst: {}, hem: "s"}, {name: "Chuuk Time", abbr: null, aliases: ["truk"], ids: ["Pacific/Truk"], std: {abbr: "CHUT", name: "Chuuk Time", offset: 10}, dst: {}, hem: "n"}, {name: "Lord Howe Time", abbr: "LHT", aliases: ["lord howe", "lord howe standard time"], ids: ["Australia/Lord_Howe"], std: {name: "Lord Howe Standard Time", abbr: "LHST", offset: 10.5}, dst: {name: "Lord Howe Daylight Time", abbr: "LHDT", offset: 11.5}, long: "(UTC+10:30) Lord Howe Island", hem: "s"}, {name: "Casey Time", abbr: "CAST", aliases: ["casey"], ids: ["Antarctica/Casey"], std: {abbr: "CAST", name: "Casey Time", offset: 11}, dst: {name: "Casey Summer Time", offset: 8}, hem: "s"}, {name: "Magadan Time", abbr: null, aliases: ["magadan", "magadan standard time"], ids: ["Asia/Magadan"], std: {abbr: "MAGT", name: "Magadan Standard Time", offset: 11}, dst: {}, long: "(UTC+11:00) Magadan", hem: "n"}, {name: "Sakhalin Time", abbr: null, aliases: ["sakhalin", "sakhalin standard time"], ids: ["Asia/Sakhalin"], std: {abbr: "SAKT", name: "Sakhalin Standard Time", offset: 11}, dst: {}, long: "(UTC+11:00) Sakhalin", hem: "n"}, {name: "Srednekolymsk Time", abbr: "SRET", aliases: ["srednekolymsk", "russia time zone 10", "chokurdakh"], ids: ["Asia/Srednekolymsk"], std: {abbr: "SRET", name: "Srednekolymsk Standard Time", offset: 11}, dst: {}, long: "(UTC+11:00) Chokurdakh", hem: "n"}, {name: "Vanuatu Time", abbr: null, aliases: ["vanuatu"], ids: ["Pacific/Efate"], std: {abbr: "VUT", name: "Vanuatu Standard Time", offset: 11}, dst: {}, hem: "n"}, {name: "Solomon Islands Time", abbr: null, aliases: ["solomon"], ids: ["Pacific/Guadalcanal"], std: {abbr: "SBT", name: "Solomon Islands Time", offset: 11}, dst: {}, hem: "n"}, {name: "Kosrae Time", abbr: null, aliases: ["kosrae"], ids: ["Pacific/Kosrae"], std: {abbr: "KOST", name: "Kosrae Time", offset: 11}, dst: {}, hem: "n"}, {name: "New Caledonia Time", abbr: null, aliases: ["new caledonia"], ids: ["Pacific/Noumea"], std: {abbr: "NCT", name: "New Caledonia Standard Time", offset: 11}, dst: {name: "New Caledonia Summer Time"}, hem: "n"}, {name: "Ponape Time", abbr: null, aliases: ["ponape"], ids: ["Pacific/Ponape"], std: {abbr: "PONT", name: "Ponape Time", offset: 11}, dst: {}, hem: "n"}, {name: "Anadyr Time", abbr: null, aliases: ["anadyr", "russia time zone 11", "petropavlovsk kamchatsky"], ids: ["Asia/Anadyr"], std: {abbr: "ANAT", name: "Anadyr Standard Time", offset: 12}, dst: {}, long: "(UTC+12:00) Anadyr, Petropavlovsk-Kamchatsky", hem: "n"}, {name: "Petropavlovsk-Kamchatski Time", abbr: null, aliases: ["kamchatka", "russia time zone 11", "anadyr", "petropavlovsk kamchatsky"], ids: ["Asia/Kamchatka"], std: {abbr: "PETT", name: "Petropavlovsk-Kamchatski Standard Time", offset: 12}, dst: {}, long: "(UTC+12:00) Anadyr, Petropavlovsk-Kamchatsky", hem: "n"}, {name: "Fiji Time", abbr: "FJT", aliases: ["fiji", "fiji standard time"], ids: ["Pacific/Fiji"], std: {abbr: "FJT", name: "Fiji Standard Time", offset: 12}, dst: {abbr: "FJT", name: "Fiji Summer Time", offset: 13}, long: "(UTC+12:00) Fiji", hem: "s"}, {name: "Tuvalu Time", abbr: "TVT", aliases: ["tuvalu"], ids: ["Pacific/Funafuti"], std: {abbr: "TVT", name: "Tuvalu Time", offset: 12}, dst: {}, hem: "n"}, {name: "Nauru Time", abbr: null, aliases: ["nauru"], ids: ["Pacific/Nauru"], std: {abbr: "NRT", name: "Nauru Time", offset: 12}, dst: {}, hem: "n"}, {name: "Norfolk Island Time", abbr: null, aliases: ["norfolk", "norfolk standard time", "norfolk island"], ids: ["Pacific/Norfolk"], std: {abbr: "NFT", name: "Norfolk Island Standard Time", offset: 12}, dst: {abbr: "NFDT", name: "Norfolk Island Daylight Time", offset: 11}, long: "(UTC+11:00) Norfolk Island", hem: "n"}, {name: "Gilbert Islands Time", abbr: null, aliases: ["gilbert islands"], ids: ["Pacific/Tarawa"], std: {abbr: "GILT", name: "Gilbert Islands Time", offset: 12}, dst: {}, hem: "n"}, {name: "Wake Island Time", abbr: null, aliases: ["wake"], ids: ["Pacific/Wake"], std: {abbr: "WAKT", name: "Wake Island Time", offset: 12}, dst: {}, hem: "n"}, {name: "Wallis & Futuna Time", abbr: null, aliases: ["wallis"], ids: ["Pacific/Wallis"], std: {abbr: "WFT", name: "Wallis & Futuna Time", offset: 12}, dst: {}, hem: "n"}, {name: "Chatham Time", abbr: "CHAT", aliases: ["chatham", "chatham islands standard time", "chatham islands"], ids: ["Pacific/Chatham"], std: {name: "Chatham Standard Time", abbr: "CHAST", offset: 12.75}, dst: {name: "Chatham Daylight Time", abbr: "CHADT", offset: 13.75}, long: "(UTC+12:45) Chatham Islands", hem: "s"}, {name: "West Samoa Time", abbr: "WST", aliases: ["apia"], ids: ["Pacific/Apia"], std: {abbr: "WST", name: "West Samoa Time", offset: 13}, dst: {abbr: "WST", name: "West Samoa Summer Time", offset: 14}, hem: "s"}, {name: "Phoenix Islands Time", abbr: null, aliases: ["phoenix islands"], ids: ["Pacific/Enderbury"], std: {abbr: "PHOT", name: "Phoenix Islands Time", offset: 13}, dst: {}, hem: "n"}, {name: "Tokelau Time", abbr: null, aliases: ["tokelau"], ids: ["Pacific/Fakaofo"], std: {abbr: "TKT", name: "Tokelau Time", offset: 13}, dst: {}, hem: "n"}, {name: "Tonga Time", abbr: null, aliases: ["tonga", "tonga standard time", "nuku'alofa"], ids: ["Pacific/Tongatapu"], std: {abbr: "TOT", name: "Tonga Standard Time", offset: 13}, dst: {name: "Tonga Summer Time", offset: 14}, long: "(UTC+13:00) Nuku'alofa", hem: "s"}, {name: "Line Islands Time", abbr: null, aliases: ["line islands", "line islands standard time", "kiritimati island"], ids: ["Pacific/Kiritimati"], std: {abbr: "LINT", name: "Line Islands Time", offset: 14}, dst: {}, long: "(UTC+14:00) Kiritimati Island", hem: "n"}, {name: "Niue Time", abbr: null, aliases: ["niue"], ids: ["Pacific/Niue"], std: {abbr: "NUT", name: "Niue Time", offset: -11}, dst: {}, hem: "n"}, {name: "Cook Islands Time", abbr: "CKT", aliases: ["cook"], ids: ["Pacific/Rarotonga"], std: {abbr: "CKT", name: "Cook Islands Standard Time", offset: -10}, dst: {}, hem: "n"}, {name: "Tahiti Time", abbr: null, aliases: ["tahiti"], ids: ["Pacific/Tahiti"], std: {abbr: "TAHT", name: "Tahiti Time", offset: -10}, dst: {}, hem: "n"}, {name: "Marquesas Time", abbr: null, aliases: ["marquesas", "marquesas standard time"], ids: ["Pacific/Marquesas"], std: {abbr: "MART", name: "Marquesas Time", offset: -9.5}, dst: {}, long: "(UTC-09:30) Marquesas Islands", hem: "n"}, {name: "Aleutian Standard Time", iso: "(UTC-10:00) Aleutian Islands", aliases: ["aleutian"], ids: ["America/Adak"], abbr: "HST", std: {name: "Hawaii Standard Time", abbr: "HST", offset: -10}, dst: {name: "Hawaii Daylight Time", abbr: "HDT", offset: -9}, hem: "n"}, {name: "Gambier Time", abbr: null, aliases: ["gambier", "utc-09", "coordinated universal time-09"], ids: ["Pacific/Gambier"], std: {abbr: "GAMT", name: "Gambier Time", offset: -9}, dst: {}, long: "(UTC-09:00) Coordinated Universal Time-09", hem: "n"}, {name: "Pitcairn Time", abbr: null, aliases: ["pitcairn", "utc-08", "coordinated universal time-08"], ids: ["Pacific/Pitcairn"], std: {abbr: "PST", name: "Pitcairn Time", offset: -8}, dst: {}, long: "(UTC-08:00) Coordinated Universal Time-08", hem: "n"}, {name: "", dupe: true, ids: ["America/Hermosillo"], std: {name: "Mexican Pacific Standard Time", abbr: "HNPMX", offset: -7}, hem: "n"}, {name: "Northwest Mexico Time", abbr: "HNOMX", aliases: ["mexico northwest", "pacific standard time (mexico)", "baja california", "pacific mexico"], ids: ["America/Santa_Isabel"], std: {name: "Northwest Mexico Standard Time", abbr: "HNNOMX", offset: -6}, dst: {name: "Northwest Mexico Daylight Time", abbr: "HENOMX", offset: -5}, long: "(UTC-08:00) Baja California", hem: "n"}, {name: "Easter Island Time", abbr: null, aliases: ["easter", "easter island standard time", "easter island"], ids: ["Pacific/Easter"], std: {name: "Easter Island Standard Time", abbr: "EAST", offset: -6}, dst: {name: "Easter Island Summer Time", abbr: "EASST", offset: -5}, long: "(UTC-06:00) Easter Island", hem: "s"}, {name: "Ecuador Time", abbr: null, aliases: ["ecuador"], ids: ["America/Guayaquil"], std: {name: "Ecuador Time", abbr: "ECT", offset: -5}, dst: {}, hem: "n"}, {name: "Cuba Time", abbr: "HCU", aliases: ["cuba", "cuba standard time", "havana"], ids: ["America/Havana"], std: {name: "Cuba Standard Time", abbr: "HNCU", offset: -5}, dst: {name: "Cuba Daylight Time", abbr: "HECU", offset: -4}, long: "(UTC-05:00) Havana", hem: "n"}, {name: "Peru Time", abbr: null, aliases: ["peru"], ids: ["America/Lima"], std: {abbr: "PET", name: "Peru Standard Time", offset: -5}, dst: {}, hem: "s"}, {name: "Paraguay Time", abbr: null, aliases: ["paraguay", "paraguay standard time", "asuncion"], ids: ["America/Asuncion"], std: {abbr: "PYT", name: "Paraguay Standard Time", offset: -4}, dst: {name: "Paraguay Summer Time", offset: -3}, long: "(UTC-04:00) Asuncion", hem: "s"}, {name: "Venezuela Time", abbr: null, aliases: ["venezuela", "venezuelan", "venezuela standard time", "caracas"], ids: ["America/Caracas"], std: {name: "Venezuela Time", abbr: "VET", offset: -4}, dst: {}, long: "(UTC-04:00) Caracas", hem: "n"}, {name: "Guyana Time", abbr: null, aliases: ["guyana"], ids: ["America/Guyana"], std: {name: "Guyana Time", abbr: "GYT", offset: -4}, dst: {}, hem: "n"}, {name: "Bolivia Time", abbr: null, aliases: ["bolivia"], ids: ["America/La_Paz"], std: {name: "Bolivia Time", abbr: "BOT", offset: -4}, dst: {}, hem: "s"}, {name: "Newfoundland Time", abbr: "HTN", aliases: ["newfoundland", "newfoundland standard time"], ids: ["America/St_Johns"], std: {name: "Newfoundland Standard Time", abbr: "HNTN", offset: -3.5}, dst: {name: "Newfoundland Daylight Time", abbr: "HETN", offset: -2.5}, long: "(UTC-03:30) Newfoundland", hem: "n"}, {name: "French Guiana Time", abbr: null, aliases: ["french guiana"], ids: ["America/Cayenne"], std: {name: "French Guiana Time", abbr: "GFT", offset: -3}, dst: {}, hem: "n"}, {name: "West Greenland Time", abbr: "HOG", aliases: ["greenland western", "greenland standard time", "greenland"], ids: ["America/Godthab"], std: {name: "West Greenland Standard Time", abbr: "HNOG", offset: -3}, dst: {name: "West Greenland Summer Time", abbr: "HEOG", offset: -2}, long: "(UTC-03:00) Greenland", hem: "n"}, {name: "St. Pierre & Miquelon Time", abbr: "HPM", aliases: ["pierre miquelon", "saint pierre standard time", "saint pierre and miquelon", "saint pierre"], ids: ["America/Miquelon"], std: {name: "St. Pierre & Miquelon Standard Time", abbr: "HNPM", offset: -3}, dst: {name: "St. Pierre & Miquelon Daylight Time", abbr: "HEPM", offset: -2}, long: "(UTC-03:00) Saint Pierre and Miquelon", hem: "n"}, {name: "Uruguay Time", abbr: "UYT", aliases: ["uruguay", "uyst", "montevideo standard time", "montevideo"], ids: ["America/Montevideo"], std: {name: "Uruguay Standard Time", abbr: "UYT", offset: -3}, dst: {}, long: "(UTC-03:00) Montevideo", hem: "s"}, {name: "Suriname Time", abbr: null, aliases: ["suriname"], ids: ["America/Paramaribo"], std: {name: "Suriname Time", abbr: "SRT", offset: -3}, dst: {}, hem: "n"}, {name: "Chile Time", abbr: "CLT", aliases: ["chile"], ids: ["America/Santiago"], std: {name: "Chile Standard Time", abbr: "CLT", offset: -3}, dst: {name: "Chile Summer Time", abbr: "CLST", offset: -4}, hem: "s"}, {name: "Falkland Islands Time", abbr: "FKT", aliases: ["falkland"], ids: ["Atlantic/Stanley"], std: {abbr: "FKST", name: "Falkland Islands Summer Time", offset: -3}, dst: {}, hem: "s"}, {name: "Fernando de Noronha Time", abbr: null, aliases: ["noronha"], ids: ["America/Noronha"], std: {abbr: "FNT", name: "Fernando de Noronha Standard Time", offset: -2}, dst: {}, hem: "n"}, {name: "South Georgia Time", abbr: null, aliases: ["south georgia"], ids: ["Atlantic/South_Georgia"], std: {abbr: "GST", name: "South Georgia Time", offset: -2}, dst: {}, hem: "n"}, {name: "Azores Time", abbr: "AZOT", aliases: ["azores", "azores standard time"], ids: ["Atlantic/Azores"], std: {abbr: "AZOT", name: "Azores Standard Time", offset: -1}, dst: {name: "Azores Summer Time", abbr: "AZOST", offset: 0}, long: "(UTC-01:00) Azores", hem: "n"}, {name: "Cape Verde Time", abbr: null, aliases: ["cape verde", "cape verde standard time", "cabo verde"], ids: ["Atlantic/Cape_Verde"], std: {abbr: "CVT", name: "Cape Verde Standard Time", offset: -1}, dst: {}, long: "(UTC-01:00) Cabo Verde Is.", hem: "n"}];
-var fc2 = {"asia/dili": "+9", "pacific/palau": "+9", "australia/west": "+8", "asia/ulan_bator": "+8/+7", "asia/choibalsan": "+8", "asia/chongqing": "+8", "asia/chungking": "+8", "asia/harbin": "+8", "asia/irkutsk": "+8", "asia/macao": "+8", "asia/ujung_pandang": "+8", "antarctica/davis": "+7", "indian/christmas": "+7", "asia/ho_chi_minh": "+7", "asia/hovd": "+7", "asia/novosibirsk": "+7", "asia/tomsk": "+7", "antarctica/vostok": "+6", "asia/dacca": "+6", "asia/dhaka": "+6", "asia/kashgar": "+6", "asia/omsk": "+6", "asia/thimbu": "+6", "asia/thimphu": "+6", "asia/urumqi": "+6", "indian/cocos": "+6.5", "antarctica/mawson": "+5", "indian/kerguelen": "+5", "asia/ashkhabad": "+5", "asia/dushanbe": "+5", "asia/yekaterinburg": "+5", "asia/kathmandu": "+5.75", "indian/reunion": "+4", "indian/mahe": "+4", "atlantic/jan_mayen": "+2/+1", "atlantic/faroe": "+1/0", "pacific/kiritimati": "+14", "pacific/apia": "+13/+12", "pacific/tongatapu": "+13/+12", "pacific/enderbury": "+13", "pacific/fakaofo": "+13", "antarctica/south_pole": "+12/+11", "pacific/norfolk": "+11.5/+10.5", "australia/lhi": "+10.5/+9.5", "etc/greenwich": "0", "etc/utc": "0", "etc/universal": "0", "etc/zulu": "0", "america/atka": "-9/-10", "pacific/gambier": "-9", "pacific/marquesas": "-9.5", "pacific/pitcairn": "-8", "america/ensenada": "-7/-8", "america/santa_isabel": "-7/-8", "mexico/bajanorte": "-7/-8", "canada/yukon": "-7/-8", "canada/east-saskatchewan": "-6", "antarctica/rothera": "-3", "atlantic/stanley": "-3", "america/nuuk": "-3/-4", "america/cayenne": "-3", "america/paramaribo": "-3", "america/rosario": "-3", "america/godthab": "-2/-3", "america/miquelon": "-2/-3", "america/noronha": "-2", "atlantic/south_georgia": "-2", "atlantic/cape_verde": "-1", "pacific/niue": "-11", "pacific/samoa": "-11", "pacific/rarotonga": "-10", "pacific/tahiti": "-10"};
-var pc2 = function(e22) {
+var fc2 = [{name: "India Time", abbr: null, aliases: ["india", "indian", "india standard time", "chennai", "kolkata", "mumbai", "new delhi"], ids: ["Asia/Kolkata", "Asia/Calcutta", "Asia/Colombo"], std: {name: "India Standard Time", abbr: "IST", offset: 5.5}, dst: {}, long: "(UTC+05:30) Chennai, Kolkata, Mumbai, New Delhi", hem: "n"}, {name: "China Time", abbr: null, aliases: ["china", "china standard time", "beijing", "chongqing", "hong kong", "urumqi"], ids: ["Asia/Shanghai", "Asia/Macau", "Asia/Urumqi"], std: {abbr: "CST", name: "China Standard Time", offset: 8}, dst: {}, long: "(UTC+08:00) Beijing, Chongqing, Hong Kong, Urumqi", hem: "n"}, {name: "Central European Time", abbr: null, aliases: ["europe central", "romance standard time", "brussels", "copenhagen", "madrid", "paris", "romance"], ids: ["Europe/Paris", "Africa/Ceuta", "Arctic/Longyearbyen", "Europe/Amsterdam", "Europe/Andorra", "Europe/Belgrade", "Europe/Berlin", "Europe/Bratislava", "Europe/Brussels", "Europe/Budapest", "Europe/Busingen", "Europe/Copenhagen", "Europe/Gibraltar", "Europe/Ljubljana", "Europe/Luxembourg", "Europe/Madrid", "Europe/Malta", "Europe/Monaco", "Europe/Oslo", "Europe/Podgorica", "Europe/Prague", "Europe/Rome", "Europe/San_Marino", "Europe/Sarajevo", "Europe/Skopje", "Europe/Stockholm", "Europe/Tirane", "Europe/Vaduz", "Europe/Vatican", "Europe/Vienna", "Europe/Warsaw", "Europe/Zagreb", "Europe/Zurich"], std: {abbr: "CET", name: "Central European Standard Time", offset: 1}, dst: {abbr: "CEST", name: "Central European Summer Time", offset: 2}, long: "(UTC+01:00) Brussels, Copenhagen, Madrid, Paris", hem: "n"}, {name: "", dupe: true, ids: ["America/Puerto_Rico", "America/Montserrat", "America/Port_of_Spain", "America/Santo_Domingo", "America/St_Barthelemy", "America/St_Kitts", "America/St_Lucia", "America/St_Thomas", "America/St_Vincent", "America/Tortola", "America/Grenada", "America/Guadeloupe", "America/Kralendijk", "America/Lower_Princes", "America/Marigot", "America/Martinique", "America/Anguilla", "America/Antigua", "America/Aruba", "America/Barbados", "America/Blanc-Sablon", "America/Curacao", "America/Dominica"], std: {name: "Atlantic Standard Time", abbr: "AST", offset: -4}, dst: {}, hem: "n"}, {name: "Greenwich Mean Time", abbr: null, aliases: ["gmt", "zulu", "utc", "coordinated universal time"], ids: ["Etc/GMT", "Africa/Abidjan", "Africa/Accra", "Africa/Bamako", "Africa/Banjul", "Africa/Bissau", "Africa/Conakry", "Africa/Dakar", "Africa/Freetown", "Africa/Lome", "Africa/Monrovia", "Africa/Nouakchott", "Africa/Ouagadougou", "Africa/Sao_Tome", "America/Danmarkshavn", "Atlantic/Reykjavik", "Atlantic/St_Helena", "Etc/UTC"], std: {name: "Greenwich Mean Time", abbr: "GMT", offset: 0}, dst: {}, long: "(UTC) Coordinated Universal Time", hem: "n"}, {name: "Eastern European Time", abbr: null, aliases: ["europe eastern"], ids: ["Asia/Beirut", "Asia/Famagusta", "Asia/Nicosia", "Europe/Athens", "Europe/Bucharest", "Europe/Chisinau", "Europe/Helsinki", "Europe/Kiev", "Europe/Mariehamn", "Europe/Riga", "Europe/Sofia", "Europe/Tallinn", "Europe/Uzhgorod", "Europe/Vilnius", "Europe/Zaporozhye"], std: {abbr: "EET", name: "Eastern European Standard Time", offset: 2}, dst: {abbr: "EEST", name: "Eastern European Summer Time", offset: 3}, hem: "n"}, {name: "", dupe: true, ids: ["America/Indiana", "America/North_Dakota", "America/Belize", "America/Costa_Rica", "America/El_Salvador", "America/Guatemala", "America/Indiana/Knox", "America/Indiana/Tell_City", "America/Managua", "America/North_Dakota/Beulah", "America/North_Dakota/Center", "America/North_Dakota/New_Salem", "America/Regina", "America/Swift_Current", "America/Tegucigalpa"], std: {name: "Central Standard Time", abbr: "CST", offset: -6}, hem: "n"}, {name: "Eastern Time", abbr: "ET", aliases: ["america eastern", "eastern standard time", "eastern"], ids: ["America/New_York", "America/Detroit", "America/Grand_Turk", "America/Indianapolis", "America/Iqaluit", "America/Louisville", "America/Nassau", "America/Nipigon", "America/Pangnirtung", "America/Port-au-Prince", "America/Thunder_Bay", "America/Toronto", "America/Montreal", "America/Kentucky"], std: {name: "Eastern Standard Time", abbr: "EST", offset: -5}, dst: {name: "Eastern Daylight Time", abbr: "EDT", offset: -4}, long: "(UTC-05:00) Eastern Time (US & Canada)", hem: "n"}, {name: "Argentina Time", abbr: "ART", aliases: ["argentina", "arst", "argentina standard time", "buenos aires"], ids: ["America/Buenos_Aires", "America/Argentina/La_Rioja", "America/Argentina/Rio_Gallegos", "America/Argentina/Salta", "America/Argentina/San_Juan", "America/Argentina/San_Luis", "America/Argentina/Tucuman", "America/Argentina/Ushuaia", "America/Catamarca", "America/Cordoba", "America/Jujuy", "America/Mendoza", "Antarctica/Rothera", "America/Argentina"], std: {name: "Argentina Standard Time", abbr: "ART", offset: -3}, dst: {}, long: "(UTC-03:00) City of Buenos Aires", hem: "s"}, {name: "", dupe: true, ids: ["America/Coral_Harbour", "America/Indiana/Marengo", "America/Indiana/Petersburg", "America/Indiana/Vevay", "America/Indiana/Vincennes", "America/Indiana/Winamac", "America/Kentucky/Monticello", "America/Cancun", "America/Cayman", "America/Jamaica", "America/Panama"], std: {name: "Eastern Standard Time", abbr: "EST", offset: -5}, hem: "n"}, {name: "East Africa Time", abbr: null, aliases: ["africa eastern", "e. africa standard time", "nairobi", "east africa", "eastern africa"], ids: ["Africa/Nairobi", "Africa/Addis_Ababa", "Africa/Asmera", "Africa/Dar_es_Salaam", "Africa/Djibouti", "Africa/Kampala", "Africa/Mogadishu", "Indian/Comoro", "Indian/Mayotte"], std: {name: "East Africa Time", abbr: "EAT", offset: 3}, dst: {}, long: "(UTC+03:00) Nairobi", hem: "n"}, {name: "West Africa Time", abbr: "WAT", aliases: ["africa western", "wast", "western africa", "w. central africa standard time", "west central africa", "w. central africa"], ids: ["Africa/Lagos", "Africa/Bangui", "Africa/Douala", "Africa/Libreville", "Africa/Malabo", "Africa/Ndjamena", "Africa/Niamey", "Africa/Porto-Novo"], std: {name: "West Africa Standard Time", abbr: "WAT", offset: 1}, long: "(UTC+01:00) West Central Africa", hem: "n"}, {name: "Moscow Time", abbr: null, aliases: ["moscow", "russian standard time", "st. petersburg", "russian", "volgograd time"], ids: ["Europe/Moscow", "Europe/Astrakhan", "Europe/Minsk", "Europe/Simferopol", "Europe/Ulyanovsk", "Europe/Kirov", "Europe/Volgograd", "Asia/Volgograd"], std: {abbr: "MSK", name: "Moscow Standard Time", offset: 3}, dst: {}, long: "(UTC+03:00) Moscow, St. Petersburg", hem: "n"}, {name: "Brasilia Time", abbr: null, aliases: ["brasilia", "e. south america standard time", "east south america"], ids: ["America/Sao_Paulo", "America/Araguaina", "America/Bahia", "America/Belem", "America/Fortaleza", "America/Maceio", "America/Recife", "America/Santarem"], std: {abbr: "BRT", name: "Brasilia Standard Time", offset: -3}, dst: {}, long: "(UTC-03:00) Brasilia", hem: "s"}, {name: "Mountain Time", abbr: "MT", aliases: ["america mountain", "mountain standard time", "mountain"], ids: ["America/Boise", "America/Cambridge_Bay", "America/Denver", "America/Edmonton", "America/Inuvik", "America/Ojinaga", "America/Yellowknife"], std: {name: "Mountain Standard Time", abbr: "MST", offset: -7}, dst: {name: "Mountain Daylight Time", abbr: "MDT", offset: -6}, long: "(UTC-07:00) Mountain Time (US & Canada)", hem: "n"}, {name: "Central Time", abbr: "CT", aliases: ["america central", "central standard time", "central"], ids: ["America/Chicago", "America/Matamoros", "America/Menominee", "America/Rainy_River", "America/Rankin_Inlet", "America/Resolute", "America/Winnipeg"], std: {name: "Central Standard Time", abbr: "CST", offset: -6}, dst: {name: "Central Daylight Time", abbr: "CDT", offset: -5}, long: "(UTC-06:00) Central Time (US & Canada)", hem: "n"}, {name: "Central Africa Time", abbr: null, aliases: ["africa central", "namibia standard time", "windhoek", "namibia"], ids: ["Africa/Windhoek", "Africa/Gaborone", "Africa/Harare", "Africa/Lubumbashi", "Africa/Lusaka", "Africa/Maputo"], std: {name: "Central Africa Time", abbr: "CAT", offset: 2}, dst: {}, long: "(UTC+02:00) Windhoek", hem: "s"}, {name: "Arabian Time", abbr: null, aliases: ["arabian", "arab standard time", "kuwait", "riyadh", "arab", "arabia", "arabic"], ids: ["Asia/Baghdad", "Asia/Aden", "Asia/Bahrain", "Asia/Kuwait", "Asia/Qatar", "Asia/Riyadh"], std: {abbr: "AST", name: "Arabian Standard Time", offset: 3}, dst: {}, long: "(UTC+03:00) Kuwait, Riyadh", hem: "n"}, {name: "Alaska Time", abbr: "AKT", aliases: ["alaska", "alaskan standard time", "alaskan"], ids: ["America/Anchorage", "America/Juneau", "America/Metlakatla", "America/Nome", "America/Sitka", "America/Yakutat"], std: {name: "Alaska Standard Time", abbr: "AKST", offset: -9}, dst: {name: "Alaska Daylight Time", abbr: "AKDT", offset: -8}, long: "(UTC-09:00) Alaska", hem: "n"}, {name: "Atlantic Time", abbr: "AT", aliases: ["atlantic", "atlantic standard time"], ids: ["America/Halifax", "America/Glace_Bay", "America/Goose_Bay", "America/Moncton", "America/Thule", "Atlantic/Bermuda"], std: {name: "Atlantic Standard Time", abbr: "AST", offset: -4}, dst: {name: "Atlantic Daylight Time", abbr: "ADT", offset: -3}, long: "(UTC-04:00) Atlantic Time (Canada)", hem: "n"}, {name: "British Time", abbr: null, aliases: ["gmt", "gmt standard time", "dublin", "edinburgh", "lisbon", "london"], ids: ["Europe/London", "Europe/Dublin", "Europe/Guernsey", "Europe/Isle_of_Man", "Europe/Jersey"], std: {name: "Greenwich Mean Time", abbr: "GMT", offset: 0}, dst: {name: "British Summer Time", abbr: "BST", offset: 1}, long: "(UTC+00:00) Dublin, Edinburgh, Lisbon, London", hem: "n"}, {name: "Central Africa Time", dupe: true, ids: ["Africa/Blantyre", "Africa/Bujumbura", "Africa/Juba", "Africa/Khartoum", "Africa/Kigali"], std: {name: "Central Africa Time", abbr: "CAT", offset: 2}, dst: {}, hem: "n"}, {name: "West Kazakhstan Time", abbr: null, aliases: ["kazakhstan western", "west asia standard time", "ashgabat", "tashkent", "west asia", "alma ata"], ids: ["Asia/Aqtau", "Asia/Aqtobe", "Asia/Atyrau", "Asia/Oral", "Asia/Qyzylorda"], std: {abbr: "ALMT", name: "Alma-Ata Time", offset: 5}, dst: {}, long: "(UTC+05:00) Ashgabat, Tashkent", hem: "n"}, {name: "Eastern Australia Time", abbr: "AET", aliases: ["australia eastern", "aus eastern standard time", "canberra", "melbourne", "sydney", "aus eastern", "aus east"], ids: ["Australia/Sydney", "Antarctica/Macquarie", "Australia/Currie", "Australia/Hobart", "Australia/Melbourne"], std: {name: "Australian Eastern Standard Time", abbr: "AEST", offset: 10}, dst: {name: "Australian Eastern Daylight Time", abbr: "AEDT", offset: 11}, long: "(UTC+10:00) Canberra, Melbourne, Sydney", hem: "s"}, {name: "Western European Time", abbr: null, aliases: ["europe western"], ids: ["Europe/Lisbon", "Atlantic/Canary", "Atlantic/Faeroe", "Atlantic/Madeira"], std: {abbr: "WET", name: "Western European Standard Time", offset: 0}, dst: {abbr: "WEST", name: "Western European Summer Time", offset: 1}, hem: "n"}, {name: "Indochina Time", abbr: null, aliases: ["indochina", "se asia standard time", "bangkok", "hanoi", "jakarta", "se asia", "south east asia"], ids: ["Asia/Bangkok", "Asia/Phnom_Penh", "Asia/Saigon", "Asia/Vientiane"], std: {abbr: "ICT", name: "Indochina Time", offset: 7}, dst: {}, long: "(UTC+07:00) Bangkok, Hanoi, Jakarta", hem: "n"}, {name: "", dupe: true, abbr: "MT", std: {name: "Mountain Standard Time", abbr: "MST", offset: -7}, ids: ["America/Phoenix", "America/Creston", "America/Dawson_Creek", "America/Fort_Nelson"], hem: "n"}, {name: "Central Mexico Time", long: "(UTC-06:00) Guadalajara, Mexico City, Monterrey", aliases: ["guadalajara", "mexico city", "monterrey", "central mexico", "central mexican"], ids: ["America/Mexico_City", "America/Merida", "America/Monterrey", "America/Bahia_Banderas"], std: {name: "Central Standard Time", abbr: "CST", offset: -6}, dst: {name: "Central Daylight Time", abbr: "CDT", offset: -5}, hem: "n"}, {name: "West Africa Time", dupe: true, ids: ["Africa/Luanda", "Africa/Kinshasa", "Africa/Brazzaville"], std: {name: "West Africa Standard Time", abbr: "WAT", offset: 1}, hem: "s"}, {name: "", dupe: true, ids: ["Africa/Cairo", "Africa/Tripoli", "Europe/Kaliningrad"], std: {abbr: "EET", name: "Eastern European Standard Time", offset: 2}, hem: "n"}, {name: "South Africa Time", abbr: null, aliases: ["africa southern", "south africa standard time", "harare", "pretoria", "south africa"], ids: ["Africa/Johannesburg", "Africa/Maseru", "Africa/Mbabane"], std: {name: "South Africa Standard Time", abbr: "SAST", offset: 2}, dst: {}, long: "(UTC+02:00) Harare, Pretoria", hem: "s"}, {name: "Krasnoyarsk Time", abbr: null, aliases: ["krasnoyarsk", "north asia standard time", "north asia"], ids: ["Asia/Krasnoyarsk", "Asia/Novokuznetsk", "Asia/Barnaul"], std: {abbr: "KRAT", name: "Krasnoyarsk Standard Time", offset: 7}, dst: {}, long: "(UTC+07:00) Krasnoyarsk", hem: "n"}, {name: "Yakutsk Time", abbr: null, aliases: ["yakutsk", "yakutsk standard time"], ids: ["Asia/Yakutsk", "Asia/Chita", "Asia/Khandyga"], std: {abbr: "YAKT", name: "Yakutsk Standard Time", offset: 9}, dst: {}, long: "(UTC+09:00) Yakutsk", hem: "n"}, {name: "Pacific Time", abbr: "PT", aliases: ["america pacific", "pacific standard time", "pacific"], ids: ["America/Los_Angeles", "America/Tijuana", "America/Vancouver"], std: {name: "Pacific Standard Time", abbr: "PST", offset: -8}, dst: {name: "Pacific Daylight Time", abbr: "PDT", offset: -7}, long: "(UTC-08:00) Pacific Time (US & Canada)", hem: "n"}, {name: "Amazon Time", abbr: null, aliases: ["amazon", "central brazilian standard time", "cuiaba", "central brazilian", "central brazil"], ids: ["America/Boa_Vista", "America/Manaus", "America/Porto_Velho"], std: {abbr: "AMT", name: "Amazon Standard Time", offset: -4}, dst: {}, long: "(UTC-04:00) Cuiaba", hem: "n"}, {name: "Morocco Standard Time", offset: 1, long: "(UTC+00:00) Casablanca", aliases: ["casablanca", "morocco"], ids: ["Africa/Casablanca", "Africa/El_Aaiun"], std: {abbr: "WET", name: "Western European Standard Time", offset: 1}, dst: {abbr: "WEST", name: "Western European Summer Time", offset: 0}, hem: "n"}, {name: "", dupe: true, ids: ["Africa/Algiers", "Africa/Tunis"], std: {abbr: "CET", name: "Central European Standard Time", offset: 1}, dst: {abbr: "CEST", name: "Central European Summer Time", offset: 2}, hem: "n"}, {name: "", dupe: true, ids: ["Asia/Gaza", "Asia/Hebron"], std: {abbr: "EET", name: "Eastern European Standard Time", offset: 2}, hem: "n"}, {name: "", dupe: true, ids: ["Asia/Damascus", "Asia/Amman"], std: {abbr: "EET", name: "Eastern European Standard Time", offset: 2}, hem: "n"}, {name: "Gulf Time", abbr: null, aliases: ["gulf", "arabian standard time", "abu dhabi", "muscat", "arabian"], ids: ["Asia/Dubai", "Asia/Muscat"], std: {name: "Gulf Standard Time", abbr: "GST", offset: 4}, dst: {}, long: "(UTC+04:00) Abu Dhabi, Muscat", hem: "n"}, {name: "Samara Time", abbr: null, aliases: ["samara", "russia time zone 3", "izhevsk"], ids: ["Europe/Samara", "Europe/Saratov"], std: {abbr: "SAMT", name: "Samara Standard Time", offset: 4}, dst: {}, long: "(UTC+04:00) Izhevsk, Samara", hem: "n"}, {name: "Uzbekistan Time", abbr: null, aliases: ["uzbekistan"], ids: ["Asia/Samarkand", "Asia/Tashkent"], std: {abbr: "UZT", name: "Uzbekistan Standard Time", offset: 5}, dst: {}, hem: "n"}, {name: "East Kazakhstan Time", abbr: null, aliases: ["kazakhstan eastern", "central asia standard time", "astana", "central asia"], ids: ["Asia/Almaty", "Asia/Qostanay"], std: {abbr: "ALMT", name: "East Kazakhstan Time", offset: 6}, dst: {}, long: "(UTC+06:00) Astana", hem: "n"}, {name: "Omsk Time", abbr: null, aliases: ["omsk", "omsk standard time"], ids: ["Asia/Omsk", "Asia/Tomsk"], std: {abbr: "OMST", name: "Omsk Standard Time", offset: 6}, dst: {}, long: "(UTC+06:00) Omsk", hem: "n"}, {name: "Western Indonesia Time", abbr: null, aliases: ["indonesia western"], ids: ["Asia/Jakarta", "Asia/Pontianak"], std: {name: "Western Indonesia Time", abbr: "WIB", offset: 7}, dst: {}, hem: "s"}, {name: "Ulaanbaatar Time", abbr: null, aliases: ["mongolia", "ulaanbaatar standard time", "ulaanbaatar"], ids: ["Asia/Ulaanbaatar", "Asia/Choibalsan"], std: {abbr: "ULAT", name: "Ulaanbaatar Standard Time", offset: 8}, dst: {}, long: "(UTC+08:00) Ulaanbaatar", hem: "n"}, {name: "Malaysia Time", abbr: null, aliases: ["malaysia"], ids: ["Asia/Kuala_Lumpur", "Asia/Kuching"], std: {name: "Malaysia Time", abbr: "MYT", offset: 8}, dst: {}, hem: "s"}, {name: "Korean Time", abbr: null, aliases: ["korea", "korea standard time", "seoul"], ids: ["Asia/Seoul", "Asia/Pyongyang"], std: {abbr: "KST", name: "Korean Standard Time", offset: 9}, dst: {}, long: "(UTC+09:00) Seoul", hem: "n"}, {name: "Central Australia Time", abbr: "ACT", aliases: ["australia central", "cen. australia standard time", "adelaide", "central australia"], ids: ["Australia/Adelaide", "Australia/Broken_Hill"], std: {name: "Australian Central Standard Time", abbr: "ACST", offset: 9.5}, dst: {name: "Australian Central Daylight Time", abbr: "ACDT", offset: 10.5}, long: "(UTC+09:30) Adelaide", hem: "s"}, {name: "Brisbane Time", dupe: true, ids: ["Australia/Brisbane", "Australia/Lindeman"], std: {name: "Australian Eastern Standard Time", abbr: "AEST", offset: 10}, hem: "s"}, {name: "Vladivostok Time", abbr: null, aliases: ["vladivostok", "vladivostok standard time"], ids: ["Asia/Vladivostok", "Asia/Ust-Nera"], std: {abbr: "VLAT", name: "Vladivostok Standard Time", offset: 10}, dst: {}, long: "(UTC+10:00) Vladivostok", hem: "n"}, {name: "Chamorro Time", abbr: null, aliases: ["chamorro", "west pacific standard time", "guam", "port moresby", "west pacific", "western pacific"], ids: ["Pacific/Guam", "Pacific/Saipan"], std: {name: "Chamorro Standard Time", abbr: "ChST", offset: 10}, dst: {}, long: "(UTC+10:00) Guam, Port Moresby", hem: "n"}, {name: "Papua New Guinea Time", abbr: null, aliases: ["papua new guinea", "guinea", "guinean"], ids: ["Pacific/Bougainville", "Pacific/Port_Moresby"], std: {abbr: "PGT", name: "Papua New Guinea Time", offset: 11}, dst: {}, hem: "s"}, {name: "New Zealand Time", abbr: "NZT", aliases: ["new zealand", "new zealand standard time", "auckland", "wellington"], ids: ["Pacific/Auckland", "Antarctica/McMurdo"], std: {name: "New Zealand Standard Time", abbr: "NZST", offset: 12}, dst: {name: "New Zealand Daylight Time", abbr: "NZDT", offset: 13}, long: "(UTC+12:00) Auckland, Wellington", hem: "s"}, {name: "Marshall Islands Time", abbr: null, aliases: ["marshall islands"], ids: ["Pacific/Kwajalein", "Pacific/Majuro"], std: {abbr: "MHT", name: "Marshall Islands Time", offset: 12}, dst: {}, hem: "n"}, {name: "Samoa Time", abbr: "SST", aliases: ["samoa", "samoa standard time"], ids: ["Pacific/Midway", "Pacific/Pago_Pago"], std: {abbr: "SST", name: "Samoa Standard Time", offset: -11}, dst: {}, long: "(UTC+13:00) Samoa", hem: "n"}, {name: "Hawaii-Aleutian Time", abbr: "HAT", aliases: ["hawaii aleutian", "aleutian standard time", "aleutian"], ids: ["Pacific/Honolulu", "Pacific/Johnston"], std: {name: "Hawaii-Aleutian Standard Time", abbr: "HAST", offset: -9}, dst: {name: "Hawaii-Aleutian Daylight Time", abbr: "HADT", offset: -8}, long: "(UTC-09:00) Aleutian Islands", hem: "n"}, {name: "", dupe: true, std: {name: "Mountain Standard Time", abbr: "MST", offset: -7}, ids: ["America/Dawson", "America/Whitehorse"], hem: "n"}, {name: "Mexican Pacific Time", abbr: "HPMX", aliases: ["mexico pacific", "mountain standard time (mexico)", "chihuahua", "la paz", "mazatlan", "mountain mexico"], ids: ["America/Chihuahua", "America/Mazatlan"], std: {name: "Mexican Pacific Standard Time", abbr: "HNPMX", offset: -7}, dst: {name: "Mexican Pacific Daylight Time", abbr: "HEPMX", offset: -6}, long: "(UTC-07:00) Chihuahua, La Paz, Mazatlan", hem: "n"}, {name: "Colombia Time", abbr: "COT", aliases: ["colombia", "cost"], ids: ["America/Bogota", "Pacific/Galapagos"], std: {name: "Colombia Standard Time", abbr: "COT", offset: -5}, dst: {}, hem: "n"}, {name: "Acre Time", abbr: null, aliases: ["acre"], ids: ["America/Eirunepe", "America/Rio_Branco"], std: {abbr: "ACT", name: "Acre Standard Time", offset: -5}, dst: {}, hem: "n"}, {name: "", dupe: true, ids: ["America/Campo_Grande", "America/Cuiaba"], std: {abbr: "AMT", name: "Amazon Standard Time", offset: -4}, hem: "s"}, {name: "", dupe: true, ids: ["Antarctica/Palmer", "America/Punta_Arenas"], std: {name: "Chile Standard Time", abbr: "CLT", offset: -3}, hem: "s"}, {name: "Troll Time", dupe: true, abbr: null, aliases: ["troll research station"], ids: ["Antarctica/Troll"], std: {name: "Greenwich Mean Time", abbr: "GMT", offset: 0}, dst: {}, hem: "s"}, {name: "East Greenland Time", abbr: "HEG", aliases: ["greenland eastern"], ids: ["America/Scoresbysund"], std: {name: "East Greenland Standard Time", abbr: "HNEG", offset: 0}, dst: {name: "East Greenland Summer Time", abbr: "HEEG", offset: 1}, hem: "n"}, {name: "Israel Time", abbr: null, aliases: ["israel", "israel standard time", "jerusalem"], ids: ["Asia/Jerusalem"], std: {abbr: "IST", name: "Israel Standard Time", offset: 2}, dst: {name: "Israel Daylight Time", offset: 3}, long: "(UTC+02:00) Jerusalem", hem: "n"}, {name: "East Africa Time", dupe: true, ids: ["Indian/Antananarivo"], std: {name: "East Africa Time", abbr: "EAT", offset: 3}, dst: {}, hem: "s"}, {name: "Syowa Time", abbr: null, aliases: ["syowa"], ids: ["Antarctica/Syowa"], std: {abbr: "SYOT", name: "Syowa Time", offset: 3}, dst: {}, hem: "s"}, {name: "Turkey Time", abbr: "TRT", aliases: ["turkey", "turkey standard time", "istanbul"], ids: ["Europe/Istanbul"], std: {name: "Turkey Time", abbr: "TRT", offset: 3}, dst: {}, long: "(UTC+03:00) Istanbul", hem: "n"}, {name: "Iran Time", abbr: null, aliases: ["iran", "iran standard time", "tehran"], ids: ["Asia/Tehran"], std: {abbr: "IRST", name: "Iran Standard Time", offset: 3.5}, dst: {abbr: "IRDT", name: "Iran Daylight Time", offset: 4.5}, long: "(UTC+03:30) Tehran", hem: "n"}, {name: "Azerbaijan Time", abbr: null, aliases: ["azerbaijan", "azerbaijan standard time", "baku"], ids: ["Asia/Baku"], std: {abbr: "AZT", name: "Azerbaijan Standard Time", offset: 4}, dst: {}, long: "(UTC+04:00) Baku", hem: "n"}, {name: "Georgia Time", abbr: "GET", aliases: ["georgia", "georgian standard time", "tbilisi", "georgian"], ids: ["Asia/Tbilisi"], std: {abbr: "GET", name: "Georgia Standard Time", offset: 4}, dst: {}, long: "(UTC+04:00) Tbilisi", hem: "n"}, {name: "Armenia Time", abbr: "AMT", aliases: ["armenia", "caucasus standard time", "yerevan", "caucasus"], ids: ["Asia/Yerevan"], std: {abbr: "AMT", name: "Armenia Standard Time", offset: 4}, dst: {}, long: "(UTC+04:00) Yerevan", hem: "n"}, {name: "Seychelles Time", abbr: null, aliases: ["seychelles"], ids: ["Indian/Mahe"], std: {abbr: "SCT", name: "Seychelles Time", offset: 4}, dst: {}, hem: "n"}, {name: "Mauritius Time", abbr: null, aliases: ["mauritius", "mauritius standard time", "port louis"], ids: ["Indian/Mauritius"], std: {abbr: "MUT", name: "Mauritius Standard Time", offset: 4}, dst: {}, long: "(UTC+04:00) Port Louis", hem: "n"}, {name: "Réunion Time", abbr: null, aliases: ["reunion"], ids: ["Indian/Reunion"], std: {abbr: "RET", name: "Réunion Time", offset: 4}, dst: {}, hem: "s"}, {name: "Afghanistan Time", abbr: null, aliases: ["afghanistan", "afghanistan standard time", "kabul"], ids: ["Asia/Kabul"], std: {abbr: "AFT", name: "Afghanistan Time", offset: 4.5}, dst: {}, long: "(UTC+04:30) Kabul", hem: "n"}, {name: "Mawson Time", abbr: null, aliases: ["mawson"], ids: ["Antarctica/Mawson"], std: {abbr: "MAWT", name: "Mawson Time", offset: 5}, dst: {}, hem: "s"}, {name: "Turkmenistan Time", abbr: "TMT", aliases: ["turkmenistan", "tmst"], ids: ["Asia/Ashgabat"], std: {name: "Turkmenistan Standard Time", abbr: "TMT", offset: 5}, dst: {}, hem: "n"}, {name: "Tajikistan Time", abbr: null, aliases: ["tajikistan"], ids: ["Asia/Dushanbe"], std: {abbr: "TJT", name: "Tajikistan Time", offset: 5}, dst: {}, hem: "n"}, {name: "Pakistan Time", abbr: null, aliases: ["pakistan", "pakistan standard time", "islamabad", "karachi"], ids: ["Asia/Karachi"], std: {abbr: "PKT", name: "Pakistan Standard Time", offset: 5}, dst: {}, long: "(UTC+05:00) Islamabad, Karachi", hem: "n"}, {name: "Yekaterinburg Time", abbr: "YEKT", aliases: ["yekaterinburg", "ekaterinburg standard time", "ekaterinburg"], ids: ["Asia/Yekaterinburg"], std: {abbr: "YEKT", name: "Yekaterinburg Standard Time", offset: 5}, dst: {}, long: "(UTC+05:00) Ekaterinburg", hem: "n"}, {name: "French Southern & Antarctic Time", abbr: null, aliases: ["french southern"], ids: ["Indian/Kerguelen"], std: {abbr: "TFT", name: "French Southern & Antarctic Time", offset: 5}, dst: {}, hem: "s"}, {name: "Maldives Time", abbr: null, aliases: ["maldives"], ids: ["Indian/Maldives"], std: {abbr: "MVT", name: "Maldives Time", offset: 5}, dst: {}, hem: "n"}, {name: "Nepal Time", abbr: null, aliases: ["nepal", "nepal standard time", "kathmandu"], ids: ["Asia/Katmandu"], std: {abbr: "NPT", name: "Nepal Time", offset: 5.75}, dst: {}, long: "(UTC+05:45) Kathmandu", hem: "n"}, {name: "Vostok Time", abbr: null, aliases: ["vostok"], ids: ["Antarctica/Vostok"], std: {abbr: "MSK+4", name: "Vostok Time", offset: 6}, dst: {}, hem: "s"}, {name: "Kyrgyzstan Time", abbr: null, aliases: ["kyrgystan"], ids: ["Asia/Bishkek"], std: {abbr: "KGT", name: "Kyrgyzstan Time", offset: 6}, dst: {}, hem: "n"}, {name: "Bangladesh Time", abbr: "BST", aliases: ["bangladesh", "bangladesh standard time", "dhaka"], ids: ["Asia/Dhaka"], std: {abbr: "BST", name: "Bangladesh Standard Time", offset: 6}, dst: {}, long: "(UTC+06:00) Dhaka", hem: "n"}, {name: "Bhutan Time", abbr: null, aliases: ["bhutan"], ids: ["Asia/Thimphu"], std: {name: "Bhutan Time", abbr: "BT", offset: 6}, dst: {}, hem: "n"}, {name: "Indian Ocean Time", abbr: null, aliases: ["indian ocean", "indian chagos"], ids: ["Indian/Chagos"], std: {abbr: "IOT", name: "Indian Ocean Time", offset: 6}, dst: {}, hem: "n"}, {name: "Myanmar Time", abbr: null, aliases: ["myanmar", "myanmar standard time"], ids: ["Asia/Rangoon"], std: {abbr: "MMT", name: "Myanmar Time", offset: 6.5}, dst: {}, long: "(UTC+06:30) Yangon (Rangoon)", hem: "n"}, {name: "Cocos Islands Time", abbr: null, aliases: ["cocos"], ids: ["Indian/Cocos"], std: {abbr: "CCT", name: "Cocos Islands Time", offset: 6.5}, dst: {}, hem: "n"}, {name: "Davis Time", abbr: null, aliases: ["davis"], ids: ["Antarctica/Davis"], std: {abbr: "DAVT", name: "Davis Time", offset: 7}, dst: {}, hem: "s"}, {name: "Hovd Time", abbr: null, aliases: ["hovd", "w. mongolia standard time", "west mongolia", "western mongolia"], ids: ["Asia/Hovd"], std: {abbr: "HOVT", name: "Hovd Standard Time", offset: 7}, dst: {}, long: "(UTC+07:00) Hovd", hem: "n"}, {name: "Novosibirsk Time", abbr: null, aliases: ["novosibirsk", "n. central asia standard time", "north central asia"], ids: ["Asia/Novosibirsk"], std: {abbr: "NOVT", name: "Novosibirsk Standard Time", offset: 7}, dst: {}, long: "(UTC+07:00) Novosibirsk", hem: "n"}, {name: "Christmas Island Time", abbr: null, aliases: ["christmas"], ids: ["Indian/Christmas"], std: {abbr: "CXT", name: "Christmas Island Time", offset: 7}, dst: {}, hem: "s"}, {name: "Brunei Darussalam Time", abbr: null, aliases: ["brunei"], ids: ["Asia/Brunei"], std: {abbr: "BNT", name: "Brunei Darussalam Time", offset: 8}, dst: {}, hem: "n"}, {name: "Hong Kong Time", abbr: "HKT", aliases: ["hong kong", "hkst"], ids: ["Asia/Hong_Kong"], std: {name: "Hong Kong Standard Time", abbr: "HKT", offset: 8}, dst: {}, hem: "n"}, {name: "Irkutsk Time", abbr: null, aliases: ["irkutsk", "north asia east standard time", "north asia east"], ids: ["Asia/Irkutsk"], std: {abbr: "IRKT", name: "Irkutsk Standard Time", offset: 8}, dst: {}, long: "(UTC+08:00) Irkutsk", hem: "n"}, {name: "Central Indonesia Time", abbr: null, aliases: ["indonesia central"], ids: ["Asia/Makassar"], std: {name: "Central Indonesia Time", abbr: "WITA", offset: 8}, dst: {}, hem: "s"}, {name: "Philippine Time", abbr: null, aliases: ["philippines"], ids: ["Asia/Manila"], std: {abbr: "PHST", name: "Philippine Standard Time", offset: 8}, dst: {}, hem: "n"}, {name: "Singapore Time", abbr: null, aliases: ["singapore", "singapore standard time", "kuala lumpur"], ids: ["Asia/Singapore"], std: {name: "Singapore Standard Time", abbr: "SGT", offset: 8}, dst: {}, long: "(UTC+08:00) Kuala Lumpur, Singapore", hem: "s"}, {name: "Taipei Time", abbr: null, aliases: ["taipei", "taipei standard time"], ids: ["Asia/Taipei"], std: {abbr: "CST", name: "Taipei Standard Time", offset: 8}, dst: {}, long: "(UTC+08:00) Taipei", hem: "n"}, {name: "Western Australia Time", abbr: "AWT", aliases: ["australia western", "awdt", "w. australia standard time", "perth", "western australia", "west australia"], ids: ["Australia/Perth"], std: {name: "Australian Western Standard Time", abbr: "AWST", offset: 8}, dst: {}, long: "(UTC+08:00) Perth", hem: "s"}, {name: "Australian Central Western Time", abbr: "ACWT", aliases: ["australia centralwestern", "acwdt", "aus central w. standard time", "eucla", "aus central west"], ids: ["Australia/Eucla"], std: {name: "Australian Central Western Standard Time", abbr: "ACWST", offset: 8.75}, dst: {}, long: "(UTC+08:45) Eucla", hem: "s"}, {name: "East Timor Time", abbr: "TLT", aliases: ["east timor"], ids: ["Asia/Dili"], std: {abbr: "TLT", name: "East Timor Time", offset: 9}, dst: {}, hem: "s"}, {name: "Eastern Indonesia Time", abbr: null, aliases: ["indonesia eastern"], ids: ["Asia/Jayapura"], std: {name: "Eastern Indonesia Time", abbr: "WIT", offset: 9}, dst: {}, hem: "s"}, {name: "Japan Time", abbr: null, aliases: ["japan", "jdt", "tokyo standard time", "osaka", "sapporo", "tokyo"], ids: ["Asia/Tokyo"], std: {name: "Japan Standard Time", abbr: "JST", offset: 9}, dst: {}, long: "(UTC+09:00) Osaka, Sapporo, Tokyo", hem: "n"}, {name: "Palau Time", abbr: null, aliases: ["palau"], ids: ["Pacific/Palau"], std: {abbr: "PWT", name: "Palau Time", offset: 9}, dst: {}, hem: "n"}, {name: "", dupe: true, ids: ["Australia/Darwin"], std: {name: "Australian Central Standard Time", abbr: "ACST", offset: 9.5}, hem: "s"}, {name: "Dumont-d’Urville Time", abbr: null, aliases: ["dumontdurville"], ids: ["Antarctica/DumontDUrville"], std: {abbr: "CLST", name: "Dumont-d’Urville Time", offset: 10}, dst: {}, hem: "s"}, {name: "Chuuk Time", abbr: null, aliases: ["truk"], ids: ["Pacific/Truk"], std: {abbr: "CHUT", name: "Chuuk Time", offset: 10}, dst: {}, hem: "n"}, {name: "Lord Howe Time", abbr: "LHT", aliases: ["lord howe", "lord howe standard time"], ids: ["Australia/Lord_Howe"], std: {name: "Lord Howe Standard Time", abbr: "LHST", offset: 10.5}, dst: {name: "Lord Howe Daylight Time", abbr: "LHDT", offset: 11.5}, long: "(UTC+10:30) Lord Howe Island", hem: "s"}, {name: "Casey Time", abbr: "CAST", aliases: ["casey"], ids: ["Antarctica/Casey"], std: {abbr: "CAST", name: "Casey Time", offset: 11}, dst: {name: "Casey Summer Time", offset: 8}, hem: "s"}, {name: "Magadan Time", abbr: null, aliases: ["magadan", "magadan standard time"], ids: ["Asia/Magadan"], std: {abbr: "MAGT", name: "Magadan Standard Time", offset: 11}, dst: {}, long: "(UTC+11:00) Magadan", hem: "n"}, {name: "Sakhalin Time", abbr: null, aliases: ["sakhalin", "sakhalin standard time"], ids: ["Asia/Sakhalin"], std: {abbr: "SAKT", name: "Sakhalin Standard Time", offset: 11}, dst: {}, long: "(UTC+11:00) Sakhalin", hem: "n"}, {name: "Srednekolymsk Time", abbr: "SRET", aliases: ["srednekolymsk", "russia time zone 10", "chokurdakh"], ids: ["Asia/Srednekolymsk"], std: {abbr: "SRET", name: "Srednekolymsk Standard Time", offset: 11}, dst: {}, long: "(UTC+11:00) Chokurdakh", hem: "n"}, {name: "Vanuatu Time", abbr: null, aliases: ["vanuatu"], ids: ["Pacific/Efate"], std: {abbr: "VUT", name: "Vanuatu Standard Time", offset: 11}, dst: {}, hem: "n"}, {name: "Solomon Islands Time", abbr: null, aliases: ["solomon"], ids: ["Pacific/Guadalcanal"], std: {abbr: "SBT", name: "Solomon Islands Time", offset: 11}, dst: {}, hem: "n"}, {name: "Kosrae Time", abbr: null, aliases: ["kosrae"], ids: ["Pacific/Kosrae"], std: {abbr: "KOST", name: "Kosrae Time", offset: 11}, dst: {}, hem: "n"}, {name: "New Caledonia Time", abbr: null, aliases: ["new caledonia"], ids: ["Pacific/Noumea"], std: {abbr: "NCT", name: "New Caledonia Standard Time", offset: 11}, dst: {name: "New Caledonia Summer Time"}, hem: "n"}, {name: "Ponape Time", abbr: null, aliases: ["ponape"], ids: ["Pacific/Ponape"], std: {abbr: "PONT", name: "Ponape Time", offset: 11}, dst: {}, hem: "n"}, {name: "Anadyr Time", abbr: null, aliases: ["anadyr", "russia time zone 11", "petropavlovsk kamchatsky"], ids: ["Asia/Anadyr"], std: {abbr: "ANAT", name: "Anadyr Standard Time", offset: 12}, dst: {}, long: "(UTC+12:00) Anadyr, Petropavlovsk-Kamchatsky", hem: "n"}, {name: "Petropavlovsk-Kamchatski Time", abbr: null, aliases: ["kamchatka", "russia time zone 11", "anadyr", "petropavlovsk kamchatsky"], ids: ["Asia/Kamchatka"], std: {abbr: "PETT", name: "Petropavlovsk-Kamchatski Standard Time", offset: 12}, dst: {}, long: "(UTC+12:00) Anadyr, Petropavlovsk-Kamchatsky", hem: "n"}, {name: "Fiji Time", abbr: "FJT", aliases: ["fiji", "fiji standard time"], ids: ["Pacific/Fiji"], std: {abbr: "FJT", name: "Fiji Standard Time", offset: 12}, dst: {abbr: "FJT", name: "Fiji Summer Time", offset: 13}, long: "(UTC+12:00) Fiji", hem: "s"}, {name: "Tuvalu Time", abbr: "TVT", aliases: ["tuvalu"], ids: ["Pacific/Funafuti"], std: {abbr: "TVT", name: "Tuvalu Time", offset: 12}, dst: {}, hem: "n"}, {name: "Nauru Time", abbr: null, aliases: ["nauru"], ids: ["Pacific/Nauru"], std: {abbr: "NRT", name: "Nauru Time", offset: 12}, dst: {}, hem: "n"}, {name: "Norfolk Island Time", abbr: null, aliases: ["norfolk", "norfolk standard time", "norfolk island"], ids: ["Pacific/Norfolk"], std: {abbr: "NFT", name: "Norfolk Island Standard Time", offset: 12}, dst: {abbr: "NFDT", name: "Norfolk Island Daylight Time", offset: 11}, long: "(UTC+11:00) Norfolk Island", hem: "n"}, {name: "Gilbert Islands Time", abbr: null, aliases: ["gilbert islands"], ids: ["Pacific/Tarawa"], std: {abbr: "GILT", name: "Gilbert Islands Time", offset: 12}, dst: {}, hem: "n"}, {name: "Wake Island Time", abbr: null, aliases: ["wake"], ids: ["Pacific/Wake"], std: {abbr: "WAKT", name: "Wake Island Time", offset: 12}, dst: {}, hem: "n"}, {name: "Wallis & Futuna Time", abbr: null, aliases: ["wallis"], ids: ["Pacific/Wallis"], std: {abbr: "WFT", name: "Wallis & Futuna Time", offset: 12}, dst: {}, hem: "n"}, {name: "Chatham Time", abbr: "CHAT", aliases: ["chatham", "chatham islands standard time", "chatham islands"], ids: ["Pacific/Chatham"], std: {name: "Chatham Standard Time", abbr: "CHAST", offset: 12.75}, dst: {name: "Chatham Daylight Time", abbr: "CHADT", offset: 13.75}, long: "(UTC+12:45) Chatham Islands", hem: "s"}, {name: "West Samoa Time", abbr: "WST", aliases: ["apia"], ids: ["Pacific/Apia"], std: {abbr: "WST", name: "West Samoa Time", offset: 13}, dst: {abbr: "WST", name: "West Samoa Summer Time", offset: 14}, hem: "s"}, {name: "Phoenix Islands Time", abbr: null, aliases: ["phoenix islands"], ids: ["Pacific/Enderbury"], std: {abbr: "PHOT", name: "Phoenix Islands Time", offset: 13}, dst: {}, hem: "n"}, {name: "Tokelau Time", abbr: null, aliases: ["tokelau"], ids: ["Pacific/Fakaofo"], std: {abbr: "TKT", name: "Tokelau Time", offset: 13}, dst: {}, hem: "n"}, {name: "Tonga Time", abbr: null, aliases: ["tonga", "tonga standard time", "nuku'alofa"], ids: ["Pacific/Tongatapu"], std: {abbr: "TOT", name: "Tonga Standard Time", offset: 13}, dst: {name: "Tonga Summer Time", offset: 14}, long: "(UTC+13:00) Nuku'alofa", hem: "s"}, {name: "Line Islands Time", abbr: null, aliases: ["line islands", "line islands standard time", "kiritimati island"], ids: ["Pacific/Kiritimati"], std: {abbr: "LINT", name: "Line Islands Time", offset: 14}, dst: {}, long: "(UTC+14:00) Kiritimati Island", hem: "n"}, {name: "Niue Time", abbr: null, aliases: ["niue"], ids: ["Pacific/Niue"], std: {abbr: "NUT", name: "Niue Time", offset: -11}, dst: {}, hem: "n"}, {name: "Cook Islands Time", abbr: "CKT", aliases: ["cook"], ids: ["Pacific/Rarotonga"], std: {abbr: "CKT", name: "Cook Islands Standard Time", offset: -10}, dst: {}, hem: "n"}, {name: "Tahiti Time", abbr: null, aliases: ["tahiti"], ids: ["Pacific/Tahiti"], std: {abbr: "TAHT", name: "Tahiti Time", offset: -10}, dst: {}, hem: "n"}, {name: "Marquesas Time", abbr: null, aliases: ["marquesas", "marquesas standard time"], ids: ["Pacific/Marquesas"], std: {abbr: "MART", name: "Marquesas Time", offset: -9.5}, dst: {}, long: "(UTC-09:30) Marquesas Islands", hem: "n"}, {name: "Aleutian Standard Time", iso: "(UTC-10:00) Aleutian Islands", aliases: ["aleutian"], ids: ["America/Adak"], abbr: "HST", std: {name: "Hawaii Standard Time", abbr: "HST", offset: -10}, dst: {name: "Hawaii Daylight Time", abbr: "HDT", offset: -9}, hem: "n"}, {name: "Gambier Time", abbr: null, aliases: ["gambier", "utc-09", "coordinated universal time-09"], ids: ["Pacific/Gambier"], std: {abbr: "GAMT", name: "Gambier Time", offset: -9}, dst: {}, long: "(UTC-09:00) Coordinated Universal Time-09", hem: "n"}, {name: "Pitcairn Time", abbr: null, aliases: ["pitcairn", "utc-08", "coordinated universal time-08"], ids: ["Pacific/Pitcairn"], std: {abbr: "PST", name: "Pitcairn Time", offset: -8}, dst: {}, long: "(UTC-08:00) Coordinated Universal Time-08", hem: "n"}, {name: "", dupe: true, ids: ["America/Hermosillo"], std: {name: "Mexican Pacific Standard Time", abbr: "HNPMX", offset: -7}, hem: "n"}, {name: "Northwest Mexico Time", abbr: "HNOMX", aliases: ["mexico northwest", "pacific standard time (mexico)", "baja california", "pacific mexico"], ids: ["America/Santa_Isabel"], std: {name: "Northwest Mexico Standard Time", abbr: "HNNOMX", offset: -6}, dst: {name: "Northwest Mexico Daylight Time", abbr: "HENOMX", offset: -5}, long: "(UTC-08:00) Baja California", hem: "n"}, {name: "Easter Island Time", abbr: null, aliases: ["easter", "easter island standard time", "easter island"], ids: ["Pacific/Easter"], std: {name: "Easter Island Standard Time", abbr: "EAST", offset: -6}, dst: {name: "Easter Island Summer Time", abbr: "EASST", offset: -5}, long: "(UTC-06:00) Easter Island", hem: "s"}, {name: "Ecuador Time", abbr: null, aliases: ["ecuador"], ids: ["America/Guayaquil"], std: {name: "Ecuador Time", abbr: "ECT", offset: -5}, dst: {}, hem: "n"}, {name: "Cuba Time", abbr: "HCU", aliases: ["cuba", "cuba standard time", "havana"], ids: ["America/Havana"], std: {name: "Cuba Standard Time", abbr: "HNCU", offset: -5}, dst: {name: "Cuba Daylight Time", abbr: "HECU", offset: -4}, long: "(UTC-05:00) Havana", hem: "n"}, {name: "Peru Time", abbr: null, aliases: ["peru"], ids: ["America/Lima"], std: {abbr: "PET", name: "Peru Standard Time", offset: -5}, dst: {}, hem: "s"}, {name: "Paraguay Time", abbr: null, aliases: ["paraguay", "paraguay standard time", "asuncion"], ids: ["America/Asuncion"], std: {abbr: "PYT", name: "Paraguay Standard Time", offset: -4}, dst: {name: "Paraguay Summer Time", offset: -3}, long: "(UTC-04:00) Asuncion", hem: "s"}, {name: "Venezuela Time", abbr: null, aliases: ["venezuela", "venezuelan", "venezuela standard time", "caracas"], ids: ["America/Caracas"], std: {name: "Venezuela Time", abbr: "VET", offset: -4}, dst: {}, long: "(UTC-04:00) Caracas", hem: "n"}, {name: "Guyana Time", abbr: null, aliases: ["guyana"], ids: ["America/Guyana"], std: {name: "Guyana Time", abbr: "GYT", offset: -4}, dst: {}, hem: "n"}, {name: "Bolivia Time", abbr: null, aliases: ["bolivia"], ids: ["America/La_Paz"], std: {name: "Bolivia Time", abbr: "BOT", offset: -4}, dst: {}, hem: "s"}, {name: "Newfoundland Time", abbr: "HTN", aliases: ["newfoundland", "newfoundland standard time"], ids: ["America/St_Johns"], std: {name: "Newfoundland Standard Time", abbr: "HNTN", offset: -3.5}, dst: {name: "Newfoundland Daylight Time", abbr: "HETN", offset: -2.5}, long: "(UTC-03:30) Newfoundland", hem: "n"}, {name: "French Guiana Time", abbr: null, aliases: ["french guiana"], ids: ["America/Cayenne"], std: {name: "French Guiana Time", abbr: "GFT", offset: -3}, dst: {}, hem: "n"}, {name: "West Greenland Time", abbr: "HOG", aliases: ["greenland western", "greenland standard time", "greenland"], ids: ["America/Godthab"], std: {name: "West Greenland Standard Time", abbr: "HNOG", offset: -3}, dst: {name: "West Greenland Summer Time", abbr: "HEOG", offset: -2}, long: "(UTC-03:00) Greenland", hem: "n"}, {name: "St. Pierre & Miquelon Time", abbr: "HPM", aliases: ["pierre miquelon", "saint pierre standard time", "saint pierre and miquelon", "saint pierre"], ids: ["America/Miquelon"], std: {name: "St. Pierre & Miquelon Standard Time", abbr: "HNPM", offset: -3}, dst: {name: "St. Pierre & Miquelon Daylight Time", abbr: "HEPM", offset: -2}, long: "(UTC-03:00) Saint Pierre and Miquelon", hem: "n"}, {name: "Uruguay Time", abbr: "UYT", aliases: ["uruguay", "uyst", "montevideo standard time", "montevideo"], ids: ["America/Montevideo"], std: {name: "Uruguay Standard Time", abbr: "UYT", offset: -3}, dst: {}, long: "(UTC-03:00) Montevideo", hem: "s"}, {name: "Suriname Time", abbr: null, aliases: ["suriname"], ids: ["America/Paramaribo"], std: {name: "Suriname Time", abbr: "SRT", offset: -3}, dst: {}, hem: "n"}, {name: "Chile Time", abbr: "CLT", aliases: ["chile"], ids: ["America/Santiago"], std: {name: "Chile Standard Time", abbr: "CLT", offset: -3}, dst: {name: "Chile Summer Time", abbr: "CLST", offset: -4}, hem: "s"}, {name: "Falkland Islands Time", abbr: "FKT", aliases: ["falkland"], ids: ["Atlantic/Stanley"], std: {abbr: "FKST", name: "Falkland Islands Summer Time", offset: -3}, dst: {}, hem: "s"}, {name: "Fernando de Noronha Time", abbr: null, aliases: ["noronha"], ids: ["America/Noronha"], std: {abbr: "FNT", name: "Fernando de Noronha Standard Time", offset: -2}, dst: {}, hem: "n"}, {name: "South Georgia Time", abbr: null, aliases: ["south georgia"], ids: ["Atlantic/South_Georgia"], std: {abbr: "GST", name: "South Georgia Time", offset: -2}, dst: {}, hem: "n"}, {name: "Azores Time", abbr: "AZOT", aliases: ["azores", "azores standard time"], ids: ["Atlantic/Azores"], std: {abbr: "AZOT", name: "Azores Standard Time", offset: -1}, dst: {name: "Azores Summer Time", abbr: "AZOST", offset: 0}, long: "(UTC-01:00) Azores", hem: "n"}, {name: "Cape Verde Time", abbr: null, aliases: ["cape verde", "cape verde standard time", "cabo verde"], ids: ["Atlantic/Cape_Verde"], std: {abbr: "CVT", name: "Cape Verde Standard Time", offset: -1}, dst: {}, long: "(UTC-01:00) Cabo Verde Is.", hem: "n"}];
+var pc2 = {"asia/dili": "+9", "pacific/palau": "+9", "australia/west": "+8", "asia/ulan_bator": "+8/+7", "asia/choibalsan": "+8", "asia/chongqing": "+8", "asia/chungking": "+8", "asia/harbin": "+8", "asia/irkutsk": "+8", "asia/macao": "+8", "asia/ujung_pandang": "+8", "antarctica/davis": "+7", "indian/christmas": "+7", "asia/ho_chi_minh": "+7", "asia/hovd": "+7", "asia/novosibirsk": "+7", "asia/tomsk": "+7", "antarctica/vostok": "+6", "asia/dacca": "+6", "asia/dhaka": "+6", "asia/kashgar": "+6", "asia/omsk": "+6", "asia/thimbu": "+6", "asia/thimphu": "+6", "asia/urumqi": "+6", "indian/cocos": "+6.5", "antarctica/mawson": "+5", "indian/kerguelen": "+5", "asia/ashkhabad": "+5", "asia/dushanbe": "+5", "asia/yekaterinburg": "+5", "asia/kathmandu": "+5.75", "indian/reunion": "+4", "indian/mahe": "+4", "atlantic/jan_mayen": "+2/+1", "atlantic/faroe": "+1/0", "pacific/kiritimati": "+14", "pacific/apia": "+13/+12", "pacific/tongatapu": "+13/+12", "pacific/enderbury": "+13", "pacific/fakaofo": "+13", "antarctica/south_pole": "+12/+11", "pacific/norfolk": "+11.5/+10.5", "australia/lhi": "+10.5/+9.5", "etc/greenwich": "0", "etc/utc": "0", "etc/universal": "0", "etc/zulu": "0", "america/atka": "-9/-10", "pacific/gambier": "-9", "pacific/marquesas": "-9.5", "pacific/pitcairn": "-8", "america/ensenada": "-7/-8", "america/santa_isabel": "-7/-8", "mexico/bajanorte": "-7/-8", "canada/yukon": "-7/-8", "canada/east-saskatchewan": "-6", "antarctica/rothera": "-3", "atlantic/stanley": "-3", "america/nuuk": "-3/-4", "america/cayenne": "-3", "america/paramaribo": "-3", "america/rosario": "-3", "america/godthab": "-2/-3", "america/miquelon": "-2/-3", "america/noronha": "-2", "atlantic/south_georgia": "-2", "atlantic/cape_verde": "-1", "pacific/niue": "-11", "pacific/samoa": "-11", "pacific/rarotonga": "-10", "pacific/tahiti": "-10"};
+var gc2 = function(e22) {
   return e22.replace(/\w\S*/g, function(a2) {
     return a2.charAt(0).toUpperCase() + a2.substr(1).toLowerCase();
   });
 };
-var gc2 = function(e22) {
+var yc2 = function(e22) {
   if (!e22)
     return null;
-  let a2 = bc2.find((t2) => t2.ids.find((r2) => r2 === e22));
+  let a2 = fc2.find((t2) => t2.ids.find((r2) => r2 === e22));
   if (!a2) {
-    let t2 = fc2[e22.toLowerCase()];
+    let t2 = pc2[e22.toLowerCase()];
     if (t2 !== void 0) {
-      let r2 = `UTC${t2}`, n2 = e22.split(/\//), i2 = pc2(n2[n2.length - 1]);
+      let r2 = `UTC${t2}`, n2 = e22.split(/\//), i2 = gc2(n2[n2.length - 1]);
       i2 = i2.replace(/_/g, " "), i2 += " Time", a2 = {std: {name: i2, abbr: r2}, offset: null};
     } else {
       let r2 = e22.replace(/^etc\//i, "");
@@ -11985,18 +11985,18 @@ var gc2 = function(e22) {
   }
   return {iana: e22, standard: a2.std || null, daylight: a2.dst || null};
 };
-var yc2 = "1.1.0";
+var vc2 = "1.1.0";
 var ho = function(e22) {
-  let a2 = hc2(e22) || [];
-  return typeof a2 == "string" && (a2 = [a2]), a2 = a2.map((t2) => gc2(t2, e22)), a2;
+  let a2 = bc2(e22) || [];
+  return typeof a2 == "string" && (a2 = [a2]), a2 = a2.map((t2) => yc2(t2, e22)), a2;
 };
-ho.prototype.version = yc2;
+ho.prototype.version = vc2;
 var bo = ho;
-var vc2 = {"Pacific/Midway": "Midway Island, Samoa", "Pacific/Honolulu": "Hawaii", "America/Juneau": "Alaska", "America/Boise": "Mountain Time", "America/Dawson": "Dawson, Yukon", "America/Chihuahua": "Chihuahua, La Paz, Mazatlan", "America/Phoenix": "Arizona", "America/Chicago": "Central Time", "America/Regina": "Saskatchewan", "America/Mexico_City": "Guadalajara, Mexico City, Monterrey", "America/Belize": "Central America", "America/Detroit": "Eastern Time", "America/Bogota": "Bogota, Lima, Quito", "America/Caracas": "Caracas, La Paz", "America/Santiago": "Santiago", "America/St_Johns": "Newfoundland and Labrador", "America/Sao_Paulo": "Brasilia", "America/Tijuana": "Tijuana", "America/Montevideo": "Montevideo", "America/Argentina/Buenos_Aires": "Buenos Aires, Georgetown", "America/Godthab": "Greenland", "America/Los_Angeles": "Pacific Time", "Atlantic/Azores": "Azores", "Atlantic/Cape_Verde": "Cape Verde Islands", GMT: "UTC", "Europe/London": "Edinburgh, London", "Europe/Dublin": "Dublin", "Europe/Lisbon": "Lisbon", "Africa/Casablanca": "Casablanca, Monrovia", "Atlantic/Canary": "Canary Islands", "Europe/Belgrade": "Belgrade, Bratislava, Budapest, Ljubljana, Prague", "Europe/Sarajevo": "Sarajevo, Skopje, Warsaw, Zagreb", "Europe/Brussels": "Brussels, Copenhagen, Madrid, Paris", "Europe/Amsterdam": "Amsterdam, Berlin, Bern, Rome, Stockholm, Vienna", "Africa/Algiers": "West Central Africa", "Europe/Bucharest": "Bucharest", "Africa/Cairo": "Cairo", "Europe/Helsinki": "Helsinki, Kiev, Riga, Sofia, Tallinn, Vilnius", "Europe/Athens": "Athens, Minsk", "Asia/Jerusalem": "Jerusalem", "Africa/Harare": "Harare, Pretoria", "Europe/Moscow": "Istanbul, Moscow, St. Petersburg, Volgograd", "Asia/Kuwait": "Kuwait, Riyadh", "Africa/Nairobi": "Nairobi", "Asia/Baghdad": "Baghdad", "Asia/Tehran": "Tehran", "Asia/Dubai": "Abu Dhabi, Muscat", "Asia/Baku": "Baku, Tbilisi, Yerevan", "Asia/Kabul": "Kabul", "Asia/Yekaterinburg": "Ekaterinburg", "Asia/Karachi": "Islamabad, Karachi, Tashkent", "Asia/Kolkata": "Chennai, Kolkata, Mumbai, New Delhi", "Asia/Kathmandu": "Kathmandu", "Asia/Dhaka": "Astana, Dhaka", "Asia/Colombo": "Sri Jayawardenepura", "Asia/Almaty": "Almaty, Novosibirsk", "Asia/Rangoon": "Yangon Rangoon", "Asia/Bangkok": "Bangkok, Hanoi, Jakarta", "Asia/Krasnoyarsk": "Krasnoyarsk", "Asia/Shanghai": "Beijing, Chongqing, Hong Kong SAR, Urumqi", "Asia/Kuala_Lumpur": "Kuala Lumpur, Singapore", "Asia/Taipei": "Taipei", "Australia/Perth": "Perth", "Asia/Irkutsk": "Irkutsk, Ulaanbaatar", "Asia/Seoul": "Seoul", "Asia/Tokyo": "Osaka, Sapporo, Tokyo", "Asia/Yakutsk": "Yakutsk", "Australia/Darwin": "Darwin", "Australia/Adelaide": "Adelaide", "Australia/Sydney": "Canberra, Melbourne, Sydney", "Australia/Brisbane": "Brisbane", "Australia/Hobart": "Hobart", "Asia/Vladivostok": "Vladivostok", "Pacific/Guam": "Guam, Port Moresby", "Asia/Magadan": "Magadan, Solomon Islands, New Caledonia", "Asia/Kamchatka": "Kamchatka, Marshall Islands", "Pacific/Fiji": "Fiji Islands", "Pacific/Auckland": "Auckland, Wellington", "Pacific/Tongatapu": "Nuku'alofa"};
-var fo = vc2;
-var Ic2 = ({value: e22, onBlur: a2, onChange: t2, labelStyle: r2 = "original", timezones: n2, ...i2}) => {
+var Ac2 = {"Pacific/Midway": "Midway Island, Samoa", "Pacific/Honolulu": "Hawaii", "America/Juneau": "Alaska", "America/Boise": "Mountain Time", "America/Dawson": "Dawson, Yukon", "America/Chihuahua": "Chihuahua, La Paz, Mazatlan", "America/Phoenix": "Arizona", "America/Chicago": "Central Time", "America/Regina": "Saskatchewan", "America/Mexico_City": "Guadalajara, Mexico City, Monterrey", "America/Belize": "Central America", "America/Detroit": "Eastern Time", "America/Bogota": "Bogota, Lima, Quito", "America/Caracas": "Caracas, La Paz", "America/Santiago": "Santiago", "America/St_Johns": "Newfoundland and Labrador", "America/Sao_Paulo": "Brasilia", "America/Tijuana": "Tijuana", "America/Montevideo": "Montevideo", "America/Argentina/Buenos_Aires": "Buenos Aires, Georgetown", "America/Godthab": "Greenland", "America/Los_Angeles": "Pacific Time", "Atlantic/Azores": "Azores", "Atlantic/Cape_Verde": "Cape Verde Islands", GMT: "UTC", "Europe/London": "Edinburgh, London", "Europe/Dublin": "Dublin", "Europe/Lisbon": "Lisbon", "Africa/Casablanca": "Casablanca, Monrovia", "Atlantic/Canary": "Canary Islands", "Europe/Belgrade": "Belgrade, Bratislava, Budapest, Ljubljana, Prague", "Europe/Sarajevo": "Sarajevo, Skopje, Warsaw, Zagreb", "Europe/Brussels": "Brussels, Copenhagen, Madrid, Paris", "Europe/Amsterdam": "Amsterdam, Berlin, Bern, Rome, Stockholm, Vienna", "Africa/Algiers": "West Central Africa", "Europe/Bucharest": "Bucharest", "Africa/Cairo": "Cairo", "Europe/Helsinki": "Helsinki, Kiev, Riga, Sofia, Tallinn, Vilnius", "Europe/Athens": "Athens, Minsk", "Asia/Jerusalem": "Jerusalem", "Africa/Harare": "Harare, Pretoria", "Europe/Moscow": "Istanbul, Moscow, St. Petersburg, Volgograd", "Asia/Kuwait": "Kuwait, Riyadh", "Africa/Nairobi": "Nairobi", "Asia/Baghdad": "Baghdad", "Asia/Tehran": "Tehran", "Asia/Dubai": "Abu Dhabi, Muscat", "Asia/Baku": "Baku, Tbilisi, Yerevan", "Asia/Kabul": "Kabul", "Asia/Yekaterinburg": "Ekaterinburg", "Asia/Karachi": "Islamabad, Karachi, Tashkent", "Asia/Kolkata": "Chennai, Kolkata, Mumbai, New Delhi", "Asia/Kathmandu": "Kathmandu", "Asia/Dhaka": "Astana, Dhaka", "Asia/Colombo": "Sri Jayawardenepura", "Asia/Almaty": "Almaty, Novosibirsk", "Asia/Rangoon": "Yangon Rangoon", "Asia/Bangkok": "Bangkok, Hanoi, Jakarta", "Asia/Krasnoyarsk": "Krasnoyarsk", "Asia/Shanghai": "Beijing, Chongqing, Hong Kong SAR, Urumqi", "Asia/Kuala_Lumpur": "Kuala Lumpur, Singapore", "Asia/Taipei": "Taipei", "Australia/Perth": "Perth", "Asia/Irkutsk": "Irkutsk, Ulaanbaatar", "Asia/Seoul": "Seoul", "Asia/Tokyo": "Osaka, Sapporo, Tokyo", "Asia/Yakutsk": "Yakutsk", "Australia/Darwin": "Darwin", "Australia/Adelaide": "Adelaide", "Australia/Sydney": "Canberra, Melbourne, Sydney", "Australia/Brisbane": "Brisbane", "Australia/Hobart": "Hobart", "Asia/Vladivostok": "Vladivostok", "Pacific/Guam": "Guam, Port Moresby", "Asia/Magadan": "Magadan, Solomon Islands, New Caledonia", "Asia/Kamchatka": "Kamchatka, Marshall Islands", "Pacific/Fiji": "Fiji Islands", "Pacific/Auckland": "Auckland, Wellington", "Pacific/Tongatapu": "Nuku'alofa"};
+var fo = Ac2;
+var Cc2 = ({value: e22, onBlur: a2, onChange: t2, labelStyle: r2 = "original", timezones: n2, ...i2}) => {
   n2 || (n2 = fo);
-  let o2 = useMemo(() => Object.entries(n2).reduce((l2, d2) => {
+  let o2 = react.useMemo(() => Object.entries(n2).reduce((l2, d2) => {
     let m2 = pt2.now(d2[0]), h2 = m2.timezone(), f2 = bo(d2[0]), g2 = "", b2 = m2.isDST() ? f2[0].daylight?.abbr : f2[0].standard?.abbr, y3 = m2.isDST() ? f2[0].daylight?.name : f2[0].standard?.name, v2 = h2.current.offset * 60, k2 = `${v2 / 60 ^ 0}:` + (v2 % 60 === 0 ? "00" : Math.abs(v2 % 60)), E2 = `(GMT${k2.includes("-") ? k2 : `+${k2}`}) ${d2[1]}`;
     switch (r2) {
       case "original":
@@ -12035,7 +12035,7 @@ var Ic2 = ({value: e22, onBlur: a2, onChange: t2, labelStyle: r2 = "original", t
       return o2.find((d2) => d2.value === l2.value);
   })(e22), onChange: s2, options: o2, onBlur: a2, ...i2});
 };
-var d0 = Ic2;
+var c0 = Cc2;
 /** @license React v16.13.1
  * react-is.production.min.js
  *
@@ -12098,7 +12098,7 @@ var Timezone = () => {
     value: "abbrev"
   }), "abbrev")), /* @__PURE__ */ react.createElement("div", {
     className: "select-wrapper"
-  }, /* @__PURE__ */ react.createElement(d0, {
+  }, /* @__PURE__ */ react.createElement(c0, {
     value: selectedTimezone,
     onChange: setSelectedTimezone,
     labelStyle,
