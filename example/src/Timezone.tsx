@@ -1,8 +1,7 @@
 import React, { useMemo, useState } from 'react';
 import spacetime from 'spacetime';
-import TimezoneSelect, { allTimezones } from '../../dist';
-// import TimezoneSelect from '../../dist';
-import type { ITimezone, ILabelStyle } from '../../dist';
+import TimezoneSelect, { allTimezones } from '../../dist/esm';
+import type { ITimezone, ILabelStyle } from '../../dist/esm/dist';
 
 const Timezone = () => {
   const [selectedTimezone, setSelectedTimezone] =

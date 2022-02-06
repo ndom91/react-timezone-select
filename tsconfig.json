@@ -2,8 +2,7 @@
   "include": ["src/index.tsx", "src/timezone-list.ts", "src/types/*.ts"],
   "exclude": ["example/", "node_modules"],
   "compilerOptions": {
-    "target": "es6",
-    "module": "esnext",
+    "target": "es2020",
     "emitDeclarationOnly": true,
     "declaration": true,
     "strict": false,
