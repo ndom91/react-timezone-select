@@ -6,9 +6,8 @@
   const shared = {
     entryPoints: ['src/index.tsx'],
     bundle: true,
-    loader: { '.ts': 'ts', '.tsx': 'tsx' },
-    platform: 'browser',
-    external: [...Object.keys(pkg.peerDependencies)],
+    loader: { '.ts': 'ts' },
+    external: Object.keys(pkg.peerDependencies),
     target: ['esnext'],
   }
 

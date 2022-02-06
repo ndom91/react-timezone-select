@@ -1,6 +1,6 @@
 {
   "name": "react-timezone-select",
-  "version": "1.2.2",
+  "version": "1.2.3-experimental.1",
   "description": "Usable, dynamic React Timezone Select",
   "scripts": {
     "start": "concurrently npm:start:example npm:build",
@@ -33,12 +33,12 @@
     "react-select"
   ],
   "files": [
-    "dist/**/*"
+    "dist/**/*",
+    "package.json"
   ],
   "type": "module",
   "main": "./dist/index.cjs",
-  "module": "./dist/index.mjs",
-  "types": "./dist/index.d.js",
+  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "import": "./dist/index.mjs",
