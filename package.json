@@ -1,19 +1,20 @@
 {
   "name": "react-timezone-select",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Usable, dynamic React Timezone Select",
   "scripts": {
     "start": "concurrently npm:start:example npm:build",
     "start:example": "cd example && npm start",
     "prepublish": "npm run build",
     "postpublish": "npm run build:example && npm run deploy",
-    "build": "node build.js && tsc",
+    "build": "node build.cjs",
     "build:example": "cd example && npm run build",
     "deploy": "gh-pages -d example/build",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:ci": "jest --ci ",
-    "pretty-quick": "pretty-quick --staged"
+    "pretty-quick": "pretty-quick --staged",
+    "tsc": "tsc"
   },
   "author": "Nico Domino <yo@ndo.dev>",
   "homepage": "https://github.com/ndom91/react-timezone-select",
@@ -32,15 +33,17 @@
     "react-select"
   ],
   "files": [
-    "dist/*"
+    "dist/**/*"
   ],
   "type": "module",
-  "main": "./dist/index.js",
-  "module": "./dist/index.js",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
   "types": "./dist/index.d.js",
   "exports": {
-    "import": "./dist/index.js",
-    "require": "./dist/index.cjs"
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
   },
   "peerDependencies": {
     "react": "^17.0.1 || ^16",
