@@ -8,10 +8,7 @@
     bundle: true,
     loader: { '.ts': 'ts', '.tsx': 'tsx' },
     platform: 'browser',
-    external: [
-      ...Object.keys(pkg.dependencies),
-      ...Object.keys(pkg.peerDependencies),
-    ],
+    external: [...Object.keys(pkg.peerDependencies)],
     target: ['esnext'],
   }
 

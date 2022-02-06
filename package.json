@@ -1,6 +1,6 @@
 {
   "name": "react-timezone-select",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "Usable, dynamic React Timezone Select",
   "scripts": {
     "start": "concurrently npm:start:example npm:build",
