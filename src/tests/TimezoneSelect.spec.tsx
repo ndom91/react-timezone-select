@@ -1,20 +1,20 @@
-import React from "react"
-import { render, findAllByText, fireEvent } from "@testing-library/react"
-import TimezoneSelect, { allTimezones } from "../../dist/index.cjs"
+import React from 'react'
+import { render, findAllByText, fireEvent } from '@testing-library/react'
+import TimezoneSelect, { allTimezones } from '../../dist/cjs/index.js'
 
 // react-select react-testing-library jest example tests:
 // https://github.com/JedWatson/react-select/blob/master/packages/react-select/src/__tests__/Select.test.js
 
-test("snapshot - defaults", () => {
+test('snapshot - defaults', () => {
   const { container } = render(
-    <TimezoneSelect value={"Europe/Amsterdam"} onChange={e => e} />
+    <TimezoneSelect value={'Europe/Amsterdam'} onChange={e => e} />
   )
   expect(container).toMatchSnapshot()
 })
 
-test("loads and displays default timezone - passing string", async () => {
+test('loads and displays default timezone - passing string', async () => {
   const { getByText } = render(
-    <TimezoneSelect value={"Europe/Amsterdam"} onChange={e => e} />
+    <TimezoneSelect value={'Europe/Amsterdam'} onChange={e => e} />
   )
 
   expect(
@@ -24,12 +24,12 @@ test("loads and displays default timezone - passing string", async () => {
   ).toBeInTheDocument()
 })
 
-test("loads and displays default timezone - passing full object", async () => {
+test('loads and displays default timezone - passing full object', async () => {
   const { getByText } = render(
     <TimezoneSelect
       value={{
-        value: "Europe/Amsterdam",
-        label: "(GMT+1:00) Amsterdam, Berlin, Bern, Rome, Stockholm, Vienna",
+        value: 'Europe/Amsterdam',
+        label: '(GMT+1:00) Amsterdam, Berlin, Bern, Rome, Stockholm, Vienna',
       }}
       onChange={e => e}
     />
@@ -42,10 +42,10 @@ test("loads and displays default timezone - passing full object", async () => {
   ).toBeInTheDocument()
 })
 
-test("load and displays labelStyle - altName", async () => {
+test('load and displays labelStyle - altName', async () => {
   const { getByText } = render(
     <TimezoneSelect
-      value={"America/Juneau"}
+      value={'America/Juneau'}
       labelStyle="altName"
       onChange={e => e}
     />
@@ -56,10 +56,10 @@ test("load and displays labelStyle - altName", async () => {
   ).toBeInTheDocument()
 })
 
-test("load and displays labelStyle - abbrev", async () => {
+test('load and displays labelStyle - abbrev', async () => {
   const { getByText } = render(
     <TimezoneSelect
-      value={"America/Juneau"}
+      value={'America/Juneau'}
       labelStyle="abbrev"
       onChange={e => e}
     />
@@ -68,13 +68,13 @@ test("load and displays labelStyle - abbrev", async () => {
   expect(getByText(/\(GMT-[8-9]:00\) Alaska \(AK[D|S]T\)$/)).toBeInTheDocument()
 })
 
-test("load and displays custom timezone", async () => {
+test('load and displays custom timezone', async () => {
   const { getByText } = render(
     <TimezoneSelect
-      value={"America/Lima"}
+      value={'America/Lima'}
       timezones={{
         ...allTimezones,
-        "America/Lima": "Pittsburgh",
+        'America/Lima': 'Pittsburgh',
       }}
       onChange={e => e}
     />
@@ -83,13 +83,13 @@ test("load and displays custom timezone", async () => {
   expect(getByText(/\(GMT-[5-6]:00\) Pittsburgh$/)).toBeInTheDocument()
 })
 
-test("load and displays only 2 custom timezone choices", async () => {
+test('load and displays only 2 custom timezone choices', async () => {
   const { container } = render(
     <TimezoneSelect
-      value={""}
+      value={''}
       timezones={{
-        "America/Lima": "Pittsburgh",
-        "Europe/Berlin": "Frankfurt",
+        'America/Lima': 'Pittsburgh',
+        'Europe/Berlin': 'Frankfurt',
       }}
       menuIsOpen={true}
       onChange={e => e}
@@ -100,23 +100,23 @@ test("load and displays only 2 custom timezone choices", async () => {
   expect(items).toHaveLength(2)
 })
 
-test("load and passes react-select props", async () => {
+test('load and passes react-select props', async () => {
   const { getByText } = render(
     <TimezoneSelect
-      value={""}
+      value={''}
       timezones={{
         ...allTimezones,
-        "America/Lima": "Pittsburgh",
+        'America/Lima': 'Pittsburgh',
       }}
-      placeholder={"Please Select a Timezone"}
+      placeholder={'Please Select a Timezone'}
       onChange={e => e}
     />
   )
 
-  expect(getByText("Please Select a Timezone")).toBeInTheDocument()
+  expect(getByText('Please Select a Timezone')).toBeInTheDocument()
 })
 
-test("can determine timezone by approximate match", async () => {
+test('can determine timezone by approximate match', async () => {
   const { getByText } = render(
     <TimezoneSelect value="Europe/Rome" onChange={e => e} />
   )
@@ -128,11 +128,11 @@ test("can determine timezone by approximate match", async () => {
   ).toBeInTheDocument()
 })
 
-test("select drop-downs must use the fireEvent.change", () => {
+test('select drop-downs must use the fireEvent.change', () => {
   const onChangeSpy = jest.fn()
   const { container } = render(
     <TimezoneSelect
-      value={"Europe/Amsterdam"}
+      value={'Europe/Amsterdam'}
       onChange={onChangeSpy}
       menuIsOpen={true}
     />
@@ -140,16 +140,16 @@ test("select drop-downs must use the fireEvent.change", () => {
 
   let selectOption = [
     ...container.querySelectorAll('div[id^="react-select"]'),
-  ].find(n => n.textContent === "(GMT-10:00) Hawaii")
+  ].find(n => n.textContent === '(GMT-10:00) Hawaii')
 
   fireEvent.click(selectOption)
 
   expect(onChangeSpy).toHaveBeenCalledTimes(1)
   expect(onChangeSpy).toHaveBeenCalledWith({
-    value: "Pacific/Honolulu",
-    label: "(GMT-10:00) Hawaii",
-    altName: "Hawaii-Aleutian Standard Time",
+    value: 'Pacific/Honolulu',
+    label: '(GMT-10:00) Hawaii',
+    altName: 'Hawaii-Aleutian Standard Time',
     offset: -10,
-    abbrev: "HAST",
+    abbrev: 'HAST',
   })
 })

@@ -19,7 +19,7 @@ exports[`snapshot - defaults 1`] = `
       class=" css-1s2u09g-control"
     >
       <div
-        class=" css-1kwwvb1-ValueContainer2"
+        class=" css-319lph-ValueContainer"
       >
         <div
           class=" css-qc6sy-singleValue"
@@ -27,7 +27,7 @@ exports[`snapshot - defaults 1`] = `
           (GMT+1:00) Amsterdam, Berlin, Bern, Rome, Stockholm, Vienna
         </div>
         <div
-          class=" css-ujecln-Input2"
+          class=" css-6j8wv5-Input"
           data-value=""
         >
           <input
@@ -51,7 +51,7 @@ exports[`snapshot - defaults 1`] = `
         </div>
       </div>
       <div
-        class=" css-4xgw5l-IndicatorsContainer2"
+        class=" css-1hb7zxy-IndicatorsContainer"
       >
         <span
           class=" css-1okebmr-indicatorSeparator"
