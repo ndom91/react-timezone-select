@@ -16,7 +16,7 @@ While looking around for a good option, I had trouble finding a timezone select 
 
 #### Demo: [ndom91.github.io/react-timezone-select](https://ndom91.github.io/react-timezone-select/)
 
-> This demo is also available in the `./examples` directory. Simply run `npm start` in the root of the repository after installing everything in the examples subdirectory and snowpack dev will begin, where you can find the demo at [`localhost:8080`](http://localhost:8080).
+> This demo is also available in the `./examples` directory. Simply run `npm run dev` in the root of the repository after installing everything in the examples subdirectory and snowpack dev will begin, where you can find the demo at [`localhost:8080`](http://localhost:8080).
 
 We also have some **more examples** available on Codesandbox using this component with the datetime library `spacetime` ([example](https://codesandbox.io/s/react-timezone-select-usage-z37hf)) as well as with `moment` ([example](https://codesandbox.io/s/react-timezone-select-usage-moment-5n6vn)), as well as in Typescript using the new `Intl` browser API ([example](https://codesandbox.io/s/react-timezone-select-typescript-8lsv3?file=/src/App.tsx)) showing how one might use this component in a real application.
 
