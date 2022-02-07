@@ -1,14 +1,18 @@
-.App {
+.wrapper {
   padding-top: 25px;
-  width: 500px;
+  width: 750px;
   margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px 0;
 }
 
 .header * {
   margin: 0px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .author {
@@ -18,9 +22,20 @@
   color: #666;
 }
 
+.label-style-select {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 10px 20px;
+  margin-top: 20px;
+}
+
+.label-style-select label {
+  margin-left: 50px;
+}
+
 .select-wrapper {
   margin-top: 15px;
-  width: 500px;
+  width: 750px;
   max-width: 90vw;
   text-align: left;
 }
@@ -30,12 +45,14 @@
 
   width: auto;
   margin-top: 20px;
-  padding: 10px;
-
-  line-height: 2;
-  white-space: pre-wrap;
+  padding: 30px;
 
   font-family: monospace;
   font-weight: 100;
   font-size: 1.2rem;
+}
+.code pre {
+  white-space: pre-wrap;
+  word-wrap: normal;
+  word-break: keep-all;
 }
