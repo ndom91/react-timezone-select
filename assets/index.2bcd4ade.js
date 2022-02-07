@@ -1,1 +1,0 @@
-import{R as r}from"./vendor.bf51d9ce.js";import{j as e,T as n}from"./Timezone.d1575e9f.js";function o({}){return e("div",{className:"App",children:e(n,{})})}r.render(e(o,{}),document.getElementById("root"));
