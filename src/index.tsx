@@ -19,23 +19,26 @@ const TimezoneSelect = ({
   onChange,
   labelStyle = 'original',
   timezones,
+  date,
   ...props
 }: Props) => {
   if (!timezones) timezones = allTimezones
   const getOptions = React.useMemo(() => {
     return Object.entries(timezones)
       .reduce<ITimezoneOption[]>((selectOptions, zone) => {
-        const now = spacetime.now(zone[0])
-        const tz = now.timezone()
+        const currentDate = date
+          ? spacetime(date, zone[0])
+          : spacetime.now(zone[0])
+        const tz = currentDate.timezone()
         const tzStrings = soft(zone[0])
 
         let label = ''
-        let abbr = now.isDST()
+        let abbr = currentDate.isDST()
           ? // @ts-expect-error
             tzStrings[0].daylight?.abbr
           : // @ts-expect-error
             tzStrings[0].standard?.abbr
-        let altName = now.isDST()
+        let altName = currentDate.isDST()
           ? tzStrings[0].daylight?.name
           : tzStrings[0].standard?.name
 
@@ -69,7 +72,7 @@ const TimezoneSelect = ({
         return selectOptions
       }, [])
       .sort((a: ITimezoneOption, b: ITimezoneOption) => a.offset - b.offset)
-  }, [labelStyle, timezones])
+  }, [labelStyle, timezones, date])
 
   const handleChange = (tz: ITimezoneOption) => {
     onChange && onChange(tz)
