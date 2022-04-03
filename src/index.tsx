@@ -45,7 +45,7 @@ const TimezoneSelect = ({
         const min = tz.current.offset * 60
         const hr =
           `${(min / 60) ^ 0}:` + (min % 60 === 0 ? '00' : Math.abs(min % 60))
-        const prefix = `(GMT${hr.includes('-') ? hr : `+${hr}`}) ${zone[1]}`
+        const prefix = `(UTC${hr.includes('-') ? hr : `+${hr}`}) ${zone[1]}`
 
         switch (labelStyle) {
           case 'original':
@@ -74,12 +74,19 @@ const TimezoneSelect = ({
       .sort((a: ITimezoneOption, b: ITimezoneOption) => a.offset - b.offset)
   }, [labelStyle, timezones, date])
 
+  // Re-select time-zone when date changes.
+  React.useEffect(() => {
+    // TODO: This doesn't yet handle the scenario where the time zone is a simple string.
+    const updatedTz = getOptions.find(({ value: v }) => v === value.value)
+    onChange && onChange(updatedTz)
+  }, [date])
+
   const handleChange = (tz: ITimezoneOption) => {
     onChange && onChange(tz)
   }
 
   const findFuzzyTz = (zone: string): ITimezoneOption => {
-    let currentTime = spacetime.now('GMT')
+    let currentTime = spacetime.now('UTC')
     try {
       currentTime = spacetime.now(zone)
     } catch (err) {
