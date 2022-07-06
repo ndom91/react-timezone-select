@@ -5,4 +5,9 @@ import react from '@vitejs/plugin-react';
 export default defineConfig({
   base: '/react-timezone-select',
   plugins: [react()],
+  server: {
+    fs: {
+      strict: false,
+    },
+  },
 });
