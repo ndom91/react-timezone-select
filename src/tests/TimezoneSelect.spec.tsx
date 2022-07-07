@@ -6,9 +6,7 @@ import TimezoneSelect, { allTimezones } from '../../dist/cjs/index.js'
 // https://github.com/JedWatson/react-select/blob/master/packages/react-select/src/__tests__/Select.test.js
 
 test('snapshot - defaults', () => {
-  const { container } = render(
-    <TimezoneSelect value={'Europe/Amsterdam'} onChange={e => e} />
-  )
+  const { container } = render(<TimezoneSelect value={''} onChange={e => e} />)
   expect(container).toMatchSnapshot()
 })
 
