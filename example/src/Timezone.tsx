@@ -23,7 +23,7 @@ const Timezone = () => {
   }, [selectedTimezone]);
 
   return (
-    <div className="App">
+    <div className="wrapper">
       <div className="header">
         <h2>react-timezone-select</h2>
         <p>
@@ -37,15 +37,20 @@ const Timezone = () => {
           </a>
         </p>
       </div>
-      <div
-        style={{
-          display: 'flex',
-          width: 'min(100%, 400px)',
-          justifyContent: 'space-around',
-          marginTop: '50px',
-        }}
-        onChange={handleLabelChange}
-      >
+      <div className="select-wrapper">
+        <TimezoneSelect
+          value={selectedTimezone}
+          onChange={setSelectedTimezone}
+          labelStyle={labelStyle}
+          onBlur={() => console.log('Blur!')}
+          timezones={{
+            ...allTimezones,
+            'America/Lima': 'Pittsburgh',
+            'Europe/Berlin': 'Frankfurt',
+          }}
+        />
+      </div>
+      <div className="label-style-select" onChange={handleLabelChange}>
         <span>Label Style:</span>
         <label htmlFor="original">
           <input
@@ -70,19 +75,6 @@ const Timezone = () => {
           <input type="radio" id="abbrev" name="labelStyle" value={'abbrev'} />
           abbrev
         </label>
-      </div>
-      <div className="select-wrapper">
-        <TimezoneSelect
-          value={selectedTimezone}
-          onChange={setSelectedTimezone}
-          labelStyle={labelStyle}
-          onBlur={() => console.log('Blur!')}
-          timezones={{
-            ...allTimezones,
-            'America/Lima': 'Pittsburgh',
-            'Europe/Berlin': 'Frankfurt',
-          }}
-        />
       </div>
       <div className="code">
         <div>
