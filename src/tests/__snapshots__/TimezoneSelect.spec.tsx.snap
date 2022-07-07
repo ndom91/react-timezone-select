@@ -24,7 +24,7 @@ exports[`snapshot - defaults 1`] = `
         <div
           class=" css-qc6sy-singleValue"
         >
-          (GMT+1:00) Amsterdam, Berlin, Bern, Rome, Stockholm, Vienna
+          (GMT+2:00) Amsterdam, Berlin, Bern, Rome, Stockholm, Vienna
         </div>
         <div
           class=" css-6j8wv5-Input"
