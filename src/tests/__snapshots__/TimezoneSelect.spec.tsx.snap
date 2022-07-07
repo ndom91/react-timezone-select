@@ -22,9 +22,10 @@ exports[`snapshot - defaults 1`] = `
         class=" css-319lph-ValueContainer"
       >
         <div
-          class=" css-qc6sy-singleValue"
+          class=" css-14el2xx-placeholder"
+          id="react-select-2-placeholder"
         >
-          (GMT+1:00) Amsterdam, Berlin, Bern, Rome, Stockholm, Vienna
+          Select...
         </div>
         <div
           class=" css-6j8wv5-Input"
@@ -33,6 +34,7 @@ exports[`snapshot - defaults 1`] = `
           <input
             aria-autocomplete="list"
             aria-controls="react-select-2-listbox"
+            aria-describedby="react-select-2-placeholder"
             aria-expanded="false"
             aria-haspopup="true"
             aria-owns="react-select-2-listbox"
