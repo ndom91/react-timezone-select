@@ -12,12 +12,8 @@ export default defineConfig({
   server: {
     fs: {
       allow: ['..'],
-    },
-  },
-  plugins: [react()],
-  server: {
-    fs: {
       strict: false,
     },
   },
+  plugins: [react()],
 });

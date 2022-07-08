@@ -21,6 +21,9 @@ export default {
       sourcemap: true,
     },
   ],
+  watch: {
+    include: 'src/**/*.tsx',
+  },
   plugins: [
     external(),
     resolve(),
