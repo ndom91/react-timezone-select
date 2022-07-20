@@ -3,8 +3,12 @@
 exports[`snapshot - defaults 1`] = `
 <div>
   <div
-    class=" css-2b097c-container"
+    class=" css-b62m3t-container"
   >
+    <span
+      class="css-1f43avz-a11yText-A11yText"
+      id="react-select-2-live-region"
+    />
     <span
       aria-atomic="false"
       aria-live="polite"
@@ -12,39 +16,40 @@ exports[`snapshot - defaults 1`] = `
       class="css-1f43avz-a11yText-A11yText"
     />
     <div
-      class=" css-yk16xz-control"
+      class=" css-1s2u09g-control"
     >
       <div
-        class=" css-g1d714-ValueContainer"
+        class=" css-319lph-ValueContainer"
       >
         <div
-          class=" css-1uccc91-singleValue"
+          class=" css-14el2xx-placeholder"
+          id="react-select-2-placeholder"
         >
-          (GMT+2:00) Amsterdam, Berlin, Bern, Rome, Stockholm, Vienna
+          Select...
         </div>
         <div
-          class="css-b8ldur-Input"
+          class=" css-6j8wv5-Input"
+          data-value=""
         >
-          <div
+          <input
+            aria-autocomplete="list"
+            aria-controls="react-select-2-listbox"
+            aria-describedby="react-select-2-placeholder"
+            aria-expanded="false"
+            aria-haspopup="true"
+            aria-owns="react-select-2-listbox"
+            autocapitalize="none"
+            autocomplete="off"
+            autocorrect="off"
             class=""
-            style="display: inline-block;"
-          >
-            <input
-              aria-autocomplete="list"
-              autocapitalize="none"
-              autocomplete="off"
-              autocorrect="off"
-              id="react-select-2-input"
-              spellcheck="false"
-              style="box-sizing: content-box; width: 2px; border: 0px; opacity: 1; outline: 0; padding: 0px;"
-              tabindex="0"
-              type="text"
-              value=""
-            />
-            <div
-              style="position: absolute; top: 0px; left: 0px; visibility: hidden; height: 0px; overflow: scroll; white-space: pre; font-family: -webkit-small-control; letter-spacing: normal; text-transform: none;"
-            />
-          </div>
+            id="react-select-2-input"
+            role="combobox"
+            spellcheck="false"
+            style="opacity: 1; width: 100%; grid-area: 1 / 2; min-width: 2px; border: 0px; margin: 0px; outline: 0; padding: 0px;"
+            tabindex="0"
+            type="text"
+            value=""
+          />
         </div>
       </div>
       <div

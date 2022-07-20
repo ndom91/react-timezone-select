@@ -1,22 +1,15 @@
 {
-  "include": ["src/index.tsx"],
-  "typeRoots": ["./src/types", "./node_modules/@types"],
-  "exclude": ["example/"],
+  "include": ["src/index.tsx", "src/timezone-list.ts", "src/types/*.ts"],
+  "exclude": ["example/", "node_modules"],
   "compilerOptions": {
-    "module": "esnext",
-    "target": "esnext",
+    "target": "es2020",
+    "emitDeclarationOnly": true,
+    "declaration": true,
+    "strict": false,
+    "jsx": "react",
+    "outDir": "dist/",
     "moduleResolution": "node",
     "esModuleInterop": true,
-    "sourceMap": true,
-    "outDir": "./dist",
-    "jsx": "react",
-    "baseUrl": "src",
-    "paths": {},
-    "strict": false,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
-    "allowSyntheticDefaultImports": true,
-    "importsNotUsedAsValues": "error",
-    "declaration": true
+    "allowSyntheticDefaultImports": true
   }
 }
