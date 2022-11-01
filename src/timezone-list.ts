@@ -38,7 +38,7 @@ const allTimezones: ICustomTimezone = {
   "Africa/Algiers": "West Central Africa",
   "Europe/Bucharest": "Bucharest",
   "Africa/Cairo": "Cairo",
-  "Europe/Helsinki": "Helsinki, Kiev, Riga, Sofia, Tallinn, Vilnius",
+  "Europe/Helsinki": "Helsinki, Kyiv, Riga, Sofia, Tallinn, Vilnius",
   "Europe/Athens": "Athens, Minsk",
   "Asia/Jerusalem": "Jerusalem",
   "Africa/Harare": "Harare, Pretoria",
