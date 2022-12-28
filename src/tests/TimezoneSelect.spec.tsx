@@ -1,6 +1,6 @@
 import React from 'react'
 import { render, findAllByText, fireEvent } from '@testing-library/react'
-import TimezoneSelect, { allTimezones } from '../../dist/index.js'
+import TimezoneSelect, { allTimezones } from '../../dist'
 
 // react-select react-testing-library jest example tests:
 // https://github.com/JedWatson/react-select/blob/master/packages/react-select/src/__tests__/Select.test.js

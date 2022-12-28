@@ -1,13 +1,34 @@
 import React, { useMemo, useState } from 'react';
 import spacetime from 'spacetime';
-import TimezoneSelect, { allTimezones } from '../../dist/index.js';
-import type { ITimezone, ILabelStyle } from '../../dist';
+import TimezoneSelect, {
+  allTimezones,
+  useTimezoneSelect,
+} from '../../dist';
+import type {
+  ITimezone,
+  ILabelStyle,
+  TimezoneSelectOptions,
+  ITimezoneOption,
+} from '../../dist';
+
+export type ISelectStyle = 'react-select' | 'select';
+
+const timezones = {
+  ...allTimezones,
+  'America/Lima': 'Pittsburgh',
+  'Europe/Berlin': 'Frankfurt',
+};
 
 const Timezone = () => {
   const [selectedTimezone, setSelectedTimezone] =
     React.useState<ITimezone>('Europe/Rome');
+  const [selectStyle, setSelectStyle] =
+    React.useState<ISelectStyle>('react-select');
   const [labelStyle, setLabelStyle] = React.useState<ILabelStyle>('original');
 
+  const handleSelectChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setSelectStyle(event.target.value as ISelectStyle);
+  };
   const handleLabelChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setLabelStyle(event.target.value as ILabelStyle);
   };
@@ -21,6 +42,11 @@ const Timezone = () => {
         : selectedTimezone.value;
     setDatetime(datetime.goto(tzValue));
   }, [selectedTimezone]);
+
+  const selectOptions = {
+    labelStyle,
+    timezones,
+  };
 
   return (
     <div className="wrapper">
@@ -38,17 +64,42 @@ const Timezone = () => {
         </p>
       </div>
       <div className="select-wrapper">
-        <TimezoneSelect
-          value={selectedTimezone}
-          onChange={setSelectedTimezone}
-          labelStyle={labelStyle}
-          onBlur={() => console.log('Blur!')}
-          timezones={{
-            ...allTimezones,
-            'America/Lima': 'Pittsburgh',
-            'Europe/Berlin': 'Frankfurt',
-          }}
-        />
+        {
+          {
+            'react-select': (
+              <TimezoneSelect
+                value={selectedTimezone}
+                onChange={setSelectedTimezone}
+                onBlur={() => console.log('Blur!')}
+                {...selectOptions}
+              />
+            ),
+            select: (
+              <NativeSelectTimezone
+                value={selectedTimezone}
+                selectOptions={selectOptions}
+                onChange={setSelectedTimezone}
+              />
+            ),
+          }[selectStyle]
+        }
+      </div>
+      <div className="label-style-select" onChange={handleSelectChange}>
+        <span>Select Style:</span>
+        <label htmlFor="react-select">
+          <input
+            type="radio"
+            id="react-select"
+            name="selectStyle"
+            value="react-select"
+            defaultChecked={selectStyle === 'react-select'}
+          />
+          react-select
+        </label>
+        <label htmlFor="select">
+          <input type="radio" id="select" name="selectStyle" value="select" />
+          select
+        </label>
       </div>
       <div className="label-style-select" onChange={handleLabelChange}>
         <span>Label Style:</span>
@@ -57,22 +108,17 @@ const Timezone = () => {
             type="radio"
             id="original"
             name="labelStyle"
-            value={'ori}ginal'}
+            value="original"
             defaultChecked={labelStyle === 'original'}
           />
           original
         </label>
         <label htmlFor="altName">
-          <input
-            type="radio"
-            id="altName"
-            name="labelStyle"
-            value={'altName'}
-          />
+          <input type="radio" id="altName" name="labelStyle" value="altName" />
           altName
         </label>
         <label htmlFor="abbrev">
-          <input type="radio" id="abbrev" name="labelStyle" value={'abbrev'} />
+          <input type="radio" id="abbrev" name="labelStyle" value="abbrev" />
           abbrev
         </label>
       </div>
@@ -89,5 +135,25 @@ const Timezone = () => {
     </div>
   );
 };
+
+type Props = {
+  value: ITimezoneOption;
+  selectOptions: TimezoneSelectOptions;
+  onChange?: (timezone: ITimezoneOption) => void;
+};
+
+function NativeSelectTimezone({ selectOptions, value, onChange }: Props) {
+  const { options, parseTimezone } = useTimezoneSelect(selectOptions);
+  return (
+    <select
+      value={parseTimezone(value).value}
+      onChange={(e) => onChange(parseTimezone(e.currentTarget.value))}
+    >
+      {options.map((option) => (
+        <option value={option.value}>{option.label}</option>
+      ))}
+    </select>
+  );
+}
 
 export default Timezone;

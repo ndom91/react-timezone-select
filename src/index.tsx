@@ -9,22 +9,21 @@ import type {
   ITimezoneOption,
   ILabelStyle,
 } from './types/timezone'
+import { TimezoneSelectOptions } from './types/timezone'
 
 export { allTimezones }
-export type { ITimezone, ITimezoneOption, Props, ILabelStyle }
+export type { ITimezone, ITimezoneOption, Props, ILabelStyle, TimezoneSelectOptions }
 
-const TimezoneSelect = ({
-  value,
-  onBlur,
-  onChange,
+export function useTimezoneSelect({
+  timezones = allTimezones,
   labelStyle = 'original',
-  timezones,
-  ...props
-}: Props) => {
-  if (!timezones) timezones = allTimezones
-  const getOptions = React.useMemo(() => {
+}: TimezoneSelectOptions): {
+  parseTimezone: (zone: ITimezone) => ITimezoneOption
+  options: ITimezoneOption[]
+} {
+  const options = React.useMemo(() => {
     return Object.entries(timezones)
-      .reduce<ITimezoneOption[]>((selectOptions, zone) => {
+      .map(zone => {
         const now = spacetime.now(zone[0])
         const tz = now.timezone()
         const tzStrings = soft(zone[0])
@@ -58,22 +57,16 @@ const TimezoneSelect = ({
             label = `${prefix}`
         }
 
-        selectOptions.push({
+        return {
           value: tz.name,
           label: label,
           offset: tz.current.offset,
           abbrev: abbr,
           altName: altName,
-        })
-
-        return selectOptions
-      }, [])
+        }
+      })
       .sort((a: ITimezoneOption, b: ITimezoneOption) => a.offset - b.offset)
   }, [labelStyle, timezones])
-
-  const handleChange = (tz: ITimezoneOption) => {
-    onChange && onChange(tz)
-  }
 
   const findFuzzyTz = (zone: string): ITimezoneOption => {
     let currentTime = spacetime.now('GMT')
@@ -82,7 +75,7 @@ const TimezoneSelect = ({
     } catch (err) {
       return
     }
-    return getOptions
+    return options
       .filter(
         (tz: ITimezoneOption) =>
           tz.offset === currentTime.timezone().current.offset
@@ -133,19 +126,39 @@ const TimezoneSelect = ({
     if (typeof zone === 'object' && zone.value && zone.label) return zone
     if (typeof zone === 'string') {
       return (
-        getOptions.find(tz => tz.value === zone) ||
+        options.find(tz => tz.value === zone) ||
         (zone.indexOf('/') !== -1 && findFuzzyTz(zone))
       )
     } else if (zone.value && !zone.label) {
-      return getOptions.find(tz => tz.value === zone.value)
+      return options.find(tz => tz.value === zone.value)
     }
+  }
+
+  return { options, parseTimezone }
+}
+
+const TimezoneSelect = ({
+  value,
+  onBlur,
+  onChange,
+  labelStyle,
+  timezones,
+  ...props
+}: Props) => {
+  const { options, parseTimezone } = useTimezoneSelect({
+    timezones,
+    labelStyle,
+  })
+
+  const handleChange = (tz: ITimezoneOption) => {
+    onChange && onChange(tz)
   }
 
   return (
     <Select
       value={parseTimezone(value)}
       onChange={handleChange}
-      options={getOptions}
+      options={options}
       onBlur={onBlur}
       {...props}
     />

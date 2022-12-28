@@ -143,6 +143,27 @@ The above example will generate two additional choices in the select options, on
 - `timezones` - Custom Timezone Object
 - Any other [`react-select`](https://github.com/jedwatson/react-select#props) props
 
+## 🎨 Custom Select component
+
+By default, react-timezone-select uses [`react-select`](https://github.com/jedwatson/react-select) as underlying select
+component.
+If your application already uses another select component i.e. MUI, Semantic UI or similar you can use
+the `useTimezoneSelect` hook instead of the `TimezoneSelect` component to render the timezones using your self-provided
+select component.
+
+```jsx
+import { useTimezoneSelect } from 'react-timezone-select'
+
+const { options, parseTimezone } = useTimezoneSelect({ labelStyle, timezones })
+return (
+  <select onChange={e => onChange(parseTimezone(e.currentTarget.value))}>
+    {options.map(option => (
+      <option value={option.value}>{option.label}</option>
+    ))}
+  </select>
+)
+```
+
 ## 🚧 Contributing
 
 Pull requests are always welcome! Please stick to the `prettier` settings, and if adding new features, please consider adding test(s) and documentation where appropriate!
