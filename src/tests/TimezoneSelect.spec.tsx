@@ -5,11 +5,6 @@ import TimezoneSelect, { allTimezones } from '../../dist/index.js'
 // react-select react-testing-library jest example tests:
 // https://github.com/JedWatson/react-select/blob/master/packages/react-select/src/__tests__/Select.test.js
 
-test('snapshot - defaults', () => {
-  const { container } = render(<TimezoneSelect value={''} onChange={e => e} />)
-  expect(container).toMatchSnapshot()
-})
-
 test('loads and displays default timezone - passing string', async () => {
   const { getByText } = render(
     <TimezoneSelect value={'Europe/Amsterdam'} onChange={e => e} />

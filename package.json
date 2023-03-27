@@ -1,6 +1,6 @@
 {
   "name": "react-timezone-select",
-  "version": "1.3.2",
+  "version": "1.4.1",
   "description": "Usable, dynamic React Timezone Select",
   "scripts": {
     "dev": "concurrently \"rollup -cw\" \"cd example && npm run dev\"",
@@ -50,7 +50,7 @@
     "react-dom": "^18 || ^17.0.1 || ^16"
   },
   "dependencies": {
-    "react-select": "^5.2.2",
+    "react-select": "^5.7.0",
     "spacetime": "^7.1.4",
     "timezone-soft": "^1.3.1"
   },
@@ -65,16 +65,37 @@
     "concurrently": "^7.0.0",
     "esbuild": "^0.16.12",
     "esbuild-jest": "^0.5.0",
+    "eslint": "^8.36.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
     "gh-pages": "^3.2.3",
     "jest": "^27.4.7",
     "prettier": "^2.5.1",
-    "pretty-quick": "^3.1.3",
     "react": "^17",
     "react-dom": "^17",
     "simple-git-hooks": "^2.7.0",
     "ts-jest": "^27.1.3",
     "tsup": "^6.5.0",
     "typescript": "^4.5.5"
+  },
+  "eslintConfig": {
+    "parserOptions": {
+      "sourceType": "module"
+    },
+    "extends": [
+      "eslint:recommended",
+      "prettier"
+    ],
+    "env": {
+      "browser": true,
+      "es6": true
+    },
+    "plugins": [
+      "prettier"
+    ],
+    "rules": {
+      "prettier/prettier": "error"
+    }
   },
   "prettier": {
     "trailingComma": "es5",
@@ -83,6 +104,14 @@
     "arrowParens": "avoid"
   },
   "simple-git-hooks": {
-    "pre-commit": "npm run pretty-quick"
+    "pre-commit": "npx lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,css,json}": [
+      "prettier --write"
+    ],
+    "*.{js,jsx}": [
+      "eslint --fix"
+    ]
   }
 }
