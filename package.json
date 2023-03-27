@@ -9,6 +9,7 @@
     "build": "tsup src/index.tsx --format cjs,esm --dts",
     "build:example": "cd example && pnpm run build",
     "deploy": "gh-pages -d example/dist",
+    "pretest": "pnpm run build",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:ci": "jest --ci ",
