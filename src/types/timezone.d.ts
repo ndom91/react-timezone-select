@@ -11,7 +11,8 @@ export interface ITimezoneOption {
   altName?: string
 }
 export declare type ITimezone = ITimezoneOption | string
-export interface Props extends Omit<ReactSelectProps, 'onChange'> {
+export interface Props
+  extends Omit<ReactSelectProps<ITimezone, false>, 'onChange'> {
   value: ITimezone
   labelStyle?: ILabelStyle
   onChange?: (timezone: ITimezoneOption) => void
