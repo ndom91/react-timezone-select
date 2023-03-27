@@ -19,6 +19,7 @@ const TimezoneSelect = ({
   onChange,
   labelStyle = 'original',
   timezones,
+  maxAbbrLength = 5,
   ...props
 }: Props) => {
   if (!timezones) timezones = allTimezones
@@ -32,14 +33,14 @@ const TimezoneSelect = ({
         let label = ''
         let abbr = now.isDST()
           ? // @ts-expect-error
-            tzStrings[0].daylight?.abbr
+            tzStrings[0]?.daylight?.abbr ?? ''
           : // @ts-expect-error
-            tzStrings[0].standard?.abbr
+            tzStrings[0]?.standard?.abbr ?? ''
         let altName = now.isDST()
-          ? tzStrings[0].daylight?.name
-          : tzStrings[0].standard?.name
+          ? tzStrings[0]?.daylight?.name ?? ''
+          : tzStrings[0]?.standard?.name ?? ''
 
-        const min = tz.current.offset * 60
+        const min = (tz?.current?.offset ?? 0) * 60
         const hr =
           `${(min / 60) ^ 0}:` + (min % 60 === 0 ? '00' : Math.abs(min % 60))
         const prefix = `(GMT${hr.includes('-') ? hr : `+${hr}`}) ${zone[1]}`
@@ -52,7 +53,9 @@ const TimezoneSelect = ({
             label = `${prefix} ${altName?.length ? `(${altName})` : ''}`
             break
           case 'abbrev':
-            label = `${prefix} ${abbr?.length < 5 ? `(${abbr})` : ''}`
+            label = `${prefix} ${
+              abbr?.length < maxAbbrLength ? `(${abbr})` : ''
+            }`
             break
           default:
             label = `${prefix}`
@@ -61,7 +64,7 @@ const TimezoneSelect = ({
         selectOptions.push({
           value: tz.name,
           label: label,
-          offset: tz.current.offset,
+          offset: tz?.current?.offset ?? 0,
           abbrev: abbr,
           altName: altName,
         })

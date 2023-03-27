@@ -22,4 +22,5 @@ export interface Props
   labelStyle?: ILabelStyle
   onChange?: (timezone: ITimezoneOption) => void
   timezones?: ICustomTimezone
+  maxAbbrLength?: number
 }
