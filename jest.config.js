@@ -6,7 +6,7 @@ const config = {
   // Jest transformations -- this adds support for TypeScript
   // using ts-jest
   transform: {
-    // '^.+\\.tsx?$': 'esbuild-jest',
+    '^.+\\.js$': 'esbuild-jest',
     '^.+\\.tsx?$': 'ts-jest',
     // '.(css|scss)$': '<rootDir>/src/tests/mocks/cssStub.ts',
   },
@@ -27,6 +27,7 @@ const config = {
   // Module file extensions for importing
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
   // extensionsToTreatAsEsm: ['.jsx', '.ts', '.tsx'],
+  transformIgnorePatterns: ['node_modules/.pnpm/(?!spacetime)'],
 }
 
 export default config

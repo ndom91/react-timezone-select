@@ -1,6 +1,6 @@
 import React from 'react'
 import { render, findAllByText, fireEvent } from '@testing-library/react'
-import TimezoneSelect, { allTimezones } from '../../dist/cjs/index.js'
+import TimezoneSelect, { allTimezones } from '../../dist/index.js'
 
 // react-select react-testing-library jest example tests:
 // https://github.com/JedWatson/react-select/blob/master/packages/react-select/src/__tests__/Select.test.js
@@ -23,6 +23,7 @@ test('loads and displays default timezone - passing full object', async () => {
       value={{
         value: 'Europe/Amsterdam',
         label: '(GMT+1:00) Amsterdam, Berlin, Bern, Rome, Stockholm, Vienna',
+        offset: 60,
       }}
       onChange={e => e}
     />
