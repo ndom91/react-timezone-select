@@ -12,7 +12,6 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "test:ci": "jest --ci ",
-    "pretty-quick": "pretty-quick --staged",
     "tsc": "tsc"
   },
   "author": "Nico Domino <yo@ndo.dev>",
