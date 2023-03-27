@@ -1,6 +1,6 @@
 {
   "name": "react-timezone-select",
-  "version": "1.5.1",
+  "version": "1.5.2",
   "description": "Usable, dynamic React Timezone Select",
   "scripts": {
     "dev": "concurrently \"rollup -cw\" \"cd example && npm run dev\"",
