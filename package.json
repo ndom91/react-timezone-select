@@ -1,17 +1,18 @@
 {
   "name": "react-timezone-select",
-  "version": "1.5.1",
+  "version": "1.5.4",
   "description": "Usable, dynamic React Timezone Select",
   "scripts": {
-    "dev": "concurrently \"rollup -cw\" \"cd example && npm run dev\"",
-    "prepublish": "npm run build",
-    "postpublish": "npm run build:example && npm run deploy",
+    "dev": "concurrently \"tsup src/index.tsx --format esm --watch\" \"cd example && npm run dev\"",
+    "prepublishOnly": "pnpm run build",
+    "postpublish": "pnpm run build:example && npm run deploy",
     "build": "tsup src/index.tsx --format cjs,esm --dts",
-    "build:example": "cd example && npm run build",
+    "build:example": "cd example && pnpm run build",
     "deploy": "gh-pages -d example/dist",
+    "pretest": "pnpm run build",
     "test": "jest",
     "test:watch": "jest --watch",
-    "test:ci": "jest --ci ",
+    "test:ci": "pnpm run build && jest --ci ",
     "tsc": "tsc"
   },
   "author": "Nico Domino <yo@ndo.dev>",
@@ -40,8 +41,9 @@
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "import": "./index.js",
-      "require": "./index.cjs"
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
     }
   },
   "peerDependencies": {
