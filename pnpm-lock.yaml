@@ -21,16 +21,16 @@ specifiers:
   react-dom: ^17
   react-select: ^5.7.0
   simple-git-hooks: ^2.7.0
-  spacetime: ^7.1.4
-  timezone-soft: ^1.3.1
+  spacetime: ^7.4.1
+  timezone-soft: ^1.4.1
   ts-jest: ^27.1.3
   tsup: ^6.5.0
   typescript: ^4.5.5
 
 dependencies:
   react-select: 5.7.0_crofjw4wgu3s56yfd4j5czcwki
-  spacetime: 7.1.4
-  timezone-soft: 1.3.1
+  spacetime: 7.4.1
+  timezone-soft: 1.4.1
 
 devDependencies:
   '@babel/core': 7.21.3
@@ -4819,8 +4819,8 @@ packages:
       whatwg-url: 7.1.0
     dev: true
 
-  /spacetime/7.1.4:
-    resolution: {integrity: sha512-ZzYuGjaMPE42p/fVU9Qcd+aMhgYzC83hgqMKyWlGILtponsLm5KJZgWzblLnOU8OblMQa3YXo/0IiZZ5JsTDfA==}
+  /spacetime/7.4.1:
+    resolution: {integrity: sha512-khQpvLNMhHFzfFJslMfunqqsjOxdmoDDYX5Wh4qYb8N6f8vBPI6HvbT7Wb2wcMa+oP1Xh1HpEcwfPFrj8UfvHQ==}
     dev: false
 
   /spawn-command/0.0.2-1:
@@ -5002,8 +5002,8 @@ packages:
     resolution: {integrity: sha512-8hmiGIJMDlwjg7dlJ4yKGLK8EsYqKgPWbG3b4wjJddKNwc7N7Dpn08Df4szr/sZdMVeOstrdYSsqzX6BYbcB+w==}
     dev: true
 
-  /timezone-soft/1.3.1:
-    resolution: {integrity: sha512-mphMogFJzQy6UIpl/UgKLSNbhmLtdgbz866TnqJ/CnWnc+7dsNyAe8nPwVdOW3Mf8nT0lA32MW/gYhAl4/RkVg==}
+  /timezone-soft/1.4.1:
+    resolution: {integrity: sha512-AnKhVnQmOjKHhdQXXe7cO7MyRGIHEGzedax4Y2N7nOr9dOYEFEBkWFJJwJTvPQvXsEtbWfa6xJj34iZKdC+W+g==}
     dev: false
 
   /tmpl/1.0.5:
