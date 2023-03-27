@@ -12,7 +12,7 @@
     "pretest": "pnpm run build",
     "test": "jest",
     "test:watch": "jest --watch",
-    "test:ci": "jest --ci ",
+    "test:ci": "pnpm run build && jest --ci ",
     "tsc": "tsc"
   },
   "author": "Nico Domino <yo@ndo.dev>",
