@@ -1,10 +1,10 @@
-import type { Props as ReactSelectProps } from 'react-select'
+import type { Props as ReactSelectProps } from "react-select"
 
 export type ICustomTimezone = {
   [key: string]: string
 }
 
-export type ILabelStyle = 'original' | 'altName' | 'abbrev'
+export type ILabelStyle = "original" | "altName" | "abbrev"
 
 export interface ITimezoneOption {
   value: string
@@ -16,8 +16,7 @@ export interface ITimezoneOption {
 
 export type ITimezone = ITimezoneOption | string
 
-export interface Props
-  extends Omit<ReactSelectProps<ITimezone, false>, 'onChange'> {
+export interface Props extends Omit<ReactSelectProps, "onChange"> {
   value: ITimezone
   labelStyle?: ILabelStyle
   onChange?: (timezone: ITimezoneOption) => void
