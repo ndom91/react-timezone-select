@@ -148,6 +148,20 @@ test('select drop-downs must use the fireEvent.change', () => {
   })
 })
 
+test('loads and does not throw on missing timezone', async () => {
+  expect(() =>
+    render(
+      <TimezoneSelect
+        value={'Europe/Berlin'}
+        timezones={{
+          'America/SmallTownMissing': 'Missing',
+        }}
+        onChange={e => e}
+      />
+    )
+  ).not.toThrowError(/Please enter an IANA timezone id/i)
+})
+
 test('load and displays for timezone has empty response from spacetime ', async () => {
   const { getByText } = render(
     <TimezoneSelect
