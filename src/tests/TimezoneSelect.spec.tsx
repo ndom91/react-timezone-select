@@ -136,7 +136,7 @@ test('select drop-downs must use the fireEvent.change', () => {
     ...container.querySelectorAll('div[id^="react-select"]'),
   ].find(n => n.textContent === '(GMT-10:00) Hawaii')
 
-  fireEvent.click(selectOption)
+  selectOption && fireEvent.click(selectOption)
 
   expect(onChangeSpy).toHaveBeenCalledTimes(1)
   expect(onChangeSpy).toHaveBeenCalledWith({
@@ -146,4 +146,40 @@ test('select drop-downs must use the fireEvent.change', () => {
     offset: -10,
     abbrev: 'HAST',
   })
+})
+
+test('load and displays for timezone has empty response from spacetime ', async () => {
+  const { getByText } = render(
+    <TimezoneSelect
+      value={'America/Antigua'}
+      onChange={e => e}
+      timezones={{ ...allTimezones, 'America/Antigua': 'Antigua' }}
+    />
+  )
+
+  expect(getByText(/Antigua/)).toBeInTheDocument()
+})
+
+test('load and show abbrevations according to maxAbbrLength(5)', async () => {
+  const { getByText } = render(
+    <TimezoneSelect
+      value={'America/Chihuahua'}
+      onChange={e => e}
+      labelStyle="abbrev"
+      maxAbbrLength={5}
+    />
+  )
+
+  expect(getByText(/\(HNPMX\)$/)).toBeInTheDocument()
+})
+
+test('load and show abbrevations according to default maxAbbrLength(4)', async () => {
+  const { getByText } = render(
+    <TimezoneSelect
+      value={'America/Chihuahua'}
+      onChange={e => e}
+      labelStyle="abbrev"
+    />
+  )
+  expect(getByText(/Chihuahua/)).not.toContain('HNPMX')
 })

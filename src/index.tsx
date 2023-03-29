@@ -19,7 +19,7 @@ const TimezoneSelect = ({
   onChange,
   labelStyle = 'original',
   timezones,
-  maxAbbrLength = 5,
+  maxAbbrLength = 4,
   ...props
 }: Props) => {
   if (!timezones) timezones = allTimezones
@@ -54,7 +54,7 @@ const TimezoneSelect = ({
             break
           case 'abbrev':
             label = `${prefix} ${
-              abbr?.length < maxAbbrLength ? `(${abbr})` : ''
+              abbr?.length <= maxAbbrLength ? `(${abbr})` : ''
             }`
             break
           default:
