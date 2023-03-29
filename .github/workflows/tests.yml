@@ -8,6 +8,8 @@ jobs:
       - uses: pnpm/action-setup@v2
         with:
           version: 'latest'
+          run_install: |
+            - args: [--no-frozen-lockfile]
       - name: Test using Node.js
         uses: actions/setup-node@v3
         with:
