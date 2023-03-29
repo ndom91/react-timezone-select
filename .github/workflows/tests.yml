@@ -11,6 +11,6 @@ jobs:
       - name: Test using Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '14'
+          node-version: '18'
       - run: pnpm install
       - run: pnpm test:ci
