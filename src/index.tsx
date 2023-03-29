@@ -33,10 +33,8 @@ const TimezoneSelect = ({
 
           let label = ''
           let abbr = now.isDST()
-            ? // @ts-expect-error
-              tzStrings[0].daylight.abbr
-            : // @ts-expect-error
-              tzStrings[0].standard.abbr
+            ? tzStrings[0].daylight.abbr
+            : tzStrings[0].standard.abbr
           let altName = now.isDST()
             ? tzStrings[0].daylight.name
             : tzStrings[0].standard.name
