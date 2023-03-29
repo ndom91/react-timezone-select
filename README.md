@@ -23,7 +23,7 @@ We also have some **more examples** available on Codesandbox using this componen
 ## 🏗️ Installing
 
 ```bash
-npm install react-timezone-select
+npm install react-select react-timezone-select
 ```
 
 ## 🔭 Usage
