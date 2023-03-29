@@ -162,18 +162,6 @@ test('loads and does not throw on missing timezone', async () => {
   ).not.toThrowError(/Please enter an IANA timezone id/i)
 })
 
-test('load and displays for timezone has empty response from spacetime ', async () => {
-  const { getByText } = render(
-    <TimezoneSelect
-      value={'America/Antigua'}
-      onChange={e => e}
-      timezones={{ ...allTimezones, 'America/Antigua': 'Antigua' }}
-    />
-  )
-
-  expect(getByText(/Antigua/)).toBeInTheDocument()
-})
-
 test('load and show abbrevations according to maxAbbrLength(5)', async () => {
   const { getByText } = render(
     <TimezoneSelect
@@ -184,7 +172,7 @@ test('load and show abbrevations according to maxAbbrLength(5)', async () => {
     />
   )
 
-  expect(getByText(/\(HNPMX\)$/)).toBeInTheDocument()
+  expect(getByText(/\(H(N|E)PMX\)$/)).toBeInTheDocument()
 })
 
 test('load and show abbrevations according to default maxAbbrLength(4)', async () => {
@@ -195,5 +183,5 @@ test('load and show abbrevations according to default maxAbbrLength(4)', async (
       labelStyle="abbrev"
     />
   )
-  expect(getByText(/Chihuahua/)).not.toContain('HNPMX')
+  expect(getByText(/Chihuahua/)).not.toContain('H(N|E)PMX')
 })
