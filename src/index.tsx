@@ -52,9 +52,7 @@ const TimezoneSelect = ({
               label = `${prefix} ${altName?.length ? `(${altName})` : ''}`
               break
             case 'abbrev':
-              label = `${prefix} ${
-                abbr?.length <= maxAbbrLength ? `(${abbr})` : ''
-              }`
+              label = `${prefix} (${abbr.substring(0, maxAbbrLength)})`
               break
             default:
               label = `${prefix}`
