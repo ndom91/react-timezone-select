@@ -3,6 +3,7 @@
   "exclude": ["example/", "node_modules"],
   "compilerOptions": {
     "target": "es2020",
+    "module": "esnext",
     "emitDeclarationOnly": true,
     "declaration": true,
     "strict": false,

@@ -10,69 +10,68 @@ import type {
   ILabelStyle,
 } from './types/timezone'
 
-export { allTimezones }
-export type { ITimezone, ITimezoneOption, Props, ILabelStyle }
-
 const TimezoneSelect = ({
   value,
   onBlur,
   onChange,
   labelStyle = 'original',
-  timezones,
+  timezones = allTimezones,
   maxAbbrLength = 4,
   ...props
 }: Props) => {
-  if (!timezones) timezones = allTimezones
-  const getOptions = React.useMemo(() => {
-    return Object.entries(timezones)
-      .reduce<ITimezoneOption[]>((selectOptions, zone) => {
-        try {
-          const now = spacetime.now(zone[0])
-          const tz = now.timezone()
-          const tzStrings = soft(zone[0])
+  const getOptions = React.useMemo(
+    () =>
+      Object.entries(timezones)
+        .reduce<ITimezoneOption[]>((selectOptions, zone) => {
+          try {
+            const now = spacetime.now(zone[0])
+            const tz = now.timezone()
+            const tzStrings = soft(zone[0])
 
-          let label = ''
-          let abbr = now.isDST()
-            ? tzStrings[0].daylight.abbr
-            : tzStrings[0].standard.abbr
-          let altName = now.isDST()
-            ? tzStrings[0].daylight.name
-            : tzStrings[0].standard.name
+            let label = ''
+            let abbr = now.isDST()
+              ? tzStrings[0].daylight.abbr
+              : tzStrings[0].standard.abbr
+            let altName = now.isDST()
+              ? tzStrings[0].daylight.name
+              : tzStrings[0].standard.name
 
-          const min = tz.current.offset * 60
-          const hr =
-            `${(min / 60) ^ 0}:` + (min % 60 === 0 ? '00' : Math.abs(min % 60))
-          const prefix = `(GMT${hr.includes('-') ? hr : `+${hr}`}) ${zone[1]}`
+            const min = tz.current.offset * 60
+            const hr =
+              `${(min / 60) ^ 0}:` +
+              (min % 60 === 0 ? '00' : Math.abs(min % 60))
+            const prefix = `(GMT${hr.includes('-') ? hr : `+${hr}`}) ${zone[1]}`
 
-          switch (labelStyle) {
-            case 'original':
-              label = prefix
-              break
-            case 'altName':
-              label = `${prefix} ${altName?.length ? `(${altName})` : ''}`
-              break
-            case 'abbrev':
-              label = `${prefix} (${abbr.substring(0, maxAbbrLength)})`
-              break
-            default:
-              label = `${prefix}`
+            switch (labelStyle) {
+              case 'original':
+                label = prefix
+                break
+              case 'altName':
+                label = `${prefix} ${altName?.length ? `(${altName})` : ''}`
+                break
+              case 'abbrev':
+                label = `${prefix} (${abbr.substring(0, maxAbbrLength)})`
+                break
+              default:
+                label = `${prefix}`
+            }
+
+            selectOptions.push({
+              value: tz.name,
+              label: label,
+              offset: tz.current.offset,
+              abbrev: abbr,
+              altName: altName,
+            })
+
+            return selectOptions
+          } catch {
+            return selectOptions
           }
-
-          selectOptions.push({
-            value: tz.name,
-            label: label,
-            offset: tz.current.offset,
-            abbrev: abbr,
-            altName: altName,
-          })
-
-          return selectOptions
-        } catch {
-          return selectOptions
-        }
-      }, [])
-      .sort((a: ITimezoneOption, b: ITimezoneOption) => a.offset - b.offset)
-  }, [labelStyle, timezones])
+        }, [])
+        .sort((a: ITimezoneOption, b: ITimezoneOption) => a.offset - b.offset),
+    [labelStyle, timezones]
+  )
 
   const handleChange = (tz: ITimezoneOption) => {
     onChange && onChange(tz)
@@ -155,4 +154,5 @@ const TimezoneSelect = ({
   )
 }
 
-export default TimezoneSelect
+export { TimezoneSelect as default, allTimezones }
+export type { ITimezone, ITimezoneOption, Props, ILabelStyle }

@@ -1,6 +1,6 @@
 {
   "name": "react-timezone-select",
-  "version": "1.5.6",
+  "version": "2.0.0",
   "description": "Usable, dynamic React Timezone Select",
   "scripts": {
     "dev": "concurrently \"tsup src/index.tsx --format esm --watch\" \"cd example && pnpm dev\"",
@@ -48,10 +48,10 @@
   },
   "peerDependencies": {
     "react": "^18 || ^17.0.1 || ^16",
-    "react-dom": "^18 || ^17.0.1 || ^16"
+    "react-dom": "^18 || ^17.0.1 || ^16",
+    "react-select": "^5.7.0"
   },
   "dependencies": {
-    "react-select": "^5.7.0",
     "spacetime": "^7.4.1",
     "timezone-soft": "^1.4.1"
   },
