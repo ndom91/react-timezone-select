@@ -136,7 +136,7 @@ test('select drop-downs must use the fireEvent.change', () => {
     ...container.querySelectorAll('div[id^="react-select"]'),
   ].find(n => n.textContent === '(GMT-10:00) Hawaii')
 
-  fireEvent.click(selectOption)
+  selectOption && fireEvent.click(selectOption)
 
   expect(onChangeSpy).toHaveBeenCalledTimes(1)
   expect(onChangeSpy).toHaveBeenCalledWith({
@@ -146,4 +146,42 @@ test('select drop-downs must use the fireEvent.change', () => {
     offset: -10,
     abbrev: 'HAST',
   })
+})
+
+test('loads and does not throw on missing timezone', async () => {
+  expect(() =>
+    render(
+      <TimezoneSelect
+        value={'Europe/Berlin'}
+        timezones={{
+          'America/SmallTownMissing': 'Missing',
+        }}
+        onChange={e => e}
+      />
+    )
+  ).not.toThrowError(/Please enter an IANA timezone id/i)
+})
+
+test('load and show abbrevations according to maxAbbrLength(5)', async () => {
+  const { getByText } = render(
+    <TimezoneSelect
+      value={'America/Chihuahua'}
+      onChange={e => e}
+      labelStyle="abbrev"
+      maxAbbrLength={5}
+    />
+  )
+
+  expect(getByText(/\(H(N|E)PMX\)$/)).toBeInTheDocument()
+})
+
+test('load and show abbrevations according to default maxAbbrLength(4)', async () => {
+  const { getByText } = render(
+    <TimezoneSelect
+      value={'America/Chihuahua'}
+      onChange={e => e}
+      labelStyle="abbrev"
+    />
+  )
+  expect(getByText(/Chihuahua/)).not.toContain('H(N|E)PMX')
 })

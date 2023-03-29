@@ -1,9 +1,9 @@
 {
   "name": "react-timezone-select",
-  "version": "1.5.4",
+  "version": "2.0.0",
   "description": "Usable, dynamic React Timezone Select",
   "scripts": {
-    "dev": "concurrently \"tsup src/index.tsx --format esm --watch\" \"cd example && npm run dev\"",
+    "dev": "concurrently \"tsup src/index.tsx --format esm --watch\" \"cd example && pnpm dev\"",
     "prepublishOnly": "pnpm run build",
     "postpublish": "pnpm run build:example && npm run deploy",
     "build": "tsup src/index.tsx --format cjs,esm --dts",
@@ -48,12 +48,12 @@
   },
   "peerDependencies": {
     "react": "^18 || ^17.0.1 || ^16",
-    "react-dom": "^18 || ^17.0.1 || ^16"
+    "react-dom": "^18 || ^17.0.1 || ^16",
+    "react-select": "^5.7.0"
   },
   "dependencies": {
-    "react-select": "^5.7.0",
-    "spacetime": "^7.1.4",
-    "timezone-soft": "^1.3.1"
+    "spacetime": "^7.4.1",
+    "timezone-soft": "^1.4.1"
   },
   "devDependencies": {
     "@babel/core": "^7.20.7",

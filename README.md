@@ -16,7 +16,7 @@ While looking around for a good option, I had trouble finding a timezone select 
 
 #### Demo: [ndom91.github.io/react-timezone-select](https://ndom91.github.io/react-timezone-select/)
 
-> This demo is also available in the `./examples` directory. Simply run `npm run dev` in the root of the repository after installing everything in the examples subdirectory and snowpack dev will begin, where you can find the demo at [`localhost:8080`](http://localhost:8080).
+> This demo is also available in the `./examples` directory. Simply run `pnpm dev` in the root of the repository and the vite dev server will start, where you can then find the example app at [`localhost:3001`](http://localhost:3001).
 
 We also have some **more examples** available on Codesandbox using this component with the datetime library `spacetime` ([example](https://codesandbox.io/s/react-timezone-select-usage-z37hf)) as well as with `moment` ([example](https://codesandbox.io/s/react-timezone-select-usage-moment-5n6vn)), as well as in Typescript using the new `Intl` browser API ([example](https://codesandbox.io/s/react-timezone-select-typescript-8lsv3?file=/src/App.tsx)) showing how one might use this component in a real application.
 
@@ -34,7 +34,9 @@ import ReactDOM from 'react-dom'
 import TimezoneSelect from 'react-timezone-select'
 
 const App = () => {
-  const [selectedTimezone, setSelectedTimezone] = useState({})
+  const [selectedTimezone, setSelectedTimezone] =useState(
+    Intl.DateTimeFormat().resolvedOptions().timeZone
+  )
 
   return (
     <div className="App">
@@ -86,22 +88,7 @@ const [timezone, setTimezone] = useState(
 )
 ```
 
-Thanks [@ndrwksr](https://github.com/ndom91/react-timezone-select/issues/25)!
-
-### ⚠ Next.js Users
-
-**Update**: Starting with `v1.3.0` you DO NOT need `next-transpile-modules` to use this library with Next.js anymore!
-
-For now, Next.js isn't great about handling ESM packages. Until this gets fixed, there is a workaround for using this and other ESM packages via [`next-transpile-modules`](https://www.npmjs.com/package/next-transpile-modules).
-
-```js
-// next.config.js
-const withTM = require('next-transpile-modules')(['react-timezone-select'])
-
-module.exports = withTM({
-  // ...further Next.js config
-})
-```
+Thanks [@ndrwksr](https://github.com/ndom91/react-timezone-select/issues/25)
 
 ### 🕒 Custom Timezones
 
@@ -111,7 +98,7 @@ The `timezones` prop takes a dictionary of timezones. Don't worry, we'll prepend
 
 ```jsx
 import TimezoneSelect, { allTimezones } from 'react-timezone-select'
-;<TimezoneSelect
+<TimezoneSelect
   value={selectedTimezone}
   onChange={setSelectedTimezone}
   timezones={{
@@ -126,21 +113,29 @@ The above example will generate two additional choices in the select options, on
 
 ## 🕹️ Props
 
-- `value` - Initial Timezone `string`, i.e. `'Europe/Amsterdam'` or the full object from the onChange function: `{ value: string, label: string, abbrev: string, altName: string }`
+- `value` - `string | Object` - Initial/current Timezone.
+```
+'America/Juneau' | {
+  value: 'America/Juneau'
+  label: '(GMT-8:00) Alaska,
+  abbrev: 'AHST',
+  offset: -8,
+  altName: 'Alaskan Standard Time'
+}
+```
 - `onBlur` - `() => void`
 - `onChange` - `(timezone) => void`
-  - Example `timezone` parameter:
-  ```
-   {
-     value: 'America/Juneau'
-     label: '(GMT-8:00) Alaska,
-     abbrev: 'AHST',
-     offset: -8,
-     altName: 'Alaskan Standard Time'
-   }
-  ```
 - `labelStyle` - `'original' | 'altName' | 'abbrev'`
-- `timezones` - Custom Timezone Object
+- `timezones` - `Record<string,string>`
+```
+timezones={{
+  ...allTimezones,
+  'America/Lima': 'Pittsburgh',
+  'Europe/Berlin': 'Frankfurt',
+}}
+```
+
+- `maxAbbrLength` - `number` - Truncate `abbrev` labelStyles string to length
 - Any other [`react-select`](https://github.com/jedwatson/react-select#props) props
 
 ## 🎨 Custom Select component
@@ -166,7 +161,7 @@ return (
 
 ## 🚧 Contributing
 
-Pull requests are always welcome! Please stick to the `prettier` settings, and if adding new features, please consider adding test(s) and documentation where appropriate!
+Pull requests are always welcome! Please stick to repo settings (prettier, eslint, etc.), and if adding new features, please consider adding test(s) and documentation where appropriate!
 
 ## 🙏 Thanks
 
