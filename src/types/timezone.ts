@@ -6,7 +6,7 @@ export type ICustomTimezone = {
 
 export type ILabelStyle = 'original' | 'altName' | 'abbrev'
 
-export interface ITimezoneOption {
+export type ITimezoneOption = {
   value: string
   label: string
   abbrev?: string
@@ -16,11 +16,14 @@ export interface ITimezoneOption {
 
 export type ITimezone = ITimezoneOption | string
 
-export interface Props
-  extends Omit<ReactSelectProps<ITimezone, false>, 'onChange'> {
-  value: ITimezone
+export type TimezoneSelectOptions = {
   labelStyle?: ILabelStyle
-  onChange?: (timezone: ITimezoneOption) => void
   timezones?: ICustomTimezone
   maxAbbrLength?: number
 }
+
+export type Props = Omit<ReactSelectProps<ITimezone, false>, 'onChange'> &
+  TimezoneSelectOptions & {
+    value: ITimezone
+    onChange?: (timezone: ITimezoneOption) => void
+  }
