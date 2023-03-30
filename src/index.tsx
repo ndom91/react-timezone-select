@@ -27,33 +27,37 @@ export function useTimezoneSelect({
           const tz = now.timezone()
           const tzStrings = soft(zone[0])
 
-              let label = ''
-              let abbr = now.isDST()
-                ? tzStrings[0].daylight.abbr
-                : tzStrings[0].standard.abbr
-              let altName = now.isDST()
-                ? tzStrings[0].daylight.name
-                : tzStrings[0].standard.name
+          let label = ''
 
-              const min = tz.current.offset * 60
-              const hr =
-                `${(min / 60) ^ 0}:` +
-                (min % 60 === 0 ? '00' : Math.abs(min % 60))
-              const prefix = `(GMT${hr.includes('-') ? hr : `+${hr}`}) ${zone[1]}`
+          const standardAbbr = tzStrings?.[0]?.standard?.abbr ?? ''
+          const dstAbbr = tzStrings?.[0]?.daylight?.abbr ?? standardAbbr
 
-              switch (labelStyle) {
-                case 'original':
-                  label = prefix
-                  break
-                case 'altName':
-                  label = `${prefix} ${altName?.length ? `(${altName})` : ''}`
-                  break
-                case 'abbrev':
-                  label = `${prefix} (${abbr.substring(0, maxAbbrLength)})`
-                  break
-                default:
-                  label = `${prefix}`
-              }
+          let abbr = now.isDST() ? dstAbbr : standardAbbr
+
+          const standardAltName = tzStrings?.[0]?.standard?.name ?? ''
+          const dstAltName = tzStrings?.[0]?.daylight?.name ?? standardAltName
+
+          let altName = now.isDST() ? dstAltName : standardAltName
+
+          const min = tz.current.offset * 60
+          const hr =
+            `${(min / 60) ^ 0}:` +
+            (min % 60 === 0 ? '00' : Math.abs(min % 60))
+          const prefix = `(GMT${hr.includes('-') ? hr : `+${hr}`}) ${zone[1]}`
+
+          switch (labelStyle) {
+            case 'original':
+              label = prefix
+              break
+            case 'altName':
+              label = `${prefix} ${altName ? `(${altName})` : ''}`
+              break
+            case 'abbrev':
+              label = `${prefix} (${abbr.substring(0, maxAbbrLength)})`
+              break
+            default:
+              label = `${prefix}`
+          }
 
           return {
             value: tz.name,
