@@ -140,23 +140,28 @@ timezones={{
 
 ## 🎨 Custom Select component
 
-By default, react-timezone-select uses [`react-select`](https://github.com/jedwatson/react-select) as underlying select
-component.
-If your application already uses another select component i.e. MUI, Semantic UI or similar you can use
-the `useTimezoneSelect` hook instead of the `TimezoneSelect` component to render the timezones using your self-provided
-select component.
+By default, `react-timezone-select` uses [`react-select`](https://github.com/jedwatson/react-select) as underlying select component. If you'd like to bring your own select component, you can use the `useTimezoneSelect` hook instead of the `TimezoneSelect` component to render the timezones using your self-provided select component.
 
 ```jsx
-import { useTimezoneSelect } from 'react-timezone-select'
+import { useTimezoneSelect, allTimezones } from 'react-timezone-select'
 
-const { options, parseTimezone } = useTimezoneSelect({ labelStyle, timezones })
-return (
-  <select onChange={e => onChange(parseTimezone(e.currentTarget.value))}>
-    {options.map(option => (
-      <option value={option.value}>{option.label}</option>
-    ))}
-  </select>
-)
+const labelStyle = 'original'
+const timezones = {
+  ...allTimezones,
+  'Europe/Berlin': 'Frankfurt'
+}
+
+const customSelect = () => {
+  const { options, parseTimezone } = useTimezoneSelect({ labelStyle, timezones })
+
+  return (
+    <select onChange={e => onChange(parseTimezone(e.currentTarget.value))}>
+      {options.map(option => (
+        <option value={option.value}>{option.label}</option>
+      ))}
+    </select>
+  )
+}
 ```
 
 ## 🚧 Contributing
