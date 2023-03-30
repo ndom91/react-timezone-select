@@ -185,3 +185,18 @@ test('load and show abbrevations according to default maxAbbrLength(4)', async (
   )
   expect(getByText(/Chihuahua/)).not.toContain('H(N|E)PMX')
 })
+
+test('load and does not omit timezone that isDST is true and doesn not have daylight definitions', async () => {
+  const { getByText } = render(
+    <TimezoneSelect
+      value={'Asia/Tehran'}
+      timezones={{
+        ...allTimezones,
+        'Asia/Tehran': 'Tehran',
+      }}
+      onChange={e => e}
+    />
+  )
+
+  expect(getByText(/Tehran/)).toBeInTheDocument()
+})
