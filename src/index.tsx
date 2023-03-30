@@ -29,12 +29,16 @@ const TimezoneSelect = ({
             const tzStrings = soft(zone[0])
 
             let label = ''
-            let abbr = now.isDST()
-              ? tzStrings[0].daylight.abbr
-              : tzStrings[0].standard.abbr
-            let altName = now.isDST()
-              ? tzStrings[0].daylight.name
-              : tzStrings[0].standard.name
+
+            const standardAbbr = tzStrings?.[0]?.standard?.abbr ?? ''
+            const dstAbbr = tzStrings?.[0]?.daylight?.abbr ?? standardAbbr
+
+            let abbr = now.isDST() ? dstAbbr : standardAbbr
+
+            const standardAltName = tzStrings?.[0]?.standard?.name ?? ''
+            const dstAltName = tzStrings?.[0]?.daylight?.name ?? standardAltName
+
+            let altName = now.isDST() ? dstAltName : standardAltName
 
             const min = tz.current.offset * 60
             const hr =
@@ -47,7 +51,7 @@ const TimezoneSelect = ({
                 label = prefix
                 break
               case 'altName':
-                label = `${prefix} ${altName?.length ? `(${altName})` : ''}`
+                label = `${prefix} ${altName ? `(${altName})` : ''}`
                 break
               case 'abbrev':
                 label = `${prefix} (${abbr.substring(0, maxAbbrLength)})`
