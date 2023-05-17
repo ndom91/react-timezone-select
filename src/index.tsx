@@ -14,6 +14,7 @@ import { TimezoneSelectOptions } from './types/timezone'
 export function useTimezoneSelect({
   timezones = allTimezones,
   labelStyle = 'original',
+  displayValue = 'GMT',
   maxAbbrLength = 4,
 }: TimezoneSelectOptions): {
   parseTimezone: (zone: ITimezone) => ITimezoneOption
@@ -41,9 +42,10 @@ export function useTimezoneSelect({
 
           const min = tz.current.offset * 60
           const hr =
-            `${(min / 60) ^ 0}:` +
-            (min % 60 === 0 ? '00' : Math.abs(min % 60))
-          const prefix = `(GMT${hr.includes('-') ? hr : `+${hr}`}) ${zone[1]}`
+            `${(min / 60) ^ 0}:` + (min % 60 === 0 ? '00' : Math.abs(min % 60))
+          const prefix = `(${displayValue}${
+            hr.includes('-') ? hr : `+${hr}`
+          }) ${zone[1]}`
 
           switch (labelStyle) {
             case 'original':
@@ -148,6 +150,7 @@ const TimezoneSelect = ({
   onBlur,
   onChange,
   labelStyle,
+  displayValue,
   maxAbbrLength,
   timezones,
   ...props
@@ -155,6 +158,7 @@ const TimezoneSelect = ({
   const { options, parseTimezone } = useTimezoneSelect({
     timezones,
     labelStyle,
+    displayValue,
     maxAbbrLength,
   })
 
@@ -174,4 +178,10 @@ const TimezoneSelect = ({
 }
 
 export { TimezoneSelect as default, allTimezones }
-export type { ITimezone, ITimezoneOption, Props, ILabelStyle, TimezoneSelectOptions }
+export type {
+  ITimezone,
+  ITimezoneOption,
+  Props,
+  ILabelStyle,
+  TimezoneSelectOptions,
+}
