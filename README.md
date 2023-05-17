@@ -126,6 +126,7 @@ The above example will generate two additional choices in the select options, on
 - `onBlur` - `() => void`
 - `onChange` - `(timezone) => void`
 - `labelStyle` - `'original' | 'altName' | 'abbrev'`
+- `displayValue` - `'GMT' | 'UTC'`
 - `timezones` - `Record<string,string>`
 ```
 timezones={{
