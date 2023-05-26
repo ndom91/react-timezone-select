@@ -200,3 +200,15 @@ test('load and does not omit timezone that isDST is true and doesn not have dayl
 
   expect(getByText(/Tehran/)).toBeInTheDocument()
 })
+
+test('load and displays UTC', async () => {
+  const { getByText } = render(
+    <TimezoneSelect
+      value={'America/Juneau'}
+      displayValue="UTC"
+      onChange={e => e}
+    />
+  )
+
+  expect(getByText(/\(UTC-[8-9]:00\) Alaska$/)).toBeInTheDocument()
+})
