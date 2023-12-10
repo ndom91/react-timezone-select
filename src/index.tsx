@@ -1,4 +1,4 @@
-import { useMemo } from 'react'
+import React, { useMemo } from 'react'
 import Select from 'react-select'
 import spacetime, { type Spacetime } from 'spacetime'
 import soft from 'timezone-soft'
@@ -31,8 +31,11 @@ export function useTimezoneSelect({
         const altName = tzStrings?.[0]?.[isDstString]?.name
 
         const min = tz.current.offset * 60
-        const hr = `${(min / 60) ^ 0}:` + (min % 60 === 0 ? '00' : Math.abs(min % 60))
-        const prefix = `(${displayValue}${hr.includes('-') ? hr : `+${hr}`}) ${zone[1]}`
+        const hr =
+          `${(min / 60) ^ 0}:` + (min % 60 === 0 ? '00' : Math.abs(min % 60))
+        const prefix = `(${displayValue}${hr.includes('-') ? hr : `+${hr}`}) ${
+          zone[1]
+        }`
 
         let label = ''
 
@@ -82,19 +85,24 @@ export function useTimezoneSelect({
         let score = 0
         if (
           currentTime.timezones[tz.value.toLowerCase()] &&
-          !!currentTime.timezones[tz.value.toLowerCase()].dst === currentTime.timezone().hasDst
+          !!currentTime.timezones[tz.value.toLowerCase()].dst ===
+            currentTime.timezone().hasDst
         ) {
           if (
             tz.value
               .toLowerCase()
-              .indexOf(currentTime.tz.substring(currentTime.tz.indexOf('/') + 1)) !== -1
+              .indexOf(
+                currentTime.tz.substring(currentTime.tz.indexOf('/') + 1)
+              ) !== -1
           ) {
             score += 8
           }
           if (
             tz.label
               .toLowerCase()
-              .indexOf(currentTime.tz.substring(currentTime.tz.indexOf('/') + 1)) !== -1
+              .indexOf(
+                currentTime.tz.substring(currentTime.tz.indexOf('/') + 1)
+              ) !== -1
           ) {
             score += 4
           }
