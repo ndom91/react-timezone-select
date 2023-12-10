@@ -22,46 +22,50 @@ export function useTimezoneSelect({
   const options = useMemo(() => {
     return Object.entries(timezones)
       .map(zone => {
-        const now = spacetime.now(zone[0])
-        const isDstString = now.isDST() ? 'daylight' : 'standard'
-        const tz = now.timezone()
-        const tzStrings = soft(zone[0])
+        try {
+          const now = spacetime.now(zone[0])
+          const isDstString = now.isDST() ? 'daylight' : 'standard'
+          const tz = now.timezone()
+          const tzStrings = soft(zone[0])
 
-        const abbr = tzStrings?.[0]?.[isDstString]?.abbr
-        const altName = tzStrings?.[0]?.[isDstString]?.name
+          const abbr = tzStrings?.[0]?.[isDstString]?.abbr
+          const altName = tzStrings?.[0]?.[isDstString]?.name
 
-        const min = tz.current.offset * 60
-        const hr =
-          `${(min / 60) ^ 0}:` + (min % 60 === 0 ? '00' : Math.abs(min % 60))
-        const prefix = `(${displayValue}${hr.includes('-') ? hr : `+${hr}`}) ${
-          zone[1]
-        }`
+          const min = tz.current.offset * 60
+          const hr =
+            `${(min / 60) ^ 0}:` + (min % 60 === 0 ? '00' : Math.abs(min % 60))
+          const prefix = `(${displayValue}${
+            hr.includes('-') ? hr : `+${hr}`
+          }) ${zone[1]}`
 
-        let label = ''
+          let label = ''
 
-        switch (labelStyle) {
-          case 'original':
-            label = prefix
-            break
-          case 'altName':
-            label = `${prefix} ${altName ? `(${altName})` : ''}`
-            break
-          case 'abbrev':
-            label = `${prefix} (${abbr})`
-            break
-          case 'offsetHidden':
-            label = `${prefix.replace(/^\(.*?\)\s*/, '')}`
-            break
-          default:
-            label = `${prefix}`
-        }
+          switch (labelStyle) {
+            case 'original':
+              label = prefix
+              break
+            case 'altName':
+              label = `${prefix} ${altName ? `(${altName})` : ''}`
+              break
+            case 'abbrev':
+              label = `${prefix} (${abbr})`
+              break
+            case 'offsetHidden':
+              label = `${prefix.replace(/^\(.*?\)\s*/, '')}`
+              break
+            default:
+              label = `${prefix}`
+          }
 
-        return {
-          value: tz.name,
-          label: label,
-          offset: tz.current.offset,
-          abbrev: abbr,
-          altName: altName,
+          return {
+            value: tz.name,
+            label: label,
+            offset: tz.current.offset,
+            abbrev: abbr,
+            altName: altName,
+          }
+        } catch (e) {
+          return null
         }
       })
       .filter(Boolean)
