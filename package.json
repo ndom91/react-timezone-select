@@ -1,6 +1,6 @@
 {
   "name": "react-timezone-select",
-  "version": "2.1.5",
+  "version": "3.0.0",
   "description": "Usable, dynamic React Timezone Select",
   "scripts": {
     "dev": "concurrently \"tsup src/index.tsx --format esm --watch\" \"cd example && pnpm dev\"",
@@ -10,9 +10,9 @@
     "build:example": "cd example && pnpm run build",
     "deploy": "gh-pages -d example/dist",
     "pretest": "pnpm run build",
-    "test": "jest",
-    "test:watch": "jest --watch",
-    "test:ci": "pnpm run build && jest --ci ",
+    "test": "vitest",
+    "test:watch": "vitest --watch",
+    "test:ci": "pnpm run build && pnpm test",
     "tsc": "tsc"
   },
   "author": "Nico Domino <yo@ndo.dev>",
@@ -52,66 +52,65 @@
     "react-select": "^5.7.0"
   },
   "dependencies": {
-    "spacetime": "^7.4.1",
-    "timezone-soft": "^1.4.1"
+    "spacetime": "^7.4.8",
+    "timezone-soft": "^1.5.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.20.7",
-    "@testing-library/jest-dom": "^5.16.1",
-    "@testing-library/react": "^12.1.2",
-    "@types/jest": "^27.4.0",
-    "@types/react": "^17.0.38",
-    "@types/react-dom": "^17.0.11",
-    "@types/testing-library__jest-dom": "^5.14.5",
-    "concurrently": "^7.0.0",
-    "esbuild": "^0.16.12",
+    "@babel/core": "^7.23.5",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^14.1.2",
+    "@types/jest": "^27.5.2",
+    "@types/react": "^18.2.43",
+    "@types/react-dom": "^18.2.17",
+    "@types/testing-library__jest-dom": "^5.14.9",
+    "@typescript-eslint/eslint-plugin": "^6.13.2",
+    "@typescript-eslint/parser": "^6.13.2",
+    "@vitejs/plugin-react": "^4.2.1",
+    "concurrently": "^7.6.0",
+    "esbuild": "^0.16.17",
     "esbuild-jest": "^0.5.0",
-    "eslint": "^8.36.0",
-    "eslint-config-prettier": "^8.8.0",
-    "eslint-plugin-prettier": "^4.2.1",
+    "eslint": "^8.55.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "5.0.1",
     "gh-pages": "^3.2.3",
-    "jest": "^27.4.7",
-    "prettier": "^2.5.1",
-    "react": "^17",
-    "react-dom": "^17",
-    "simple-git-hooks": "^2.7.0",
-    "ts-jest": "^27.1.3",
-    "tsup": "^6.5.0",
-    "typescript": "^4.5.5"
+    "jest-environment-jsdom": "^29.7.0",
+    "prettier": "^3.1.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "simple-git-hooks": "^2.9.0",
+    "ts-jest": "^29.1.1",
+    "tsup": "^6.7.0",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.7",
+    "vite-tsconfig-paths": "^4.2.2",
+    "vitest": "^1.0.4"
   },
   "eslintConfig": {
+    "parser": "@typescript-eslint/parser",
     "parserOptions": {
+      "ecmaVersion": "latest",
       "sourceType": "module"
     },
     "extends": [
       "eslint:recommended",
-      "prettier"
+      "plugin:@typescript-eslint/recommended",
+      "plugin:prettier/recommended"
     ],
-    "env": {
-      "browser": true,
-      "es6": true
-    },
     "plugins": [
-      "prettier"
+      "@typescript-eslint"
     ],
-    "rules": {
-      "prettier/prettier": "error"
-    }
+    "root": true
   },
   "prettier": {
-    "trailingComma": "es5",
     "semi": false,
     "singleQuote": true,
-    "arrowParens": "avoid"
+    "maxLineLength": 100
   },
   "simple-git-hooks": {
     "pre-commit": "npx lint-staged"
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx,css,json}": [
-      "prettier --write"
-    ],
-    "*.{js,jsx}": [
+    "*.{js,jsx,ts,tsx}": [
       "eslint --fix"
     ]
   }

@@ -136,7 +136,6 @@ timezones={{
 }}
 ```
 
-- `maxAbbrLength` - `number` - Truncate `abbrev` labelStyles string to length
 - Any other [`react-select`](https://github.com/jedwatson/react-select#props) props
 
 ## 🎨 Custom Select component
