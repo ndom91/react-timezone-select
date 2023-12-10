@@ -21,7 +21,7 @@ export function useTimezoneSelect({
 } {
   const options = useMemo(() => {
     return Object.entries(timezones)
-      .map(zone => {
+      .map((zone) => {
         try {
           const now = spacetime.now(zone[0])
           const isDstString = now.isDST() ? 'daylight' : 'standard'
@@ -84,7 +84,7 @@ export function useTimezoneSelect({
     return options
       .filter(
         (tz: ITimezoneOption) =>
-          tz.offset === currentTime.timezone().current.offset
+          tz.offset === currentTime.timezone().current.offset,
       )
       .map((tz: ITimezoneOption) => {
         let score = 0
@@ -97,7 +97,7 @@ export function useTimezoneSelect({
             tz.value
               .toLowerCase()
               .indexOf(
-                currentTime.tz.substring(currentTime.tz.indexOf('/') + 1)
+                currentTime.tz.substring(currentTime.tz.indexOf('/') + 1),
               ) !== -1
           ) {
             score += 8
@@ -106,7 +106,7 @@ export function useTimezoneSelect({
             tz.label
               .toLowerCase()
               .indexOf(
-                currentTime.tz.substring(currentTime.tz.indexOf('/') + 1)
+                currentTime.tz.substring(currentTime.tz.indexOf('/') + 1),
               ) !== -1
           ) {
             score += 4
@@ -131,11 +131,11 @@ export function useTimezoneSelect({
     if (typeof zone === 'object' && zone.value && zone.label) return zone
     if (typeof zone === 'string') {
       return (
-        options.find(tz => tz.value === zone) ||
+        options.find((tz) => tz.value === zone) ||
         (zone.indexOf('/') !== -1 && findFuzzyTz(zone))
       )
     } else if (zone.value && !zone.label) {
-      return options.find(tz => tz.value === zone.value)
+      return options.find((tz) => tz.value === zone.value)
     }
   }
 
