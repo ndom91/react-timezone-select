@@ -32,8 +32,9 @@ export function useTimezoneSelect({
           const altName = tzStrings?.[0]?.[isDstString]?.name
 
           const min = tz.current.offset * 60
-          const hr =
-            `${(min / 60) ^ 0}:` + (min % 60 === 0 ? '00' : Math.abs(min % 60))
+          const hr = `${(min / 60) ^ 0}:${
+            min % 60 === 0 ? '00' : Math.abs(min % 60)
+          }`
           const prefix = `(${displayValue}${
             hr.includes('-') ? hr : `+${hr}`
           }) ${zone[1]}`
