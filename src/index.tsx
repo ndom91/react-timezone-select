@@ -27,8 +27,8 @@ export function useTimezoneSelect({
         const tz = now.timezone()
         const tzStrings = soft(zone[0])
 
-        let abbr = tzStrings?.[0]?.[isDstString]?.abbr
-        let altName = tzStrings?.[0]?.[isDstString]?.name
+        const abbr = tzStrings?.[0]?.[isDstString]?.abbr
+        const altName = tzStrings?.[0]?.[isDstString]?.name
 
         const min = tz.current.offset * 60
         const hr =
