@@ -102,7 +102,8 @@
     "trailingComma": "es5",
     "semi": false,
     "singleQuote": true,
-    "arrowParens": "avoid"
+    "arrowParens": "avoid",
+    "maxLineLength": 100
   },
   "simple-git-hooks": {
     "pre-commit": "npx lint-staged"
