@@ -57,6 +57,9 @@ export function useTimezoneSelect({
             case 'abbrev':
               label = `${prefix} (${abbr.substring(0, maxAbbrLength)})`
               break
+            case 'offsetHidden':
+              label = `${prefix.replace(/^\(.*?\)\s*/, '')}`
+              break
             default:
               label = `${prefix}`
           }
