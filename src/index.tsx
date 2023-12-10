@@ -65,7 +65,7 @@ export function useTimezoneSelect({
             abbrev: abbr,
             altName: altName,
           }
-        } catch (e) {
+        } catch {
           return null
         }
       })
