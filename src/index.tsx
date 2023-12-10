@@ -23,12 +23,12 @@ export function useTimezoneSelect({
     return Object.entries(timezones)
       .map(zone => {
         const now = spacetime.now(zone[0])
+        const isDstString = now.isDST() ? 'daylight' : 'standard'
         const tz = now.timezone()
         const tzStrings = soft(zone[0])
 
-        let abbr = tzStrings?.[0]?.[now.isDST() ? 'daylight' : 'standard']?.abbr
-        let altName =
-          tzStrings?.[0]?.[now.isDST() ? 'daylight' : 'standard']?.name
+        let abbr = tzStrings?.[0]?.[isDstString]?.abbr
+        let altName = tzStrings?.[0]?.[isDstString]?.name
 
         const min = tz.current.offset * 60
         const hr =
