@@ -4,10 +4,9 @@
   "compilerOptions": {
     "target": "es6",
     "module": "esnext",
-    "emitDeclarationOnly": true,
     "declaration": true,
     "strict": false,
-    "jsx": "react",
+    "jsx": "react-jsx",
     "outDir": "dist/",
     "moduleResolution": "node",
     "esModuleInterop": true,
