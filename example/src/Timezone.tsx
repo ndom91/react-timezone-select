@@ -17,8 +17,7 @@ const timezones = {
 };
 
 const Timezone = () => {
-  const [selectedTimezone, setSelectedTimezone] =
-    React.useState<ITimezone>('Europe/Rome');
+  const [selectedTimezone, setSelectedTimezone] = React.useState<ITimezone>('');
   const [selectStyle, setSelectStyle] =
     React.useState<ISelectStyle>('react-select');
   const [labelStyle, setLabelStyle] = React.useState<ILabelStyle>('original');
@@ -67,7 +66,6 @@ const Timezone = () => {
               <TimezoneSelect
                 value={selectedTimezone}
                 onChange={setSelectedTimezone}
-                onBlur={() => console.log('Blur!')}
                 {...selectOptions}
               />
             ),
@@ -156,7 +154,9 @@ function NativeSelectTimezone({ selectOptions, value, onChange }: Props) {
       onChange={(e) => onChange(parseTimezone(e.currentTarget.value))}
     >
       {options.map((option) => (
-        <option value={option.value}>{option.label}</option>
+        <option key={option.value} value={option.value}>
+          {option.label}
+        </option>
       ))}
     </select>
   );
