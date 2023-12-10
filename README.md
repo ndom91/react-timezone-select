@@ -18,12 +18,11 @@ While looking around for a good option, I had trouble finding a timezone select 
 
 > This demo is also available in the `./examples` directory. Simply run `pnpm dev` in the root of the repository and the vite dev server will start, where you can then find the example app at [`localhost:3001`](http://localhost:3001).
 
-We also have some **more examples** available on Codesandbox using this component with the datetime library `spacetime` ([example](https://codesandbox.io/s/react-timezone-select-usage-z37hf)) as well as with `moment` ([example](https://codesandbox.io/s/react-timezone-select-usage-moment-5n6vn)), as well as in Typescript using the new `Intl` browser API ([example](https://codesandbox.io/s/react-timezone-select-typescript-8lsv3?file=/src/App.tsx)) showing how one might use this component in a real application.
-
 ## 🏗️ Installing
 
 ```bash
-npm install react-select react-timezone-select
+// react-select is an optional peer dependency, unnecessary if using the hook
+npm install react-timezone-select react-select
 ```
 
 ## 🔭 Usage
@@ -31,10 +30,10 @@ npm install react-select react-timezone-select
 ```jsx
 import React, { useState } from 'react'
 import ReactDOM from 'react-dom'
-import TimezoneSelect from 'react-timezone-select'
+import TimezoneSelect, { type ITimezone } from 'react-timezone-select'
 
 const App = () => {
-  const [selectedTimezone, setSelectedTimezone] =useState(
+  const [selectedTimezone, setSelectedTimezone] = useState<ITimezone>(
     Intl.DateTimeFormat().resolvedOptions().timeZone
   )
 
@@ -97,7 +96,10 @@ You can append custom choices of your own, or fully replace the listed timezone 
 The `timezones` prop takes a dictionary of timezones. Don't worry, we'll prepend the `(GMT...)` part, you just have to pass the city(s) or region(s) you want in your label.
 
 ```jsx
-import TimezoneSelect, { allTimezones } from 'react-timezone-select'
+import TimezoneSelect, { type ITimezone, allTimezones } from 'react-timezone-select'
+
+const [selectedTimezone, setSelectedTimezone] = useState<ITimezone>('Europe/Berlin')
+
 <TimezoneSelect
   value={selectedTimezone}
   onChange={setSelectedTimezone}
