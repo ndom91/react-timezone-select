@@ -1,4 +1,4 @@
-import * as React from 'react'
+import { useMemo } from 'react'
 import Select from 'react-select'
 import spacetime, { type Spacetime } from 'spacetime'
 import soft from 'timezone-soft'
@@ -19,7 +19,7 @@ export function useTimezoneSelect({
   parseTimezone: (zone: ITimezone) => ITimezoneOption
   options: ITimezoneOption[]
 } {
-  const options = React.useMemo(() => {
+  const options = useMemo(() => {
     return Object.entries(timezones)
       .map(zone => {
         const now = spacetime.now(zone[0])
