@@ -1,9 +1,6 @@
 import React, { useMemo, useState } from 'react';
 import spacetime from 'spacetime';
-import TimezoneSelect, {
-  allTimezones,
-  useTimezoneSelect,
-} from '../../dist';
+import TimezoneSelect, { allTimezones, useTimezoneSelect } from '../../dist';
 import type {
   ITimezone,
   ILabelStyle,
@@ -120,6 +117,15 @@ const Timezone = () => {
         <label htmlFor="abbrev">
           <input type="radio" id="abbrev" name="labelStyle" value="abbrev" />
           abbrev
+        </label>
+        <label htmlFor="offsetHidden">
+          <input
+            type="radio"
+            id="offsetHidden"
+            name="labelStyle"
+            value="offsetHidden"
+          />
+          offsetHidden
         </label>
       </div>
       <div className="code">
