@@ -1,0 +1,13 @@
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    open-pull-requests-limit: 3
+    labels:
+      - "dependencies"
+    schedule:
+      interval: "monthly"
+    allow:
+      - dependency-name: "spacetime"
+      - dependency-name: "timezone-soft"
+      - dependency-name: "react-select"
