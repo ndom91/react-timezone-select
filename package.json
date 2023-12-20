@@ -1,12 +1,12 @@
 {
   "name": "react-timezone-select",
-  "version": "3.0.2",
+  "version": "3.1.0",
   "description": "Usable, dynamic React Timezone Select",
   "scripts": {
     "dev": "concurrently \"tsup src/index.tsx --format esm --watch\" \"cd example && pnpm dev\"",
     "prepublishOnly": "pnpm run build",
     "postpublish": "pnpm run build:example && npm run deploy",
-    "build": "tsup src/index.tsx --format cjs,esm --clean --dts",
+    "build": "tsup src/index.tsx --format esm --clean --dts",
     "build:example": "cd example && pnpm run build",
     "deploy": "gh-pages -d example/dist",
     "pretest": "pnpm run build",
@@ -36,20 +36,18 @@
     "package.json"
   ],
   "type": "module",
-  "main": "./dist/index.cjs",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "import": "./dist/index.js",
-      "require": "./dist/index.cjs"
+      "import": "./dist/index.js"
     }
   },
   "peerDependencies": {
     "react": "^18 || ^17.0.1 || ^16",
     "react-dom": "^18 || ^17.0.1 || ^16",
-    "react-select": "^5.7.0"
+    "react-select": "^5.7.3"
   },
   "dependencies": {
     "spacetime": "^7.4.8",
