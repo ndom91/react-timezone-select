@@ -173,3 +173,27 @@ test('load and displays UTC', async () => {
 
   expect(getByText(/\(UTC-[8-9]:00\) Alaska$/)).toBeInTheDocument()
 })
+
+test('can set current time (DST)', async () => {
+  const { getByText } = render(
+    <TimezoneSelect
+      value={'America/Detroit'}
+      currentDatetime="2017-07-08"
+      onChange={(e) => e}
+    />,
+  )
+
+  expect(getByText(/GMT-4/)).toBeInTheDocument()
+})
+
+test('can set current time (standard)', async () => {
+  const { getByText } = render(
+    <TimezoneSelect
+      value={'America/Detroit'}
+      currentDatetime="2017-01-27"
+      onChange={(e) => e}
+    />,
+  )
+
+  expect(getByText(/GMT-5/)).toBeInTheDocument()
+})

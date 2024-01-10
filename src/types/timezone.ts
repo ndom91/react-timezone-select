@@ -22,6 +22,7 @@ export type TimezoneSelectOptions = {
   labelStyle?: ILabelStyle
   displayValue?: IDisplayValue
   timezones?: ICustomTimezone
+  currentDatetime?: Date | string
 }
 
 export type Props = Omit<ReactSelectProps<ITimezone, false>, 'onChange'> &

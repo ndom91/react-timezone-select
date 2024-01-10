@@ -15,6 +15,7 @@ export function useTimezoneSelect({
   timezones = allTimezones,
   labelStyle = 'original',
   displayValue = 'GMT',
+  currentDatetime,
 }: TimezoneSelectOptions): {
   parseTimezone: (zone: ITimezone) => ITimezoneOption
   options: ITimezoneOption[]
@@ -23,7 +24,9 @@ export function useTimezoneSelect({
     return Object.entries(timezones)
       .map((zone) => {
         try {
-          const now = spacetime.now(zone[0])
+          const now = (
+            currentDatetime ? spacetime(currentDatetime) : spacetime.now()
+          ).goto(zone[0])
           const isDstString = now.isDST() ? 'daylight' : 'standard'
           const tz = now.timezone()
           const tzStrings = soft(zone[0])
@@ -76,9 +79,13 @@ export function useTimezoneSelect({
   const findFuzzyTz = (zone: string): ITimezoneOption => {
     let currentTime: Spacetime
     try {
-      currentTime = spacetime.now(zone)
+      currentTime = (
+        currentDatetime ? spacetime(currentDatetime) : spacetime.now()
+      ).goto(zone)
     } catch (err) {
-      currentTime = spacetime.now('GMT')
+      currentTime = (
+        currentDatetime ? spacetime(currentDatetime) : spacetime.now()
+      ).goto('GMT')
     }
 
     return options
@@ -149,12 +156,14 @@ const TimezoneSelect = ({
   labelStyle,
   displayValue,
   timezones,
+  currentDatetime,
   ...props
 }: Props) => {
   const { options, parseTimezone } = useTimezoneSelect({
     timezones,
     labelStyle,
     displayValue,
+    currentDatetime,
   })
 
   const handleChange = (tz: ITimezoneOption) => {

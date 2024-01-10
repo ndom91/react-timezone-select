@@ -130,6 +130,7 @@ The above example will generate two additional choices in the select options, on
 - `labelStyle` - `'original' | 'altName' | 'abbrev' | 'offsetHidden'`
 - `displayValue` - `'GMT' | 'UTC'`
 - `timezones` - `Record<string,string>`
+- `currentDatetime` - `Date | string` - Set datetime used to calculate timezone values (alternative to current datetime) 
 ```
 timezones={{
   ...allTimezones,
