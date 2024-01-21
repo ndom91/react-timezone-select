@@ -1,20 +1,17 @@
-import React, { useMemo } from 'react'
-import Select from 'react-select'
-import spacetime, { type Spacetime } from 'spacetime'
-import soft from 'timezone-soft'
-import allTimezones from './timezone-list.js'
-import type {
-  Props,
-  ITimezone,
-  ITimezoneOption,
-  ILabelStyle,
-} from './types/timezone'
-import { TimezoneSelectOptions } from './types/timezone'
+"use client"
+
+import { useMemo } from "react"
+import Select from "react-select"
+import spacetime, { type Spacetime } from "spacetime"
+import soft from "timezone-soft"
+import allTimezones from "./timezone-list.js"
+import type { Props, ITimezone, ITimezoneOption, ILabelStyle } from "./types/timezone"
+import { TimezoneSelectOptions } from "./types/timezone"
 
 export function useTimezoneSelect({
   timezones = allTimezones,
-  labelStyle = 'original',
-  displayValue = 'GMT',
+  labelStyle = "original",
+  displayValue = "GMT",
   currentDatetime,
 }: TimezoneSelectOptions): {
   parseTimezone: (zone: ITimezone) => ITimezoneOption
@@ -24,10 +21,8 @@ export function useTimezoneSelect({
     return Object.entries(timezones)
       .map((zone) => {
         try {
-          const now = (
-            currentDatetime ? spacetime(currentDatetime) : spacetime.now()
-          ).goto(zone[0])
-          const isDstString = now.isDST() ? 'daylight' : 'standard'
+          const now = (currentDatetime ? spacetime(currentDatetime) : spacetime.now()).goto(zone[0])
+          const isDstString = now.isDST() ? "daylight" : "standard"
           const tz = now.timezone()
           const tzStrings = soft(zone[0])
 
@@ -35,27 +30,23 @@ export function useTimezoneSelect({
           const altName = tzStrings?.[0]?.[isDstString]?.name
 
           const min = tz.current.offset * 60
-          const hr = `${(min / 60) ^ 0}:${
-            min % 60 === 0 ? '00' : Math.abs(min % 60)
-          }`
-          const prefix = `(${displayValue}${
-            hr.includes('-') ? hr : `+${hr}`
-          }) ${zone[1]}`
+          const hr = `${(min / 60) ^ 0}:${min % 60 === 0 ? "00" : Math.abs(min % 60)}`
+          const prefix = `(${displayValue}${hr.includes("-") ? hr : `+${hr}`}) ${zone[1]}`
 
-          let label = ''
+          let label = ""
 
           switch (labelStyle) {
-            case 'original':
+            case "original":
               label = prefix
               break
-            case 'altName':
-              label = `${prefix} ${altName ? `(${altName})` : ''}`
+            case "altName":
+              label = `${prefix} ${altName ? `(${altName})` : ""}`
               break
-            case 'abbrev':
+            case "abbrev":
               label = `${prefix} (${abbr})`
               break
-            case 'offsetHidden':
-              label = `${prefix.replace(/^\(.*?\)\s*/, '')}`
+            case "offsetHidden":
+              label = `${prefix.replace(/^\(.*?\)\s*/, "")}`
               break
             default:
               label = `${prefix}`
@@ -79,54 +70,40 @@ export function useTimezoneSelect({
   const findFuzzyTz = (zone: string): ITimezoneOption => {
     let currentTime: Spacetime
     try {
-      currentTime = (
-        currentDatetime ? spacetime(currentDatetime) : spacetime.now()
-      ).goto(zone)
+      currentTime = (currentDatetime ? spacetime(currentDatetime) : spacetime.now()).goto(zone)
     } catch (err) {
-      currentTime = (
-        currentDatetime ? spacetime(currentDatetime) : spacetime.now()
-      ).goto('GMT')
+      currentTime = (currentDatetime ? spacetime(currentDatetime) : spacetime.now()).goto("GMT")
     }
 
     return options
-      .filter(
-        (tz: ITimezoneOption) =>
-          tz.offset === currentTime.timezone().current.offset,
-      )
+      .filter((tz: ITimezoneOption) => tz.offset === currentTime.timezone().current.offset)
       .map((tz: ITimezoneOption) => {
         let score = 0
         if (
           currentTime.timezones[tz.value.toLowerCase()] &&
-          !!currentTime.timezones[tz.value.toLowerCase()].dst ===
-            currentTime.timezone().hasDst
+          !!currentTime.timezones[tz.value.toLowerCase()].dst === currentTime.timezone().hasDst
         ) {
           if (
             tz.value
               .toLowerCase()
-              .indexOf(
-                currentTime.tz.substring(currentTime.tz.indexOf('/') + 1),
-              ) !== -1
+              .indexOf(currentTime.tz.substring(currentTime.tz.indexOf("/") + 1)) !== -1
           ) {
             score += 8
           }
           if (
             tz.label
               .toLowerCase()
-              .indexOf(
-                currentTime.tz.substring(currentTime.tz.indexOf('/') + 1),
-              ) !== -1
+              .indexOf(currentTime.tz.substring(currentTime.tz.indexOf("/") + 1)) !== -1
           ) {
             score += 4
           }
           if (
-            tz.value
-              .toLowerCase()
-              .indexOf(currentTime.tz.substring(0, currentTime.tz.indexOf('/')))
+            tz.value.toLowerCase().indexOf(currentTime.tz.substring(0, currentTime.tz.indexOf("/")))
           ) {
             score += 2
           }
           score += 1
-        } else if (tz.value === 'GMT') {
+        } else if (tz.value === "GMT") {
           score += 1
         }
         return { tz, score }
@@ -135,11 +112,10 @@ export function useTimezoneSelect({
   }
 
   const parseTimezone = (zone: ITimezone) => {
-    if (typeof zone === 'object' && zone.value && zone.label) return zone
-    if (typeof zone === 'string') {
+    if (typeof zone === "object" && zone.value && zone.label) return zone
+    if (typeof zone === "string") {
       return (
-        options.find((tz) => tz.value === zone) ||
-        (zone.indexOf('/') !== -1 && findFuzzyTz(zone))
+        options.find((tz) => tz.value === zone) || (zone.indexOf("/") !== -1 && findFuzzyTz(zone))
       )
     } else if (zone.value && !zone.label) {
       return options.find((tz) => tz.value === zone.value)
@@ -182,10 +158,4 @@ const TimezoneSelect = ({
 }
 
 export { TimezoneSelect as default, allTimezones }
-export type {
-  ITimezone,
-  ITimezoneOption,
-  Props,
-  ILabelStyle,
-  TimezoneSelectOptions,
-}
+export type { ITimezone, ITimezoneOption, Props, ILabelStyle, TimezoneSelectOptions }

@@ -6,6 +6,7 @@
     "module": "esnext",
     "declaration": true,
     "strict": false,
+    "lib": ["dom", "dom.iterable", "esnext"],
     "jsx": "react-jsx",
     "outDir": "dist/",
     "moduleResolution": "node",

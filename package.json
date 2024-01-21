@@ -1,6 +1,6 @@
 {
   "name": "react-timezone-select",
-  "version": "3.2.0",
+  "version": "3.2.1",
   "description": "Usable, dynamic React Timezone Select",
   "scripts": {
     "dev": "concurrently \"tsup src/index.tsx --format esm --watch\" \"cd example && pnpm dev\"",
@@ -101,8 +101,7 @@
   },
   "prettier": {
     "semi": false,
-    "singleQuote": true,
-    "maxLineLength": 100
+    "printWidth": 100
   },
   "simple-git-hooks": {
     "pre-commit": "npx lint-staged"
