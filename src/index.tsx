@@ -98,7 +98,9 @@ export function useTimezoneSelect({
             score += 4
           }
           if (
-            tz.value.toLowerCase().indexOf(currentTime.tz.substring(0, currentTime.tz.indexOf("/")))
+            tz.value
+              .toLowerCase()
+              .indexOf(currentTime.tz.substring(0, currentTime.tz.indexOf("/"))) !== -1
           ) {
             score += 2
           }
