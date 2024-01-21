@@ -2,9 +2,7 @@ import React from 'react';
 import Timezone from './Timezone';
 import './App.css';
 
-interface AppProps {}
-
-function App({}: AppProps) {
+function App() {
   return (
     <div className="App">
       <Timezone />

@@ -60,24 +60,19 @@ const Timezone = () => {
         </p>
       </div>
       <div className="select-wrapper">
-        {
-          {
-            'react-select': (
-              <TimezoneSelect
-                value={selectedTimezone}
-                onChange={setSelectedTimezone}
-                {...selectOptions}
-              />
-            ),
-            select: (
-              <NativeSelectTimezone
-                value={selectedTimezone}
-                selectOptions={selectOptions}
-                onChange={setSelectedTimezone}
-              />
-            ),
-          }[selectStyle]
-        }
+        {selectStyle === 'react-select' ? (
+          <TimezoneSelect
+            value={selectedTimezone}
+            onChange={setSelectedTimezone}
+            {...selectOptions}
+          />
+        ) : (
+          <NativeSelectTimezone
+            value={selectedTimezone}
+            selectOptions={selectOptions}
+            onChange={setSelectedTimezone}
+          />
+        )}
       </div>
       <div className="label-style-select" onChange={handleSelectChange}>
         <span>Select Style:</span>
