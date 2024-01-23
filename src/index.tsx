@@ -1,5 +1,3 @@
-"use client"
-
 import { useMemo } from "react"
 import Select from "react-select"
 import spacetime, { type Spacetime } from "spacetime"

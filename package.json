@@ -1,12 +1,12 @@
 {
   "name": "react-timezone-select",
-  "version": "3.2.2",
+  "version": "3.2.3",
   "description": "Usable, dynamic React Timezone Select",
   "scripts": {
     "dev": "concurrently \"tsup src/index.tsx --format esm --watch\" \"cd example && pnpm dev\"",
     "prepublishOnly": "pnpm run build",
     "postpublish": "pnpm run build:example && npm run deploy",
-    "build": "tsup src/index.tsx --format esm --clean --dts",
+    "build": "tsup src/index.tsx --format esm --clean --dts && sed -i '1i \"use client\"\\n' dist/index.js",
     "build:example": "cd example && pnpm run build",
     "deploy": "gh-pages -d example/dist",
     "pretest": "pnpm run build",
