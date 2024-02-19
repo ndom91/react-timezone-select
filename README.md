@@ -24,7 +24,8 @@ While looking around for a good option, I had trouble finding a timezone select 
 npm install react-timezone-select react-select
 ```
 
-> [!TIP] > `react-select` is an optional peer dependency, unnecessary if using [the hook](#-timezone-hook).
+> [!TIP]
+> The package `react-select` is an optional peer dependency. It is unnecessary if you're only using [the hook](#-timezone-hook).
 
 ## 🔭 Usage
 
