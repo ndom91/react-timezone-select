@@ -191,15 +191,11 @@ If you'd like the user's own timezone to be set as the initially selected option
 const [timezone, setTimezone] = useState(Intl.DateTimeFormat().resolvedOptions().timeZone)
 ```
 
-Thanks [@ndrwksr](https://github.com/ndom91/react-timezone-select/issues/25)
-
 ### 🕒 Custom Timezones
 
 You can append custom choices of your own, or fully replace the listed timezone options.
 
-The `timezones` prop takes a dictionary of timezones in the format of `[Timezone Identifier](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones): Label`
-
-We'll prepend the correct `(GMT...)` part to the generated label, you just have to pass the string you want in your label.
+The `timezones` prop takes a dictionary of timezones in the format of "`{ tzIdentifier: Label }`" ([Timezone Identifiers](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones)). 
 
 ```tsx
 import TimezoneSelect, { type ITimezone, allTimezones } from 'react-timezone-select'
@@ -217,8 +213,12 @@ const [selectedTimezone, setSelectedTimezone] = useState<ITimezone>('Europe/Berl
 />
 ```
 
-> [!NOTE]
-> The above example will generate two additional choices in the select options, one with the label `'(GMT-5:00) Pittsburgh'` and another with `'(GMT+1:00) Frankfurt'`. You can omit spreading in the `allTimezones` object and then only your custom timezone options get rendered in the select component.
+The example above will include all original timezones and generate two additional choices:
+
+- `'(GMT-5:00) Pittsburgh'`
+- `'(GMT+1:00) Frankfurt'`
+
+We'll prepend the correct `(GMT...)` part to the generated label, you just have to provide the string you want in your label. Also, you can omit spreading in the `allTimezones` object for a select dropdown consisting of only your custom choices.
 
 ## 🚧 Contributing
 
