@@ -21,9 +21,10 @@ While looking around for a good option, I had trouble finding a timezone select 
 ## 🏗️ Installing
 
 ```bash
-// react-select is an optional peer dependency, unnecessary if using the hook
 npm install react-timezone-select react-select
 ```
+
+> [!TIP] > `react-select` is an optional peer dependency, unnecessary if using [the hook](#-timezone-hook).
 
 ## 🔭 Usage
 
@@ -75,6 +76,32 @@ const rootElement = document.getElementById('root')
 ReactDOM.render(<App />, rootElement)
 ```
 
+## 🎨 Timezone Hook
+
+By default, `react-timezone-select` uses [`react-select`](https://github.com/jedwatson/react-select) as underlying select component. If you'd like to bring your own select component, you can use the `useTimezoneSelect` hook instead of the `TimezoneSelect` component to render the timezones using your self-provided select component.
+
+```jsx
+import { useTimezoneSelect, allTimezones } from "react-timezone-select"
+
+const labelStyle = "original"
+const timezones = {
+  ...allTimezones,
+  "Europe/Berlin": "Frankfurt",
+}
+
+const customSelect = () => {
+  const { options, parseTimezone } = useTimezoneSelect({ labelStyle, timezones })
+
+  return (
+    <select onChange={(e) => onChange(parseTimezone(e.currentTarget.value))}>
+      {options.map((option) => (
+        <option value={option.value}>{option.label}</option>
+      ))}
+    </select>
+  )
+}
+```
+
 ## 🪙 Tips
 
 ### 👤 Default Users Timezone
@@ -82,9 +109,7 @@ ReactDOM.render(<App />, rootElement)
 If you'd like the user's own timezone to be set as the initially selected option on render, we can make use of the new `Intl` browser API by setting the default state value to `Intl.DateTimeFormat().resolvedOptions().timeZone`.
 
 ```jsx
-const [timezone, setTimezone] = useState(
-  Intl.DateTimeFormat().resolvedOptions().timeZone
-)
+const [timezone, setTimezone] = useState(Intl.DateTimeFormat().resolvedOptions().timeZone)
 ```
 
 Thanks [@ndrwksr](https://github.com/ndom91/react-timezone-select/issues/25)
@@ -93,7 +118,9 @@ Thanks [@ndrwksr](https://github.com/ndom91/react-timezone-select/issues/25)
 
 You can append custom choices of your own, or fully replace the listed timezone options.
 
-The `timezones` prop takes a dictionary of timezones. Don't worry, we'll prepend the `(GMT...)` part, you just have to pass the city(s) or region(s) you want in your label.
+The `timezones` prop takes a dictionary of timezones in the format of `[Timezone Identifier](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones): Label`
+
+We'll prepend the correct `(GMT...)` part to the generated label, you just have to pass the string you want in your label.
 
 ```jsx
 import TimezoneSelect, { type ITimezone, allTimezones } from 'react-timezone-select'
@@ -111,12 +138,14 @@ const [selectedTimezone, setSelectedTimezone] = useState<ITimezone>('Europe/Berl
 />
 ```
 
-The above example will generate two additional choices in the select options, one with the label `'(GMT-5:00) Pittsburgh'` and another with `'(GMT+1:00) Frankfurt'`. You can omit spreading in the `allTimezones` object and then only your custom timezone options get rendered in the select component.
+> [!NOTE]
+> The above example will generate two additional choices in the select options, one with the label `'(GMT-5:00) Pittsburgh'` and another with `'(GMT+1:00) Frankfurt'`. You can omit spreading in the `allTimezones` object and then only your custom timezone options get rendered in the select component.
 
 ## 🕹️ Props
 
 - `value` - `string | Object` - Initial/current Timezone.
-```
+
+```ts
 'America/Juneau' | {
   value: 'America/Juneau'
   label: '(GMT-8:00) Alaska,
@@ -125,13 +154,15 @@ The above example will generate two additional choices in the select options, on
   altName: 'Alaskan Standard Time'
 }
 ```
+
 - `onBlur` - `() => void`
 - `onChange` - `(timezone) => void`
 - `labelStyle` - `'original' | 'altName' | 'abbrev' | 'offsetHidden'`
 - `displayValue` - `'GMT' | 'UTC'`
 - `timezones` - `Record<string,string>`
-- `currentDatetime` - `Date | string` - Set datetime used to calculate timezone values (alternative to current datetime) 
-```
+- `currentDatetime` - `Date | string` - Set datetime used to calculate timezone values (alternative to current datetime)
+
+```ts
 timezones={{
   ...allTimezones,
   'America/Lima': 'Pittsburgh',
@@ -141,35 +172,9 @@ timezones={{
 
 - Any other [`react-select`](https://github.com/jedwatson/react-select#props) props
 
-## 🎨 Custom Select component
-
-By default, `react-timezone-select` uses [`react-select`](https://github.com/jedwatson/react-select) as underlying select component. If you'd like to bring your own select component, you can use the `useTimezoneSelect` hook instead of the `TimezoneSelect` component to render the timezones using your self-provided select component.
-
-```jsx
-import { useTimezoneSelect, allTimezones } from 'react-timezone-select'
-
-const labelStyle = 'original'
-const timezones = {
-  ...allTimezones,
-  'Europe/Berlin': 'Frankfurt'
-}
-
-const customSelect = () => {
-  const { options, parseTimezone } = useTimezoneSelect({ labelStyle, timezones })
-
-  return (
-    <select onChange={e => onChange(parseTimezone(e.currentTarget.value))}>
-      {options.map(option => (
-        <option value={option.value}>{option.label}</option>
-      ))}
-    </select>
-  )
-}
-```
-
 ## 🚧 Contributing
 
-Pull requests are always welcome! Please stick to repo settings (prettier, eslint, etc.), and if adding new features, please consider adding test(s) and documentation where appropriate!
+Pull requests are always welcome! Please stick to repo formatting/linting settings, and if adding new features, please consider adding test(s) and documentation where appropriate!
 
 ## 🙏 Thanks
 
