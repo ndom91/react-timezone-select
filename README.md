@@ -13,9 +13,10 @@ While looking around for a good option, I had trouble finding a timezone select 
 1. Adjusted the choices automatically with Daylight Savings Time (DST)
 2. Didn't have a huge list of choices to scroll through when technically only 24 (ish) are necessary
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
+>
 > ### Demo: [ndom91.github.io/react-timezone-select](https://ndom91.github.io/react-timezone-select/)
-> 
+>
 > This demo is also available in the `./examples` directory. Simply run `pnpm dev` in the root of the repository and the vite dev server will start, where you can then find the example app at [`localhost:3001`](http://localhost:3001).
 
 ## 🏗️ Installing
@@ -25,18 +26,18 @@ npm install react-timezone-select react-select
 ```
 
 > [!CAUTION]
-> The package `react-select` is an optional peer dependency. It is unnecessary if you're only using [the hook](#-timezone-hook).
+> The package `react-select` is optional. It is unnecessary if you're only using [the hook](#-timezone-hook).
 
 ## 🔭 Usage
 
-```tsx 
-import React, { useState } from 'react'
-import ReactDOM from 'react-dom'
-import TimezoneSelect, { type ITimezone } from 'react-timezone-select'
+```tsx
+import React, { useState } from "react"
+import ReactDOM from "react-dom"
+import TimezoneSelect, { type ITimezone } from "react-timezone-select"
 
 const App = () => {
   const [selectedTimezone, setSelectedTimezone] = useState<ITimezone>(
-    Intl.DateTimeFormat().resolvedOptions().timeZone
+    Intl.DateTimeFormat().resolvedOptions().timeZone,
   )
 
   return (
@@ -44,26 +45,23 @@ const App = () => {
       <h2>react-timezone-select</h2>
       <blockquote>Please make a selection</blockquote>
       <div className="select-wrapper">
-        <TimezoneSelect
-          value={selectedTimezone}
-          onChange={setSelectedTimezone}
-        />
+        <TimezoneSelect value={selectedTimezone} onChange={setSelectedTimezone} />
       </div>
       <h3>Output:</h3>
       <div
         style={{
-          backgroundColor: '#ccc',
-          padding: '20px',
-          margin: '20px auto',
-          borderRadius: '5px',
-          maxWidth: '600px',
+          backgroundColor: "#ccc",
+          padding: "20px",
+          margin: "20px auto",
+          borderRadius: "5px",
+          maxWidth: "600px",
         }}
       >
         <pre
           style={{
-            margin: '0 20px',
+            margin: "0 20px",
             fontWeight: 500,
-            fontFamily: 'monospace',
+            fontFamily: "monospace",
           }}
         >
           {JSON.stringify(selectedTimezone, null, 2)}
@@ -73,7 +71,7 @@ const App = () => {
   )
 }
 
-const rootElement = document.getElementById('root')
+const rootElement = document.getElementById("root")
 ReactDOM.render(<App />, rootElement)
 ```
 
@@ -182,7 +180,6 @@ timezones={{
   'Europe/Berlin': 'Frankfurt',
 }}
 ```
-
 
 ## ✨ Tips
 
