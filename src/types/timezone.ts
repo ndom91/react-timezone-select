@@ -1,12 +1,12 @@
-import type { Props as ReactSelectProps } from 'react-select'
+import type { Props as ReactSelectProps } from "react-select"
 
 export type ICustomTimezone = {
   [key: string]: string
 }
 
-export type ILabelStyle = 'original' | 'altName' | 'abbrev' | 'offsetHidden'
+export type ILabelStyle = "original" | "altName" | "abbrev" | "offsetHidden"
 
-export type IDisplayValue = 'GMT' | 'UTC'
+export type IDisplayValue = "GMT" | "UTC"
 
 export type ITimezoneOption = {
   value: string
@@ -25,8 +25,8 @@ export type TimezoneSelectOptions = {
   currentDatetime?: Date | string
 }
 
-export type Props = Omit<ReactSelectProps<ITimezone, false>, 'onChange'> &
+export type Props = Omit<ReactSelectProps<ITimezone, false>, "onChange"> &
   TimezoneSelectOptions & {
     value: ITimezone
-    onChange?: (timezone: ITimezone) => void
+    onChange?: (timezone: ITimezoneOption) => void
   }
