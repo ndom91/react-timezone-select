@@ -63,7 +63,7 @@ export function useTimezoneSelect({
       })
       .filter(Boolean)
       .sort((a: ITimezoneOption, b: ITimezoneOption) => a.offset - b.offset)
-  }, [labelStyle, timezones])
+  }, [labelStyle, timezones, currentDatetime])
 
   const findFuzzyTz = (zone: string): ITimezoneOption => {
     let currentTime: Spacetime
