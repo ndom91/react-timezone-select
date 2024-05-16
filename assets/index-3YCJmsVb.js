@@ -1,1 +1,0 @@
-import{r,j as o,R as a}from"./Timezone-U1W1y7Gj.js";import{A as c}from"./App-xH9dNqha.js";var t={},e=r;t.createRoot=e.createRoot,t.hydrateRoot=e.hydrateRoot;t.createRoot(document.getElementById("root")).render(o.jsx(a.StrictMode,{children:o.jsx(c,{})}));
