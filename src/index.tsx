@@ -108,7 +108,7 @@ export function useTimezoneSelect({
         }
         return { tz, score }
       })
-      .sort((a, b) => b.score - a.score)[0].tz
+      .sort((a, b) => b.score - a.score)?.[0]?.tz
   }
 
   const parseTimezone = (zone: ITimezone) => {
