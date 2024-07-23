@@ -1,6 +1,6 @@
 {
   "name": "react-timezone-select",
-  "version": "3.2.6",
+  "version": "3.2.7",
   "description": "Usable, dynamic React Timezone Select",
   "scripts": {
     "dev": "concurrently \"tsup src/index.tsx --format esm --watch\" \"cd example && pnpm dev\"",
