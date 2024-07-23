@@ -35,7 +35,7 @@ const Timezone = () => {
     const tzValue =
       typeof selectedTimezone === 'string'
         ? selectedTimezone
-        : selectedTimezone.value;
+        : selectedTimezone?.value;
     setDatetime(datetime.goto(tzValue));
   }, [selectedTimezone]);
 
@@ -126,7 +126,7 @@ const Timezone = () => {
           Current Date / Time in{' '}
           {typeof selectedTimezone === 'string'
             ? selectedTimezone.split('/')[1]
-            : selectedTimezone.value.split('/')[1]}
+            : selectedTimezone?.value.split('/')[1]}
           : <pre>{datetime.unixFmt('dd.MM.YY HH:mm:ss')}</pre>
         </div>
         <pre>{JSON.stringify(selectedTimezone, null, 2)}</pre>
@@ -136,7 +136,7 @@ const Timezone = () => {
 };
 
 type Props = {
-  value: ITimezoneOption;
+  value: ITimezone;
   selectOptions: TimezoneSelectOptions;
   onChange?: (timezone: ITimezoneOption) => void;
 };
@@ -145,7 +145,7 @@ function NativeSelectTimezone({ selectOptions, value, onChange }: Props) {
   const { options, parseTimezone } = useTimezoneSelect(selectOptions);
   return (
     <select
-      value={parseTimezone(value).value}
+      value={parseTimezone(value)?.value}
       onChange={(e) => onChange(parseTimezone(e.currentTarget.value))}
     >
       {options.map((option) => (

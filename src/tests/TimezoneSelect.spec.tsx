@@ -159,3 +159,10 @@ test("can set current time (standard)", async () => {
 
   expect(getByText(/GMT-5/)).toBeInTheDocument()
 })
+
+test("can handle null input", async () => {
+  // @ts-expect-error Explicitly testing null input
+  const { container } = render(<TimezoneSelect value={null} />)
+
+  expect(container.firstChild).toBeInTheDocument()
+})

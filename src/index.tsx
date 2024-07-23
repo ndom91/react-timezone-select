@@ -111,14 +111,19 @@ export function useTimezoneSelect({
       .sort((a, b) => b.score - a.score)?.[0]?.tz
   }
 
+  function isObject(item: unknown) {
+    return typeof item === "object" && !Array.isArray(item) && item !== null
+  }
+
   const parseTimezone = (zone: ITimezone) => {
-    if (typeof zone === "object" && zone.value && zone.label) return zone
     if (typeof zone === "string") {
       return (
         options.find((tz) => tz.value === zone) || (zone.indexOf("/") !== -1 && findFuzzyTz(zone))
       )
-    } else if (zone.value && !zone.label) {
+    } else if (isObject(zone) && !zone.label) {
       return options.find((tz) => tz.value === zone.value)
+    } else {
+      return zone
     }
   }
 
