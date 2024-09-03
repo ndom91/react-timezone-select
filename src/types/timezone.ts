@@ -25,7 +25,7 @@ export type TimezoneSelectOptions = {
   currentDatetime?: Date | string
 }
 
-export type Props = Omit<ReactSelectProps<ITimezone, false>, "onChange"> &
+export type Props = Omit<ReactSelectProps<ITimezone>, "onChange"> &
   TimezoneSelectOptions & {
     value: ITimezone
     onChange?: (timezone: ITimezoneOption) => void
