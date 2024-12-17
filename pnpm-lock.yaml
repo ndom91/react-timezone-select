@@ -13,7 +13,7 @@ importers:
         version: 5.8.3(@types/react@18.3.3)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       spacetime:
         specifier: ^7.6.0
-        version: 7.6.1
+        version: 7.6.2
       timezone-soft:
         specifier: ^1.5.2
         version: 1.5.2
@@ -3204,8 +3204,8 @@ packages:
     resolution: {integrity: sha512-2ymg6oRBpebeZi9UUNsgQ89bhx01TcTkmNTGnNO88imTmbSgy4nfujrgVEFKWpMTEGA11EDkTt7mqObTPdigIA==}
     engines: {node: '>= 8'}
 
-  spacetime@7.6.1:
-    resolution: {integrity: sha512-LeqAU4HKi0DyJzhp6qHAGklipM81WvGDXVGlwXEZ1hHJCZUT4JhduBwovdnRvtqUPjDaI4DT2C/ZlsIXodSF8w==}
+  spacetime@7.6.2:
+    resolution: {integrity: sha512-x5Qr2yiG5wy/0IBeaNeYG9OLigePKTj1/liF9j5xWNbb1psi5Q2AuZTh9SpIT+QZqpKCWX0OCdvwJIm9FlJouA==}
 
   spawn-command@0.0.2:
     resolution: {integrity: sha512-zC8zGoGkmc8J9ndvml8Xksr1Amk9qBujgbF0JAIWO7kXr43w0h/0GJNM/Vustixu+YE8N/MTrQ7N31FvHUACxQ==}
@@ -7183,7 +7183,7 @@ snapshots:
     dependencies:
       whatwg-url: 7.1.0
 
-  spacetime@7.6.1: {}
+  spacetime@7.6.2: {}
 
   spawn-command@0.0.2: {}
 
