@@ -66,12 +66,17 @@ export function useTimezoneSelect({
       .sort((a: ITimezoneOption, b: ITimezoneOption) => a.offset - b.offset)
   }, [labelStyle, timezones, currentDatetime])
 
+  const customTimezoneKeys = useMemo(() => {
+    const defaultKeys = new Set(Object.keys(allTimezones))
+    return new Set(Object.keys(timezones).filter((key) => !defaultKeys.has(key)))
+  }, [timezones])
+
   const options = useMemo(() => {
     return allOptions
-      .filter(
-        (item: ITimezoneOption, idx: number, arr: ITimezoneOption[]) =>
-          arr.findIndex((t) => t.offset === item.offset) === idx,
-      )
+      .filter((item: ITimezoneOption, idx: number, arr: ITimezoneOption[]) => {
+        if (customTimezoneKeys.has(item.value)) return true
+        return arr.findIndex((t) => t.offset === item.offset) === idx
+      })
       .map((item) => ({
         ...item,
         searchTerms: allOptions
@@ -79,7 +84,7 @@ export function useTimezoneSelect({
           .map((t) => t.label)
           .join(" "),
       }))
-  }, [allOptions])
+  }, [allOptions, customTimezoneKeys])
 
   const filterOption = (option: { label: string; value: string; data: ITimezone }, inputValue: string): boolean => {
     const data = option.data as ITimezoneOption

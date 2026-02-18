@@ -1,6 +1,6 @@
 {
   "name": "react-timezone-select",
-  "version": "3.3.1",
+  "version": "3.3.2",
   "description": "Usable, dynamic React Timezone Select",
   "scripts": {
     "dev": "concurrently \"tsup --watch\" \"cd example && pnpm dev\"",
