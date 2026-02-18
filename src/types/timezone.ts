@@ -14,6 +14,7 @@ export type ITimezoneOption = {
   abbrev?: string
   altName?: string
   offset?: number
+  searchTerms?: string
 }
 
 export type ITimezone = ITimezoneOption | string

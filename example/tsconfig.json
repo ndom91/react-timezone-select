@@ -3,8 +3,8 @@
   "compilerOptions": {
     "module": "esnext",
     "target": "esnext",
-    "moduleResolution": "node",
-    "jsx": "react",
+    "moduleResolution": "bundler",
+    "jsx": "react-jsx",
     "baseUrl": "./",
     "paths": {
       "*": ["../../src"]
@@ -15,7 +15,6 @@
     "lib": ["dom", "dom.iterable", "esnext"],
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
-    "allowSyntheticDefaultImports": true,
-    "importsNotUsedAsValues": "error"
+    "allowSyntheticDefaultImports": true
   }
 }
