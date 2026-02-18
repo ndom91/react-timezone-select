@@ -63,6 +63,10 @@ export function useTimezoneSelect({
       })
       .filter(Boolean)
       .sort((a: ITimezoneOption, b: ITimezoneOption) => a.offset - b.offset)
+      .filter(
+        (item: ITimezoneOption, idx: number, arr: ITimezoneOption[]) =>
+          arr.findIndex((t) => t.offset === item.offset) === idx,
+      )
   }, [labelStyle, timezones, currentDatetime])
 
   const findFuzzyTz = (zone: string): ITimezoneOption => {
