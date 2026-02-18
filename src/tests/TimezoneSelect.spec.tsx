@@ -61,6 +61,23 @@ test("load and displays custom timezone", async () => {
   expect(getByText(/\(GMT-[5-6]:00\) Pittsburgh$/)).toBeInTheDocument()
 })
 
+test("custom timezone key not in default list is not deduped from dropdown", async () => {
+  const { getAllByText } = render(
+    <TimezoneSelect
+      value={"America/Detroit"}
+      timezones={{
+        ...allTimezones,
+        "America/Detroit": "Detroit",
+      }}
+      menuIsOpen={true}
+      onChange={(e) => e}
+    />,
+  )
+
+  // Detroit should appear in both the selected value and as a dropdown option
+  expect(getAllByText(/Detroit/).length).toBeGreaterThanOrEqual(2)
+})
+
 test("load and passes react-select props", async () => {
   const { getByText } = render(
     <TimezoneSelect
