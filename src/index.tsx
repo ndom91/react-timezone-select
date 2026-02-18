@@ -14,6 +14,7 @@ export function useTimezoneSelect({
 }: TimezoneSelectOptions): {
   parseTimezone: (zone: ITimezone) => ITimezoneOption
   options: ITimezoneOption[]
+  filterOption: (option: { label: string; value: string; data: ITimezone }, inputValue: string) => boolean
 } {
   const allOptions = useMemo(() => {
     return Object.entries(timezones)
@@ -66,11 +67,28 @@ export function useTimezoneSelect({
   }, [labelStyle, timezones, currentDatetime])
 
   const options = useMemo(() => {
-    return allOptions.filter(
-      (item: ITimezoneOption, idx: number, arr: ITimezoneOption[]) =>
-        arr.findIndex((t) => t.offset === item.offset) === idx,
-    )
+    return allOptions
+      .filter(
+        (item: ITimezoneOption, idx: number, arr: ITimezoneOption[]) =>
+          arr.findIndex((t) => t.offset === item.offset) === idx,
+      )
+      .map((item) => ({
+        ...item,
+        searchTerms: allOptions
+          .filter((t) => t.offset === item.offset)
+          .map((t) => t.label)
+          .join(" "),
+      }))
   }, [allOptions])
+
+  const filterOption = (option: { label: string; value: string; data: ITimezone }, inputValue: string): boolean => {
+    const data = option.data as ITimezoneOption
+    const term = inputValue.toLowerCase()
+    return (
+      data.label?.toLowerCase().includes(term) ||
+      (data.searchTerms?.toLowerCase().includes(term) ?? false)
+    )
+  }
 
   const findFuzzyTz = (zone: string): ITimezoneOption => {
     let currentTime: Spacetime
@@ -135,7 +153,7 @@ export function useTimezoneSelect({
     }
   }
 
-  return { options, parseTimezone }
+  return { options, parseTimezone, filterOption }
 }
 
 const TimezoneSelect = ({
@@ -148,7 +166,7 @@ const TimezoneSelect = ({
   currentDatetime,
   ...props
 }: Props) => {
-  const { options, parseTimezone } = useTimezoneSelect({
+  const { options, parseTimezone, filterOption } = useTimezoneSelect({
     timezones,
     labelStyle,
     displayValue,
@@ -156,7 +174,9 @@ const TimezoneSelect = ({
   })
 
   const handleChange = (tz: ITimezoneOption) => {
-    onChange && onChange(tz)
+    if (!onChange) return
+    const { searchTerms: _, ...rest } = tz
+    onChange(rest as ITimezoneOption)
   }
 
   return (
@@ -164,6 +184,7 @@ const TimezoneSelect = ({
       value={parseTimezone(value)}
       onChange={handleChange}
       options={options}
+      filterOption={filterOption}
       onBlur={onBlur}
       {...props}
     />
