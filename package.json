@@ -13,7 +13,9 @@
     "test": "vitest",
     "test:watch": "vitest --watch",
     "test:ci": "pnpm run build && pnpm test",
-    "tsc": "tsc"
+    "tsc": "tsc",
+    "lint": "biome check .",
+    "format": "biome format --write ."
   },
   "author": "Nico Domino <yo@ndo.dev>",
   "homepage": "https://github.com/ndom91/react-timezone-select",
@@ -50,65 +52,34 @@
     "react-select": "^5.8.0"
   },
   "dependencies": {
-    "spacetime": "^7.6.0",
+    "spacetime": "^7.12.0",
     "timezone-soft": "^1.5.2"
   },
   "devDependencies": {
-    "@babel/core": "^7.24.9",
-    "@testing-library/jest-dom": "^6.4.8",
-    "@testing-library/react": "^16.0.0",
-    "@types/jest": "^29.5.12",
-    "@types/react": "^18.3.3",
-    "@types/react-dom": "^18.3.0",
-    "@types/testing-library__jest-dom": "^5.14.9",
-    "@typescript-eslint/eslint-plugin": "^7.17.0",
-    "@typescript-eslint/parser": "^7.17.0",
-    "@vitejs/plugin-react": "^4.3.1",
-    "concurrently": "^8.2.2",
-    "esbuild": "^0.23.0",
-    "esbuild-jest": "^0.5.0",
-    "eslint": "^8.57.0",
-    "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-prettier": "5.2.1",
-    "gh-pages": "^6.1.1",
-    "jest-environment-jsdom": "^29.7.0",
-    "prettier": "^3.3.3",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "simple-git-hooks": "^2.11.1",
-    "ts-jest": "^29.2.3",
-    "tsup": "^8.2.2",
-    "typescript": "^5.5.4",
-    "vite": "^5.3.4",
-    "vite-tsconfig-paths": "^4.3.2",
-    "vitest": "^2.0.4"
-  },
-  "eslintConfig": {
-    "parser": "@typescript-eslint/parser",
-    "parserOptions": {
-      "ecmaVersion": "latest",
-      "sourceType": "module"
-    },
-    "extends": [
-      "eslint:recommended",
-      "plugin:@typescript-eslint/recommended",
-      "plugin:prettier/recommended"
-    ],
-    "plugins": [
-      "@typescript-eslint"
-    ],
-    "root": true
-  },
-  "prettier": {
-    "semi": false,
-    "printWidth": 100
+    "@biomejs/biome": "^1.9.4",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.2",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^5.1.4",
+    "concurrently": "^9.2.1",
+    "esbuild": "^0.27.3",
+    "gh-pages": "^6.3.0",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "simple-git-hooks": "^2.13.1",
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.3",
+    "vite": "^7.3.1",
+    "vite-tsconfig-paths": "^6.1.1",
+    "vitest": "^4.0.18"
   },
   "simple-git-hooks": {
     "pre-commit": "npx lint-staged"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
-      "eslint --fix"
+      "biome check --write"
     ]
   },
   "packageManager": "pnpm@9.0.6+sha256.0624e30eff866cdeb363b15061bdb7fd9425b17bc1bb42c22f5f4efdea21f6b3"
