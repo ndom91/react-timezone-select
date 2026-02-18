@@ -4,7 +4,7 @@ import spacetime, { type Spacetime } from "spacetime"
 import soft from "timezone-soft"
 import allTimezones from "./timezone-list.js"
 import type { Props, ITimezone, ITimezoneOption, ILabelStyle } from "./types/timezone"
-import { TimezoneSelectOptions } from "./types/timezone"
+import type { TimezoneSelectOptions } from "./types/timezone"
 
 export function useTimezoneSelect({
   timezones = allTimezones,
@@ -15,7 +15,7 @@ export function useTimezoneSelect({
   parseTimezone: (zone: ITimezone) => ITimezoneOption
   options: ITimezoneOption[]
 } {
-  const options = useMemo(() => {
+  const allOptions = useMemo(() => {
     return Object.entries(timezones)
       .map((zone) => {
         try {
@@ -63,11 +63,14 @@ export function useTimezoneSelect({
       })
       .filter(Boolean)
       .sort((a: ITimezoneOption, b: ITimezoneOption) => a.offset - b.offset)
-      .filter(
-        (item: ITimezoneOption, idx: number, arr: ITimezoneOption[]) =>
-          arr.findIndex((t) => t.offset === item.offset) === idx,
-      )
   }, [labelStyle, timezones, currentDatetime])
+
+  const options = useMemo(() => {
+    return allOptions.filter(
+      (item: ITimezoneOption, idx: number, arr: ITimezoneOption[]) =>
+        arr.findIndex((t) => t.offset === item.offset) === idx,
+    )
+  }, [allOptions])
 
   const findFuzzyTz = (zone: string): ITimezoneOption => {
     let currentTime: Spacetime
@@ -77,7 +80,7 @@ export function useTimezoneSelect({
       currentTime = (currentDatetime ? spacetime(currentDatetime) : spacetime.now()).goto("GMT")
     }
 
-    return options
+    return allOptions
       .filter((tz: ITimezoneOption) => tz.offset === currentTime.timezone().current.offset)
       .map((tz: ITimezoneOption) => {
         let score = 0
@@ -122,10 +125,11 @@ export function useTimezoneSelect({
   const parseTimezone = (zone: ITimezone) => {
     if (typeof zone === "string") {
       return (
-        options.find((tz) => tz.value === zone) || (zone.indexOf("/") !== -1 && findFuzzyTz(zone))
+        allOptions.find((tz) => tz.value === zone) ||
+        (zone.indexOf("/") !== -1 && findFuzzyTz(zone))
       )
     } else if (isObject(zone) && !zone.label) {
-      return options.find((tz) => tz.value === zone.value)
+      return allOptions.find((tz) => tz.value === zone.value)
     } else {
       return zone
     }

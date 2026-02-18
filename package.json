@@ -14,8 +14,10 @@
     "test:watch": "vitest --watch",
     "test:ci": "pnpm run build && pnpm test",
     "tsc": "tsc",
-    "lint": "biome check .",
-    "format": "biome format --write ."
+    "lint": "biome lint",
+    "lint:fix": "biome lint --fix",
+    "format": "biome check",
+    "format:fix": "biome check --write"
   },
   "author": "Nico Domino <yo@ndo.dev>",
   "homepage": "https://github.com/ndom91/react-timezone-select",
@@ -68,20 +70,11 @@
     "gh-pages": "^6.3.0",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
-    "simple-git-hooks": "^2.13.1",
     "tsup": "^8.5.1",
     "typescript": "^5.9.3",
     "vite": "^7.3.1",
     "vite-tsconfig-paths": "^6.1.1",
     "vitest": "^4.0.18"
-  },
-  "simple-git-hooks": {
-    "pre-commit": "npx lint-staged"
-  },
-  "lint-staged": {
-    "*.{js,jsx,ts,tsx}": [
-      "biome check --write"
-    ]
   },
   "packageManager": "pnpm@9.0.6+sha256.0624e30eff866cdeb363b15061bdb7fd9425b17bc1bb42c22f5f4efdea21f6b3"
 }
