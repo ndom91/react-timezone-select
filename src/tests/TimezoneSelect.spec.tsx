@@ -191,6 +191,19 @@ test("Pacific Time is present in dropdown during DST", async () => {
   expect(getAllByText(/Pacific Time/).length).toBeGreaterThanOrEqual(2)
 })
 
+test("Pacific Time is present in dropdown during standard time", async () => {
+  const { getAllByText } = render(
+    <TimezoneSelect
+      value={"America/Los_Angeles"}
+      currentDatetime="2025-01-15"
+      menuIsOpen={true}
+      onChange={(e) => e}
+    />,
+  )
+
+  expect(getAllByText(/Pacific Time/).length).toBeGreaterThanOrEqual(2)
+})
+
 test("can handle null input", async () => {
   // @ts-expect-error Explicitly testing null input
   const { container } = render(<TimezoneSelect value={null} />)
