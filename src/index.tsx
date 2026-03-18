@@ -57,6 +57,7 @@ export function useTimezoneSelect({
             offset: tz.current.offset,
             abbrev: abbr,
             altName: altName,
+            hasDst: tz.hasDst,
           }
         } catch {
           return null
@@ -73,14 +74,14 @@ export function useTimezoneSelect({
 
   const options = useMemo(() => {
     return allOptions
-      .filter((item: ITimezoneOption, idx: number, arr: ITimezoneOption[]) => {
+      .filter((item, idx, arr) => {
         if (customTimezoneKeys.has(item.value)) return true
-        return arr.findIndex((t) => t.offset === item.offset) === idx
+        return arr.findIndex((t) => t.offset === item.offset && t.hasDst === item.hasDst) === idx
       })
-      .map((item) => ({
+      .map(({ hasDst: _, ...item }) => ({
         ...item,
         searchTerms: allOptions
-          .filter((t) => t.offset === item.offset)
+          .filter((t) => t.offset === item.offset && t.hasDst === _)
           .map((t) => t.label)
           .join(" "),
       }))

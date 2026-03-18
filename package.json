@@ -43,7 +43,7 @@
   "peerDependencies": {
     "react": "^16 || ^17.0.1 || ^18 || ^19",
     "react-dom": "^16 || ^17.0.1 || ^18 || ^19",
-    "react-select": "^5.8.0"
+    "react-select": "^5.9.0"
   },
   "dependencies": {
     "spacetime": "^7.12.0",

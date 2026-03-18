@@ -177,6 +177,25 @@ test("can set current time (standard)", async () => {
   expect(getByText(/GMT-5/)).toBeInTheDocument()
 })
 
+test("Pacific Time is present in dropdown during DST", async () => {
+  const { container } = render(
+    <TimezoneSelect value={"America/Los_Angeles"} currentDatetime="2025-03-15" onChange={(e) => e} />,
+  )
+
+  // Pacific Time should be displayed as the selected value during DST
+  expect(container.querySelector(".css-1dimb5e-singleValue")?.textContent).toMatch(/Pacific Time/)
+
+  // Open the dropdown and verify Pacific Time is in the options
+  const input = container.querySelector("input")
+  fireEvent.focus(input!)
+  fireEvent.keyDown(input!, { key: "ArrowDown", code: "ArrowDown" })
+
+  // Check that Pacific Time appears in the dropdown menu
+  const menuOptions = container.querySelectorAll("[class*='option']")
+  const optionTexts = Array.from(menuOptions).map((el) => el.textContent)
+  expect(optionTexts.some((text) => text?.includes("Pacific Time"))).toBe(true)
+})
+
 test("can handle null input", async () => {
   // @ts-expect-error Explicitly testing null input
   const { container } = render(<TimezoneSelect value={null} />)
