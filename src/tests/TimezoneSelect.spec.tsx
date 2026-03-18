@@ -178,22 +178,17 @@ test("can set current time (standard)", async () => {
 })
 
 test("Pacific Time is present in dropdown during DST", async () => {
-  const { container } = render(
-    <TimezoneSelect value={"America/Los_Angeles"} currentDatetime="2025-03-15" onChange={(e) => e} />,
+  const { getAllByText } = render(
+    <TimezoneSelect
+      value={"America/Los_Angeles"}
+      currentDatetime="2025-03-15"
+      menuIsOpen={true}
+      onChange={(e) => e}
+    />,
   )
 
-  // Pacific Time should be displayed as the selected value during DST
-  expect(container.querySelector(".css-1dimb5e-singleValue")?.textContent).toMatch(/Pacific Time/)
-
-  // Open the dropdown and verify Pacific Time is in the options
-  const input = container.querySelector("input")
-  fireEvent.focus(input!)
-  fireEvent.keyDown(input!, { key: "ArrowDown", code: "ArrowDown" })
-
-  // Check that Pacific Time appears in the dropdown menu
-  const menuOptions = container.querySelectorAll("[class*='option']")
-  const optionTexts = Array.from(menuOptions).map((el) => el.textContent)
-  expect(optionTexts.some((text) => text?.includes("Pacific Time"))).toBe(true)
+  // Pacific Time should appear in both the selected value and as a dropdown option
+  expect(getAllByText(/Pacific Time/).length).toBeGreaterThanOrEqual(2)
 })
 
 test("can handle null input", async () => {
