@@ -165,9 +165,9 @@ value='America/Juneau'
 value={{
   value: 'America/Juneau'
   label: '(GMT-8:00) Alaska,
-  abbrev: 'AHST',
+  abbrev: 'AKST',
   offset: -8,
-  altName: 'Alaskan Standard Time'
+  altName: 'Alaska Standard Time'
 }}
 ```
 
@@ -228,7 +228,7 @@ Pull requests are always welcome! Please stick to repo formatting/linting settin
 
 - [All Contributors](https://github.com/ndom91/react-timezone-select/graphs/contributors)
 - [Carlos Matallin](https://github.com/matallo/)
-- [spacetime](https://github.com/spencermountain/spacetime)
+- [@vvo/tzdb](https://github.com/vvo/tzdb)
 - [react-select](https://react-select.com)
 
 ## 📝 License
