@@ -46,8 +46,7 @@
     "react-select": "^5.9.0"
   },
   "dependencies": {
-    "spacetime": "^7.12.0",
-    "timezone-soft": "^1.5.2"
+    "@vvo/tzdb": "^6.201.1"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",

@@ -120,7 +120,7 @@ test("select drop-downs must use the fireEvent.change", () => {
     label: "(GMT-10:00) Hawaii",
     altName: "Hawaii-Aleutian Standard Time",
     offset: -10,
-    abbrev: "HAST",
+    abbrev: "HST",
   })
 })
 

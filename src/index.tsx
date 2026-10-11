@@ -1,10 +1,47 @@
+import { type TimeZone, getTimeZones } from "@vvo/tzdb"
 import { useMemo } from "react"
 import Select from "react-select"
-import spacetime, { type Spacetime } from "spacetime"
-import soft from "timezone-soft"
 import allTimezones from "./timezone-list.js"
-import type { Props, ITimezone, ITimezoneOption, ILabelStyle } from "./types/timezone"
+import type { ILabelStyle, ITimezone, ITimezoneOption, Props } from "./types/timezone"
 import type { TimezoneSelectOptions } from "./types/timezone"
+
+type TimezoneOptionWithDst = ITimezoneOption & { hasDst: boolean }
+
+// UTC offset in hours at a given date, like -7 or 5.5. Throws for unknown time zones.
+function getOffset(timeZone: string, date: Date): number {
+  const parts: Record<string, number> = {}
+  const format = new Intl.DateTimeFormat("en-US", {
+    timeZone,
+    hourCycle: "h23",
+    year: "numeric",
+    month: "numeric",
+    day: "numeric",
+    hour: "numeric",
+    minute: "numeric",
+  })
+  for (const { type, value } of format.formatToParts(date)) {
+    parts[type] = Number(value)
+  }
+  const wallClock = Date.UTC(parts.year, parts.month - 1, parts.day, parts.hour % 24, parts.minute)
+  return Math.round((wallClock - date.getTime()) / 60000) / 60
+}
+
+function getLongName(timeZone: string, date: Date): string | undefined {
+  return new Intl.DateTimeFormat("en-US", { timeZone, timeZoneName: "long" })
+    .formatToParts(date)
+    .find((part) => part.type === "timeZoneName")?.value
+}
+
+// Every IANA name, current or deprecated, mapped to its @vvo/tzdb time zone
+function getTimeZonesByName(date: Date): Map<string, TimeZone> {
+  const timeZonesByName = new Map<string, TimeZone>()
+  for (const timeZone of getTimeZones({ date, includeUtc: true, includeGmtOffsets: true })) {
+    for (const name of timeZone.group) {
+      timeZonesByName.set(name, timeZone)
+    }
+  }
+  return timeZonesByName
+}
 
 export function useTimezoneSelect({
   timezones = allTimezones,
@@ -14,23 +51,30 @@ export function useTimezoneSelect({
 }: TimezoneSelectOptions): {
   parseTimezone: (zone: ITimezone) => ITimezoneOption
   options: ITimezoneOption[]
-  filterOption: (option: { label: string; value: string; data: ITimezone }, inputValue: string) => boolean
+  filterOption: (
+    option: { label: string; value: string; data: ITimezone },
+    inputValue: string,
+  ) => boolean
 } {
+  const { date, timeZonesByName } = useMemo(() => {
+    const date = currentDatetime ? new Date(currentDatetime) : new Date()
+    return { date, timeZonesByName: getTimeZonesByName(date) }
+  }, [currentDatetime])
+
   const allOptions = useMemo(() => {
     return Object.entries(timezones)
-      .map((zone) => {
+      .map(([value, name]): TimezoneOptionWithDst | null => {
         try {
-          const now = (currentDatetime ? spacetime(currentDatetime) : spacetime.now()).goto(zone[0])
-          const isDstString = now.isDST() ? "daylight" : "standard"
-          const tz = now.timezone()
-          const tzStrings = soft(zone[0])
+          const offset = getOffset(value, date)
+          const timeZone = timeZonesByName.get(value)
+          const isDst = timeZone ? offset * 60 > timeZone.rawOffsetInMinutes : false
+          const abbr =
+            isDst && timeZone?.dstAbbreviation ? timeZone.dstAbbreviation : timeZone?.abbreviation
+          const altName = getLongName(value, date)
 
-          const abbr = tzStrings?.[0]?.[isDstString]?.abbr
-          const altName = tzStrings?.[0]?.[isDstString]?.name
-
-          const min = tz.current.offset * 60
+          const min = offset * 60
           const hr = `${(min / 60) ^ 0}:${min % 60 === 0 ? "00" : Math.abs(min % 60)}`
-          const prefix = `(${displayValue}${hr.includes("-") ? hr : `+${hr}`}) ${zone[1]}`
+          const prefix = `(${displayValue}${hr.includes("-") ? hr : `+${hr}`}) ${name}`
 
           let label = ""
 
@@ -52,20 +96,20 @@ export function useTimezoneSelect({
           }
 
           return {
-            value: tz.name,
-            label: label,
-            offset: tz.current.offset,
+            value,
+            label,
+            offset,
             abbrev: abbr,
-            altName: altName,
-            hasDst: tz.hasDst,
+            altName,
+            hasDst: Boolean(timeZone?.dstAbbreviation),
           }
         } catch {
           return null
         }
       })
-      .filter(Boolean)
-      .sort((a: ITimezoneOption, b: ITimezoneOption) => a.offset - b.offset)
-  }, [labelStyle, timezones, currentDatetime])
+      .filter((option): option is TimezoneOptionWithDst => option !== null)
+      .sort((a, b) => (a.offset ?? 0) - (b.offset ?? 0))
+  }, [labelStyle, displayValue, timezones, date, timeZonesByName])
 
   const customTimezoneKeys = useMemo(() => {
     const defaultKeys = new Set(Object.keys(allTimezones))
@@ -87,7 +131,10 @@ export function useTimezoneSelect({
       }))
   }, [allOptions, customTimezoneKeys])
 
-  const filterOption = (option: { label: string; value: string; data: ITimezone }, inputValue: string): boolean => {
+  const filterOption = (
+    option: { label: string; value: string; data: ITimezone },
+    inputValue: string,
+  ): boolean => {
     const data = option.data as ITimezoneOption
     const term = inputValue.toLowerCase()
     return (
@@ -96,41 +143,36 @@ export function useTimezoneSelect({
     )
   }
 
-  const findFuzzyTz = (zone: string): ITimezoneOption => {
-    let currentTime: Spacetime
-    try {
-      currentTime = (currentDatetime ? spacetime(currentDatetime) : spacetime.now()).goto(zone)
-    } catch (err) {
-      currentTime = (currentDatetime ? spacetime(currentDatetime) : spacetime.now()).goto("GMT")
+  const findFuzzyTz = (zone: string): ITimezoneOption | undefined => {
+    // Names that show the same time share a tzdb group, like Asia/Calcutta and Asia/Kolkata
+    const timeZone = timeZonesByName.get(zone)
+    const sameTime = timeZone && allOptions.find((tz) => timeZone.group.includes(tz.value))
+    if (sameTime) {
+      return sameTime
     }
 
+    let offset = 0
+    try {
+      offset = getOffset(zone, date)
+    } catch {
+      // Unknown time zones fall back to GMT
+    }
+    const hasDst = Boolean(timeZone?.dstAbbreviation)
+    const region = zone.substring(0, zone.indexOf("/")).toLowerCase()
+    const city = zone.substring(zone.indexOf("/") + 1).toLowerCase()
+
     return allOptions
-      .filter((tz: ITimezoneOption) => tz.offset === currentTime.timezone().current.offset)
-      .map((tz: ITimezoneOption) => {
+      .filter((tz) => tz.offset === offset)
+      .map((tz) => {
         let score = 0
-        if (
-          currentTime.timezones[tz.value.toLowerCase()] &&
-          !!currentTime.timezones[tz.value.toLowerCase()].dst === currentTime.timezone().hasDst
-        ) {
-          if (
-            tz.value
-              .toLowerCase()
-              .indexOf(currentTime.tz.substring(currentTime.tz.indexOf("/") + 1)) !== -1
-          ) {
+        if (tz.hasDst === hasDst) {
+          if (tz.value.toLowerCase().indexOf(city) !== -1) {
             score += 8
           }
-          if (
-            tz.label
-              .toLowerCase()
-              .indexOf(currentTime.tz.substring(currentTime.tz.indexOf("/") + 1)) !== -1
-          ) {
+          if (tz.label.toLowerCase().indexOf(city) !== -1) {
             score += 4
           }
-          if (
-            tz.value
-              .toLowerCase()
-              .indexOf(currentTime.tz.substring(0, currentTime.tz.indexOf("/"))) !== -1
-          ) {
+          if (tz.value.toLowerCase().indexOf(region) !== -1) {
             score += 2
           }
           score += 1
