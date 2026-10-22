@@ -1,0 +1,1 @@
+import e,{t}from"./Timezone-C3zrc2-H.js";var n=t();function r(){return(0,n.jsx)(`div`,{className:`App`,children:(0,n.jsx)(e,{})})}export{r as default};

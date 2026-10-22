@@ -1,1 +1,0 @@
-import e,{r as t,t as n}from"./Timezone-B4BHVM07.js";t();var r=n();function i(){return(0,r.jsx)(`div`,{className:`App`,children:(0,r.jsx)(e,{})})}export{i as default};
