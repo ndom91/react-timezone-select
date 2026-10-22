@@ -63,14 +63,14 @@ const Timezone = () => {
         {selectStyle === 'react-select' ? (
           <TimezoneSelect
             value={selectedTimezone}
-            onChange={setSelectedTimezone}
+            onChange={(timezone) => setSelectedTimezone(timezone.value)}
             {...selectOptions}
           />
         ) : (
           <NativeSelectTimezone
             value={selectedTimezone}
             selectOptions={selectOptions}
-            onChange={setSelectedTimezone}
+            onChange={(timezone) => setSelectedTimezone(timezone.value)}
           />
         )}
       </div>
