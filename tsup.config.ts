@@ -4,7 +4,7 @@ export default defineConfig({
   entry: ["src/index.tsx"],
   format: ["esm"],
   clean: true,
-  dts: true,
+  dts: false,
   banner: {
     js: '"use client"',
   },

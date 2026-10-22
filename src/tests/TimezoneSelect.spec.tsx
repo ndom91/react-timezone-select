@@ -118,9 +118,9 @@ test("select drop-downs must use the fireEvent.change", () => {
   expect(onChangeSpy).toHaveBeenCalledWith({
     value: "Pacific/Honolulu",
     label: "(GMT-10:00) Hawaii",
-    altName: "Hawaii-Aleutian Standard Time",
+    altName: "Hawaii Standard Time",
     offset: -10,
-    abbrev: "HAST",
+    abbrev: "HST",
   })
 })
 

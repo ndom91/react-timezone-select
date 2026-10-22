@@ -3,8 +3,8 @@ import Select from "react-select"
 import spacetime, { type Spacetime } from "spacetime"
 import soft from "timezone-soft"
 import allTimezones from "./timezone-list.js"
-import type { Props, ITimezone, ITimezoneOption, ILabelStyle } from "./types/timezone"
-import type { TimezoneSelectOptions } from "./types/timezone"
+import type { Props, ITimezone, ITimezoneOption, ILabelStyle } from "./types/timezone.js"
+import type { TimezoneSelectOptions } from "./types/timezone.js"
 
 export function useTimezoneSelect({
   timezones = allTimezones,

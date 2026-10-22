@@ -8,6 +8,7 @@
     "strict": false,
     "lib": ["dom", "dom.iterable", "esnext"],
     "jsx": "react-jsx",
+    "rootDir": "src",
     "outDir": "dist/",
     "moduleResolution": "bundler",
     "esModuleInterop": true,

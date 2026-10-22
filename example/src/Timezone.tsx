@@ -1,12 +1,12 @@
 import React, { useMemo, useState } from 'react';
 import spacetime from 'spacetime';
-import TimezoneSelect, { allTimezones, useTimezoneSelect } from '../../dist';
+import TimezoneSelect, { allTimezones, useTimezoneSelect } from '../../dist/index.js';
 import type {
   ITimezone,
   ILabelStyle,
   TimezoneSelectOptions,
   ITimezoneOption,
-} from '../../dist';
+} from '../../dist/index.js';
 
 export type ISelectStyle = 'react-select' | 'select';
 
