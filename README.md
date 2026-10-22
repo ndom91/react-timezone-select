@@ -134,7 +134,7 @@ const customSelect = () => {
     </tr>
     <tr>
       <td><code>labelStyle</code></td>
-      <td><code>'original' | 'altName' | 'abbrev' | 'offsetHidden'</code></td>
+        <td><code>'original' | 'altName' | 'abbrev' | 'offsetHidden' | 'inverted'</code></td>
       <td><code>'original'</code></td>
       <td></td>
     </tr>

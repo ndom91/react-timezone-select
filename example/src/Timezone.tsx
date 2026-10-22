@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react';
+import React, { useMemo } from 'react';
 import spacetime from 'spacetime';
 import TimezoneSelect, { allTimezones, useTimezoneSelect } from '../../dist/index.js';
 import type {
@@ -29,14 +29,12 @@ const Timezone = () => {
     setLabelStyle(event.target.value as ILabelStyle);
   };
 
-  const [datetime, setDatetime] = useState(spacetime.now());
-
-  useMemo(() => {
+  const datetime = useMemo(() => {
     const tzValue =
       typeof selectedTimezone === 'string'
         ? selectedTimezone
         : selectedTimezone?.value;
-    setDatetime(datetime.goto(tzValue));
+    return spacetime.now().goto(tzValue);
   }, [selectedTimezone]);
 
   const selectOptions = {
@@ -119,6 +117,10 @@ const Timezone = () => {
             value="offsetHidden"
           />
           offsetHidden
+        </label>
+        <label htmlFor="inverted">
+          <input type="radio" id="inverted" name="labelStyle" value="inverted" />
+          inverted
         </label>
       </div>
       <div className="code">

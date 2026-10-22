@@ -2,7 +2,7 @@ export type ICustomTimezone = {
   [key: string]: string
 }
 
-export type ILabelStyle = "original" | "altName" | "abbrev" | "offsetHidden"
+export type ILabelStyle = "original" | "altName" | "abbrev" | "offsetHidden" | "inverted"
 
 export type IDisplayValue = "GMT" | "UTC"
 

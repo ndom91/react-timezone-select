@@ -11,7 +11,6 @@
     <a
       href="https://github.com/ndom91/react-timezone-select"
       class="github-corner"
-      aria-label="View source on GitHub"
       ><svg
         width="80"
         height="80"
@@ -39,8 +38,20 @@
           class="octo-body"
         ></path>
       </svg>
+      <span class="visually-hidden">View source on GitHub</span>
     </a>
     <style>
+      .visually-hidden {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
       .github-corner:hover .octo-arm {
         animation: octocat-wave 560ms ease-in-out;
       }
@@ -59,11 +70,11 @@
         }
       }
       @media (max-width: 500px) {
-        .github-corner:hover .octo-arm {
-          animation: none;
-        }
         .github-corner .octo-arm {
           animation: octocat-wave 560ms ease-in-out;
+        }
+        .github-corner:hover .octo-arm {
+          animation: none;
         }
       }
     </style>

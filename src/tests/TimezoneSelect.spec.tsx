@@ -1,4 +1,3 @@
-import React from "react"
 import { render, fireEvent } from "@testing-library/react"
 import { test, expect, vi } from "vitest"
 import TimezoneSelect, { allTimezones } from "../../dist"
@@ -44,6 +43,14 @@ test("load and displays labelStyle - abbrev", async () => {
   )
 
   expect(getByText(/\(GMT-[8-9]:00\) Alaska \(AK[D|S]T\)$/)).toBeInTheDocument()
+})
+
+test("load and displays labelStyle - inverted", async () => {
+  const { getByText } = render(
+    <TimezoneSelect value={"America/Juneau"} labelStyle="inverted" onChange={(e) => e} />,
+  )
+
+  expect(getByText(/Alaska \(GMT-[8-9]:00\)$/)).toBeInTheDocument()
 })
 
 test("load and displays custom timezone", async () => {

@@ -46,6 +46,9 @@ export function useTimezoneSelect({
             case "offsetHidden":
               label = `${prefix.replace(/^\(.*?\)\s*/, "")}`
               break
+            case "inverted":
+              label = `${zone[1]} ${prefix.substring(0, prefix.indexOf(")") + 1)}`
+              break
             default:
               label = `${prefix}`
           }
@@ -64,7 +67,7 @@ export function useTimezoneSelect({
       })
       .filter(Boolean)
       .sort((a: ITimezoneOption, b: ITimezoneOption) => a.offset - b.offset)
-  }, [labelStyle, timezones, currentDatetime])
+  }, [labelStyle, timezones, currentDatetime, displayValue])
 
   const customTimezoneKeys = useMemo(() => {
     const defaultKeys = new Set(Object.keys(allTimezones))
@@ -99,7 +102,7 @@ export function useTimezoneSelect({
     let currentTime: Spacetime
     try {
       currentTime = (currentDatetime ? spacetime(currentDatetime) : spacetime.now()).goto(zone)
-    } catch (err) {
+    } catch {
       currentTime = (currentDatetime ? spacetime(currentDatetime) : spacetime.now()).goto("GMT")
     }
 
