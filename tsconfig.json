@@ -1,5 +1,5 @@
 {
-  "include": ["src/index.tsx", "src/timezone-list.ts", "src/types/*.ts"],
+  "include": ["src/index.tsx", "src/hook.ts", "src/timezone-list.ts", "src/types/*.ts"],
   "exclude": ["example/", "node_modules"],
   "compilerOptions": {
     "target": "es6",

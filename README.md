@@ -25,8 +25,11 @@ While looking around for a good option, I had trouble finding a timezone select 
 npm install react-timezone-select react-select
 ```
 
-> [!CAUTION]
-> The package `react-select` is optional. It is unnecessary if you're only using [the hook](#-timezone-hook).
+If you only use [the hook](#-timezone-hook), `react-select` is not required:
+
+```bash
+npm install react-timezone-select
+```
 
 ## 🔭 Usage
 
@@ -80,7 +83,7 @@ ReactDOM.render(<App />, rootElement)
 By default, `react-timezone-select` uses [`react-select`](https://github.com/jedwatson/react-select) as underlying select component. If you'd like to bring your own select component, you can use the `useTimezoneSelect` hook instead of the `TimezoneSelect` component to render the timezones using your self-provided select component.
 
 ```tsx
-import { useTimezoneSelect, allTimezones } from "react-timezone-select"
+import { useTimezoneSelect, allTimezones } from "react-timezone-select/hook"
 
 const labelStyle = "original"
 const timezones = {

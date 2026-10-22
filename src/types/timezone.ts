@@ -1,5 +1,3 @@
-import type { Props as ReactSelectProps } from "react-select"
-
 export type ICustomTimezone = {
   [key: string]: string
 }
@@ -25,9 +23,3 @@ export type TimezoneSelectOptions = {
   timezones?: ICustomTimezone
   currentDatetime?: Date | string
 }
-
-export type Props = Omit<ReactSelectProps<ITimezone>, "onChange"> &
-  TimezoneSelectOptions & {
-    value: ITimezone
-    onChange?: (timezone: ITimezoneOption) => void
-  }
